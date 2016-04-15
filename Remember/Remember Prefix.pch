@@ -1,0 +1,65 @@
+//
+//  Remember Prefix.pch
+//  Remember
+//
+//  Created by Keeton on 10/16/14.
+//  Copyright (c) 2014 Solar Pepper Studios. All rights reserved.
+//
+
+#ifndef Remember_Remember_Prefix_pch
+#define Remember_Remember_Prefix_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+/**
+ ------------------------------------------------
+ Framework Imports Listed Below Commented Section
+ ------------------------------------------------
+ */
+#import <AddressBook/AddressBook.h>
+#import <AddressBookUI/AddressBookUI.h>
+#import <AudioToolbox/AudioToolbox.h>
+#import <AssetsLibrary/AssetsLibrary.h>
+#import <CoreData/CoreData.h>
+#import <CoreLocation/CoreLocation.h>
+#import <CoreMotion/CoreMotion.h>
+#import <CoreSpotlight/CoreSpotlight.h>
+#import <CoreText/CoreText.h>
+#import <Foundation/Foundation.h>
+#import <MapKit/MapKit.h>
+#import <MediaPlayer/MediaPlayer.h>
+#import <MessageUI/MessageUI.h>
+#import <QuartzCore/QuartzCore.h>
+#import <Social/Social.h>
+#import <UIKit/UIKit.h>
+#import "AppDelegate.h"
+#import <objc/runtime.h>
+
+/**
+ -----------------------------------------------
+ Remember Imports Listed Below Commented Section
+ -----------------------------------------------
+ */
+#import "RMPhotoManager.h"
+#import "RMAudio.h"
+#import "RMGooglePlus.h"
+#import "RMDataManager.h"
+
+/**
+ -----------------------------------------------
+ Pod File Imports Listed Below Commented Section
+ -----------------------------------------------
+ */
+#import <AFNetworking/AFNetworking.h>
+#import <BOZPongRefreshControl/BOZPongRefreshControl.h>
+#import <ChameleonFramework/Chameleon.h>
+#import <FXReachability/FXReachability.h>
+#import <REFrostedViewController/REFrostedViewController.h>
+#import <SCLAlertView-Objective-C/SCLAlertView.h>
+#import <SWTableViewCell/SWTableViewCell.h>
+#import <POP/POP.h>
+#import <GoogleSignIn/GoogleSignIn.h>
+#import <Haneke/Haneke.h>
+
+#endif

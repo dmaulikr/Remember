@@ -1,0 +1,1472 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10102" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10080"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="AlegreyaSans-Light.otf">
+            <string>AlegreyaSans-Light</string>
+            <string>AlegreyaSans-Light</string>
+        </mutableArray>
+        <mutableArray key="Amble-Bold.ttf">
+            <string>Amble-Bold</string>
+        </mutableArray>
+        <mutableArray key="Amble-LightCondensed.ttf">
+            <string>Amble-LightCondensed</string>
+            <string>Amble-LightCondensed</string>
+            <string>Amble-LightCondensed</string>
+            <string>Amble-LightCondensed</string>
+            <string>Amble-LightCondensed</string>
+            <string>Amble-LightCondensed</string>
+            <string>Amble-LightCondensed</string>
+        </mutableArray>
+        <mutableArray key="Amble-Regular.ttf">
+            <string>Amble-Regular</string>
+            <string>Amble-Regular</string>
+            <string>Amble-Regular</string>
+            <string>Amble-Regular</string>
+            <string>Amble-Regular</string>
+            <string>Amble-Regular</string>
+            <string>Amble-Regular</string>
+            <string>Amble-Regular</string>
+            <string>Amble-Regular</string>
+            <string>Amble-Regular</string>
+            <string>Amble-Regular</string>
+            <string>Amble-Regular</string>
+            <string>Amble-Regular</string>
+            <string>Amble-Regular</string>
+            <string>Amble-Regular</string>
+            <string>Amble-Regular</string>
+            <string>Amble-Regular</string>
+            <string>Amble-Regular</string>
+            <string>Amble-Regular</string>
+            <string>Amble-Regular</string>
+            <string>Amble-Regular</string>
+            <string>Amble-Regular</string>
+            <string>Amble-Regular</string>
+            <string>Amble-Regular</string>
+            <string>Amble-Regular</string>
+            <string>Amble-Regular</string>
+        </mutableArray>
+    </customFonts>
+    <scenes>
+        <!--Root-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController storyboardIdentifier="rootController" title="Root" useStoryboardIdentifierAsRestorationIdentifier="YES" id="vXZ-lx-hvc" customClass="RootViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" red="0.43529411764705883" green="0.44313725490196076" blue="0.47450980392156861" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-610" y="129"/>
+        </scene>
+        <!--About-->
+        <scene sceneID="Q6g-AL-RPD">
+            <objects>
+                <viewController storyboardIdentifier="aboutController" title="About" useStoryboardIdentifierAsRestorationIdentifier="YES" id="kxi-Xm-SGm" customClass="AboutViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wW8-dS-0KM"/>
+                        <viewControllerLayoutGuide type="bottom" id="sMn-pS-pbl"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Tdz-Vr-DYe">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Foggy Blue Sky" translatesAutoresizingMaskIntoConstraints="NO" id="xO6-bB-Lg0">
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="About Remember" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Efq-y3-14c">
+                                <rect key="frame" x="224" y="52" width="320" height="39"/>
+                                <fontDescription key="fontDescription" name="AlegreyaSans-Light" family="Alegreya Sans" pointSize="32"/>
+                                <color key="textColor" red="0.90823972230000005" green="0.92638683320000004" blue="0.93171715740000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MXw-lf-QkQ">
+                                <rect key="frame" x="0.0" y="99" width="768" height="6"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" id="cnK-CV-lKQ">
+                                    <rect key="frame" x="0.0" y="0.0" width="768" height="6"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                </view>
+                                <blurEffect style="light"/>
+                            </visualEffectView>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4bV-Ka-L1q">
+                                <rect key="frame" x="0.0" y="958" width="768" height="58"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" id="nxL-ep-MSw">
+                                    <rect key="frame" x="0.0" y="0.0" width="768" height="58"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="diV-Ub-ud9">
+                                            <rect key="frame" x="417" y="4" width="50" height="50"/>
+                                            <state key="normal" image="Mail">
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="mailButton:" destination="kxi-Xm-SGm" eventType="touchUpInside" id="lkA-W8-248"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9QK-uy-sbD">
+                                            <rect key="frame" x="359" y="4" width="50" height="50"/>
+                                            <state key="normal" image="Safari">
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="safariButton:" destination="kxi-Xm-SGm" eventType="touchUpInside" id="aap-Zg-mBd"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ueV-Gv-YWH">
+                                            <rect key="frame" x="301" y="4" width="50" height="50"/>
+                                            <state key="normal" image="Github">
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="githubButton:" destination="kxi-Xm-SGm" eventType="touchUpInside" id="sqf-fb-QZO"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                </view>
+                                <blurEffect style="light"/>
+                            </visualEffectView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aoD-xw-kiZ">
+                                <rect key="frame" x="254" y="924" width="95" height="26"/>
+                                <fontDescription key="fontDescription" name="Amble-Regular" family="Amble" pointSize="20"/>
+                                <state key="normal" title="@Kfeavel_">
+                                    <color key="titleColor" red="0.90823972225189209" green="0.92638683319091797" blue="0.9317171573638916" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="twitterButton:" destination="kxi-Xm-SGm" eventType="touchUpInside" id="c4x-1W-dtP"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="And" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vFs-mn-smC">
+                                <rect key="frame" x="368" y="926" width="32" height="21"/>
+                                <fontDescription key="fontDescription" name="Amble-Regular" family="Amble" pointSize="17"/>
+                                <color key="textColor" red="0.90823972225189209" green="0.92638683319091797" blue="0.9317171573638916" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TzD-xK-vjA">
+                                <rect key="frame" x="420" y="924" width="95" height="26"/>
+                                <fontDescription key="fontDescription" name="Amble-Regular" family="Amble" pointSize="20"/>
+                                <state key="normal" title="@EA_Roa">
+                                    <color key="titleColor" red="0.90823972230000005" green="0.92638683320000004" blue="0.93171715740000005" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="efrainButton:" destination="kxi-Xm-SGm" eventType="touchUpInside" id="jzl-e1-COB"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Designed By Solar Pepper Studios" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o60-PM-WCK">
+                                <rect key="frame" x="122" y="710" width="524" height="30"/>
+                                <fontDescription key="fontDescription" name="Amble-Regular" family="Amble" pointSize="24"/>
+                                <color key="textColor" red="0.90823972225189209" green="0.92638683319091797" blue="0.9317171573638916" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Pepper Circle" translatesAutoresizingMaskIntoConstraints="NO" id="Cs9-ym-ObO">
+                                <rect key="frame" x="300" y="748" width="168" height="168"/>
+                            </imageView>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rLC-jH-L0s">
+                                <rect key="frame" x="64" y="172" width="640" height="484"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" id="kdP-dC-njf">
+                                    <rect key="frame" x="0.0" y="0.0" width="640" height="484"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="W2i-BY-bxa">
+                                            <rect key="frame" x="20" y="16" width="600" height="452"/>
+                                            <color key="backgroundColor" red="0.90823972230000005" green="0.92638683320000004" blue="0.93171715740000005" alpha="0.75" colorSpace="calibratedRGB"/>
+                                            <attributedString key="attributedText">
+                                                <fragment>
+                                                    <string key="content">Remember Me is the result of a collaborative effort between two guys who met on Twitter. They are Keeton Feavel and Efrain Roa. Remember Me is an effort towards creating a better, more usable notes and reminders app. Most notes apps have little functionality. They let you type as much as you want, maybe even include a location or a photo but that’s about it. The same problem exists for reminder apps. They let you jot a quick note, maybe a sentence or two and they’ll remind you on that date. Usually they don’t let you include a photo, but possibly a location. Remember Me was designed to bridge the gap between these two types of apps.</string>
+                                                    <attributes>
+                                                        <color key="NSColor" red="0.111818932" green="0.11183650050000001" blue="0.1118125319" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <font key="NSFont" size="13" name="Amble-Regular"/>
+                                                        <font key="NSOriginalFont" size="12" name="Amble-Regular"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                    </attributes>
+                                                </fragment>
+                                                <fragment>
+                                                    <string key="content" base64-UTF8="YES">
+Cg
+</string>
+                                                    <attributes>
+                                                        <color key="NSColor" red="0.111818932" green="0.11183650050000001" blue="0.1118125319" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <font key="NSFont" size="12" name="Amble-Regular"/>
+                                                        <font key="NSOriginalFont" size="12" name="Amble-Regular"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                    </attributes>
+                                                </fragment>
+                                                <fragment>
+                                                    <string key="content" base64-UTF8="YES">
+Cg
+</string>
+                                                    <attributes>
+                                                        <color key="NSColor" red="0.111818932" green="0.11183650050000001" blue="0.1118125319" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <font key="NSFont" size="12" name="Amble-Regular"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                    </attributes>
+                                                </fragment>
+                                                <fragment>
+                                                    <string key="content" base64-UTF8="YES">
+Cg
+</string>
+                                                    <attributes>
+                                                        <color key="NSColor" red="0.111818932" green="0.11183650050000001" blue="0.1118125319" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <font key="NSFont" size="12" name="Amble-Regular"/>
+                                                        <font key="NSOriginalFont" size="12" name="Amble-Regular"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                    </attributes>
+                                                </fragment>
+                                                <fragment content="Keeton Feavel:">
+                                                    <attributes>
+                                                        <color key="NSColor" red="0.111818932" green="0.11183650050000001" blue="0.1118125319" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <font key="NSFont" size="13" name="Amble-Bold"/>
+                                                        <font key="NSOriginalFont" size="12" name="Amble-Bold"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                    </attributes>
+                                                </fragment>
+                                                <fragment>
+                                                    <string key="content" base64-UTF8="YES">
+Cg
+</string>
+                                                    <attributes>
+                                                        <color key="NSColor" red="0.111818932" green="0.11183650050000001" blue="0.1118125319" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <font key="NSFont" size="12" name="Amble-Regular"/>
+                                                        <font key="NSOriginalFont" size="12" name="Amble-Regular"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                    </attributes>
+                                                </fragment>
+                                                <fragment>
+                                                    <string key="content">I’m the guy who codes and writes the actual software part of Remember Me. I am by no means a graphic designer but I can come up with some great ideas. I’m the guy who started Solar Pepper Studios, which is the name associated with apps such as iDelay Messages, Harvest Connect, and of course, Remember Me.</string>
+                                                    <attributes>
+                                                        <color key="NSColor" red="0.111818932" green="0.11183650050000001" blue="0.1118125319" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <font key="NSFont" size="13" name="Amble-Regular"/>
+                                                        <font key="NSOriginalFont" size="12" name="Amble-Regular"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                    </attributes>
+                                                </fragment>
+                                                <fragment>
+                                                    <string key="content" base64-UTF8="YES">
+Cgo
+</string>
+                                                    <attributes>
+                                                        <color key="NSColor" red="0.111818932" green="0.11183650050000001" blue="0.1118125319" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <font key="NSFont" size="12" name="Amble-Regular"/>
+                                                        <font key="NSOriginalFont" size="12" name="Amble-Regular"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                    </attributes>
+                                                </fragment>
+                                                <fragment content="Efrain Roa:">
+                                                    <attributes>
+                                                        <font key="NSFont" size="13" name="Amble-Bold"/>
+                                                        <font key="NSOriginalFont" size="12" name="Amble-Bold"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural">
+                                                            <tabStops>
+                                                                <textTab alignment="left" location="36">
+                                                                    <options/>
+                                                                </textTab>
+                                                                <textTab alignment="left" location="72">
+                                                                    <options/>
+                                                                </textTab>
+                                                                <textTab alignment="left" location="108">
+                                                                    <options/>
+                                                                </textTab>
+                                                                <textTab alignment="left" location="144">
+                                                                    <options/>
+                                                                </textTab>
+                                                                <textTab alignment="left" location="180">
+                                                                    <options/>
+                                                                </textTab>
+                                                                <textTab alignment="left" location="216">
+                                                                    <options/>
+                                                                </textTab>
+                                                                <textTab alignment="left" location="252">
+                                                                    <options/>
+                                                                </textTab>
+                                                                <textTab alignment="left" location="288">
+                                                                    <options/>
+                                                                </textTab>
+                                                                <textTab alignment="left" location="324">
+                                                                    <options/>
+                                                                </textTab>
+                                                                <textTab alignment="left" location="360">
+                                                                    <options/>
+                                                                </textTab>
+                                                                <textTab alignment="left" location="396">
+                                                                    <options/>
+                                                                </textTab>
+                                                                <textTab alignment="left" location="432">
+                                                                    <options/>
+                                                                </textTab>
+                                                            </tabStops>
+                                                        </paragraphStyle>
+                                                    </attributes>
+                                                </fragment>
+                                                <fragment>
+                                                    <string key="content" base64-UTF8="YES">
+Cg
+</string>
+                                                    <attributes>
+                                                        <font key="NSFont" size="12" name="Amble-Regular"/>
+                                                        <font key="NSOriginalFont" size="12" name="Amble-Regular"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural">
+                                                            <tabStops>
+                                                                <textTab alignment="left" location="36">
+                                                                    <options/>
+                                                                </textTab>
+                                                                <textTab alignment="left" location="72">
+                                                                    <options/>
+                                                                </textTab>
+                                                                <textTab alignment="left" location="108">
+                                                                    <options/>
+                                                                </textTab>
+                                                                <textTab alignment="left" location="144">
+                                                                    <options/>
+                                                                </textTab>
+                                                                <textTab alignment="left" location="180">
+                                                                    <options/>
+                                                                </textTab>
+                                                                <textTab alignment="left" location="216">
+                                                                    <options/>
+                                                                </textTab>
+                                                                <textTab alignment="left" location="252">
+                                                                    <options/>
+                                                                </textTab>
+                                                                <textTab alignment="left" location="288">
+                                                                    <options/>
+                                                                </textTab>
+                                                                <textTab alignment="left" location="324">
+                                                                    <options/>
+                                                                </textTab>
+                                                                <textTab alignment="left" location="360">
+                                                                    <options/>
+                                                                </textTab>
+                                                                <textTab alignment="left" location="396">
+                                                                    <options/>
+                                                                </textTab>
+                                                                <textTab alignment="left" location="432">
+                                                                    <options/>
+                                                                </textTab>
+                                                            </tabStops>
+                                                        </paragraphStyle>
+                                                    </attributes>
+                                                </fragment>
+                                                <fragment content="I created the logo and influenced the design of Remember Me. I">
+                                                    <attributes>
+                                                        <font key="NSFont" size="13" name="Amble-Regular"/>
+                                                        <font key="NSOriginalFont" size="12" name="Amble-Regular"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural">
+                                                            <tabStops>
+                                                                <textTab alignment="left" location="36">
+                                                                    <options/>
+                                                                </textTab>
+                                                                <textTab alignment="left" location="72">
+                                                                    <options/>
+                                                                </textTab>
+                                                                <textTab alignment="left" location="108">
+                                                                    <options/>
+                                                                </textTab>
+                                                                <textTab alignment="left" location="144">
+                                                                    <options/>
+                                                                </textTab>
+                                                                <textTab alignment="left" location="180">
+                                                                    <options/>
+                                                                </textTab>
+                                                                <textTab alignment="left" location="216">
+                                                                    <options/>
+                                                                </textTab>
+                                                                <textTab alignment="left" location="252">
+                                                                    <options/>
+                                                                </textTab>
+                                                                <textTab alignment="left" location="288">
+                                                                    <options/>
+                                                                </textTab>
+                                                                <textTab alignment="left" location="324">
+                                                                    <options/>
+                                                                </textTab>
+                                                                <textTab alignment="left" location="360">
+                                                                    <options/>
+                                                                </textTab>
+                                                                <textTab alignment="left" location="396">
+                                                                    <options/>
+                                                                </textTab>
+                                                                <textTab alignment="left" location="432">
+                                                                    <options/>
+                                                                </textTab>
+                                                            </tabStops>
+                                                        </paragraphStyle>
+                                                    </attributes>
+                                                </fragment>
+                                                <fragment content=" am also">
+                                                    <attributes>
+                                                        <font key="NSFont" size="12" name="Amble-Regular"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural">
+                                                            <tabStops>
+                                                                <textTab alignment="left" location="36">
+                                                                    <options/>
+                                                                </textTab>
+                                                                <textTab alignment="left" location="72">
+                                                                    <options/>
+                                                                </textTab>
+                                                                <textTab alignment="left" location="108">
+                                                                    <options/>
+                                                                </textTab>
+                                                                <textTab alignment="left" location="144">
+                                                                    <options/>
+                                                                </textTab>
+                                                                <textTab alignment="left" location="180">
+                                                                    <options/>
+                                                                </textTab>
+                                                                <textTab alignment="left" location="216">
+                                                                    <options/>
+                                                                </textTab>
+                                                                <textTab alignment="left" location="252">
+                                                                    <options/>
+                                                                </textTab>
+                                                                <textTab alignment="left" location="288">
+                                                                    <options/>
+                                                                </textTab>
+                                                                <textTab alignment="left" location="324">
+                                                                    <options/>
+                                                                </textTab>
+                                                                <textTab alignment="left" location="360">
+                                                                    <options/>
+                                                                </textTab>
+                                                                <textTab alignment="left" location="396">
+                                                                    <options/>
+                                                                </textTab>
+                                                                <textTab alignment="left" location="432">
+                                                                    <options/>
+                                                                </textTab>
+                                                            </tabStops>
+                                                        </paragraphStyle>
+                                                    </attributes>
+                                                </fragment>
+                                                <fragment content=" the designer of the two. I have worked with Keeton before to create an application for my website AppleTimer">
+                                                    <attributes>
+                                                        <font key="NSFont" size="13" name="Amble-Regular"/>
+                                                        <font key="NSOriginalFont" size="12" name="Amble-Regular"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural">
+                                                            <tabStops>
+                                                                <textTab alignment="left" location="36">
+                                                                    <options/>
+                                                                </textTab>
+                                                                <textTab alignment="left" location="72">
+                                                                    <options/>
+                                                                </textTab>
+                                                                <textTab alignment="left" location="108">
+                                                                    <options/>
+                                                                </textTab>
+                                                                <textTab alignment="left" location="144">
+                                                                    <options/>
+                                                                </textTab>
+                                                                <textTab alignment="left" location="180">
+                                                                    <options/>
+                                                                </textTab>
+                                                                <textTab alignment="left" location="216">
+                                                                    <options/>
+                                                                </textTab>
+                                                                <textTab alignment="left" location="252">
+                                                                    <options/>
+                                                                </textTab>
+                                                                <textTab alignment="left" location="288">
+                                                                    <options/>
+                                                                </textTab>
+                                                                <textTab alignment="left" location="324">
+                                                                    <options/>
+                                                                </textTab>
+                                                                <textTab alignment="left" location="360">
+                                                                    <options/>
+                                                                </textTab>
+                                                                <textTab alignment="left" location="396">
+                                                                    <options/>
+                                                                </textTab>
+                                                                <textTab alignment="left" location="432">
+                                                                    <options/>
+                                                                </textTab>
+                                                            </tabStops>
+                                                        </paragraphStyle>
+                                                    </attributes>
+                                                </fragment>
+                                                <fragment content=", which you can visit at AppleTimer.com">
+                                                    <attributes>
+                                                        <font key="NSFont" size="12" name="Amble-Regular"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural">
+                                                            <tabStops>
+                                                                <textTab alignment="left" location="36">
+                                                                    <options/>
+                                                                </textTab>
+                                                                <textTab alignment="left" location="72">
+                                                                    <options/>
+                                                                </textTab>
+                                                                <textTab alignment="left" location="108">
+                                                                    <options/>
+                                                                </textTab>
+                                                                <textTab alignment="left" location="144">
+                                                                    <options/>
+                                                                </textTab>
+                                                                <textTab alignment="left" location="180">
+                                                                    <options/>
+                                                                </textTab>
+                                                                <textTab alignment="left" location="216">
+                                                                    <options/>
+                                                                </textTab>
+                                                                <textTab alignment="left" location="252">
+                                                                    <options/>
+                                                                </textTab>
+                                                                <textTab alignment="left" location="288">
+                                                                    <options/>
+                                                                </textTab>
+                                                                <textTab alignment="left" location="324">
+                                                                    <options/>
+                                                                </textTab>
+                                                                <textTab alignment="left" location="360">
+                                                                    <options/>
+                                                                </textTab>
+                                                                <textTab alignment="left" location="396">
+                                                                    <options/>
+                                                                </textTab>
+                                                                <textTab alignment="left" location="432">
+                                                                    <options/>
+                                                                </textTab>
+                                                            </tabStops>
+                                                        </paragraphStyle>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES" calendarEvent="YES"/>
+                                        </textView>
+                                    </subviews>
+                                </view>
+                                <blurEffect style="light"/>
+                            </visualEffectView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Remember" id="aVo-PY-DXk">
+                        <barButtonItem key="leftBarButtonItem" image="Menu" id="sYK-Y1-d4L">
+                            <color key="tintColor" red="0.2783651352" green="0.1853051037" blue="0.59323644639999995" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="showMenu" destination="kxi-Xm-SGm" id="yyq-61-sCI"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
+                    <connections>
+                        <outlet property="aboutText" destination="W2i-BY-bxa" id="3s6-GI-laL"/>
+                        <outlet property="githubButton" destination="ueV-Gv-YWH" id="Yz5-Ko-DqN"/>
+                        <outlet property="mailButton" destination="diV-Ub-ud9" id="I5X-j5-ZHx"/>
+                        <outlet property="safariButton" destination="9QK-uy-sbD" id="AZZ-PU-Lwn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aGZ-M6-ktr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1349" y="-1048"/>
+        </scene>
+        <!--Help-->
+        <scene sceneID="s6j-8b-wtx">
+            <objects>
+                <viewController storyboardIdentifier="helpController" title="Help" useStoryboardIdentifierAsRestorationIdentifier="YES" id="alO-g2-w6a" customClass="HelpViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5nd-po-krp"/>
+                        <viewControllerLayoutGuide type="bottom" id="DlH-bj-kU9"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="LRu-SL-8De">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Foggy Blue Sky" translatesAutoresizingMaskIntoConstraints="NO" id="pD8-vF-WMH">
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                            </imageView>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9K5-tu-WmR">
+                                <rect key="frame" x="0.0" y="99" width="768" height="6"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" id="qR1-uL-rsE">
+                                    <rect key="frame" x="0.0" y="0.0" width="768" height="6"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                </view>
+                                <blurEffect style="light"/>
+                            </visualEffectView>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Krc-xM-hW7">
+                                <rect key="frame" x="0.0" y="113" width="768" height="891"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES" calendarEvent="YES"/>
+                            </webView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Help Desk" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rby-kX-vxs">
+                                <rect key="frame" x="224" y="52" width="320" height="39"/>
+                                <fontDescription key="fontDescription" name="AlegreyaSans-Light" family="Alegreya Sans" pointSize="32"/>
+                                <color key="textColor" red="0.90823972230000005" green="0.92638683320000004" blue="0.93171715740000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Remember" id="vHz-xx-ycq">
+                        <barButtonItem key="leftBarButtonItem" image="Menu" id="TAH-cu-hfH">
+                            <color key="tintColor" red="0.2783651352" green="0.1853051037" blue="0.59323644639999995" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="showMenu" destination="alO-g2-w6a" id="PP1-XD-ebj"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
+                    <connections>
+                        <outlet property="webView" destination="Krc-xM-hW7" id="b0f-Pp-0JT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zMS-k7-yNF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2358" y="-1048"/>
+        </scene>
+        <!--Navigation-->
+        <scene sceneID="VyM-7P-IsW">
+            <objects>
+                <navigationController storyboardIdentifier="contentController" title="Navigation" useStoryboardIdentifierAsRestorationIdentifier="YES" id="4zC-f7-fXk" customClass="NavigationViewController" sceneMemberID="viewController">
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="56t-i6-dlL">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="ViL-NN-DNo" kind="relationship" relationship="rootViewController" id="fFz-Mc-M47"/>
+                        <segue destination="wZo-CA-478" kind="show" identifier="Third" id="HVH-dm-i2C"/>
+                        <segue destination="TIS-xJ-jje" kind="show" identifier="Second" id="Fcj-va-aLz"/>
+                        <segue destination="kxi-Xm-SGm" kind="show" identifier="Fourth" id="NRZ-mf-Zen"/>
+                        <segue destination="alO-g2-w6a" kind="show" identifier="Fifth" id="DYx-BW-zu5"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YmU-1r-h1J" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="318" y="129"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="XGJ-cc-wcC">
+            <objects>
+                <viewController storyboardIdentifier="homeController" title="Home" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ViL-NN-DNo" customClass="HomeViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="g2U-jG-5AP"/>
+                        <viewControllerLayoutGuide type="bottom" id="iOr-53-Sct"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="wIj-0a-45w">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Foggy Blue Sky" translatesAutoresizingMaskIntoConstraints="NO" id="O6l-M4-7nj">
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Remember" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K1e-rF-5uK">
+                                <rect key="frame" x="224" y="52" width="320" height="39"/>
+                                <fontDescription key="fontDescription" name="Amble-LightCondensed" family="Amble" pointSize="32"/>
+                                <color key="textColor" red="0.90823972230000005" green="0.92638683320000004" blue="0.93171715740000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Remember This Tip:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TGb-Lq-gaP">
+                                <rect key="frame" x="281" y="441" width="206" height="26"/>
+                                <fontDescription key="fontDescription" name="Amble-Regular" family="Amble" pointSize="20"/>
+                                <color key="textColor" red="0.90823972230000005" green="0.92638683320000004" blue="0.93171715740000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ENX-eq-HuQ">
+                                <rect key="frame" x="0.0" y="99" width="768" height="6"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" id="dC5-FD-E5q">
+                                    <rect key="frame" x="0.0" y="0.0" width="768" height="6"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                </view>
+                                <blurEffect style="light"/>
+                            </visualEffectView>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MTS-jG-kF9">
+                                <rect key="frame" x="0.0" y="469" width="768" height="88"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" id="eta-6E-wkG">
+                                    <rect key="frame" x="0.0" y="0.0" width="768" height="88"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Lorem ipsum" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A9H-3e-k2l">
+                                            <rect key="frame" x="80" y="0.0" width="608" height="88"/>
+                                            <fontDescription key="fontDescription" name="Amble-Regular" family="Amble" pointSize="18"/>
+                                            <color key="textColor" red="0.90823972230000005" green="0.92638683320000004" blue="0.93171715740000005" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </view>
+                                <blurEffect style="light"/>
+                            </visualEffectView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Icon Rounded" translatesAutoresizingMaskIntoConstraints="NO" id="omj-FD-a9u">
+                                <rect key="frame" x="224" y="113" width="320" height="320"/>
+                            </imageView>
+                        </subviews>
+                    </view>
+                    <navigationItem key="navigationItem" title="Remember" id="DWy-TH-whD">
+                        <barButtonItem key="leftBarButtonItem" image="Menu" id="1V0-bW-b2b">
+                            <color key="tintColor" red="0.2783651352" green="0.1853051037" blue="0.59323644639999995" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="showMenu" destination="ViL-NN-DNo" id="OCY-kV-JAQ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
+                    <connections>
+                        <outlet property="logoImage" destination="omj-FD-a9u" id="fQK-6L-8T3"/>
+                        <outlet property="tipsLabel" destination="A9H-3e-k2l" id="Kf2-SK-kmK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1kM-In-Te3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2341" y="129"/>
+        </scene>
+        <!--Notes-->
+        <scene sceneID="799-pT-qUU">
+            <objects>
+                <viewController storyboardIdentifier="secondController" title="Notes" useStoryboardIdentifierAsRestorationIdentifier="YES" id="TIS-xJ-jje" customClass="NotesTableController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="WZF-su-Cau"/>
+                        <viewControllerLayoutGuide type="bottom" id="QqZ-6h-dQV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="wsD-EZ-XXQ">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Foggy Blue Sky" translatesAutoresizingMaskIntoConstraints="NO" id="KMt-EP-5hV">
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                            </imageView>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MeE-8O-UQi">
+                                <rect key="frame" x="0.0" y="124" width="768" height="888"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" id="0qe-ML-KzH">
+                                    <rect key="frame" x="0.0" y="0.0" width="768" height="888"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                </view>
+                                <blurEffect style="light"/>
+                            </visualEffectView>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Nkf-xI-XGC">
+                                <rect key="frame" x="0.0" y="99" width="768" height="6"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" id="onq-jP-aWA">
+                                    <rect key="frame" x="0.0" y="0.0" width="768" height="6"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                </view>
+                                <blurEffect style="light"/>
+                            </visualEffectView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="96" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="jxH-kY-RFc">
+                                <rect key="frame" x="0.0" y="124" width="784" height="888"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" alpha="0.0" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="noteCell" rowHeight="96" id="jJh-6F-7NH" customClass="NotesTableCell">
+                                        <rect key="frame" x="0.0" y="22" width="784" height="96"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="jJh-6F-7NH" id="TG1-Re-ud1">
+                                            <rect key="frame" x="0.0" y="0.0" width="784" height="95"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.75" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Menu Top" translatesAutoresizingMaskIntoConstraints="NO" id="qYJ-Tr-5za">
+                                                    <rect key="frame" x="0.0" y="0.0" width="768" height="96"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NZh-8t-vSy">
+                                                    <rect key="frame" x="8" y="8" width="280" height="24"/>
+                                                    <fontDescription key="fontDescription" name="Amble-Bold" family="Amble" pointSize="20"/>
+                                                    <color key="textColor" red="0.12637259066104889" green="0.12639245390892029" blue="0.12636536359786987" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Remember:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wHJ-U0-KVC">
+                                                    <rect key="frame" x="8" y="41" width="280" height="21"/>
+                                                    <fontDescription key="fontDescription" name="Amble-Regular" family="Amble" pointSize="18"/>
+                                                    <color key="textColor" red="0.12637259066104889" green="0.12639245390892029" blue="0.12636536359786987" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Author:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZjD-3y-TPA">
+                                                    <rect key="frame" x="8" y="70" width="280" height="21"/>
+                                                    <fontDescription key="fontDescription" name="Amble-Regular" family="Amble" pointSize="18"/>
+                                                    <color key="textColor" red="0.11181893199682236" green="0.1118365004658699" blue="0.1118125319480896" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="author" destination="ZjD-3y-TPA" id="vgO-2A-65u"/>
+                                            <outlet property="customBackground" destination="qYJ-Tr-5za" id="aQb-dG-Oc1"/>
+                                            <outlet property="reminder" destination="wHJ-U0-KVC" id="QFa-ge-xZS"/>
+                                            <outlet property="title" destination="NZh-8t-vSy" id="JdA-hW-7un"/>
+                                            <segue destination="vbh-s1-EDa" kind="show" identifier="pushCell" id="vin-ag-34O"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Today's Reminders" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UiH-Ba-AAs">
+                                <rect key="frame" x="224" y="52" width="320" height="39"/>
+                                <fontDescription key="fontDescription" name="Amble-LightCondensed" family="Amble" pointSize="32"/>
+                                <color key="textColor" red="0.90823972225189209" green="0.92638683319091797" blue="0.9317171573638916" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Remember" id="hVt-8C-2a8">
+                        <barButtonItem key="leftBarButtonItem" image="Menu" id="zRp-Ei-tu3">
+                            <color key="tintColor" red="0.2783651352" green="0.1853051037" blue="0.59323644639999995" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="showMenu" destination="TIS-xJ-jje" id="RK0-p9-NDT"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="compose" id="FzZ-Wt-EoR">
+                            <color key="tintColor" red="0.2783651352" green="0.1853051037" blue="0.59323644639999995" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="addReminder:" destination="TIS-xJ-jje" id="N2L-qm-bYQ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
+                    <connections>
+                        <outlet property="reminderTable" destination="jxH-kY-RFc" id="oyu-ZJ-I4x"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FoC-50-Ctg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1349" y="1329"/>
+        </scene>
+        <!--Details-->
+        <scene sceneID="KYM-k9-VUt">
+            <objects>
+                <viewController storyboardIdentifier="detailController" title="Details" id="vbh-s1-EDa" customClass="DetailViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="U9g-hB-JZj"/>
+                        <viewControllerLayoutGuide type="bottom" id="XFT-Vk-vGw"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="dLG-r8-b3c">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Glacier National Park" translatesAutoresizingMaskIntoConstraints="NO" id="GWX-1V-NoE">
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                            </imageView>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xqj-0d-Ggy">
+                                <rect key="frame" x="0.0" y="102" width="768" height="932"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" id="nwN-LZ-ufE">
+                                    <rect key="frame" x="0.0" y="0.0" width="768" height="932"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <imageView multipleTouchEnabled="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="agV-ff-PJt">
+                                            <rect key="frame" x="430" y="562" width="256" height="256"/>
+                                            <color key="backgroundColor" red="0.90823972225189209" green="0.92638683319091797" blue="0.9317171573638916" alpha="0.75" colorSpace="calibratedRGB"/>
+                                        </imageView>
+                                        <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" rotateEnabled="NO" pitchEnabled="NO" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gzR-J8-VPx">
+                                            <rect key="frame" x="84" y="562" width="256" height="256"/>
+                                        </mapView>
+                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" pagingEnabled="YES" indicatorStyle="black" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mb6-F9-M4n">
+                                            <rect key="frame" x="84" y="46" width="600" height="488"/>
+                                            <color key="backgroundColor" red="0.90823972225189209" green="0.92638683319091797" blue="0.9317171573638916" alpha="0.75" colorSpace="calibratedRGB"/>
+                                            <attributedString key="attributedText">
+                                                <fragment>
+                                                    <string key="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam nec nisl et augue viverra tincidunt. Maecenas pellentesque luctus nisl vel rhoncus. Praesent vitae ante libero. Pellentesque velit ipsum, lacinia sed nisi vitae, ornare pellentesque enim. Nullam consectetur mi lacus, nec pharetra eros finibus in. Nulla euismod, dui et feugiat venenatis, quam magna tempor eros, vel ultricies ex mauris ac metus. Sed lorem nunc, consequat id erat suscipit, semper malesuada tortor. Vestibulum non tempor dolor, non facilisis neque. Nulla a metus magna. Suspendisse eu quam interdum, placerat tortor sit amet, tincidunt felis. In lorem erat, facilisis quis magna suscipit, tempus porta turpis. Praesent suscipit arcu vitae metus laoreet, sit amet euismod purus pretium.
+
+Aliquam maximus et enim eu vestibulum. Aenean sem ipsum, luctus vel ligula ac, mattis rhoncus nisl. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin sed viverra est, a dignissim est. Vestibulum fermentum, orci eget semper vulputate, augue orci suscipit mauris, nec tincidunt magna sem at risus. Aliquam at tellus ac ante consequat consequat. Mauris eu turpis urna. Aliquam ultricies mauris non purus auctor, sagittis tincidunt justo euismod. Nunc luctus velit vitae enim ornare bibendum. Nullam dapibus nibh ac condimentum blandit. Donec rutrum odio quis sapien tempus, sit amet lobortis lectus sodales. Phasellus felis libero, tincidunt sit amet sem vel, posuere blandit diam. In sit amet vehicula mi, sed volutpat quam. Morbi luctus mauris ac sollicitudin sodales. Duis tincidunt quam sit amet efficitur dictum. Sed vestibulum massa non eros gravida facilisis.</string>
+                                                    <attributes>
+                                                        <color key="NSColor" red="0.11181893199682236" green="0.1118365004658699" blue="0.1118125319480896" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <font key="NSFont" size="14" name="Amble-Regular"/>
+                                                        <font key="NSOriginalFont" size="12" name="Amble-Regular"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        </textView>
+                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Author" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Dn9-nG-v82">
+                                            <rect key="frame" x="82" y="8" width="604" height="30"/>
+                                            <color key="backgroundColor" red="0.90823972230000005" green="0.92638683320000004" blue="0.93171715740000005" alpha="0.75" colorSpace="calibratedRGB"/>
+                                            <fontDescription key="fontDescription" name="Amble-Regular" family="Amble" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="done"/>
+                                            <connections>
+                                                <action selector="textFieldDidBeginEditing:" destination="vbh-s1-EDa" eventType="editingDidBegin" id="uaM-L9-1ml"/>
+                                                <action selector="textFieldDidEndEditing:" destination="vbh-s1-EDa" eventType="editingDidEnd" id="MWu-0A-rq9"/>
+                                            </connections>
+                                        </textField>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mWq-9f-hQg">
+                                            <rect key="frame" x="234" y="872" width="300" height="32"/>
+                                            <color key="backgroundColor" red="0.90823972225189209" green="0.92638683319091797" blue="0.9317171573638916" alpha="0.75" colorSpace="calibratedRGB"/>
+                                            <fontDescription key="fontDescription" name="Amble-Regular" family="Amble" pointSize="16"/>
+                                            <state key="normal" title="Configure Reminder">
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="showDateViewButton:" destination="vbh-s1-EDa" eventType="touchUpInside" id="kMn-X0-iBd"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i9D-2y-r3r">
+                                            <rect key="frame" x="589" y="542" width="128" height="128"/>
+                                            <state key="normal" image="Paperclip">
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="showImagePickerForPhotoPicker:" destination="vbh-s1-EDa" eventType="touchUpInside" id="l4A-52-BeS"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                </view>
+                                <blurEffect style="light"/>
+                            </visualEffectView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Edit Reminder" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ohv-WU-A3c">
+                                <rect key="frame" x="224" y="52" width="320" height="39"/>
+                                <fontDescription key="fontDescription" name="Amble-LightCondensed" family="Amble" pointSize="32"/>
+                                <color key="textColor" red="0.90823972230000005" green="0.92638683320000004" blue="0.93171715740000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Note" id="iL1-H9-if7">
+                        <barButtonItem key="leftBarButtonItem" image="Menu" id="exx-u1-kFn">
+                            <color key="tintColor" red="0.2783651352" green="0.1853051037" blue="0.59323644639999995" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="showMenu" destination="vbh-s1-EDa" id="31O-We-eHp"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="TdR-ro-9gP">
+                            <color key="tintColor" red="0.2783651352" green="0.1853051037" blue="0.59323644639999995" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="dismissView:" destination="vbh-s1-EDa" id="2ta-Bv-Ve6"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
+                    <connections>
+                        <outlet property="authorField" destination="Dn9-nG-v82" id="V78-Kx-Mla"/>
+                        <outlet property="dateButton" destination="mWq-9f-hQg" id="vtg-cu-sJB"/>
+                        <outlet property="imageView" destination="agV-ff-PJt" id="a8g-wU-hBz"/>
+                        <outlet property="mapView" destination="gzR-J8-VPx" id="ZHK-iv-NZf"/>
+                        <outlet property="navigationItem" destination="iL1-H9-if7" id="ZIM-5H-hgT"/>
+                        <outlet property="textView" destination="mb6-F9-M4n" id="kVw-Oj-dOy"/>
+                        <segue destination="TIS-xJ-jje" kind="show" identifier="reversePushCell" id="Zpg-jo-7KN"/>
+                        <segue destination="NIh-nZ-IJt" kind="presentation" identifier="photoPush" id="niq-Kc-5V7"/>
+                        <segue destination="SEl-yt-nAD" kind="presentation" identifier="mapPush" id="7Hy-cH-C10"/>
+                        <segue destination="Qcg-JZ-zzA" kind="presentation" identifier="datePush" id="rZe-Rn-47k"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wN1-x1-ASC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2341" y="1329"/>
+        </scene>
+        <!--Photo-->
+        <scene sceneID="P4G-GZ-HC8">
+            <objects>
+                <viewController storyboardIdentifier="photoController" title="Photo" useStoryboardIdentifierAsRestorationIdentifier="YES" id="NIh-nZ-IJt" customClass="PhotoViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="SOo-vB-P1H"/>
+                        <viewControllerLayoutGuide type="bottom" id="8kT-Yj-FAC"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Cy1-Ol-Cwf">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Foggy Blue Sky" translatesAutoresizingMaskIntoConstraints="NO" id="tYK-ra-xnA">
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Photo Viewer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bpQ-Hs-Vdo">
+                                <rect key="frame" x="224" y="8" width="320" height="39"/>
+                                <fontDescription key="fontDescription" name="Amble-LightCondensed" family="Amble" pointSize="32"/>
+                                <color key="textColor" red="0.90823972230000005" green="0.92638683320000004" blue="0.93171715740000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kG7-cu-Kfa">
+                                <rect key="frame" x="0.0" y="55" width="768" height="6"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" id="WGp-II-WxT">
+                                    <rect key="frame" x="0.0" y="0.0" width="768" height="6"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                </view>
+                                <blurEffect style="light"/>
+                            </visualEffectView>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="j4z-lD-jBR">
+                                <rect key="frame" x="224" y="974" width="320" height="30"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" id="26h-gg-l7l">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="30"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="egA-hb-KAh">
+                                            <rect key="frame" x="10" y="0.0" width="300" height="30"/>
+                                            <color key="backgroundColor" red="0.90823972230000005" green="0.92638683320000004" blue="0.93171715740000005" alpha="0.75" colorSpace="calibratedRGB"/>
+                                            <fontDescription key="fontDescription" name="Amble-Regular" family="Amble" pointSize="16"/>
+                                            <state key="normal" title="Done">
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="dismissView:" destination="NIh-nZ-IJt" eventType="touchUpInside" id="koP-b4-Ljr"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                </view>
+                                <blurEffect style="light"/>
+                            </visualEffectView>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cg8-Xm-m22">
+                                <rect key="frame" x="64" y="192" width="640" height="640"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" id="qgc-ZZ-28T">
+                                    <rect key="frame" x="0.0" y="0.0" width="640" height="640"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fPL-n3-PfG">
+                                            <rect key="frame" x="32" y="32" width="576" height="576"/>
+                                        </imageView>
+                                    </subviews>
+                                </view>
+                                <blurEffect style="light"/>
+                            </visualEffectView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
+                    <connections>
+                        <outlet property="dismissButton" destination="egA-hb-KAh" id="REt-SY-x9Z"/>
+                        <outlet property="photoView" destination="fPL-n3-PfG" id="MLi-mU-IaH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Sj1-ad-6xa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3390" y="500"/>
+        </scene>
+        <!--Menu-->
+        <scene sceneID="dMI-RR-UKE">
+            <objects>
+                <tableViewController storyboardIdentifier="menuController" title="Menu" useStoryboardIdentifierAsRestorationIdentifier="YES" id="k79-Nn-uVl" customClass="MenuViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="l39-Uy-3QH">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="rYm-3w-O8A">
+                            <rect key="frame" x="0.0" y="0.0" width="768" height="320"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Menu Top" translatesAutoresizingMaskIntoConstraints="NO" id="Krh-Qd-ddd">
+                                    <rect key="frame" x="0.0" y="0.0" width="768" height="320"/>
+                                </imageView>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Default Avatar" translatesAutoresizingMaskIntoConstraints="NO" id="EM9-Px-mH3">
+                                    <rect key="frame" x="8" y="68" width="184" height="184"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </imageView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Beta Version 1.0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LKT-bQ-nqc">
+                                    <rect key="frame" x="200" y="190" width="248" height="16"/>
+                                    <fontDescription key="fontDescription" name="Amble-Regular" family="Amble" pointSize="14"/>
+                                    <color key="textColor" red="0.90823972230000005" green="0.92638683320000004" blue="0.93171715740000005" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Remember" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uC7-vo-alV">
+                                    <rect key="frame" x="200" y="114" width="240" height="64"/>
+                                    <fontDescription key="fontDescription" name="Amble-Regular" family="Amble" pointSize="28"/>
+                                    <color key="textColor" red="0.90823972225189209" green="0.92638683319091797" blue="0.9317171573638916" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        </view>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="108" id="OTk-Ng-Ply" customClass="MenuViewCell">
+                                <rect key="frame" x="0.0" y="342" width="768" height="108"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="OTk-Ng-Ply" id="aQa-DF-LSi">
+                                    <rect key="frame" x="0.0" y="0.0" width="768" height="107"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rqa-YO-0jD">
+                                            <rect key="frame" x="8" y="22" width="64" height="64"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FCc-tL-mRn">
+                                            <rect key="frame" x="80" y="24" width="256" height="60"/>
+                                            <fontDescription key="fontDescription" name="Amble-Regular" family="Amble" pointSize="22"/>
+                                            <color key="textColor" red="0.11181893199682236" green="0.1118365004658699" blue="0.1118125319480896" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="icon" destination="rqa-YO-0jD" id="80H-UW-E2q"/>
+                                    <outlet property="title" destination="FCc-tL-mRn" id="ek2-oF-tGG"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="k79-Nn-uVl" id="Chl-Eu-UJo"/>
+                            <outlet property="delegate" destination="k79-Nn-uVl" id="Ee8-vA-EEf"/>
+                        </connections>
+                    </tableView>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
+                    <connections>
+                        <outlet property="contactImage" destination="EM9-Px-mH3" id="dTh-Nm-ds5"/>
+                        <outlet property="userNameLabel" destination="uC7-vo-alV" id="WE2-Wc-GVu"/>
+                        <outlet property="versionLabel" destination="LKT-bQ-nqc" id="08V-TP-iA6"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5Sk-Bv-yYb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-610" y="1329"/>
+        </scene>
+        <!--Settings-->
+        <scene sceneID="mc6-IO-bf8">
+            <objects>
+                <viewController storyboardIdentifier="thirdController" title="Settings" useStoryboardIdentifierAsRestorationIdentifier="YES" id="wZo-CA-478" customClass="SettingsViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Mdv-id-6uN"/>
+                        <viewControllerLayoutGuide type="bottom" id="itb-O4-wyj"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="qGC-3A-rGK">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Foggy Blue Sky" translatesAutoresizingMaskIntoConstraints="NO" id="TIp-zL-BNV">
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tweaks And Settings" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Okq-QP-cWq">
+                                <rect key="frame" x="224" y="52" width="320" height="39"/>
+                                <fontDescription key="fontDescription" name="Amble-LightCondensed" family="Amble" pointSize="32"/>
+                                <color key="textColor" red="0.90823972230000005" green="0.92638683320000004" blue="0.93171715740000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="li2-9T-Xon">
+                                <rect key="frame" x="0.0" y="99" width="768" height="6"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" id="ikH-Q1-m27">
+                                    <rect key="frame" x="0.0" y="0.0" width="768" height="6"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                </view>
+                                <blurEffect style="light"/>
+                            </visualEffectView>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9Vq-He-iJs">
+                                <rect key="frame" x="0.0" y="192" width="768" height="60"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" id="RlM-oe-lTu">
+                                    <rect key="frame" x="0.0" y="0.0" width="768" height="60"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="User Name:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6A0-LO-eM0">
+                                            <rect key="frame" x="240" y="0.0" width="94" height="30"/>
+                                            <fontDescription key="fontDescription" name="Amble-Regular" family="Amble" pointSize="16"/>
+                                            <color key="textColor" red="0.90823972230000005" green="0.92638683320000004" blue="0.93171715740000005" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Your Name Here" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hbW-jn-Fd6">
+                                            <rect key="frame" x="342" y="0.0" width="194" height="30"/>
+                                            <fontDescription key="fontDescription" name="Amble-Regular" family="Amble" pointSize="12"/>
+                                            <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
+                                            <connections>
+                                                <action selector="authorValueChanged:" destination="wZo-CA-478" eventType="valueChanged" id="XVb-rv-Aco"/>
+                                            </connections>
+                                        </textField>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="This name will be used as the default author." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tmp-aE-mM9">
+                                            <rect key="frame" x="224" y="34" width="320" height="26"/>
+                                            <fontDescription key="fontDescription" name="Amble-Regular" family="Amble" pointSize="15"/>
+                                            <color key="textColor" red="0.90823972230000005" green="0.92638683320000004" blue="0.93171715740000005" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </view>
+                                <blurEffect style="light"/>
+                            </visualEffectView>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Sry-MU-Tbs">
+                                <rect key="frame" x="0.0" y="260" width="768" height="60"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" id="9cq-xe-CI0">
+                                    <rect key="frame" x="0.0" y="0.0" width="768" height="60"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2E1-fa-PGH">
+                                            <rect key="frame" x="304" y="0.0" width="160" height="22"/>
+                                            <state key="normal" title="Remove Contact Photo">
+                                                <color key="titleColor" red="0.85043728351593018" green="0.21816034615039825" blue="0.15920260548591614" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="deletePhoto:" destination="wZo-CA-478" eventType="touchUpInside" id="KFe-py-H6j"/>
+                                            </connections>
+                                        </button>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Your contact image is displayed above your name in the slide out menu." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DbE-ng-XLI">
+                                            <rect key="frame" x="224" y="24" width="320" height="36"/>
+                                            <fontDescription key="fontDescription" name="Amble-Regular" family="Amble" pointSize="15"/>
+                                            <color key="textColor" red="0.90823972230000005" green="0.92638683320000004" blue="0.93171715740000005" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </view>
+                                <blurEffect style="light"/>
+                            </visualEffectView>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3Pe-Pf-NxT">
+                                <rect key="frame" x="0.0" y="124" width="768" height="60"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" id="TvK-2y-2ox">
+                                    <rect key="frame" x="0.0" y="0.0" width="768" height="60"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Note Text Size:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="49v-iL-Vla">
+                                            <rect key="frame" x="240" y="0.0" width="112" height="31"/>
+                                            <fontDescription key="fontDescription" name="Amble-Regular" family="Amble" pointSize="16"/>
+                                            <color key="textColor" red="0.90823972225189209" green="0.92638683319091797" blue="0.9317171573638916" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="14" minValue="12" maxValue="22" translatesAutoresizingMaskIntoConstraints="NO" id="Jjb-Ai-hyZ">
+                                            <rect key="frame" x="358" y="0.0" width="176" height="31"/>
+                                            <connections>
+                                                <action selector="textSizeValueChanged:" destination="wZo-CA-478" eventType="valueChanged" id="d3i-dV-7Ft"/>
+                                            </connections>
+                                        </slider>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Text Size: 14pt" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DbK-XQ-vAO">
+                                            <rect key="frame" x="375" y="38" width="142" height="22"/>
+                                            <fontDescription key="fontDescription" name="Amble-Regular" family="Amble" pointSize="16"/>
+                                            <color key="textColor" red="0.90823972230000005" green="0.92638683320000004" blue="0.93171715740000005" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </view>
+                                <blurEffect style="light"/>
+                            </visualEffectView>
+                        </subviews>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Remember" id="ZqS-48-z4c">
+                        <barButtonItem key="leftBarButtonItem" image="Menu" id="6uF-Xg-J5P">
+                            <color key="tintColor" red="0.27836513519287109" green="0.18530510365962982" blue="0.59323644638061523" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="showMenu" destination="wZo-CA-478" id="pju-ae-Npu"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
+                    <connections>
+                        <outlet property="defaultAuthorField" destination="hbW-jn-Fd6" id="37v-Ei-ex4"/>
+                        <outlet property="textSizeLabel" destination="DbK-XQ-vAO" id="NkY-6C-l8p"/>
+                        <outlet property="textSizeSlider" destination="Jjb-Ai-hyZ" id="o6Z-55-PNT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UlT-tc-FN3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="318" y="1329"/>
+        </scene>
+        <!--Map-->
+        <scene sceneID="TYo-gU-Rai">
+            <objects>
+                <viewController storyboardIdentifier="mapController" title="Map" useStoryboardIdentifierAsRestorationIdentifier="YES" id="SEl-yt-nAD" customClass="MapViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="j84-q2-ecL"/>
+                        <viewControllerLayoutGuide type="bottom" id="DZd-1g-5pj"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fhN-vl-bNQ">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Foggy Blue Sky" translatesAutoresizingMaskIntoConstraints="NO" id="ayZ-S5-76i">
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                            </imageView>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="t42-6h-9Di">
+                                <rect key="frame" x="224" y="974" width="320" height="30"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" id="c3u-J7-wav">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="30"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KNM-s8-dLV">
+                                            <rect key="frame" x="10" y="0.0" width="300" height="30"/>
+                                            <color key="backgroundColor" red="0.90823972230000005" green="0.92638683320000004" blue="0.93171715740000005" alpha="0.75" colorSpace="calibratedRGB"/>
+                                            <fontDescription key="fontDescription" name="Amble-Regular" family="Amble" pointSize="16"/>
+                                            <state key="normal" title="Done">
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="dismissView:" destination="SEl-yt-nAD" eventType="touchUpInside" id="4SS-mF-JZL"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                </view>
+                                <blurEffect style="light"/>
+                            </visualEffectView>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UaG-nn-y6A">
+                                <rect key="frame" x="0.0" y="55" width="768" height="6"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" id="4c5-sM-CRD">
+                                    <rect key="frame" x="0.0" y="0.0" width="768" height="6"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                </view>
+                                <blurEffect style="light"/>
+                            </visualEffectView>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zCR-ah-HuC">
+                                <rect key="frame" x="64" y="192" width="640" height="640"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" id="Soh-2B-enq">
+                                    <rect key="frame" x="0.0" y="0.0" width="640" height="640"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="bgF-rs-yee">
+                                            <rect key="frame" x="32" y="32" width="576" height="576"/>
+                                        </mapView>
+                                    </subviews>
+                                </view>
+                                <blurEffect style="light"/>
+                            </visualEffectView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Map Viewer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0n2-ia-pem">
+                                <rect key="frame" x="224" y="8" width="320" height="39"/>
+                                <fontDescription key="fontDescription" name="Amble-LightCondensed" family="Amble" pointSize="32"/>
+                                <color key="textColor" red="0.90823972230000005" green="0.92638683320000004" blue="0.93171715740000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
+                    <connections>
+                        <outlet property="dismissButton" destination="KNM-s8-dLV" id="dOI-ee-7jr"/>
+                        <outlet property="mapView" destination="bgF-rs-yee" id="2ry-X0-UnW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xxv-Xf-HBm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3390" y="2039"/>
+        </scene>
+        <!--Date View Controller-->
+        <scene sceneID="yEZ-Bv-JNn">
+            <objects>
+                <viewController storyboardIdentifier="timeController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Qcg-JZ-zzA" customClass="DateViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="7bq-J3-4uj"/>
+                        <viewControllerLayoutGuide type="bottom" id="49P-Yt-ceM"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="FoY-PS-UeK">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Foggy Blue Sky" translatesAutoresizingMaskIntoConstraints="NO" id="I9Y-lo-942">
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Remember Me On:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="weE-kq-kDs">
+                                <rect key="frame" x="224" y="590" width="320" height="24"/>
+                                <fontDescription key="fontDescription" name="Amble-Regular" family="Amble" pointSize="22"/>
+                                <color key="textColor" red="0.90823972230000005" green="0.92638683320000004" blue="0.93171715740000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YbF-sH-y8r">
+                                <rect key="frame" x="0.0" y="55" width="768" height="6"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" id="bLo-Qt-Jqh">
+                                    <rect key="frame" x="0.0" y="0.0" width="768" height="6"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                </view>
+                                <blurEffect style="light"/>
+                            </visualEffectView>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZOY-sb-9gc">
+                                <rect key="frame" x="64" y="194" width="640" height="388"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" id="XWx-h5-1s6">
+                                    <rect key="frame" x="0.0" y="0.0" width="640" height="388"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="cgq-74-yQm">
+                                            <rect key="frame" x="0.0" y="32" width="640" height="324"/>
+                                            <date key="date" timeIntervalSinceReferenceDate="436802630.360735">
+                                                <!--2014-11-04 14:03:50 +0000-->
+                                            </date>
+                                            <connections>
+                                                <action selector="pickerValueChanged:" destination="Qcg-JZ-zzA" eventType="valueChanged" id="GV6-XY-tv5"/>
+                                            </connections>
+                                        </datePicker>
+                                    </subviews>
+                                </view>
+                                <blurEffect style="light"/>
+                            </visualEffectView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="September 10, 9:14 AM" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jZC-Rx-0AC">
+                                <rect key="frame" x="224" y="622" width="320" height="18"/>
+                                <fontDescription key="fontDescription" name="Amble-Regular" family="Amble" pointSize="18"/>
+                                <color key="textColor" red="0.90823972230000005" green="0.92638683320000004" blue="0.93171715740000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XzN-pi-9MW">
+                                <rect key="frame" x="224" y="974" width="320" height="30"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" id="Z3F-zx-cS3">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="30"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QuE-HY-KZY">
+                                            <rect key="frame" x="10" y="0.0" width="300" height="30"/>
+                                            <color key="backgroundColor" red="0.90823972230000005" green="0.92638683320000004" blue="0.93171715740000005" alpha="0.75" colorSpace="calibratedRGB"/>
+                                            <fontDescription key="fontDescription" name="Amble-Regular" family="Amble" pointSize="16"/>
+                                            <state key="normal" title="Done">
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="dismissView:" destination="Qcg-JZ-zzA" eventType="touchUpInside" id="VyO-Pb-nHx"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                </view>
+                                <blurEffect style="light"/>
+                            </visualEffectView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gcT-ak-pqs">
+                                <rect key="frame" x="224" y="69" width="320" height="52"/>
+                                <string key="text">Set the date on which you 
+want to be reminded below:</string>
+                                <fontDescription key="fontDescription" name="Amble-Regular" family="Amble" pointSize="22"/>
+                                <color key="textColor" red="0.90823972230000005" green="0.92638683320000004" blue="0.93171715740000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="c4d-PO-iy3">
+                                <rect key="frame" x="224" y="648" width="320" height="36"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" id="KPP-tl-vsM">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="36"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Chn-eU-1ds">
+                                            <rect key="frame" x="16" y="3" width="288" height="30"/>
+                                            <color key="backgroundColor" red="0.90823972230000005" green="0.92638683320000004" blue="0.93171715740000005" alpha="0.75" colorSpace="calibratedRGB"/>
+                                            <fontDescription key="fontDescription" name="Amble-Regular" family="Amble" pointSize="16"/>
+                                            <state key="normal" title="Set Reminder">
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="setReminder:" destination="Qcg-JZ-zzA" eventType="touchUpInside" id="905-Ta-qyY"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                </view>
+                                <blurEffect style="light"/>
+                            </visualEffectView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Remember Time" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SPk-ge-1cP">
+                                <rect key="frame" x="224" y="8" width="320" height="39"/>
+                                <fontDescription key="fontDescription" name="Amble-LightCondensed" family="Amble" pointSize="32"/>
+                                <color key="textColor" red="0.90823972230000005" green="0.92638683320000004" blue="0.93171715740000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
+                    <connections>
+                        <outlet property="buttonBlur" destination="KPP-tl-vsM" id="nPd-FG-IAJ"/>
+                        <outlet property="dateButton" destination="Chn-eU-1ds" id="Om2-wX-etf"/>
+                        <outlet property="dateLabel" destination="jZC-Rx-0AC" id="U0y-ta-iRu"/>
+                        <outlet property="datePicker" destination="cgq-74-yQm" id="J9h-o5-K6s"/>
+                        <outlet property="dismissButton" destination="QuE-HY-KZY" id="Iks-Ay-Ad0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rPS-Vh-Sff" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4353" y="1329"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Default Avatar" width="166" height="167"/>
+        <image name="Foggy Blue Sky" width="3264" height="2448"/>
+        <image name="Github" width="60" height="60"/>
+        <image name="Glacier National Park" width="1024" height="692"/>
+        <image name="Icon Rounded" width="512" height="512"/>
+        <image name="Mail" width="60" height="60"/>
+        <image name="Menu" width="30" height="13"/>
+        <image name="Menu Top" width="320" height="160"/>
+        <image name="Paperclip" width="120" height="120"/>
+        <image name="Pepper Circle" width="300" height="300"/>
+        <image name="Safari" width="60" height="60"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="Zpg-jo-7KN"/>
+    </inferredMetricsTieBreakers>
+    <color key="tintColor" red="0.2783651352" green="0.1853051037" blue="0.59323644639999995" alpha="1" colorSpace="calibratedRGB"/>
+</document>

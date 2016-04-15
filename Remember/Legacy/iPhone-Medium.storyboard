@@ -1,0 +1,1041 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10102" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10080"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="Amble-Bold.ttf">
+            <string>Amble-Bold</string>
+        </mutableArray>
+        <mutableArray key="Amble-LightCondensed.ttf">
+            <string>Amble-LightCondensed</string>
+            <string>Amble-LightCondensed</string>
+            <string>Amble-LightCondensed</string>
+            <string>Amble-LightCondensed</string>
+            <string>Amble-LightCondensed</string>
+            <string>Amble-LightCondensed</string>
+            <string>Amble-LightCondensed</string>
+            <string>Amble-LightCondensed</string>
+        </mutableArray>
+        <mutableArray key="Amble-Regular.ttf">
+            <string>Amble-Regular</string>
+            <string>Amble-Regular</string>
+            <string>Amble-Regular</string>
+            <string>Amble-Regular</string>
+            <string>Amble-Regular</string>
+            <string>Amble-Regular</string>
+            <string>Amble-Regular</string>
+            <string>Amble-Regular</string>
+            <string>Amble-Regular</string>
+            <string>Amble-Regular</string>
+            <string>Amble-Regular</string>
+            <string>Amble-Regular</string>
+            <string>Amble-Regular</string>
+            <string>Amble-Regular</string>
+            <string>Amble-Regular</string>
+            <string>Amble-Regular</string>
+            <string>Amble-Regular</string>
+            <string>Amble-Regular</string>
+            <string>Amble-Regular</string>
+            <string>Amble-Regular</string>
+            <string>Amble-Regular</string>
+            <string>Amble-Regular</string>
+        </mutableArray>
+    </customFonts>
+    <scenes>
+        <!--Root-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController storyboardIdentifier="rootController" title="Root" useStoryboardIdentifierAsRestorationIdentifier="YES" id="vXZ-lx-hvc" customClass="RootViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" red="0.43529411764705883" green="0.44313725490196076" blue="0.47450980392156861" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="356" y="325"/>
+        </scene>
+        <!--About-->
+        <scene sceneID="Q6g-AL-RPD">
+            <objects>
+                <viewController storyboardIdentifier="aboutController" title="About" useStoryboardIdentifierAsRestorationIdentifier="YES" id="kxi-Xm-SGm" customClass="AboutViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wW8-dS-0KM"/>
+                        <viewControllerLayoutGuide type="bottom" id="sMn-pS-pbl"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Tdz-Vr-DYe">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Foggy Blue Sky" translatesAutoresizingMaskIntoConstraints="NO" id="xO6-bB-Lg0">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HyF-Te-UT6">
+                                <rect key="frame" x="0.0" y="120" width="320" height="64"/>
+                                <string key="text">Remember was created by Keeton Feavel
+(Solar Pepper Studios) 
+and designed by Efrain Roa (EA_Roa).</string>
+                                <fontDescription key="fontDescription" name="Amble-LightCondensed" family="Amble" pointSize="17"/>
+                                <color key="textColor" red="0.90823972230000005" green="0.92638683320000004" blue="0.93171715740000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="About Remember" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Efq-y3-14c">
+                                <rect key="frame" x="0.0" y="72" width="320" height="30"/>
+                                <fontDescription key="fontDescription" name="Amble-LightCondensed" family="Amble" pointSize="28"/>
+                                <color key="textColor" red="0.90823972230000005" green="0.92638683320000004" blue="0.93171715740000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4bV-Ka-L1q">
+                                <rect key="frame" x="0.0" y="502" width="320" height="58"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" id="nxL-ep-MSw">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="58"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="diV-Ub-ud9">
+                                            <rect key="frame" x="193" y="4" width="50" height="50"/>
+                                            <state key="normal" image="Mail">
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="mailButton:" destination="kxi-Xm-SGm" eventType="touchUpInside" id="lkA-W8-248"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9QK-uy-sbD">
+                                            <rect key="frame" x="135" y="4" width="50" height="50"/>
+                                            <state key="normal" image="Safari">
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="safariButton:" destination="kxi-Xm-SGm" eventType="touchUpInside" id="aap-Zg-mBd"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ueV-Gv-YWH">
+                                            <rect key="frame" x="77" y="4" width="50" height="50"/>
+                                            <state key="normal" image="Github">
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="githubButton:" destination="kxi-Xm-SGm" eventType="touchUpInside" id="sqf-fb-QZO"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                </view>
+                                <blurEffect style="light"/>
+                            </visualEffectView>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rLC-jH-L0s">
+                                <rect key="frame" x="0.0" y="216" width="320" height="136"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" id="kdP-dC-njf">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="136"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aoD-xw-kiZ">
+                                            <rect key="frame" x="30" y="102" width="95" height="26"/>
+                                            <fontDescription key="fontDescription" name="Amble-Regular" family="Amble" pointSize="18"/>
+                                            <state key="normal" title="@Kfeavel_">
+                                                <color key="titleColor" red="0.90823972225189209" green="0.92638683319091797" blue="0.9317171573638916" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="twitterButton:" destination="kxi-Xm-SGm" eventType="touchUpInside" id="c4x-1W-dtP"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TzD-xK-vjA">
+                                            <rect key="frame" x="196" y="102" width="95" height="26"/>
+                                            <fontDescription key="fontDescription" name="Amble-Regular" family="Amble" pointSize="18"/>
+                                            <state key="normal" title="@EA_Roa">
+                                                <color key="titleColor" red="0.90823972230000005" green="0.92638683320000004" blue="0.93171715740000005" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="efrainButton:" destination="kxi-Xm-SGm" eventType="touchUpInside" id="jzl-e1-COB"/>
+                                            </connections>
+                                        </button>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Pepper Circle" translatesAutoresizingMaskIntoConstraints="NO" id="Cs9-ym-ObO">
+                                            <rect key="frame" x="35" y="8" width="84" height="84"/>
+                                        </imageView>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="earoa" translatesAutoresizingMaskIntoConstraints="NO" id="bVr-D7-ABB">
+                                            <rect key="frame" x="201" y="25" width="84" height="50"/>
+                                        </imageView>
+                                    </subviews>
+                                </view>
+                                <blurEffect style="light"/>
+                            </visualEffectView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2b8-gS-YMr">
+                                <rect key="frame" x="0.0" y="110" width="320" height="2"/>
+                                <color key="backgroundColor" red="0.90823972225189209" green="0.92638683319091797" blue="0.9317171573638916" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Remember" id="aVo-PY-DXk">
+                        <barButtonItem key="leftBarButtonItem" image="Menu" id="sYK-Y1-d4L">
+                            <color key="tintColor" red="0.2783651352" green="0.1853051037" blue="0.59323644639999995" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="showMenu" destination="kxi-Xm-SGm" id="yyq-61-sCI"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="githubButton" destination="ueV-Gv-YWH" id="Yz5-Ko-DqN"/>
+                        <outlet property="mailButton" destination="diV-Ub-ud9" id="I5X-j5-ZHx"/>
+                        <outlet property="safariButton" destination="9QK-uy-sbD" id="AZZ-PU-Lwn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aGZ-M6-ktr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1273" y="-390"/>
+        </scene>
+        <!--Help-->
+        <scene sceneID="s6j-8b-wtx">
+            <objects>
+                <viewController storyboardIdentifier="helpController" title="Help" useStoryboardIdentifierAsRestorationIdentifier="YES" id="alO-g2-w6a" customClass="HelpViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5nd-po-krp"/>
+                        <viewControllerLayoutGuide type="bottom" id="DlH-bj-kU9"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="LRu-SL-8De">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Foggy Blue Sky" translatesAutoresizingMaskIntoConstraints="NO" id="pD8-vF-WMH">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Help Desk" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rby-kX-vxs">
+                                <rect key="frame" x="0.0" y="72" width="320" height="30"/>
+                                <fontDescription key="fontDescription" name="Amble-LightCondensed" family="Amble" pointSize="28"/>
+                                <color key="textColor" red="0.90823972230000005" green="0.92638683320000004" blue="0.93171715740000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3tt-uG-7WP">
+                                <rect key="frame" x="0.0" y="110" width="320" height="2"/>
+                                <color key="backgroundColor" red="0.90823972225189209" green="0.92638683319091797" blue="0.9317171573638916" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Krc-xM-hW7">
+                                <rect key="frame" x="0.0" y="120" width="320" height="448"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES" calendarEvent="YES"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Remember" id="vHz-xx-ycq">
+                        <barButtonItem key="leftBarButtonItem" image="Menu" id="TAH-cu-hfH">
+                            <color key="tintColor" red="0.2783651352" green="0.1853051037" blue="0.59323644639999995" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="showMenu" destination="alO-g2-w6a" id="PP1-XD-ebj"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="webView" destination="Krc-xM-hW7" id="b0f-Pp-0JT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zMS-k7-yNF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1730" y="-390"/>
+        </scene>
+        <!--Navigation-->
+        <scene sceneID="VyM-7P-IsW">
+            <objects>
+                <navigationController storyboardIdentifier="contentController" title="Navigation" useStoryboardIdentifierAsRestorationIdentifier="YES" id="4zC-f7-fXk" customClass="NavigationViewController" sceneMemberID="viewController">
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="56t-i6-dlL">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="wZo-CA-478" kind="show" identifier="Third" id="HVH-dm-i2C"/>
+                        <segue destination="TIS-xJ-jje" kind="show" identifier="Second" id="Fcj-va-aLz"/>
+                        <segue destination="kxi-Xm-SGm" kind="show" identifier="Fourth" id="NRZ-mf-Zen"/>
+                        <segue destination="alO-g2-w6a" kind="show" identifier="Fifth" id="DYx-BW-zu5"/>
+                        <segue destination="TIS-xJ-jje" kind="relationship" relationship="rootViewController" id="GD3-Lc-AzB"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YmU-1r-h1J" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="836" y="325"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="XGJ-cc-wcC">
+            <objects>
+                <viewController storyboardIdentifier="homeController" title="Home" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ViL-NN-DNo" customClass="HomeViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="g2U-jG-5AP"/>
+                        <viewControllerLayoutGuide type="bottom" id="iOr-53-Sct"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="wIj-0a-45w">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Foggy Blue Sky" translatesAutoresizingMaskIntoConstraints="NO" id="O6l-M4-7nj">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Icon Rounded" translatesAutoresizingMaskIntoConstraints="NO" id="omj-FD-a9u">
+                                <rect key="frame" x="80" y="113" width="160" height="160"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Remember" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K1e-rF-5uK">
+                                <rect key="frame" x="0.0" y="52" width="320" height="39"/>
+                                <fontDescription key="fontDescription" name="Amble-LightCondensed" family="Amble" pointSize="32"/>
+                                <color key="textColor" red="0.90823972230000005" green="0.92638683320000004" blue="0.93171715740000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Remember This Tip:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TGb-Lq-gaP">
+                                <rect key="frame" x="57" y="279" width="206" height="26"/>
+                                <fontDescription key="fontDescription" name="Amble-Regular" family="Amble" pointSize="20"/>
+                                <color key="textColor" red="0.90823972230000005" green="0.92638683320000004" blue="0.93171715740000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ENX-eq-HuQ">
+                                <rect key="frame" x="0.0" y="99" width="320" height="6"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" id="dC5-FD-E5q">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="6"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                </view>
+                                <blurEffect style="light"/>
+                            </visualEffectView>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MTS-jG-kF9">
+                                <rect key="frame" x="0.0" y="313" width="320" height="44"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" id="eta-6E-wkG">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Lorem ipsum" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A9H-3e-k2l">
+                                            <rect key="frame" x="16" y="0.0" width="288" height="44"/>
+                                            <fontDescription key="fontDescription" name="Amble-Regular" family="Amble" pointSize="18"/>
+                                            <color key="textColor" red="0.90823972230000005" green="0.92638683320000004" blue="0.93171715740000005" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </view>
+                                <blurEffect style="light"/>
+                            </visualEffectView>
+                        </subviews>
+                    </view>
+                    <navigationItem key="navigationItem" title="Remember" id="DWy-TH-whD">
+                        <barButtonItem key="leftBarButtonItem" image="Menu" id="1V0-bW-b2b">
+                            <color key="tintColor" red="0.2783651352" green="0.1853051037" blue="0.59323644639999995" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="showMenu" destination="ViL-NN-DNo" id="OCY-kV-JAQ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="logoImage" destination="omj-FD-a9u" id="fQK-6L-8T3"/>
+                        <outlet property="tipsLabel" destination="A9H-3e-k2l" id="Kf2-SK-kmK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1kM-In-Te3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1273" y="325"/>
+        </scene>
+        <!--Notes-->
+        <scene sceneID="799-pT-qUU">
+            <objects>
+                <viewController storyboardIdentifier="notesTableController" title="Notes" useStoryboardIdentifierAsRestorationIdentifier="YES" id="TIS-xJ-jje" customClass="NotesTableController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="WZF-su-Cau"/>
+                        <viewControllerLayoutGuide type="bottom" id="QqZ-6h-dQV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="wsD-EZ-XXQ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Foggy Blue Sky" translatesAutoresizingMaskIntoConstraints="NO" id="KMt-EP-5hV">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MeE-8O-UQi">
+                                <rect key="frame" x="0.0" y="72" width="320" height="496"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" id="0qe-ML-KzH">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="496"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                </view>
+                                <blurEffect style="light"/>
+                            </visualEffectView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="96" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="jxH-kY-RFc">
+                                <rect key="frame" x="0.0" y="72" width="320" height="496"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" alpha="0.0" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="noteCell" rowHeight="96" id="jJh-6F-7NH" customClass="NotesTableCell">
+                                        <rect key="frame" x="0.0" y="22" width="320" height="96"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="jJh-6F-7NH" id="TG1-Re-ud1">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="95"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qYJ-Tr-5za">
+                                                    <rect key="frame" x="0.0" y="0.0" width="320" height="96"/>
+                                                    <color key="backgroundColor" red="0.90823972225189209" green="0.92638683319091797" blue="0.9317171573638916" alpha="1" colorSpace="calibratedRGB"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NZh-8t-vSy">
+                                                    <rect key="frame" x="8" y="8" width="280" height="24"/>
+                                                    <fontDescription key="fontDescription" name="Amble-Bold" family="Amble" pointSize="20"/>
+                                                    <color key="textColor" red="0.11181893199682236" green="0.1118365004658699" blue="0.1118125319480896" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <color key="shadowColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <size key="shadowOffset" width="0.0" height="2"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Remember:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wHJ-U0-KVC">
+                                                    <rect key="frame" x="8" y="41" width="280" height="21"/>
+                                                    <fontDescription key="fontDescription" name="Amble-Regular" family="Amble" pointSize="18"/>
+                                                    <color key="textColor" red="0.11181893199682236" green="0.1118365004658699" blue="0.1118125319480896" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <color key="shadowColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <size key="shadowOffset" width="0.0" height="2"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Author:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZjD-3y-TPA">
+                                                    <rect key="frame" x="8" y="70" width="280" height="21"/>
+                                                    <fontDescription key="fontDescription" name="Amble-Regular" family="Amble" pointSize="18"/>
+                                                    <color key="textColor" red="0.11181893199682236" green="0.1118365004658699" blue="0.1118125319480896" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <color key="shadowColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <size key="shadowOffset" width="0.0" height="2"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="author" destination="ZjD-3y-TPA" id="vgO-2A-65u"/>
+                                            <outlet property="customBackground" destination="qYJ-Tr-5za" id="aQb-dG-Oc1"/>
+                                            <outlet property="reminder" destination="wHJ-U0-KVC" id="QFa-ge-xZS"/>
+                                            <outlet property="title" destination="NZh-8t-vSy" id="JdA-hW-7un"/>
+                                            <segue destination="vbh-s1-EDa" kind="show" identifier="pushCell" id="vin-ag-34O"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="hVt-8C-2a8">
+                        <nil key="title"/>
+                        <barButtonItem key="leftBarButtonItem" image="Menu" id="zRp-Ei-tu3">
+                            <color key="tintColor" red="0.2783651352" green="0.1853051037" blue="0.59323644639999995" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="showMenu" destination="TIS-xJ-jje" id="RK0-p9-NDT"/>
+                            </connections>
+                        </barButtonItem>
+                        <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="x29-fC-Fcn">
+                            <rect key="frame" x="76" y="7" width="168" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <segments>
+                                <segment title="Current"/>
+                                <segment title="Completed"/>
+                            </segments>
+                            <connections>
+                                <action selector="segmentValueChanged:" destination="TIS-xJ-jje" eventType="valueChanged" id="H9e-qf-F3b"/>
+                            </connections>
+                        </segmentedControl>
+                        <barButtonItem key="rightBarButtonItem" systemItem="compose" id="FzZ-Wt-EoR">
+                            <color key="tintColor" red="0.2783651352" green="0.1853051037" blue="0.59323644639999995" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="addReminder:" destination="TIS-xJ-jje" id="N2L-qm-bYQ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="reminderTable" destination="jxH-kY-RFc" id="oyu-ZJ-I4x"/>
+                        <outlet property="segmentedController" destination="x29-fC-Fcn" id="5zf-oh-VXw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FoC-50-Ctg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1273" y="1040"/>
+        </scene>
+        <!--Details-->
+        <scene sceneID="KYM-k9-VUt">
+            <objects>
+                <viewController storyboardIdentifier="detailController" title="Details" useStoryboardIdentifierAsRestorationIdentifier="YES" id="vbh-s1-EDa" customClass="DetailViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="U9g-hB-JZj"/>
+                        <viewControllerLayoutGuide type="bottom" id="XFT-Vk-vGw"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="dLG-r8-b3c">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Foggy Blue Sky" translatesAutoresizingMaskIntoConstraints="NO" id="GWX-1V-NoE">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xqj-0d-Ggy">
+                                <rect key="frame" x="0.0" y="72" width="320" height="496"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" id="nwN-LZ-ufE">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="496"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <imageView multipleTouchEnabled="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="agV-ff-PJt">
+                                            <rect key="frame" x="181" y="328" width="128" height="128"/>
+                                            <color key="backgroundColor" red="0.90823972225189209" green="0.92638683319091797" blue="0.9317171573638916" alpha="0.75" colorSpace="calibratedRGB"/>
+                                        </imageView>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i9D-2y-r3r">
+                                            <rect key="frame" x="256" y="321" width="64" height="64"/>
+                                            <state key="normal" image="Paperclip">
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="showImagePickerForPhotoPicker:" destination="vbh-s1-EDa" eventType="touchUpInside" id="l4A-52-BeS"/>
+                                            </connections>
+                                        </button>
+                                        <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" rotateEnabled="NO" pitchEnabled="NO" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gzR-J8-VPx">
+                                            <rect key="frame" x="9" y="328" width="128" height="128"/>
+                                        </mapView>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mWq-9f-hQg">
+                                            <rect key="frame" x="10" y="464" width="300" height="24"/>
+                                            <color key="backgroundColor" red="0.90823972225189209" green="0.92638683319091797" blue="0.9317171573638916" alpha="0.75" colorSpace="calibratedRGB"/>
+                                            <fontDescription key="fontDescription" name="Amble-Regular" family="Amble" pointSize="16"/>
+                                            <state key="normal" title="Configure Reminder">
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="showDateViewButton:" destination="vbh-s1-EDa" eventType="touchUpInside" id="kMn-X0-iBd"/>
+                                            </connections>
+                                        </button>
+                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" indicatorStyle="black" translatesAutoresizingMaskIntoConstraints="NO" id="mb6-F9-M4n">
+                                            <rect key="frame" x="10" y="46" width="300" height="274"/>
+                                            <color key="backgroundColor" red="0.90823972225189209" green="0.92638683319091797" blue="0.9317171573638916" alpha="0.75" colorSpace="calibratedRGB"/>
+                                            <color key="textColor" red="0.11181893199682236" green="0.1118365004658699" blue="0.1118125319480896" alpha="1" colorSpace="calibratedRGB"/>
+                                            <fontDescription key="fontDescription" name="Amble-Regular" family="Amble" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        </textView>
+                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Author" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Dn9-nG-v82">
+                                            <rect key="frame" x="10" y="8" width="300" height="30"/>
+                                            <color key="backgroundColor" red="0.90823972230000005" green="0.92638683320000004" blue="0.93171715740000005" alpha="0.75" colorSpace="calibratedRGB"/>
+                                            <fontDescription key="fontDescription" name="Amble-Regular" family="Amble" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="done"/>
+                                            <connections>
+                                                <action selector="textFieldDidBeginEditing:" destination="vbh-s1-EDa" eventType="editingDidBegin" id="uaM-L9-1ml"/>
+                                                <action selector="textFieldDidEndEditing:" destination="vbh-s1-EDa" eventType="editingDidEnd" id="MWu-0A-rq9"/>
+                                            </connections>
+                                        </textField>
+                                    </subviews>
+                                </view>
+                                <blurEffect style="light"/>
+                            </visualEffectView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Note" id="iL1-H9-if7">
+                        <barButtonItem key="leftBarButtonItem" image="Menu" id="exx-u1-kFn">
+                            <color key="tintColor" red="0.2783651352" green="0.1853051037" blue="0.59323644639999995" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="showMenu" destination="vbh-s1-EDa" id="31O-We-eHp"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="TdR-ro-9gP">
+                            <color key="tintColor" red="0.2783651352" green="0.1853051037" blue="0.59323644639999995" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="dismissView:" destination="vbh-s1-EDa" id="2ta-Bv-Ve6"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="authorField" destination="Dn9-nG-v82" id="V78-Kx-Mla"/>
+                        <outlet property="dateButton" destination="mWq-9f-hQg" id="vtg-cu-sJB"/>
+                        <outlet property="imageView" destination="agV-ff-PJt" id="a8g-wU-hBz"/>
+                        <outlet property="mapView" destination="gzR-J8-VPx" id="ZHK-iv-NZf"/>
+                        <outlet property="navigationItem" destination="iL1-H9-if7" id="ZIM-5H-hgT"/>
+                        <outlet property="textView" destination="mb6-F9-M4n" id="2Uv-df-Le5"/>
+                        <segue destination="TIS-xJ-jje" kind="custom" identifier="reversePushCell" customClass="RMSegueReverse" id="Zpg-jo-7KN"/>
+                        <segue destination="NIh-nZ-IJt" kind="presentation" identifier="photoPush" id="niq-Kc-5V7"/>
+                        <segue destination="SEl-yt-nAD" kind="presentation" identifier="mapPush" id="7Hy-cH-C10"/>
+                        <segue destination="Qcg-JZ-zzA" kind="presentation" identifier="datePush" id="rZe-Rn-47k"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wN1-x1-ASC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1739" y="1039"/>
+        </scene>
+        <!--Photo-->
+        <scene sceneID="P4G-GZ-HC8">
+            <objects>
+                <viewController storyboardIdentifier="photoController" title="Photo" useStoryboardIdentifierAsRestorationIdentifier="YES" id="NIh-nZ-IJt" customClass="PhotoViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="SOo-vB-P1H"/>
+                        <viewControllerLayoutGuide type="bottom" id="8kT-Yj-FAC"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Cy1-Ol-Cwf">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Reminder Photo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bpQ-Hs-Vdo">
+                                <rect key="frame" x="0.0" y="72" width="320" height="30"/>
+                                <fontDescription key="fontDescription" name="Amble-LightCondensed" family="Amble" pointSize="28"/>
+                                <color key="textColor" red="0.40000000596046448" green="0.40000000596046448" blue="0.40000000596046448" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hn5-Tk-GJJ">
+                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                                <items>
+                                    <navigationItem id="dKS-Um-H6H">
+                                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="QCV-yM-RP5">
+                                            <connections>
+                                                <action selector="dismissView:" destination="NIh-nZ-IJt" id="9a4-kg-Zhu"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ghY-pF-aJW">
+                                <rect key="frame" x="0.0" y="110" width="320" height="2"/>
+                                <color key="backgroundColor" red="0.50196081399917603" green="0.50196081399917603" blue="0.50196081399917603" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EUR-Hx-bhe">
+                                <rect key="frame" x="0.0" y="120" width="320" height="384"/>
+                                <connections>
+                                    <outlet property="delegate" destination="NIh-nZ-IJt" id="mhQ-V8-tvO"/>
+                                </connections>
+                            </scrollView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UNf-te-9Wo">
+                                <rect key="frame" x="0.0" y="512" width="320" height="2"/>
+                                <color key="backgroundColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1uA-mc-uNZ">
+                                <rect key="frame" x="60" y="528" width="200" height="34"/>
+                                <color key="backgroundColor" red="0.90823972230000005" green="0.92638683320000004" blue="0.93171715740000005" alpha="0.75" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Amble-Regular" family="Amble" pointSize="18"/>
+                                <state key="normal" title="Save Photo">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="savePhotoToLibrary:" destination="NIh-nZ-IJt" eventType="touchUpInside" id="hvG-mZ-8yI"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="saveButton" destination="1uA-mc-uNZ" id="XLo-i6-dSA"/>
+                        <outlet property="scrollView" destination="EUR-Hx-bhe" id="189-ov-SnE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Sj1-ad-6xa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2306" y="612"/>
+        </scene>
+        <!--Menu-->
+        <scene sceneID="dMI-RR-UKE">
+            <objects>
+                <tableViewController storyboardIdentifier="menuController" title="Menu" useStoryboardIdentifierAsRestorationIdentifier="YES" id="k79-Nn-uVl" customClass="MenuViewController" sceneMemberID="viewController">
+                    <tableView key="view" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="l39-Uy-3QH">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <view key="tableHeaderView" clipsSubviews="YES" contentMode="scaleToFill" id="rYm-3w-O8A">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="200"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Menu Top" translatesAutoresizingMaskIntoConstraints="NO" id="Krh-Qd-ddd">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="200"/>
+                                </imageView>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Default Avatar" translatesAutoresizingMaskIntoConstraints="NO" id="EM9-Px-mH3">
+                                    <rect key="frame" x="116" y="34" width="92" height="92"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="92" id="I8Q-7f-iEm"/>
+                                    </constraints>
+                                </imageView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Beta Version 1.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LKT-bQ-nqc">
+                                    <rect key="frame" x="98" y="180" width="124" height="16"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="16" id="7hK-dv-rox"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="Amble-Regular" family="Amble" pointSize="12"/>
+                                    <color key="textColor" red="0.90823972230000005" green="0.92638683320000004" blue="0.93171715740000005" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Remember" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uC7-vo-alV">
+                                    <rect key="frame" x="40" y="134" width="240" height="38"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="38" id="iDt-4k-aho"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="Amble-Regular" family="Amble" pointSize="22"/>
+                                    <color key="textColor" red="0.90823972225189209" green="0.92638683319091797" blue="0.9317171573638916" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="uC7-vo-alV" firstAttribute="leading" secondItem="rYm-3w-O8A" secondAttribute="leading" constant="40" id="4H8-yo-OdC"/>
+                                <constraint firstItem="LKT-bQ-nqc" firstAttribute="top" secondItem="uC7-vo-alV" secondAttribute="bottom" constant="8" symbolic="YES" id="B3x-L6-20C"/>
+                                <constraint firstItem="uC7-vo-alV" firstAttribute="top" secondItem="EM9-Px-mH3" secondAttribute="bottom" constant="8" symbolic="YES" id="M69-aY-bVb"/>
+                                <constraint firstItem="LKT-bQ-nqc" firstAttribute="leading" secondItem="rYm-3w-O8A" secondAttribute="leading" constant="98" id="UnV-ig-7uW"/>
+                                <constraint firstItem="EM9-Px-mH3" firstAttribute="leading" secondItem="rYm-3w-O8A" secondAttribute="leading" constant="116" id="Y7Y-iA-gtK"/>
+                                <constraint firstAttribute="bottom" secondItem="LKT-bQ-nqc" secondAttribute="bottom" constant="4" id="cqc-tR-pes"/>
+                                <constraint firstItem="EM9-Px-mH3" firstAttribute="top" secondItem="rYm-3w-O8A" secondAttribute="top" constant="34" id="j5Y-v9-iMi"/>
+                                <constraint firstItem="LKT-bQ-nqc" firstAttribute="centerX" secondItem="uC7-vo-alV" secondAttribute="centerX" id="rIF-RI-Q7w"/>
+                                <constraint firstItem="LKT-bQ-nqc" firstAttribute="centerX" secondItem="rYm-3w-O8A" secondAttribute="centerX" id="yAz-89-nhu"/>
+                            </constraints>
+                        </view>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="54" id="OTk-Ng-Ply" customClass="MenuViewCell">
+                                <rect key="frame" x="0.0" y="222" width="320" height="54"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="OTk-Ng-Ply" id="aQa-DF-LSi">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="53"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rqa-YO-0jD">
+                                            <rect key="frame" x="8" y="10" width="32" height="32"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FCc-tL-mRn">
+                                            <rect key="frame" x="48" y="12" width="256" height="30"/>
+                                            <fontDescription key="fontDescription" name="Amble-Regular" family="Amble" pointSize="18"/>
+                                            <color key="textColor" red="0.11181893199682236" green="0.1118365004658699" blue="0.1118125319480896" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="icon" destination="rqa-YO-0jD" id="80H-UW-E2q"/>
+                                    <outlet property="title" destination="FCc-tL-mRn" id="ek2-oF-tGG"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="k79-Nn-uVl" id="Chl-Eu-UJo"/>
+                            <outlet property="delegate" destination="k79-Nn-uVl" id="Ee8-vA-EEf"/>
+                        </connections>
+                    </tableView>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="contactImage" destination="EM9-Px-mH3" id="dTh-Nm-ds5"/>
+                        <outlet property="headerView" destination="rYm-3w-O8A" id="MgB-0e-Flb"/>
+                        <outlet property="userNameLabel" destination="uC7-vo-alV" id="WE2-Wc-GVu"/>
+                        <outlet property="versionLabel" destination="LKT-bQ-nqc" id="08V-TP-iA6"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5Sk-Bv-yYb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="356" y="1039"/>
+        </scene>
+        <!--Settings-->
+        <scene sceneID="mc6-IO-bf8">
+            <objects>
+                <viewController storyboardIdentifier="thirdController" title="Settings" useStoryboardIdentifierAsRestorationIdentifier="YES" id="wZo-CA-478" customClass="SettingsViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Mdv-id-6uN"/>
+                        <viewControllerLayoutGuide type="bottom" id="itb-O4-wyj"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="qGC-3A-rGK">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Foggy Blue Sky" translatesAutoresizingMaskIntoConstraints="NO" id="TIp-zL-BNV">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3Pe-Pf-NxT">
+                                <rect key="frame" x="0.0" y="124" width="320" height="260"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" id="TvK-2y-2ox">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="260"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="14" minValue="12" maxValue="22" translatesAutoresizingMaskIntoConstraints="NO" id="Jjb-Ai-hyZ">
+                                            <rect key="frame" x="46" y="1" width="228" height="31"/>
+                                            <connections>
+                                                <action selector="textSizeValueChanged:" destination="wZo-CA-478" eventType="valueChanged" id="d3i-dV-7Ft"/>
+                                            </connections>
+                                        </slider>
+                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Your Name Here" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="19p-EM-hKe">
+                                            <rect key="frame" x="48" y="70" width="224" height="30"/>
+                                            <fontDescription key="fontDescription" name="Amble-Regular" family="Amble" pointSize="12"/>
+                                            <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
+                                            <connections>
+                                                <action selector="authorValueChanged:" destination="wZo-CA-478" eventType="valueChanged" id="7HB-yw-D2N"/>
+                                            </connections>
+                                        </textField>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="This name will be used as the default author." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dqq-tC-P1N">
+                                            <rect key="frame" x="0.0" y="104" width="320" height="26"/>
+                                            <fontDescription key="fontDescription" name="Amble-Regular" family="Amble" pointSize="15"/>
+                                            <color key="textColor" red="0.90823972230000005" green="0.92638683320000004" blue="0.93171715740000005" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Your contact image is displayed above your name in the slide out menu." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fj6-pX-TZu">
+                                            <rect key="frame" x="0.0" y="164" width="320" height="36"/>
+                                            <fontDescription key="fontDescription" name="Amble-Regular" family="Amble" pointSize="15"/>
+                                            <color key="textColor" red="0.90823972230000005" green="0.92638683320000004" blue="0.93171715740000005" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tXK-JQ-5S3">
+                                            <rect key="frame" x="70" y="208" width="180" height="22"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <state key="normal" title="Sign out of Google+">
+                                                <color key="titleColor" red="0.85043728350000003" green="0.21816034619999999" blue="0.15920260550000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="signOut:" destination="wZo-CA-478" eventType="touchUpInside" id="gUr-6J-EFM"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zTQ-s7-1Ev">
+                                            <rect key="frame" x="80" y="140" width="160" height="22"/>
+                                            <state key="normal" title="Remove Contact Photo">
+                                                <color key="titleColor" red="0.85043728350000003" green="0.21816034619999999" blue="0.15920260550000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="deletePhoto:" destination="wZo-CA-478" eventType="touchUpInside" id="IFI-r6-HRi"/>
+                                            </connections>
+                                        </button>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Text Size: 14pt" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DbK-XQ-vAO">
+                                            <rect key="frame" x="79" y="39" width="162" height="22"/>
+                                            <fontDescription key="fontDescription" name="Amble-Regular" family="Amble" pointSize="16"/>
+                                            <color key="textColor" red="0.90823972230000005" green="0.92638683320000004" blue="0.93171715740000005" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </view>
+                                <blurEffect style="light"/>
+                            </visualEffectView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tweaks And Settings" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Okq-QP-cWq">
+                                <rect key="frame" x="0.0" y="72" width="320" height="30"/>
+                                <fontDescription key="fontDescription" name="Amble-LightCondensed" family="Amble" pointSize="28"/>
+                                <color key="textColor" red="0.90823972230000005" green="0.92638683320000004" blue="0.93171715740000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gFC-tf-Me6">
+                                <rect key="frame" x="0.0" y="110" width="320" height="2"/>
+                                <color key="backgroundColor" red="0.90823972225189209" green="0.92638683319091797" blue="0.9317171573638916" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                        </subviews>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Remember" id="ZqS-48-z4c">
+                        <barButtonItem key="leftBarButtonItem" image="Menu" id="6uF-Xg-J5P">
+                            <color key="tintColor" red="0.27836513519287109" green="0.18530510365962982" blue="0.59323644638061523" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="showMenu" destination="wZo-CA-478" id="pju-ae-Npu"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="defaultAuthorField" destination="19p-EM-hKe" id="DaI-Bw-BsX"/>
+                        <outlet property="signOut" destination="tXK-JQ-5S3" id="rvM-Ie-swg"/>
+                        <outlet property="textSizeLabel" destination="DbK-XQ-vAO" id="NkY-6C-l8p"/>
+                        <outlet property="textSizeSlider" destination="Jjb-Ai-hyZ" id="o6Z-55-PNT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UlT-tc-FN3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="836" y="1042"/>
+        </scene>
+        <!--Map-->
+        <scene sceneID="TYo-gU-Rai">
+            <objects>
+                <viewController storyboardIdentifier="mapController" title="Map" useStoryboardIdentifierAsRestorationIdentifier="YES" id="SEl-yt-nAD" customClass="MapViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="j84-q2-ecL"/>
+                        <viewControllerLayoutGuide type="bottom" id="DZd-1g-5pj"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fhN-vl-bNQ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Reminder Location" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0n2-ia-pem">
+                                <rect key="frame" x="0.0" y="72" width="320" height="30"/>
+                                <fontDescription key="fontDescription" name="Amble-LightCondensed" family="Amble" pointSize="28"/>
+                                <color key="textColor" red="0.40000000596046448" green="0.40000000596046448" blue="0.40000000596046448" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Un3-8Q-aci">
+                                <rect key="frame" x="0.0" y="110" width="320" height="2"/>
+                                <color key="backgroundColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="irq-66-JfX">
+                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                                <items>
+                                    <navigationItem id="FpS-8N-W1S">
+                                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="gDo-bh-2kL">
+                                            <connections>
+                                                <action selector="dismissView:" destination="SEl-yt-nAD" id="0tJ-ad-Dmc"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7ae-HD-hoA">
+                                <rect key="frame" x="0.0" y="512" width="320" height="2"/>
+                                <color key="backgroundColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="bgF-rs-yee">
+                                <rect key="frame" x="0.0" y="120" width="320" height="384"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="mapView" destination="bgF-rs-yee" id="2ry-X0-UnW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xxv-Xf-HBm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2306" y="1469"/>
+        </scene>
+        <!--Date View Controller-->
+        <scene sceneID="yEZ-Bv-JNn">
+            <objects>
+                <viewController storyboardIdentifier="timeController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Qcg-JZ-zzA" customClass="DateViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="7bq-J3-4uj"/>
+                        <viewControllerLayoutGuide type="bottom" id="49P-Yt-ceM"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="FoY-PS-UeK">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YbF-sH-y8r">
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" id="bLo-Qt-Jqh">
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                </view>
+                                <blurEffect style="light"/>
+                            </visualEffectView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="September 10, 9:14 AM" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jZC-Rx-0AC">
+                                <rect key="frame" x="0.0" y="502" width="320" height="18"/>
+                                <fontDescription key="fontDescription" name="Amble-Regular" family="Amble" pointSize="16"/>
+                                <color key="textColor" red="0.51784205436706543" green="0.58159953355789185" blue="0.58617168664932251" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="cgq-74-yQm">
+                                <rect key="frame" x="0.0" y="203" width="320" height="162"/>
+                                <date key="date" timeIntervalSinceReferenceDate="436802630.360735">
+                                    <!--2014-11-04 14:03:50 +0000-->
+                                </date>
+                                <connections>
+                                    <action selector="pickerValueChanged:" destination="Qcg-JZ-zzA" eventType="valueChanged" id="GV6-XY-tv5"/>
+                                </connections>
+                            </datePicker>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Kqw-Pe-Txa">
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" id="TZt-ta-bbX">
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                </view>
+                                <blurEffect style="light"/>
+                            </visualEffectView>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0RC-UE-sN2">
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" id="dh6-GC-oQr">
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                </view>
+                                <blurEffect style="light"/>
+                            </visualEffectView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gcT-ak-pqs">
+                                <rect key="frame" x="0.0" y="128" width="320" height="48"/>
+                                <string key="text">Set the date on which you 
+want to be reminded below:</string>
+                                <fontDescription key="fontDescription" name="Amble-Regular" family="Amble" pointSize="20"/>
+                                <color key="textColor" red="0.40000000596046448" green="0.40000000596046448" blue="0.40000000596046448" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zXq-P3-138">
+                                <rect key="frame" x="0.0" y="198" width="320" height="2"/>
+                                <color key="backgroundColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kiG-aO-iho">
+                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                                <items>
+                                    <navigationItem id="Y8k-Fp-d6z">
+                                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="qwf-Lf-GlY">
+                                            <connections>
+                                                <action selector="dismissView:" destination="Qcg-JZ-zzA" id="cl0-tx-vIC"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Schedule Reminder" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SPk-ge-1cP">
+                                <rect key="frame" x="0.0" y="72" width="320" height="30"/>
+                                <fontDescription key="fontDescription" name="Amble-LightCondensed" family="Amble" pointSize="28"/>
+                                <color key="textColor" red="0.40000000596046448" green="0.40000000596046448" blue="0.40000000596046448" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tA6-cM-yBF">
+                                <rect key="frame" x="0.0" y="110" width="320" height="2"/>
+                                <color key="backgroundColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Chn-eU-1ds">
+                                <rect key="frame" x="60" y="388" width="200" height="32"/>
+                                <color key="backgroundColor" red="0.90823972230000005" green="0.92638683320000004" blue="0.93171715740000005" alpha="0.75" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Amble-Regular" family="Amble" pointSize="18"/>
+                                <state key="normal" title="Set Reminder">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="setReminder:" destination="Qcg-JZ-zzA" eventType="touchUpInside" id="905-Ta-qyY"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GH8-uK-5eB">
+                                <rect key="frame" x="60" y="428" width="200" height="34"/>
+                                <color key="backgroundColor" red="0.90823972230000005" green="0.92638683320000004" blue="0.93171715740000005" alpha="0.75" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Amble-Regular" family="Amble" pointSize="18"/>
+                                <state key="normal" title="Cancel Reminder">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="cancelReminder:" destination="Qcg-JZ-zzA" eventType="touchUpInside" id="ukK-zf-yW7"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Remind Me On:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="weE-kq-kDs">
+                                <rect key="frame" x="60" y="470" width="200" height="26"/>
+                                <fontDescription key="fontDescription" name="Amble-Regular" family="Amble" pointSize="22"/>
+                                <color key="textColor" red="0.40000000596046448" green="0.40000000596046448" blue="0.40000000596046448" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="cancelButton" destination="GH8-uK-5eB" id="mNM-lt-FzN"/>
+                        <outlet property="dateButton" destination="Chn-eU-1ds" id="hMv-Sg-71i"/>
+                        <outlet property="dateLabel" destination="jZC-Rx-0AC" id="U0y-ta-iRu"/>
+                        <outlet property="datePicker" destination="cgq-74-yQm" id="J9h-o5-K6s"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rPS-Vh-Sff" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2745" y="1039"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Default Avatar" width="166" height="167"/>
+        <image name="Foggy Blue Sky" width="1242" height="2208"/>
+        <image name="Github" width="30" height="30"/>
+        <image name="Icon Rounded" width="512" height="512"/>
+        <image name="Mail" width="30" height="30"/>
+        <image name="Menu" width="30" height="13"/>
+        <image name="Menu Top" width="320" height="160"/>
+        <image name="Paperclip" width="102" height="95"/>
+        <image name="Pepper Circle" width="161" height="139"/>
+        <image name="Safari" width="30" height="30"/>
+        <image name="earoa" width="346" height="207"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="Zpg-jo-7KN"/>
+    </inferredMetricsTieBreakers>
+    <color key="tintColor" red="0.2783651352" green="0.1853051037" blue="0.59323644639999995" alpha="1" colorSpace="calibratedRGB"/>
+</document>

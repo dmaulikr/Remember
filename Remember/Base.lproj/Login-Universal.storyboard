@@ -1,0 +1,422 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="PXw-ib-HlO">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="Amble-Regular.ttf">
+            <string>Amble-Regular</string>
+            <string>Amble-Regular</string>
+        </mutableArray>
+        <mutableArray key="Arimo-Regular.ttf">
+            <string>Arimo</string>
+            <string>Arimo</string>
+            <string>Arimo</string>
+            <string>Arimo</string>
+            <string>Arimo</string>
+            <string>Arimo</string>
+            <string>Arimo</string>
+            <string>Arimo</string>
+            <string>Arimo</string>
+            <string>Arimo</string>
+            <string>Arimo</string>
+            <string>Arimo</string>
+        </mutableArray>
+    </customFonts>
+    <scenes>
+        <!--Pages-->
+        <scene sceneID="NY2-gc-EnS">
+            <objects>
+                <pageViewController storyboardIdentifier="pageController" autoresizesArchivedViewToFullSize="NO" title="Pages" useStoryboardIdentifierAsRestorationIdentifier="YES" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="kt2-xD-2Oe" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YqD-aP-Yg3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1042" y="319"/>
+        </scene>
+        <!--Welcome View Controller-->
+        <scene sceneID="k3r-PD-pzb">
+            <objects>
+                <viewController storyboardIdentifier="welcomeController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="AJ6-3l-54Z" customClass="WelcomeViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="w70-ly-iRp"/>
+                        <viewControllerLayoutGuide type="bottom" id="ETT-qj-k93"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ut7-vA-BhO">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Foggy Blue Sky" translatesAutoresizingMaskIntoConstraints="NO" id="gRn-Lz-GH6">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gTc-dB-xCn">
+                                <rect key="frame" x="169" y="508" width="120" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="DS3-pj-zfO"/>
+                                    <constraint firstAttribute="height" constant="28" id="bDs-R3-7Zg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Arimo" family="Arimo" pointSize="15"/>
+                                <state key="normal" title="Remember" backgroundImage="Purple Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="dismissView:" destination="AJ6-3l-54Z" eventType="touchUpInside" id="mtt-pu-iuK"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Sticky Note" translatesAutoresizingMaskIntoConstraints="NO" id="3ky-og-Ddk">
+                                <rect key="frame" x="220" y="58" width="160" height="160"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="160" id="Odx-Xj-tn4"/>
+                                    <constraint firstAttribute="width" secondItem="3ky-og-Ddk" secondAttribute="height" multiplier="1:1" id="TNA-rz-4On"/>
+                                    <constraint firstAttribute="width" constant="160" id="Y4Y-GV-3pi"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MmH-go-0OM">
+                                <rect key="frame" x="311" y="508" width="120" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="yaG-do-VA2"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Arimo" family="Arimo" pointSize="15"/>
+                                <state key="normal" title="Google +" backgroundImage="Purple Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="googlePlusSignIn:" destination="AJ6-3l-54Z" eventType="touchUpInside" id="8oa-bW-2Pk"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign in using:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="unR-ck-mGU">
+                                <rect key="frame" x="169" y="479" width="262" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="WQJ-JH-HYe"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Arimo" family="Arimo" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <size key="shadowOffset" width="1" height="1"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="Vs3-Vo-fAs">
+                                <rect key="frame" x="20" y="226" width="560" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="560" id="7Ud-cj-XOy"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <size key="shadowOffset" width="1" height="2"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="MmH-go-0OM" firstAttribute="trailing" secondItem="gTc-dB-xCn" secondAttribute="trailing" constant="142" id="11R-vz-co3"/>
+                            <constraint firstItem="3ky-og-Ddk" firstAttribute="centerX" secondItem="gRn-Lz-GH6" secondAttribute="centerX" id="8XZ-vw-haJ"/>
+                            <constraint firstItem="unR-ck-mGU" firstAttribute="leading" secondItem="gTc-dB-xCn" secondAttribute="leading" id="CjN-is-9qB"/>
+                            <constraint firstItem="gRn-Lz-GH6" firstAttribute="bottom" secondItem="ETT-qj-k93" secondAttribute="top" id="Hze-l1-9R4"/>
+                            <constraint firstItem="Vs3-Vo-fAs" firstAttribute="centerY" secondItem="gRn-Lz-GH6" secondAttribute="centerY" constant="-34" id="LYJ-qG-beA"/>
+                            <constraint firstItem="Vs3-Vo-fAs" firstAttribute="top" secondItem="3ky-og-Ddk" secondAttribute="bottom" constant="8" id="M6j-o3-UJA"/>
+                            <constraint firstItem="gRn-Lz-GH6" firstAttribute="leading" secondItem="ut7-vA-BhO" secondAttribute="leading" id="QNp-q8-uw3"/>
+                            <constraint firstItem="Vs3-Vo-fAs" firstAttribute="centerX" secondItem="3ky-og-Ddk" secondAttribute="centerX" id="RZj-mb-2Ud"/>
+                            <constraint firstItem="MmH-go-0OM" firstAttribute="leading" secondItem="gTc-dB-xCn" secondAttribute="leading" constant="142" id="Y9g-sH-F41"/>
+                            <constraint firstItem="gTc-dB-xCn" firstAttribute="top" secondItem="unR-ck-mGU" secondAttribute="bottom" constant="8" symbolic="YES" id="ZPr-pj-VFo"/>
+                            <constraint firstItem="3ky-og-Ddk" firstAttribute="top" secondItem="w70-ly-iRp" secondAttribute="bottom" constant="38" id="ft0-AH-ubf"/>
+                            <constraint firstItem="unR-ck-mGU" firstAttribute="trailing" secondItem="MmH-go-0OM" secondAttribute="trailing" id="i5D-sQ-rCf"/>
+                            <constraint firstItem="MmH-go-0OM" firstAttribute="top" secondItem="gTc-dB-xCn" secondAttribute="bottom" constant="-28" id="lza-bD-Oaa"/>
+                            <constraint firstItem="ETT-qj-k93" firstAttribute="top" secondItem="MmH-go-0OM" secondAttribute="bottom" constant="64" id="nJE-j1-YYl"/>
+                            <constraint firstAttribute="trailing" secondItem="gRn-Lz-GH6" secondAttribute="trailing" id="qq0-TU-f1L"/>
+                            <constraint firstItem="3ky-og-Ddk" firstAttribute="centerX" secondItem="gTc-dB-xCn" secondAttribute="centerX" constant="71" id="xcR-Yb-mVY"/>
+                            <constraint firstItem="gRn-Lz-GH6" firstAttribute="top" secondItem="ut7-vA-BhO" secondAttribute="top" id="zfu-Ox-maC"/>
+                        </constraints>
+                    </view>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="600" height="600"/>
+                    <connections>
+                        <outlet property="background" destination="gRn-Lz-GH6" id="LHY-UE-z1k"/>
+                        <outlet property="signInButton" destination="MmH-go-0OM" id="ADk-TT-Wn7"/>
+                        <outlet property="signInLabel" destination="unR-ck-mGU" id="TL2-hQ-TRr"/>
+                        <outlet property="tutorialText" destination="Vs3-Vo-fAs" id="kcG-DZ-YQD"/>
+                        <segue destination="qe3-Ag-aaC" kind="show" identifier="push" id="8oj-Vm-qdp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="doI-QR-y6Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-279" y="319"/>
+        </scene>
+        <!--Content Controller-->
+        <scene sceneID="Sgv-Xd-ctm">
+            <objects>
+                <viewController storyboardIdentifier="contentController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="PXw-ib-HlO" customClass="ContentController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8EC-Yv-niA"/>
+                        <viewControllerLayoutGuide type="bottom" id="5Nm-xh-XXv"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="aKb-qe-6sa">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.12637259066104889" green="0.12639245390892029" blue="0.12636536359786987" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9XE-Qq-bdM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1773" y="319"/>
+        </scene>
+        <!--Login View Controller-->
+        <scene sceneID="sti-Cm-76s">
+            <objects>
+                <viewController storyboardIdentifier="loginController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="qe3-Ag-aaC" customClass="LoginViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Qur-ZD-xso"/>
+                        <viewControllerLayoutGuide type="bottom" id="OIr-Ah-fUK"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="1VA-tg-dKZ">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Foggy Blue Sky" translatesAutoresizingMaskIntoConstraints="NO" id="zto-XR-Eta">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9rf-hx-Y80">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="eNI-hk-Tco">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                </view>
+                                <blurEffect style="light"/>
+                            </visualEffectView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JE5-gF-hYh">
+                                <rect key="frame" x="240" y="508" width="120" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="fO8-vL-fLj"/>
+                                    <constraint firstAttribute="height" constant="28" id="fWQ-kL-rik"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Amble-Regular" family="Amble" pointSize="15"/>
+                                <state key="normal" title="Finish" backgroundImage="Purple Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="exitLogin:" destination="qe3-Ag-aaC" eventType="touchUpInside" id="Lmq-Ti-GWe"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UHy-Yp-nIl">
+                                <rect key="frame" x="241" y="348" width="120" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="0RZ-Ji-9ub"/>
+                                    <constraint firstAttribute="height" constant="28" id="pPt-aY-94G"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Amble-Regular" family="Amble" pointSize="15"/>
+                                <state key="normal" title="Setup Dropbox">
+                                    <color key="titleColor" red="0.090196078430000007" green="0.4039215686" blue="0.87450980389999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="showDropbox:" destination="qe3-Ag-aaC" eventType="touchUpInside" id="nbc-Xj-czx"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First &amp; Last Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PVX-vQ-DEg">
+                                <rect key="frame" x="172" y="210" width="256" height="30"/>
+                                <color key="tintColor" red="0.46620205044746399" green="0.15637357532978058" blue="0.6434749960899353" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="256" id="gLZ-6h-XJc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Arimo" family="Arimo" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="done"/>
+                                <connections>
+                                    <action selector="authorChanged:" destination="qe3-Ag-aaC" eventType="valueChanged" id="ir2-tk-sBY"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter Your Name:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oK3-Lg-fKl">
+                                <rect key="frame" x="232" y="181" width="136" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="136" id="hiu-6u-AOh"/>
+                                    <constraint firstAttribute="height" constant="21" id="pjy-uJ-dJf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Arimo" family="Arimo" pointSize="17"/>
+                                <color key="textColor" red="0.11181893199682236" green="0.1118365004658699" blue="0.1118125319480896" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView multipleTouchEnabled="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Default Avatar" translatesAutoresizingMaskIntoConstraints="NO" id="DzT-37-wM5">
+                                <rect key="frame" x="250" y="56" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="Evb-Zz-n3A"/>
+                                    <constraint firstAttribute="height" constant="100" id="lfn-0a-RJr"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select a Contact Photo:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ofy-gh-Rxz">
+                                <rect key="frame" x="210" y="28" width="181" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="OFW-Fl-O1K"/>
+                                    <constraint firstAttribute="width" constant="181" id="vea-bg-ltm"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Arimo" family="Arimo" pointSize="17"/>
+                                <color key="textColor" red="0.11181893199682236" green="0.1118365004658699" blue="0.1118125319480896" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="12" minValue="12" maxValue="22" translatesAutoresizingMaskIntoConstraints="NO" id="cIc-of-9nk">
+                                <rect key="frame" x="178" y="280" width="244" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="4Bp-gA-Xrs"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="sizeChanged:" destination="qe3-Ag-aaC" eventType="valueChanged" id="XR2-uH-vUv"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Text Size: 12pt" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tk5-Nf-RRc">
+                                <rect key="frame" x="172" y="318" width="256" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="22" id="ymm-1D-EgD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Arimo" family="Arimo" pointSize="14"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose a Text Size:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w1S-vj-Z66">
+                                <rect key="frame" x="172" y="248" width="256" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="256" id="4Au-Au-tUF"/>
+                                    <constraint firstAttribute="height" constant="24" id="imY-9N-iAJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Arimo" family="Arimo" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="UHy-Yp-nIl" firstAttribute="centerX" secondItem="Ofy-gh-Rxz" secondAttribute="centerX" id="2y7-a7-nBw"/>
+                            <constraint firstItem="UHy-Yp-nIl" firstAttribute="top" secondItem="tk5-Nf-RRc" secondAttribute="bottom" constant="8" symbolic="YES" id="5ZY-Ol-a4n"/>
+                            <constraint firstItem="tk5-Nf-RRc" firstAttribute="trailing" secondItem="w1S-vj-Z66" secondAttribute="trailing" id="9Wm-bk-vPE"/>
+                            <constraint firstItem="oK3-Lg-fKl" firstAttribute="top" secondItem="DzT-37-wM5" secondAttribute="bottom" constant="25" id="FwR-h9-sIt"/>
+                            <constraint firstItem="tk5-Nf-RRc" firstAttribute="leading" secondItem="w1S-vj-Z66" secondAttribute="leading" id="Gv2-rb-PPE"/>
+                            <constraint firstItem="9rf-hx-Y80" firstAttribute="trailing" secondItem="zto-XR-Eta" secondAttribute="trailing" id="Kgz-tw-net"/>
+                            <constraint firstItem="oK3-Lg-fKl" firstAttribute="centerX" secondItem="PVX-vQ-DEg" secondAttribute="centerX" id="Oog-xg-psE"/>
+                            <constraint firstItem="Ofy-gh-Rxz" firstAttribute="centerX" secondItem="zto-XR-Eta" secondAttribute="centerX" id="PIM-wE-zbU"/>
+                            <constraint firstItem="9rf-hx-Y80" firstAttribute="leading" secondItem="zto-XR-Eta" secondAttribute="leading" id="QPI-lq-N9Q"/>
+                            <constraint firstItem="w1S-vj-Z66" firstAttribute="top" secondItem="PVX-vQ-DEg" secondAttribute="bottom" constant="8" symbolic="YES" id="QUj-sS-xiw"/>
+                            <constraint firstItem="DzT-37-wM5" firstAttribute="centerX" secondItem="oK3-Lg-fKl" secondAttribute="centerX" id="Tpq-Jd-JgH"/>
+                            <constraint firstItem="Ofy-gh-Rxz" firstAttribute="centerX" secondItem="DzT-37-wM5" secondAttribute="centerX" id="VnK-df-Loo"/>
+                            <constraint firstItem="DzT-37-wM5" firstAttribute="top" secondItem="Ofy-gh-Rxz" secondAttribute="bottom" constant="7" id="Wiq-Ho-079"/>
+                            <constraint firstItem="w1S-vj-Z66" firstAttribute="centerX" secondItem="PVX-vQ-DEg" secondAttribute="centerX" id="XEq-Tk-bfS"/>
+                            <constraint firstItem="cIc-of-9nk" firstAttribute="top" secondItem="w1S-vj-Z66" secondAttribute="bottom" constant="8" symbolic="YES" id="ZcC-IZ-jZl"/>
+                            <constraint firstItem="OIr-Ah-fUK" firstAttribute="top" secondItem="JE5-gF-hYh" secondAttribute="bottom" constant="64" id="cZt-kt-ob9"/>
+                            <constraint firstAttribute="trailing" secondItem="zto-XR-Eta" secondAttribute="trailing" id="dhg-lZ-0XQ"/>
+                            <constraint firstItem="tk5-Nf-RRc" firstAttribute="centerX" secondItem="JE5-gF-hYh" secondAttribute="centerX" id="fen-yP-pXY"/>
+                            <constraint firstItem="zto-XR-Eta" firstAttribute="top" secondItem="1VA-tg-dKZ" secondAttribute="top" id="hS9-eK-zwv"/>
+                            <constraint firstItem="w1S-vj-Z66" firstAttribute="centerX" secondItem="cIc-of-9nk" secondAttribute="centerX" id="qgz-Ut-dZG"/>
+                            <constraint firstItem="tk5-Nf-RRc" firstAttribute="top" secondItem="cIc-of-9nk" secondAttribute="bottom" constant="8" symbolic="YES" id="s1o-7F-YpA"/>
+                            <constraint firstItem="Ofy-gh-Rxz" firstAttribute="top" secondItem="Qur-ZD-xso" secondAttribute="bottom" constant="8" symbolic="YES" id="sT5-Qk-aDS"/>
+                            <constraint firstItem="zto-XR-Eta" firstAttribute="leading" secondItem="1VA-tg-dKZ" secondAttribute="leading" id="sfg-yR-gJF"/>
+                            <constraint firstItem="PVX-vQ-DEg" firstAttribute="top" secondItem="oK3-Lg-fKl" secondAttribute="bottom" constant="8" symbolic="YES" id="sug-Ou-mU5"/>
+                            <constraint firstItem="zto-XR-Eta" firstAttribute="bottom" secondItem="OIr-Ah-fUK" secondAttribute="top" id="umu-ic-Zjs"/>
+                            <constraint firstItem="9rf-hx-Y80" firstAttribute="top" secondItem="zto-XR-Eta" secondAttribute="top" id="vQE-XO-hTi"/>
+                            <constraint firstItem="9rf-hx-Y80" firstAttribute="bottom" secondItem="OIr-Ah-fUK" secondAttribute="top" id="wBj-sk-swP"/>
+                        </constraints>
+                    </view>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="600" height="600"/>
+                    <connections>
+                        <outlet property="authorField" destination="PVX-vQ-DEg" id="s1f-jp-S8K"/>
+                        <outlet property="contactImage" destination="DzT-37-wM5" id="vKc-4H-IPR"/>
+                        <outlet property="textLabel" destination="tk5-Nf-RRc" id="I9h-G9-UdK"/>
+                        <outlet property="textSlider" destination="cIc-of-9nk" id="HmC-U2-oYl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZXW-uC-Y7j" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="443" y="319"/>
+        </scene>
+        <!--Dropbox Controller-->
+        <scene sceneID="mJA-x9-Mc3">
+            <objects>
+                <viewController storyboardIdentifier="dropbox" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ZIa-eI-znu" customClass="DropboxController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="CIs-nJ-FLS"/>
+                        <viewControllerLayoutGuide type="bottom" id="Aoa-TK-RHJ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gAV-KV-Cdx">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eRQ-On-m0Y">
+                                <rect key="frame" x="169" y="508" width="120" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="cGp-dd-dh7"/>
+                                    <constraint firstAttribute="height" constant="28" id="oos-h7-j8W"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Arimo" family="Arimo" pointSize="15"/>
+                                <state key="normal" title="Login">
+                                    <color key="titleColor" cyan="0.73999999999999999" magenta="0.62" yellow="0.55000000000000004" black="0.42999999999999999" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="dropboxLogin:" destination="ZIa-eI-znu" eventType="touchUpInside" id="i6y-d4-s5S"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5KZ-dJ-tpY">
+                                <rect key="frame" x="310" y="508" width="120" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="VOV-eb-P4t"/>
+                                    <constraint firstAttribute="width" constant="120" id="xOP-r5-WAy"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Arimo" family="Arimo" pointSize="15"/>
+                                <state key="normal" title="Cancel">
+                                    <color key="titleColor" cyan="0.73999999999999999" magenta="0.62" yellow="0.55000000000000004" black="0.42999999999999999" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="dismissView:" destination="ZIa-eI-znu" eventType="touchUpInside" id="NUW-r5-FfH"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Dropbox" translatesAutoresizingMaskIntoConstraints="NO" id="Enb-6I-kIl">
+                                <rect key="frame" x="220" y="58" width="160" height="160"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dropbox" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="22t-wv-JsU">
+                                <rect key="frame" x="169" y="226" width="261" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="261" id="I4R-Dn-06O"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Arimo" family="Arimo" pointSize="32"/>
+                                <color key="textColor" red="0.0" green="0.49411764705882355" blue="0.89803921568627454" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <size key="shadowOffset" width="1" height="1"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Remember is able to sync your notes across all of your devices by utilizing Dropbox's cloud storage service." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B6c-YI-K7g">
+                                <rect key="frame" x="169" y="270" width="261" height="92"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="92" id="cBJ-0R-6RQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Arimo" family="Arimo" pointSize="16"/>
+                                <color key="textColor" red="0.090196078431372548" green="0.40392156862745099" blue="0.87450980392156863" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="eRQ-On-m0Y" firstAttribute="centerX" secondItem="gAV-KV-Cdx" secondAttribute="centerX" constant="-71" id="6EP-hF-o9Q"/>
+                            <constraint firstItem="B6c-YI-K7g" firstAttribute="trailing" secondItem="22t-wv-JsU" secondAttribute="trailing" id="9UI-jP-jJP"/>
+                            <constraint firstItem="Enb-6I-kIl" firstAttribute="trailing" secondItem="22t-wv-JsU" secondAttribute="trailing" constant="-50" id="Abd-0J-kdS"/>
+                            <constraint firstItem="Aoa-TK-RHJ" firstAttribute="top" secondItem="eRQ-On-m0Y" secondAttribute="bottom" constant="64" id="GMT-Y8-jZu"/>
+                            <constraint firstItem="B6c-YI-K7g" firstAttribute="leading" secondItem="22t-wv-JsU" secondAttribute="leading" id="HAV-hG-7Gp"/>
+                            <constraint firstItem="22t-wv-JsU" firstAttribute="centerX" secondItem="gAV-KV-Cdx" secondAttribute="centerX" id="JuK-Nv-IXL"/>
+                            <constraint firstItem="Enb-6I-kIl" firstAttribute="top" secondItem="CIs-nJ-FLS" secondAttribute="bottom" constant="38" id="KRe-5u-bRj"/>
+                            <constraint firstItem="B6c-YI-K7g" firstAttribute="top" secondItem="22t-wv-JsU" secondAttribute="bottom" constant="8" symbolic="YES" id="KdM-ZQ-6NH"/>
+                            <constraint firstItem="22t-wv-JsU" firstAttribute="top" secondItem="Enb-6I-kIl" secondAttribute="bottom" constant="8" symbolic="YES" id="h20-HT-0ez"/>
+                            <constraint firstItem="5KZ-dJ-tpY" firstAttribute="baseline" secondItem="eRQ-On-m0Y" secondAttribute="baseline" id="irT-C3-svC"/>
+                            <constraint firstItem="Enb-6I-kIl" firstAttribute="leading" secondItem="22t-wv-JsU" secondAttribute="leading" constant="51" id="l8j-EN-3iv"/>
+                            <constraint firstItem="22t-wv-JsU" firstAttribute="top" secondItem="gAV-KV-Cdx" secondAttribute="top" constant="226" id="mhK-Hd-3t8"/>
+                            <constraint firstItem="5KZ-dJ-tpY" firstAttribute="leading" secondItem="eRQ-On-m0Y" secondAttribute="trailing" constant="21" id="vqU-mX-TNK"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mf3-Cd-mqT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="443" y="1023"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Default Avatar" width="166" height="167"/>
+        <image name="Dropbox" width="236" height="236"/>
+        <image name="Foggy Blue Sky" width="1242" height="2208"/>
+        <image name="Purple Button" width="200" height="57"/>
+        <image name="Sticky Note" width="225" height="227"/>
+    </resources>
+    <color key="tintColor" red="0.48627450980392156" green="0.0" blue="0.99607843137254903" alpha="1" colorSpace="calibratedRGB"/>
+</document>
