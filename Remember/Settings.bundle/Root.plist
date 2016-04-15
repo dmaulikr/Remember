@@ -48,29 +48,11 @@
 		</dict>
 		<dict>
 			<key>Type</key>
-			<string>PSChildPaneSpecifier</string>
-			<key>Title</key>
-			<string>Creators</string>
-			<key>File</key>
-			<string>Designer</string>
-		</dict>
-		<dict>
-			<key>Type</key>
 			<string>PSGroupSpecifier</string>
 			<key>Title</key>
-			<string>Developer Stuff</string>
+			<string>Debugging</string>
 			<key>FooterText</key>
 			<string>Leave these alone unless specified by tech support.</string>
-		</dict>
-		<dict>
-			<key>Type</key>
-			<string>PSToggleSwitchSpecifier</string>
-			<key>Title</key>
-			<string>Universal Interface</string>
-			<key>Key</key>
-			<string>Universal</string>
-			<key>DefaultValue</key>
-			<false/>
 		</dict>
 		<dict>
 			<key>Type</key>

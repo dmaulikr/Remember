@@ -16,6 +16,8 @@
 @property (weak, nonatomic) IBOutlet UIImageView *background;
 @property (copy, nonatomic) NSArray *pageTitles;
 @property (copy, nonatomic) NSArray *pageImages;
+@property (copy, nonatomic) NSArray *pageColors;
+@property (copy, nonatomic) NSArray *signinColors;
 @end
 
 @implementation ContentController
@@ -23,14 +25,22 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    _pageTitles = @[@"Beautiful notes with the perfect features.",
-                    @"Attach important photos and locations.",
-                    @"Bookmark your favorites.",
-                    @"Designed simply and beautifully for you."];
+    _pageTitles = @[@"Beautiful notes with the perfect features. Set reminders for your notes so you never forget them again.",
+                    @"Bookmark your favorites and share them with your friends via social media, email, text, or almost any other service.",
+                    @"Designed simply and beautifully with you in mind. Remember's interface is simple, intuitive and designed with care.",
+                    @"Attach important photos and locations to make your notes more personal and memorable."];
     _pageImages = @[[UIImage imageNamed:@"Pexels-1"],
                     [UIImage imageNamed:@"Pexels-2"],
                     [UIImage imageNamed:@"Pexels-3"],
                     [UIImage imageNamed:@"Pexels-4"]];
+    _pageColors = @[[UIColor flatBlackColorDark],
+                    [UIColor flatWhiteColor],
+                    [UIColor flatBlackColorDark],
+                    [UIColor flatWhiteColor]];
+    _signinColors = @[[UIColor flatWhiteColor],
+                    [UIColor flatBlackColorDark],
+                    [UIColor flatWhiteColor],
+                    [UIColor flatWhiteColor]];
     
     // Create page view controller
     self.pageViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"pageController"];
@@ -67,7 +77,8 @@
     pageContentViewController.imageName = self.pageImages[index];
     pageContentViewController.text = self.pageTitles[index];
     pageContentViewController.pageIndex = index;
-    
+    pageContentViewController.textColor = self.pageColors[index];
+    pageContentViewController.signinColor = self.signinColors[index];
     return pageContentViewController;
 }
 

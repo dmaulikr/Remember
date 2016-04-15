@@ -925,28 +925,34 @@ Keeton Feavel (@Auxel)
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="460"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="14" minValue="12" maxValue="22" translatesAutoresizingMaskIntoConstraints="NO" id="Jjb-Ai-hyZ">
-                                            <rect key="frame" x="190" y="18" width="220" height="15"/>
+                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xnJ-b9-uJj">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="40"/>
+                                            <color key="backgroundColor" red="0.90823972225189209" green="0.92638683319091797" blue="0.9317171573638916" alpha="1" colorSpace="calibratedRGB"/>
+                                        </view>
+                                        <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="12" minValue="12" maxValue="22" translatesAutoresizingMaskIntoConstraints="NO" id="Jjb-Ai-hyZ">
+                                            <rect key="frame" x="138" y="82" width="324" height="15"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="216" id="Mu0-v9-jcJ"/>
-                                                <constraint firstAttribute="height" constant="14" id="Wk9-Mg-yCD"/>
+                                                <constraint firstAttribute="height" constant="14" id="ESg-MO-2L1"/>
                                             </constraints>
                                             <connections>
                                                 <action selector="textSizeValueChanged:" destination="wZo-CA-478" eventType="valueChanged" id="d3i-dV-7Ft"/>
                                             </connections>
                                         </slider>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Text Size: 14pt" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="DbK-XQ-vAO">
-                                            <rect key="frame" x="210" y="56" width="180" height="22"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Text Size: 12pt" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="DbK-XQ-vAO">
+                                            <rect key="frame" x="210" y="104" width="180" height="22"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="22" id="ORS-MF-cPJ"/>
-                                                <constraint firstAttribute="width" constant="180" id="Onc-Vf-bOr"/>
+                                                <constraint firstAttribute="width" constant="180" id="Rx8-vZ-46l"/>
+                                                <constraint firstAttribute="height" constant="22" id="eDn-J2-hMK"/>
                                             </constraints>
-                                            <fontDescription key="fontDescription" name="Arimo" family="Arimo" pointSize="16"/>
+                                            <fontDescription key="fontDescription" name="Arimo" family="Arimo" pointSize="12"/>
                                             <color key="textColor" red="0.90823972230000005" green="0.92638683320000004" blue="0.93171715740000005" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Display Name" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="17e-UA-iU4">
-                                            <rect key="frame" x="192" y="86" width="216" height="30"/>
+                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Author First and Last Name" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="17e-UA-iU4">
+                                            <rect key="frame" x="8" y="0.0" width="584" height="40"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="40" id="Bjw-CE-1bA"/>
+                                            </constraints>
                                             <fontDescription key="fontDescription" name="Arimo" family="Arimo" pointSize="12"/>
                                             <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
                                             <connections>
@@ -954,20 +960,20 @@ Keeton Feavel (@Auxel)
                                             </connections>
                                         </textField>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This name will be used as the default author." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zXE-IY-whl">
-                                            <rect key="frame" x="140" y="124" width="320" height="26"/>
+                                            <rect key="frame" x="140" y="48" width="320" height="26"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="320" id="JmQ-rV-0nI"/>
-                                                <constraint firstAttribute="height" constant="26" id="rjM-Tg-ofT"/>
+                                                <constraint firstAttribute="width" constant="320" id="oY9-CJ-yYV"/>
+                                                <constraint firstAttribute="height" constant="26" id="yjf-l3-4dk"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" name="Arimo" family="Arimo" pointSize="15"/>
                                             <color key="textColor" red="0.90823972230000005" green="0.92638683320000004" blue="0.93171715740000005" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ga8-ce-WMo">
-                                            <rect key="frame" x="220" y="231" width="160" height="22"/>
+                                            <rect key="frame" x="220" y="207" width="160" height="22"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="160" id="huN-iY-BNQ"/>
-                                                <constraint firstAttribute="height" constant="22" id="y1N-tR-wUM"/>
+                                                <constraint firstAttribute="height" constant="22" id="K5h-05-m0E"/>
+                                                <constraint firstAttribute="width" constant="160" id="yum-3c-q7g"/>
                                             </constraints>
                                             <state key="normal" title="Remove Contact Photo">
                                                 <color key="titleColor" red="0.85043728350000003" green="0.21816034619999999" blue="0.15920260550000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -978,9 +984,9 @@ Keeton Feavel (@Auxel)
                                             </connections>
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="8" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5Jh-Qw-Xmb">
-                                            <rect key="frame" x="140" y="261" width="320" height="36"/>
+                                            <rect key="frame" x="140" y="237" width="320" height="36"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="36" id="dHA-gO-zk6"/>
+                                                <constraint firstAttribute="height" constant="36" id="lKz-ns-zmq"/>
                                             </constraints>
                                             <string key="text">Your contact image is displayed above
 your name in the slide out menu.</string>
@@ -989,9 +995,9 @@ your name in the slide out menu.</string>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bkb-uE-COH">
-                                            <rect key="frame" x="210" y="305" width="180" height="22"/>
+                                            <rect key="frame" x="210" y="281" width="180" height="22"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="22" id="4Iy-ch-d0T"/>
+                                                <constraint firstAttribute="height" constant="22" id="Q56-Kg-TV2"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                             <state key="normal" title="Sign out of Google+">
@@ -1003,7 +1009,7 @@ your name in the slide out menu.</string>
                                             </connections>
                                         </button>
                                         <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VmL-Bk-Kh3">
-                                            <rect key="frame" x="276" y="192" width="51" height="31"/>
+                                            <rect key="frame" x="276" y="168" width="51" height="31"/>
                                             <color key="onTintColor" red="0.2783651352" green="0.1853051037" blue="0.59323644639999995" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="thumbTintColor" red="0.90823972225189209" green="0.92638683319091797" blue="0.9317171573638916" alpha="1" colorSpace="calibratedRGB"/>
                                             <connections>
@@ -1011,10 +1017,10 @@ your name in the slide out menu.</string>
                                             </connections>
                                         </switch>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enable Interface Sounds:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5C3-gQ-Usc">
-                                            <rect key="frame" x="197" y="158" width="207" height="26"/>
+                                            <rect key="frame" x="197" y="134" width="207" height="26"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="207" id="HXd-PZ-mCV"/>
-                                                <constraint firstAttribute="height" constant="26" id="rm9-WR-JFG"/>
+                                                <constraint firstAttribute="width" constant="207" id="31h-LR-pGO"/>
+                                                <constraint firstAttribute="height" constant="26" id="j87-Qj-TFc"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" name="Arimo" family="Arimo" pointSize="15"/>
                                             <color key="textColor" red="0.90823972230000005" green="0.92638683320000004" blue="0.93171715740000005" alpha="1" colorSpace="calibratedRGB"/>
@@ -1022,28 +1028,29 @@ your name in the slide out menu.</string>
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="5C3-gQ-Usc" firstAttribute="top" secondItem="zXE-IY-whl" secondAttribute="bottom" constant="8" symbolic="YES" id="05S-L4-8fA"/>
-                                        <constraint firstItem="17e-UA-iU4" firstAttribute="trailing" secondItem="Jjb-Ai-hyZ" secondAttribute="trailing" id="0oU-Ml-r4N"/>
-                                        <constraint firstItem="5C3-gQ-Usc" firstAttribute="centerX" secondItem="TvK-2y-2ox" secondAttribute="centerX" id="53d-jb-ZnM"/>
-                                        <constraint firstItem="Jjb-Ai-hyZ" firstAttribute="top" secondItem="TvK-2y-2ox" secondAttribute="top" constant="18" id="6OX-l1-h4p"/>
-                                        <constraint firstItem="bkb-uE-COH" firstAttribute="top" secondItem="5Jh-Qw-Xmb" secondAttribute="bottom" constant="8" symbolic="YES" id="6aM-9o-vYy"/>
-                                        <constraint firstItem="17e-UA-iU4" firstAttribute="top" secondItem="DbK-XQ-vAO" secondAttribute="bottom" constant="8" symbolic="YES" id="8IV-P1-j0G"/>
-                                        <constraint firstItem="5C3-gQ-Usc" firstAttribute="centerX" secondItem="zXE-IY-whl" secondAttribute="centerX" id="Aci-EP-kG8"/>
-                                        <constraint firstItem="bkb-uE-COH" firstAttribute="trailing" secondItem="DbK-XQ-vAO" secondAttribute="trailing" id="JLY-x7-F59"/>
-                                        <constraint firstItem="ga8-ce-WMo" firstAttribute="centerX" secondItem="5Jh-Qw-Xmb" secondAttribute="centerX" id="M64-Y9-Zbn"/>
-                                        <constraint firstItem="VmL-Bk-Kh3" firstAttribute="top" secondItem="5C3-gQ-Usc" secondAttribute="bottom" constant="8" id="PF4-35-qhV"/>
+                                        <constraint firstItem="zXE-IY-whl" firstAttribute="top" secondItem="17e-UA-iU4" secondAttribute="bottom" constant="8" symbolic="YES" id="1aj-ra-4Cs"/>
+                                        <constraint firstItem="ga8-ce-WMo" firstAttribute="top" secondItem="VmL-Bk-Kh3" secondAttribute="bottom" constant="8" symbolic="YES" id="3Jz-cL-Q8Z"/>
+                                        <constraint firstItem="VmL-Bk-Kh3" firstAttribute="top" secondItem="5C3-gQ-Usc" secondAttribute="bottom" constant="8" symbolic="YES" id="AgB-YU-EcG"/>
+                                        <constraint firstItem="bkb-uE-COH" firstAttribute="top" secondItem="5Jh-Qw-Xmb" secondAttribute="bottom" constant="8" symbolic="YES" id="B4u-6V-WuK"/>
+                                        <constraint firstItem="Jjb-Ai-hyZ" firstAttribute="centerX" secondItem="DbK-XQ-vAO" secondAttribute="centerX" id="DXt-wl-g72"/>
+                                        <constraint firstItem="5Jh-Qw-Xmb" firstAttribute="top" secondItem="ga8-ce-WMo" secondAttribute="bottom" constant="8" symbolic="YES" id="IyQ-h1-la3"/>
+                                        <constraint firstItem="5C3-gQ-Usc" firstAttribute="centerX" secondItem="VmL-Bk-Kh3" secondAttribute="centerX" id="Maj-Xj-hEo"/>
                                         <constraint firstItem="5C3-gQ-Usc" firstAttribute="trailing" secondItem="VmL-Bk-Kh3" secondAttribute="trailing" id="QAZ-5N-w98"/>
-                                        <constraint firstItem="5Jh-Qw-Xmb" firstAttribute="leading" secondItem="zXE-IY-whl" secondAttribute="leading" id="Ua1-d3-Mqs"/>
-                                        <constraint firstItem="ga8-ce-WMo" firstAttribute="top" secondItem="VmL-Bk-Kh3" secondAttribute="bottom" constant="8" id="Vwg-Cd-MnS"/>
-                                        <constraint firstItem="5Jh-Qw-Xmb" firstAttribute="top" secondItem="ga8-ce-WMo" secondAttribute="bottom" constant="8" symbolic="YES" id="bHC-WE-xCm"/>
-                                        <constraint firstItem="5Jh-Qw-Xmb" firstAttribute="trailing" secondItem="zXE-IY-whl" secondAttribute="trailing" id="cf7-FI-fOu"/>
-                                        <constraint firstItem="zXE-IY-whl" firstAttribute="centerX" secondItem="17e-UA-iU4" secondAttribute="centerX" id="d3e-mW-e2H"/>
-                                        <constraint firstItem="bkb-uE-COH" firstAttribute="leading" secondItem="DbK-XQ-vAO" secondAttribute="leading" id="gdn-Y7-ZiD"/>
-                                        <constraint firstItem="DbK-XQ-vAO" firstAttribute="centerX" secondItem="Jjb-Ai-hyZ" secondAttribute="centerX" id="nj7-Eg-Wnb"/>
-                                        <constraint firstItem="Jjb-Ai-hyZ" firstAttribute="leading" secondItem="17e-UA-iU4" secondAttribute="leading" id="pL6-Yi-8TQ"/>
-                                        <constraint firstItem="ga8-ce-WMo" firstAttribute="centerX" secondItem="VmL-Bk-Kh3" secondAttribute="centerX" id="vrV-Dy-JFf"/>
-                                        <constraint firstItem="DbK-XQ-vAO" firstAttribute="top" secondItem="Jjb-Ai-hyZ" secondAttribute="bottom" constant="24" id="yCw-AP-DqZ"/>
-                                        <constraint firstItem="zXE-IY-whl" firstAttribute="top" secondItem="17e-UA-iU4" secondAttribute="bottom" constant="8" symbolic="YES" id="zm1-nX-IcT"/>
+                                        <constraint firstAttribute="trailing" secondItem="17e-UA-iU4" secondAttribute="trailing" constant="8" id="QtW-Lx-dtg"/>
+                                        <constraint firstItem="DbK-XQ-vAO" firstAttribute="trailing" secondItem="bkb-uE-COH" secondAttribute="trailing" id="X3r-sh-ylv"/>
+                                        <constraint firstItem="17e-UA-iU4" firstAttribute="leading" secondItem="TvK-2y-2ox" secondAttribute="leading" constant="8" id="XJ4-gT-jpZ"/>
+                                        <constraint firstItem="DbK-XQ-vAO" firstAttribute="centerX" secondItem="5C3-gQ-Usc" secondAttribute="centerX" id="aa4-Hu-ye3"/>
+                                        <constraint firstItem="zXE-IY-whl" firstAttribute="trailing" secondItem="Jjb-Ai-hyZ" secondAttribute="trailing" id="bBA-go-iQo"/>
+                                        <constraint firstItem="Jjb-Ai-hyZ" firstAttribute="trailing" secondItem="5Jh-Qw-Xmb" secondAttribute="trailing" id="bjz-lb-wr3"/>
+                                        <constraint firstItem="17e-UA-iU4" firstAttribute="centerX" secondItem="zXE-IY-whl" secondAttribute="centerX" id="bpV-4W-QM2"/>
+                                        <constraint firstItem="DbK-XQ-vAO" firstAttribute="leading" secondItem="bkb-uE-COH" secondAttribute="leading" id="jHU-08-h5l"/>
+                                        <constraint firstItem="VmL-Bk-Kh3" firstAttribute="centerX" secondItem="ga8-ce-WMo" secondAttribute="centerX" id="kfA-sT-78Q"/>
+                                        <constraint firstItem="5C3-gQ-Usc" firstAttribute="top" secondItem="DbK-XQ-vAO" secondAttribute="bottom" constant="8" symbolic="YES" id="m1d-eO-LDd"/>
+                                        <constraint firstItem="zXE-IY-whl" firstAttribute="leading" secondItem="Jjb-Ai-hyZ" secondAttribute="leading" id="oox-nh-I8c"/>
+                                        <constraint firstItem="Jjb-Ai-hyZ" firstAttribute="top" secondItem="zXE-IY-whl" secondAttribute="bottom" constant="8" symbolic="YES" id="q2p-VB-fxo"/>
+                                        <constraint firstItem="DbK-XQ-vAO" firstAttribute="top" secondItem="Jjb-Ai-hyZ" secondAttribute="bottom" constant="8" symbolic="YES" id="qfO-lq-b0Z"/>
+                                        <constraint firstItem="Jjb-Ai-hyZ" firstAttribute="leading" secondItem="5Jh-Qw-Xmb" secondAttribute="leading" id="ujK-uh-wh6"/>
+                                        <constraint firstItem="17e-UA-iU4" firstAttribute="top" secondItem="TvK-2y-2ox" secondAttribute="top" id="vIf-W6-PKB"/>
                                     </constraints>
                                     <variation key="default">
                                         <mask key="constraints">

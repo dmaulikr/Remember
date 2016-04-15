@@ -245,12 +245,16 @@ UITextViewDelegate
                                                     handler:^(UIAlertAction * action)
                             {
                                 [_pMan selectPhotoFromLibrary:self];
+                                //HNKCache *format = [HNKCache sharedCache];
+                                //[format removeAllImages];
                             }];
     UIAlertAction *camera = [UIAlertAction actionWithTitle:@"Photo From Camera"
                                                       style:UIAlertActionStyleDefault
                                                     handler:^(UIAlertAction * action)
                             {
                                 [_pMan selectPhotoFromCamera:self];
+                                //HNKCache *format = [HNKCache sharedCache];
+                                //[format removeAllImages];
                             }];
     UIAlertAction *viewPhoto = [UIAlertAction actionWithTitle:@"View Photo"
                                                      style:UIAlertActionStyleDefault

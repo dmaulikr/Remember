@@ -468,7 +468,7 @@ UIViewControllerPreviewingDelegate
                 format.size = CGSizeMake(cell.frame.size.width, cell.frame.size.height);
                 format.scaleMode = HNKScaleModeAspectFill;
                 format.compressionQuality = 0.5;
-                format.diskCapacity = 2 * 1024 * 1024; // 2MB
+                format.diskCapacity = 1 * 1024 * 1024; // 2MB
                 format.preloadPolicy = HNKPreloadPolicyAll;
             }
             cell.customBackground.hnk_cacheFormat = format;

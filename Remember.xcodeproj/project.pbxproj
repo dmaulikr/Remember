@@ -857,7 +857,6 @@
 				E95481771A0056CC000BDFC9 /* App Delegate */,
 				E9BC90A919F1E4740036A6F4 /* View Controllers */,
 				E9FBB3E719E9E5C000063C38 /* Supporting Files */,
-				E961A2541CC146C8003728BA /* Settings.bundle */,
 			);
 			path = Remember;
 			sourceTree = "<group>";
@@ -870,6 +869,7 @@
 				E9FBB3E819E9E5C000063C38 /* Info.plist */,
 				E9E0EDC01A1A63B600924329 /* Remember.entitlements */,
 				E95C833E1C77761D004D18D9 /* GoogleSignIn.bundle */,
+				E961A2541CC146C8003728BA /* Settings.bundle */,
 				E9FBB3E919E9E5C000063C38 /* main.m */,
 				E9BCF4EF19F05EF3009CFEBB /* Remember Prefix.pch */,
 			);

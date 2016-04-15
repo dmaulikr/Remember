@@ -41,12 +41,14 @@
     
     self.background.image = _imageName;
     self.tutorialText.text = self.text;
-    self.tutorialText.textColor = [UIColor colorWithContrastingBlackOrWhiteColorOn:
-                                   [UIColor colorWithComplementaryFlatColorOf:
-                                    AverageColorFromImage(_imageName)] isFlat:YES];
-    self.signInLabel.textColor = [UIColor colorWithContrastingBlackOrWhiteColorOn:
-                                   [UIColor colorWithComplementaryFlatColorOf:
-                                    AverageColorFromImage(_imageName)] isFlat:YES];
+    self.tutorialText.textColor = _textColor;
+    //[UIColor colorWithContrastingBlackOrWhiteColorOn:
+    // [UIColor colorWithComplementaryFlatColorOf:
+    //  AverageColorFromImage(_imageName)] isFlat:YES];
+    self.signInLabel.textColor = _signinColor;
+    //[UIColor colorWithContrastingBlackOrWhiteColorOn:
+    //[UIColor colorWithComplementaryFlatColorOf:
+    //AverageColorFromImage(_imageName)] isFlat:YES];
     
     RMView *corners = [RMView new];
     [corners createViewWithRoundedCornersWithRadius:10.0 andView:_blurView];

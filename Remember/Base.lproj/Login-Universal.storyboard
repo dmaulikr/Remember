@@ -4,6 +4,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <customFonts key="customFonts">
         <mutableArray key="Amble-Regular.ttf">
@@ -11,6 +12,7 @@
             <string>Amble-Regular</string>
         </mutableArray>
         <mutableArray key="Arimo-Regular.ttf">
+            <string>Arimo</string>
             <string>Arimo</string>
             <string>Arimo</string>
             <string>Arimo</string>
@@ -64,7 +66,7 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Sticky Note" translatesAutoresizingMaskIntoConstraints="NO" id="3ky-og-Ddk">
-                                <rect key="frame" x="220" y="58" width="160" height="160"/>
+                                <rect key="frame" x="220" y="28" width="160" height="160"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="160" id="Odx-Xj-tn4"/>
                                     <constraint firstAttribute="width" secondItem="3ky-og-Ddk" secondAttribute="height" multiplier="1:1" id="TNA-rz-4On"/>
@@ -77,7 +79,7 @@
                                     <constraint firstAttribute="height" constant="28" id="yaG-do-VA2"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Arimo" family="Arimo" pointSize="15"/>
-                                <state key="normal" title="Google +" backgroundImage="Purple Button">
+                                <state key="normal" title="Google" backgroundImage="Purple Button">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -94,12 +96,12 @@
                                 <nil key="highlightedColor"/>
                                 <size key="shadowOffset" width="1" height="1"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="Vs3-Vo-fAs">
-                                <rect key="frame" x="20" y="226" width="560" height="80"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="Vs3-Vo-fAs">
+                                <rect key="frame" x="57" y="204" width="486" height="80"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="560" id="7Ud-cj-XOy"/>
+                                    <constraint firstAttribute="height" constant="80" id="2Tg-6l-dUQ"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <fontDescription key="fontDescription" name="Arimo" family="Arimo" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                                 <size key="shadowOffset" width="1" height="2"/>
@@ -111,17 +113,17 @@
                             <constraint firstItem="3ky-og-Ddk" firstAttribute="centerX" secondItem="gRn-Lz-GH6" secondAttribute="centerX" id="8XZ-vw-haJ"/>
                             <constraint firstItem="unR-ck-mGU" firstAttribute="leading" secondItem="gTc-dB-xCn" secondAttribute="leading" id="CjN-is-9qB"/>
                             <constraint firstItem="gRn-Lz-GH6" firstAttribute="bottom" secondItem="ETT-qj-k93" secondAttribute="top" id="Hze-l1-9R4"/>
-                            <constraint firstItem="Vs3-Vo-fAs" firstAttribute="centerY" secondItem="gRn-Lz-GH6" secondAttribute="centerY" constant="-34" id="LYJ-qG-beA"/>
-                            <constraint firstItem="Vs3-Vo-fAs" firstAttribute="top" secondItem="3ky-og-Ddk" secondAttribute="bottom" constant="8" id="M6j-o3-UJA"/>
                             <constraint firstItem="gRn-Lz-GH6" firstAttribute="leading" secondItem="ut7-vA-BhO" secondAttribute="leading" id="QNp-q8-uw3"/>
-                            <constraint firstItem="Vs3-Vo-fAs" firstAttribute="centerX" secondItem="3ky-og-Ddk" secondAttribute="centerX" id="RZj-mb-2Ud"/>
                             <constraint firstItem="MmH-go-0OM" firstAttribute="leading" secondItem="gTc-dB-xCn" secondAttribute="leading" constant="142" id="Y9g-sH-F41"/>
                             <constraint firstItem="gTc-dB-xCn" firstAttribute="top" secondItem="unR-ck-mGU" secondAttribute="bottom" constant="8" symbolic="YES" id="ZPr-pj-VFo"/>
-                            <constraint firstItem="3ky-og-Ddk" firstAttribute="top" secondItem="w70-ly-iRp" secondAttribute="bottom" constant="38" id="ft0-AH-ubf"/>
+                            <constraint firstItem="3ky-og-Ddk" firstAttribute="top" secondItem="w70-ly-iRp" secondAttribute="bottom" constant="8" id="ft0-AH-ubf"/>
                             <constraint firstItem="unR-ck-mGU" firstAttribute="trailing" secondItem="MmH-go-0OM" secondAttribute="trailing" id="i5D-sQ-rCf"/>
                             <constraint firstItem="MmH-go-0OM" firstAttribute="top" secondItem="gTc-dB-xCn" secondAttribute="bottom" constant="-28" id="lza-bD-Oaa"/>
                             <constraint firstItem="ETT-qj-k93" firstAttribute="top" secondItem="MmH-go-0OM" secondAttribute="bottom" constant="64" id="nJE-j1-YYl"/>
                             <constraint firstAttribute="trailing" secondItem="gRn-Lz-GH6" secondAttribute="trailing" id="qq0-TU-f1L"/>
+                            <constraint firstItem="Vs3-Vo-fAs" firstAttribute="centerX" secondItem="3ky-og-Ddk" secondAttribute="centerX" id="tih-Mf-75U"/>
+                            <constraint firstItem="Vs3-Vo-fAs" firstAttribute="leading" secondItem="ut7-vA-BhO" secondAttribute="leadingMargin" constant="37" id="wmI-Hn-sY6"/>
+                            <constraint firstItem="Vs3-Vo-fAs" firstAttribute="top" secondItem="3ky-og-Ddk" secondAttribute="bottom" constant="16" id="xbr-tX-gd0"/>
                             <constraint firstItem="3ky-og-Ddk" firstAttribute="centerX" secondItem="gTc-dB-xCn" secondAttribute="centerX" constant="71" id="xcR-Yb-mVY"/>
                             <constraint firstItem="gRn-Lz-GH6" firstAttribute="top" secondItem="ut7-vA-BhO" secondAttribute="top" id="zfu-Ox-maC"/>
                         </constraints>
@@ -144,7 +146,7 @@
         <!--Content Controller-->
         <scene sceneID="Sgv-Xd-ctm">
             <objects>
-                <viewController storyboardIdentifier="contentController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="PXw-ib-HlO" customClass="ContentController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="loginContentController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="PXw-ib-HlO" customClass="ContentController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="8EC-Yv-niA"/>
                         <viewControllerLayoutGuide type="bottom" id="5Nm-xh-XXv"/>
@@ -264,7 +266,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="22" id="ymm-1D-EgD"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Arimo" family="Arimo" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="Arimo" family="Arimo" pointSize="12"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -367,11 +369,14 @@
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Dropbox" translatesAutoresizingMaskIntoConstraints="NO" id="Enb-6I-kIl">
                                 <rect key="frame" x="220" y="58" width="160" height="160"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="160" id="WaN-fN-okE"/>
+                                </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dropbox" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="22t-wv-JsU">
                                 <rect key="frame" x="169" y="226" width="261" height="36"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="261" id="I4R-Dn-06O"/>
+                                    <constraint firstAttribute="height" constant="36" id="9Mc-Xp-d1f"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Arimo" family="Arimo" pointSize="32"/>
                                 <color key="textColor" red="0.0" green="0.49411764705882355" blue="0.89803921568627454" alpha="1" colorSpace="calibratedRGB"/>
@@ -381,7 +386,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Remember is able to sync your notes across all of your devices by utilizing Dropbox's cloud storage service." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B6c-YI-K7g">
                                 <rect key="frame" x="169" y="270" width="261" height="92"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="92" id="cBJ-0R-6RQ"/>
+                                    <constraint firstAttribute="height" constant="92" id="EBe-cx-k7R"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Arimo" family="Arimo" pointSize="16"/>
                                 <color key="textColor" red="0.090196078431372548" green="0.40392156862745099" blue="0.87450980392156863" alpha="1" colorSpace="calibratedRGB"/>
@@ -391,18 +396,18 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="eRQ-On-m0Y" firstAttribute="centerX" secondItem="gAV-KV-Cdx" secondAttribute="centerX" constant="-71" id="6EP-hF-o9Q"/>
-                            <constraint firstItem="B6c-YI-K7g" firstAttribute="trailing" secondItem="22t-wv-JsU" secondAttribute="trailing" id="9UI-jP-jJP"/>
-                            <constraint firstItem="Enb-6I-kIl" firstAttribute="trailing" secondItem="22t-wv-JsU" secondAttribute="trailing" constant="-50" id="Abd-0J-kdS"/>
+                            <constraint firstItem="B6c-YI-K7g" firstAttribute="trailing" secondItem="5KZ-dJ-tpY" secondAttribute="trailing" id="9HZ-P6-bho"/>
+                            <constraint firstItem="B6c-YI-K7g" firstAttribute="top" secondItem="22t-wv-JsU" secondAttribute="bottom" constant="8" symbolic="YES" id="Ccm-II-eZZ"/>
                             <constraint firstItem="Aoa-TK-RHJ" firstAttribute="top" secondItem="eRQ-On-m0Y" secondAttribute="bottom" constant="64" id="GMT-Y8-jZu"/>
-                            <constraint firstItem="B6c-YI-K7g" firstAttribute="leading" secondItem="22t-wv-JsU" secondAttribute="leading" id="HAV-hG-7Gp"/>
-                            <constraint firstItem="22t-wv-JsU" firstAttribute="centerX" secondItem="gAV-KV-Cdx" secondAttribute="centerX" id="JuK-Nv-IXL"/>
-                            <constraint firstItem="Enb-6I-kIl" firstAttribute="top" secondItem="CIs-nJ-FLS" secondAttribute="bottom" constant="38" id="KRe-5u-bRj"/>
-                            <constraint firstItem="B6c-YI-K7g" firstAttribute="top" secondItem="22t-wv-JsU" secondAttribute="bottom" constant="8" symbolic="YES" id="KdM-ZQ-6NH"/>
-                            <constraint firstItem="22t-wv-JsU" firstAttribute="top" secondItem="Enb-6I-kIl" secondAttribute="bottom" constant="8" symbolic="YES" id="h20-HT-0ez"/>
+                            <constraint firstItem="Enb-6I-kIl" firstAttribute="centerX" secondItem="22t-wv-JsU" secondAttribute="centerX" id="IXc-Gh-q69"/>
+                            <constraint firstItem="22t-wv-JsU" firstAttribute="top" secondItem="Enb-6I-kIl" secondAttribute="bottom" constant="8" symbolic="YES" id="Moc-1y-4bS"/>
+                            <constraint firstItem="22t-wv-JsU" firstAttribute="top" secondItem="gAV-KV-Cdx" secondAttribute="top" constant="226" id="g38-t2-w9X"/>
                             <constraint firstItem="5KZ-dJ-tpY" firstAttribute="baseline" secondItem="eRQ-On-m0Y" secondAttribute="baseline" id="irT-C3-svC"/>
-                            <constraint firstItem="Enb-6I-kIl" firstAttribute="leading" secondItem="22t-wv-JsU" secondAttribute="leading" constant="51" id="l8j-EN-3iv"/>
-                            <constraint firstItem="22t-wv-JsU" firstAttribute="top" secondItem="gAV-KV-Cdx" secondAttribute="top" constant="226" id="mhK-Hd-3t8"/>
+                            <constraint firstItem="Enb-6I-kIl" firstAttribute="top" secondItem="CIs-nJ-FLS" secondAttribute="bottom" constant="38" id="l72-du-Y5t"/>
+                            <constraint firstItem="22t-wv-JsU" firstAttribute="leading" secondItem="B6c-YI-K7g" secondAttribute="leading" id="nqX-7n-hAD"/>
+                            <constraint firstItem="B6c-YI-K7g" firstAttribute="leading" secondItem="eRQ-On-m0Y" secondAttribute="leading" id="u51-It-cmk"/>
                             <constraint firstItem="5KZ-dJ-tpY" firstAttribute="leading" secondItem="eRQ-On-m0Y" secondAttribute="trailing" constant="21" id="vqU-mX-TNK"/>
+                            <constraint firstItem="22t-wv-JsU" firstAttribute="trailing" secondItem="B6c-YI-K7g" secondAttribute="trailing" id="yBj-D2-uUQ"/>
                         </constraints>
                     </view>
                 </viewController>

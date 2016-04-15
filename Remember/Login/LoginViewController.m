@@ -69,16 +69,16 @@
 }
 
 - (void)runExitLogin {
-    UIStoryboard *storyboard;
+    NSString *storyboard;
     CGSize iOSDeviceScreenSize = [[UIScreen mainScreen] bounds].size;
     if (iOSDeviceScreenSize.height == 480)
     {
         // Instantiate a new storyboard object using the storyboard file named Storyboard_iPhone35
-        storyboard = [UIStoryboard storyboardWithName:@"iPhone-Small" bundle:nil];
+        storyboard = @"iPhone-Small";
     }
     else
     {
-        storyboard = [UIStoryboard storyboardWithName:@"Storyboard" bundle:nil];
+        storyboard = @"Storyboard";
     }
     
     
@@ -98,13 +98,15 @@
                                     fileName:@"Notes"];
     
     // Instantiate the initial view controller object from the storyboard
+    // TODO: Remove? Does this cause issues?
+    [self dismissViewControllerAnimated:YES completion:nil];
     UIViewController *initialViewController;
-    initialViewController = [storyboard instantiateInitialViewController];
+    initialViewController = [[UIStoryboard storyboardWithName:storyboard bundle:nil] instantiateInitialViewController];
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.rootViewController = initialViewController;
     [self.window makeKeyAndVisible];
-    // TODO: Remove? Does this cause issues?
-    [self dismissViewControllerAnimated:YES completion:nil];
+     
+    //[self.storyboard instantiateViewControllerWithIdentifier:storyboard];
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
