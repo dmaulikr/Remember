@@ -74,6 +74,7 @@
     if (iOSDeviceScreenSize.height == 480)
     {
         // Instantiate a new storyboard object using the storyboard file named Storyboard_iPhone35
+        // Ugh. Apple, kill the iPhone 4S already!
         storyboard = @"iPhone-Small";
     }
     else
@@ -96,10 +97,11 @@
     [dataManager writeTableContentsFromArray:dictionary
                                  containerID:@"group.com.solarpepper.Remember"
                                     fileName:@"Notes"];
+    [[NSUserDefaults standardUserDefaults] setBool:TRUE forKey:@"Audio"];
     
     // Instantiate the initial view controller object from the storyboard
     // TODO: Remove? Does this cause issues?
-    [self dismissViewControllerAnimated:YES completion:nil];
+    //[self dismissViewControllerAnimated:YES completion:nil];
     UIViewController *initialViewController;
     initialViewController = [[UIStoryboard storyboardWithName:storyboard bundle:nil] instantiateInitialViewController];
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];

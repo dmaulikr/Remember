@@ -524,9 +524,11 @@
     }
     
     //NSLog(@"Writing URL: %@",url);
-    [data setObject:[url absoluteString]
-             forKey:[NSString stringWithFormat:@"%@+URL",rememberTitle]];
-    [data writeToURL:path atomically:YES];
+    if (url) {
+        [data setObject:[url absoluteString]
+                 forKey:[NSString stringWithFormat:@"%@+URL",rememberTitle]];
+        [data writeToURL:path atomically:YES];
+    }
 }
 
 - (NSURL *)readURL:(NSString *)rememberTitle; {

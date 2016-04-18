@@ -48,7 +48,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Foggy Blue Sky" translatesAutoresizingMaskIntoConstraints="NO" id="gRn-Lz-GH6">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Beach" translatesAutoresizingMaskIntoConstraints="NO" id="gRn-Lz-GH6">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gTc-dB-xCn">
@@ -173,7 +173,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Foggy Blue Sky" translatesAutoresizingMaskIntoConstraints="NO" id="zto-XR-Eta">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Beach" translatesAutoresizingMaskIntoConstraints="NO" id="zto-XR-Eta">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
                             <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9rf-hx-Y80">
@@ -242,11 +242,11 @@
                                     <constraint firstAttribute="height" constant="100" id="lfn-0a-RJr"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select a Contact Photo:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ofy-gh-Rxz">
-                                <rect key="frame" x="210" y="28" width="181" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select a Contact Photo:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ofy-gh-Rxz">
+                                <rect key="frame" x="172" y="28" width="248" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="OFW-Fl-O1K"/>
-                                    <constraint firstAttribute="width" constant="181" id="vea-bg-ltm"/>
+                                    <constraint firstAttribute="width" constant="248" id="vea-bg-ltm"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Arimo" family="Arimo" pointSize="17"/>
                                 <color key="textColor" red="0.11181893199682236" green="0.1118365004658699" blue="0.1118125319480896" alpha="1" colorSpace="calibratedRGB"/>
@@ -282,18 +282,18 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="UHy-Yp-nIl" firstAttribute="centerX" secondItem="Ofy-gh-Rxz" secondAttribute="centerX" id="2y7-a7-nBw"/>
+                            <constraint firstItem="UHy-Yp-nIl" firstAttribute="centerX" secondItem="Ofy-gh-Rxz" secondAttribute="centerX" constant="5" id="2y7-a7-nBw"/>
                             <constraint firstItem="UHy-Yp-nIl" firstAttribute="top" secondItem="tk5-Nf-RRc" secondAttribute="bottom" constant="8" symbolic="YES" id="5ZY-Ol-a4n"/>
                             <constraint firstItem="tk5-Nf-RRc" firstAttribute="trailing" secondItem="w1S-vj-Z66" secondAttribute="trailing" id="9Wm-bk-vPE"/>
                             <constraint firstItem="oK3-Lg-fKl" firstAttribute="top" secondItem="DzT-37-wM5" secondAttribute="bottom" constant="25" id="FwR-h9-sIt"/>
                             <constraint firstItem="tk5-Nf-RRc" firstAttribute="leading" secondItem="w1S-vj-Z66" secondAttribute="leading" id="Gv2-rb-PPE"/>
                             <constraint firstItem="9rf-hx-Y80" firstAttribute="trailing" secondItem="zto-XR-Eta" secondAttribute="trailing" id="Kgz-tw-net"/>
                             <constraint firstItem="oK3-Lg-fKl" firstAttribute="centerX" secondItem="PVX-vQ-DEg" secondAttribute="centerX" id="Oog-xg-psE"/>
-                            <constraint firstItem="Ofy-gh-Rxz" firstAttribute="centerX" secondItem="zto-XR-Eta" secondAttribute="centerX" id="PIM-wE-zbU"/>
+                            <constraint firstItem="Ofy-gh-Rxz" firstAttribute="centerX" secondItem="zto-XR-Eta" secondAttribute="centerX" constant="-4" id="PIM-wE-zbU"/>
                             <constraint firstItem="9rf-hx-Y80" firstAttribute="leading" secondItem="zto-XR-Eta" secondAttribute="leading" id="QPI-lq-N9Q"/>
                             <constraint firstItem="w1S-vj-Z66" firstAttribute="top" secondItem="PVX-vQ-DEg" secondAttribute="bottom" constant="8" symbolic="YES" id="QUj-sS-xiw"/>
                             <constraint firstItem="DzT-37-wM5" firstAttribute="centerX" secondItem="oK3-Lg-fKl" secondAttribute="centerX" id="Tpq-Jd-JgH"/>
-                            <constraint firstItem="Ofy-gh-Rxz" firstAttribute="centerX" secondItem="DzT-37-wM5" secondAttribute="centerX" id="VnK-df-Loo"/>
+                            <constraint firstItem="Ofy-gh-Rxz" firstAttribute="centerX" secondItem="DzT-37-wM5" secondAttribute="centerX" constant="-4" id="VnK-df-Loo"/>
                             <constraint firstItem="DzT-37-wM5" firstAttribute="top" secondItem="Ofy-gh-Rxz" secondAttribute="bottom" constant="7" id="Wiq-Ho-079"/>
                             <constraint firstItem="w1S-vj-Z66" firstAttribute="centerX" secondItem="PVX-vQ-DEg" secondAttribute="centerX" id="XEq-Tk-bfS"/>
                             <constraint firstItem="cIc-of-9nk" firstAttribute="top" secondItem="w1S-vj-Z66" secondAttribute="bottom" constant="8" symbolic="YES" id="ZcC-IZ-jZl"/>
@@ -417,9 +417,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Beach" width="414" height="736"/>
         <image name="Default Avatar" width="166" height="167"/>
         <image name="Dropbox" width="236" height="236"/>
-        <image name="Foggy Blue Sky" width="1242" height="2208"/>
         <image name="Purple Button" width="200" height="57"/>
         <image name="Sticky Note" width="225" height="227"/>
     </resources>

@@ -55,14 +55,11 @@
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker; {
     
     [_view dismissViewControllerAnimated:YES completion:NULL];
-    [[UIApplication sharedApplication] setStatusBarHidden:YES];
     [[NSUserDefaults standardUserDefaults] setBool:NO forKey:[NSString stringWithFormat:@"MainPhoto"]];
     [self cancelActionSound];
 }
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info; {
-    
-    [[UIApplication sharedApplication] setStatusBarHidden:YES];
     _image = [info valueForKey:UIImagePickerControllerOriginalImage];
     [self finishAndUpdate:_file];
 }
@@ -85,7 +82,6 @@
     
     imageName = [[cDocuments path] stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.jpg",_file]];
     _image = [UIImage imageWithContentsOfFile:imageName];
-    [[UIApplication sharedApplication] setStatusBarHidden:NO];
     [self photoCompleteSound];
 }
 

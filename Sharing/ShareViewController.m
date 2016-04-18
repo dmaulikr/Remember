@@ -11,6 +11,7 @@
 #import <CoreLocation/CoreLocation.h>
 #import "RMAudio.h"
 #import "RMView.h"
+#import "RMPhotoManager.h"
 #import <CoreSpotlight/CoreSpotlight.h>
 #import <MobileCoreServices/MobileCoreServices.h>
 
@@ -54,7 +55,6 @@
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:YES];
-    [[NSUserDefaults standardUserDefaults] setBool:TRUE forKey:@"Audio"];
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]
                                    initWithTarget:self
                                    action:@selector(dismissKeyboard)];
@@ -71,6 +71,7 @@
     
     _sound = [[RMAudio alloc] init];
     _manager = [[RMDataManager alloc] init];
+    _image = [[UIImage alloc] init];
     
     RMView *corners = [RMView new];
     [corners createViewWithRoundedCornersWithRadius:10.0 andView:_imageView];
@@ -205,10 +206,14 @@
     
     [titles addObject:titleField.text];
     [self writeFileContents:@"Notes"];
-    [self writeURLContents:_sharedURL andName:titleField.text];
-    if (_image)
+    if (_sharedURL) {
+        [self writeURLContents:_sharedURL andName:titleField.text];
+    }
+    if (_hasPhoto)
     {
-        [self finishAndUpdate];
+        RMPhotoManager *photo = [[RMPhotoManager alloc] initWithView:self andFileName:titleField.text];
+        [photo writePicture:_image withName:titleField.text];
+        //[self finishAndUpdate];
     }
     [self addItemToCoreSpotlight];
     [self sendPostSound];
