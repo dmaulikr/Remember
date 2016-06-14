@@ -11,6 +11,7 @@
 #import "DetailViewController.h"
 #import "AlertView+Input.h"
 #import "RMSpotlight.h"
+#import "RMParallax.h"
 #import <SWTableViewCell.h>
 
 @interface NotesTableController ()
@@ -41,6 +42,7 @@ UIViewControllerPreviewingDelegate
 @property (copy, nonatomic) RMAudio *sound;
 @property (copy, nonatomic) RMDataManager *dManager;
 @property (copy, nonatomic) RMSpotlight *spotlight;
+@property (copy, nonatomic) RMParallax *parallax;
 @property (copy, nonatomic) SCLAlertView *alert;
 
 @end
@@ -61,6 +63,7 @@ UIViewControllerPreviewingDelegate
     _dManager = [RMDataManager new];
     _alert = [SCLAlertView new];
     _spotlight = [RMSpotlight new];
+    _parallax = [RMParallax new];
     titles = [NSMutableArray new];
     
     [self sizeHeaderToFit];
@@ -94,6 +97,8 @@ UIViewControllerPreviewingDelegate
     if ([self isForceTouchAvailable]) {
         self.previewingContext = [self registerForPreviewingWithDelegate:self sourceView:self.view];
     }
+    [_parallax setMinimumValue:-5];
+    [_parallax setMaximumValue: 5];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -101,6 +106,7 @@ UIViewControllerPreviewingDelegate
     [super viewWillAppear:animated];
     [self readFileContents:@"Notes"];
     [_reminderTable reloadData];
+    [self update];
 }
 
 - (void)viewDidLayoutSubviews
@@ -465,13 +471,12 @@ UIViewControllerPreviewingDelegate
             if (!format)
             {
                 format = [[HNKCacheFormat alloc] initWithName:@"thumbnail"];
-                format.size = CGSizeMake(cell.frame.size.width, cell.frame.size.height);
+                format.size = CGSizeMake(cell.frame.size.width+20, cell.frame.size.height+20);
                 format.scaleMode = HNKScaleModeAspectFill;
                 format.compressionQuality = 0.5;
-                format.diskCapacity = 1 * 1024 * 1024; // 2MB
+                format.diskCapacity = 10 * 1024 * 1024; // 10MB
                 format.preloadPolicy = HNKPreloadPolicyAll;
             }
-            cell.customBackground.hnk_cacheFormat = format;
             [cell.customBackground hnk_setImageFromFile:imageName];
             
             cell.title.textColor = [UIColor colorWithContrastingBlackOrWhiteColorOn:[UIColor colorWithComplementaryFlatColorOf:
@@ -480,6 +485,7 @@ UIViewControllerPreviewingDelegate
                                                                                         AverageColorFromImage(cell.customBackground.image)] isFlat:YES];
             cell.author.textColor = [UIColor colorWithContrastingBlackOrWhiteColorOn:[UIColor colorWithComplementaryFlatColorOf:
                                                                                       AverageColorFromImage(cell.customBackground.image)] isFlat:YES];
+            //[_parallax addParallaxToView:_cell.customBackground];
 
         } else {
             cell.customBackground.image = nil;
@@ -488,7 +494,6 @@ UIViewControllerPreviewingDelegate
             cell.author.textColor = [UIColor flatBlackColor];
         }
     }
-    
     return cell;
 }
 
@@ -510,7 +515,7 @@ UIViewControllerPreviewingDelegate
         [self readFileContents:@"Completed"];
     [_reminderTable reloadData];
     [_refresh endRefreshing];
-    double delayInSeconds = 2.5;
+    double delayInSeconds = 1.5;
     dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, delayInSeconds * NSEC_PER_SEC);
     dispatch_after(popTime, dispatch_get_main_queue(), ^(void)
     {

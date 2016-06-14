@@ -12,10 +12,10 @@ pod 'REFrostedViewController'
 pod 'FXReachability'
 pod 'BOZPongRefreshControl'
 pod 'pop'
-pod 'Haneke', '~> 1.0'
+pod 'Haneke'
 
 end
 
 target "Sharing" do
-
+pod 'Haneke'
 end

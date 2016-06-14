@@ -141,11 +141,14 @@
              forKey:[NSString stringWithFormat:@"%@+Author",rememberTitle]];
     [data setObject:body
              forKey:[NSString stringWithFormat:@"%@+Note",rememberTitle]];
-    
+    //TODO: Update everything from NSMutableDictionary to NSData along with NSFileManager
+    [data setObject:[NSNumber numberWithBool:false] forKey:@"Updated"];
     [data writeToURL:path atomically:YES];
-    
+    if ([[NSUserDefaults standardUserDefaults] boolForKey:@"AdvLog"]) {
+        NSLog(@"File Attributes: %@",[[NSFileManager defaultManager] attributesOfItemAtPath:[path path]
+                                                         error:NULL]);
+    }
     self.rememberTitle = rememberTitle;
-    
     [self writeCoordinates];
 }
 

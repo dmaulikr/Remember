@@ -82,6 +82,8 @@
     
     imageName = [[cDocuments path] stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.jpg",_file]];
     _image = [UIImage imageWithContentsOfFile:imageName];
+    //HNKCache *cache = [HNKCache sharedCache];
+    //[cache setImage:_image forKey:_file formatName:nil];
     [self photoCompleteSound];
 }
 

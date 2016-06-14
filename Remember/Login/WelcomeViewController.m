@@ -13,6 +13,7 @@
 #import "RMPhotoManager.h"
 #import "RMView.h"
 #import <GoogleSignIn/GoogleSignIn.h>
+#import "RMPhotoManager.h"
 
 @interface WelcomeViewController ()
 <CLLocationManagerDelegate, GIDSignInDelegate, GIDSignInUIDelegate>
@@ -22,7 +23,8 @@
 @property (strong, nonatomic) UIWindow *window;
 @property (copy, nonatomic) UIImage *image;
 @property (copy, nonatomic) NSString *name;
-@property (strong, nonatomic) IBOutlet UILabel *signInLabel;
+@property (weak, nonatomic) IBOutlet UILabel *signInLabel;
+@property (strong, nonatomic) RMPhotoManager *photo;
 
 @end
 
@@ -61,6 +63,7 @@
     _signIn.delegate = self;
     _signIn.uiDelegate = self;
     _image = [UIImage new];
+    _photo = [[RMPhotoManager alloc] initWithView:self andFileName:@"MainPhoto"];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -157,10 +160,10 @@
 - (void)finishAndUpdate
 {
     [[NSUserDefaults standardUserDefaults] setBool:YES forKey:[NSString stringWithFormat:@"MainPhoto"]];
+    
     NSURL *containerURL = [[NSFileManager defaultManager] containerURLForSecurityApplicationGroupIdentifier:
                            @"group.com.solarpepper.Remember"];
     NSURL *cDocuments = [containerURL URLByAppendingPathComponent:[NSString stringWithFormat:@"Documents"]];
-    
     NSString *imageName = [[cDocuments path] stringByAppendingPathComponent:[NSString stringWithFormat:@"MainPhoto.jpg"]];
     NSData *imageData = UIImageJPEGRepresentation(_image, 1.0);
     [imageData writeToFile:imageName atomically:YES];
