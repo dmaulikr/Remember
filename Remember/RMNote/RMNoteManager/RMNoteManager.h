@@ -13,8 +13,8 @@
 @interface RMNoteManager : NSObject
 
 - (id)initWithGroupID:(NSString *)groupID;
-- (void)writeNote:(RMNote *)note toURL:(NSURL *)url;
-- (RMNote *)readNoteFromURL:(NSURL *)url;
-- (void)managerShouldUseContainerWithName:(NSString *)name;
+- (NSString *)getManagerContainerName;
+- (void)writeNote:(RMNote *)note;
+- (RMNote *)readNoteWithName:(NSString *)name;
 
 @end

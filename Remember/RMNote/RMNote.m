@@ -14,12 +14,26 @@
 
 @implementation RMNote
 
-- (id)init; {
+- (id)initWithDictionary:(NSDictionary *)dict; {
     self = [super init];
     if (self) {
-        // Custom initilization
+        _data.dictionary = dict;
     }
     return self;
+}
+
+- (void)processNoteDictionary:(NSDictionary *)dict; {
+    //RMDataManager *dataManager = [[RMDataManager alloc] initWithContainer:[RMNoteManager getManagerContainerName]];
+    switch ([self getNoteVersion].integerValue) {
+        case 1:
+            self.noteUnattributed = [dict valueForKey:@"note"];
+            break;
+        case 2:
+            //
+            break;
+        default:
+            break;
+    }
 }
 
 - (NSNumber *)getNoteVersion; {
@@ -40,7 +54,7 @@
              I do things right this time around instead of saving
              everything to plist files and ignoring NSData.
              */
-            return [NSNumber numberWithInt:0];
+            return [NSNumber numberWithInt:-1];
             break;
     }
 }

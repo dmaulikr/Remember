@@ -9,6 +9,7 @@
 #import "RMNoteManager.h"
 
 @interface RMNoteManager ()
+@property (strong, nonatomic) NSFileManager *fileManager;
 @property (strong, nonatomic) NSString *groupID;
 @end
 
@@ -22,12 +23,12 @@
     return self;
 }
 
-- (void)writeNote:(RMNote *)note toURL:(NSURL *)url; {
+- (void)writeNote:(RMNote *)note {
     RMDataManager *dataManager = [[RMDataManager alloc] init];
     NSNumber *longitude = [note.noteLocationDictionary valueForKey:@"lon"];
     NSNumber *latitude = [note.noteLocationDictionary valueForKey:@"lat"];
     switch (note.getNoteVersion.integerValue) {
-        case 0:
+        case -1:
             [NSException raise:@"Invalid note version"
                         format:@"Note version does not exist: %li", (long)note.getNoteVersion.integerValue];
             break;
@@ -42,20 +43,39 @@
             //
             break;
         default:
-            /**
-             RMNote's documentation / comment on
-             getNoteVersion returning value 0.
-             */
+            [NSException raise:@"Unknown note versioning issue"
+                        format:@"Note version does not exist: %li", (long)note.getNoteVersion.integerValue];
             break;
     }
 }
 
-- (RMNote *)readNoteFromURL:(NSURL *)url; {
-    return nil;
+- (RMNote *)readNoteWithName:(NSString *)name; {
+    NSMutableDictionary *data;
+    _fileManager = [NSFileManager defaultManager];
+    
+    NSURL *containerURL = [[NSFileManager defaultManager] containerURLForSecurityApplicationGroupIdentifier:
+                           _groupID];
+    NSURL *path = [containerURL URLByAppendingPathComponent:[NSString stringWithFormat:@"Documents/%@",name]];
+    
+    if (![_fileManager fileExistsAtPath:[path path]])
+    {
+        path = [containerURL URLByAppendingPathComponent:[NSString stringWithFormat:@"%@",name]];
+        //NSLog(@"Creating file...");
+    }
+    
+    if ([_fileManager fileExistsAtPath:[path path]])
+    {
+        data = [[NSMutableDictionary alloc] initWithContentsOfFile:[path path]];
+    } else {
+        // If the file doesn’t exist, create an empty dictionary
+        data = [[NSMutableDictionary alloc] init];
+    }
+    RMNote *note = [[RMNote alloc] initWithDictionary:data];
+    return note;
 }
 
-- (void)managerShouldUseContainerWithName:(NSString *)name; {
-    
+- (NSString *)getManagerContainerName; {
+    return _groupID;
 }
 
 @end

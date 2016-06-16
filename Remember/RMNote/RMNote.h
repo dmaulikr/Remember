@@ -7,12 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
+@class RMDataManager;
+@class RMNoteManager;
 
 @interface RMNote : NSObject
 /**
  
  */
-- (id)init;
+- (id)initWithDictionary:(NSDictionary *)dict;
 /**
  noteUnattributed returns an unattributed, plain NSString
  for the note. This is simply used for compatibility with
