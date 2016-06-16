@@ -48,7 +48,6 @@ UIViewControllerPreviewingDelegate
 @end
 
 @implementation NotesTableController
-@synthesize titles;
 
 # pragma mark - View Management
 
@@ -64,7 +63,7 @@ UIViewControllerPreviewingDelegate
     _alert = [SCLAlertView new];
     _spotlight = [RMSpotlight new];
     _parallax = [RMParallax new];
-    titles = [NSMutableArray new];
+    _titlesCurrent = [NSMutableArray new];
     
     [self sizeHeaderToFit];
     UIPanGestureRecognizer *pan = [[UIPanGestureRecognizer alloc]
@@ -148,7 +147,7 @@ UIViewControllerPreviewingDelegate
     {
         DetailViewController *destViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"detailController"];
         NSIndexPath *indexPath = [_reminderTable indexPathForSelectedRow];
-        NSString *string = [NSString stringWithFormat:@"%@",titles[indexPath.row]];
+        NSString *string = [NSString stringWithFormat:@"%@",_titlesCurrent[indexPath.row]];
         destViewController.rememberTitle = string;
         return destViewController;
     }
@@ -205,7 +204,7 @@ UIViewControllerPreviewingDelegate
     __weak typeof(self) weakSelf = self;
     [alertView addButton:@"Done" actionBlock:^(void)
     {
-        if ([weakSelf.titles containsObject:textField.text])
+        if ([weakSelf.titlesCurrent containsObject:textField.text])
         {
             SCLAlertView *alert2 = [SCLAlertView new];
             alert2.shouldDismissOnTapOutside = YES;
@@ -224,7 +223,7 @@ UIViewControllerPreviewingDelegate
             // 4. Read (validate that title was added)
             // 5. Refresh (display updated array and contents)
             [weakSelf readFileContents:@"Notes"];
-            [weakSelf.titles addObject:textField.text];
+            [weakSelf.titlesCurrent addObject:textField.text];
             [weakSelf writeFileContents:@"Notes"];
             [weakSelf readFileContents:@"Notes"];
             [weakSelf.reminderTable reloadData];
@@ -246,7 +245,7 @@ UIViewControllerPreviewingDelegate
         if (![_noteField.text isEqual: @""])
         {
             [self readFileContents:@"Notes"];
-            if ([self.titles containsObject:textField.text])
+            if ([self.titlesCurrent containsObject:textField.text])
             {
                 SCLAlertView *alert = [SCLAlertView new];
                 [alert showCustom:self
@@ -257,7 +256,7 @@ UIViewControllerPreviewingDelegate
                  closeButtonTitle:@"Dismiss"
                          duration:0.0f];
             } else {
-                [self.titles addObject:_noteField.text];
+                [self.titlesCurrent addObject:_noteField.text];
                 [self writeFileContents:@"Notes"];
                 [self readFileContents:@"Notes"];
                 [self.reminderTable reloadData];
@@ -275,7 +274,7 @@ UIViewControllerPreviewingDelegate
         if (![_noteField.text isEqual: @""])
         {
             [self readFileContents:@"Notes"];
-            if ([self.titles containsObject:field.text])
+            if ([self.titlesCurrent containsObject:field.text])
             {
                 SCLAlertView *alert = [SCLAlertView new];
                 [alert showCustom:self
@@ -345,7 +344,7 @@ UIViewControllerPreviewingDelegate
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
     if (_segmentedController.selectedSegmentIndex == 0) {
-        return _noteField.frame.size.height+10;
+        return _noteField.frame.size.height; //+10
     } else {
         return 0;
     }
@@ -360,7 +359,7 @@ UIViewControllerPreviewingDelegate
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)sectionIndex {
-    return [titles count];
+    return [_titlesCurrent count];
 }
 
 - (BOOL)swipeableTableViewCellShouldHideUtilityButtonsOnSwipe:(SWTableViewCell *)cell; {
@@ -425,13 +424,13 @@ UIViewControllerPreviewingDelegate
     {
         NSURL *containerURL = [[NSFileManager defaultManager] containerURLForSecurityApplicationGroupIdentifier:
                                @"group.com.solarpepper.Remember"];
-        NSURL *container = [containerURL URLByAppendingPathComponent:[NSString stringWithFormat:@"Documents/%@.remember",titles[indexPath.row]]];
+        NSURL *container = [containerURL URLByAppendingPathComponent:[NSString stringWithFormat:@"Documents/%@.remember",_titlesCurrent[indexPath.row]]];
         NSMutableDictionary *sharedData = [[NSMutableDictionary alloc] initWithContentsOfURL:container];
         
-        cell.title.text = titles[indexPath.row];
-        NSString *author = [sharedData objectForKey:[NSString stringWithFormat:@"%@+Author",titles[indexPath.row]]];
+        cell.title.text = _titlesCurrent[indexPath.row];
+        NSString *author = [sharedData objectForKey:[NSString stringWithFormat:@"%@+Author",_titlesCurrent[indexPath.row]]];
         
-        if ([sharedData objectForKey:[NSString stringWithFormat:@"%@+Author",titles[indexPath.row]]] == nil)
+        if ([sharedData objectForKey:[NSString stringWithFormat:@"%@+Author",_titlesCurrent[indexPath.row]]] == nil)
         {
             cell.author.text = [NSString stringWithFormat:@"Author: "];
         } else {
@@ -441,7 +440,7 @@ UIViewControllerPreviewingDelegate
         NSURL *dateContainer = [containerURL URLByAppendingPathComponent:[NSString stringWithFormat:@"Documents/Dates.remember"]];
         NSMutableDictionary *dateManager = [[NSMutableDictionary alloc] initWithContentsOfURL:dateContainer];
         
-        NSDate *date = [dateManager objectForKey:[NSString stringWithFormat:@"%@+Date",titles[indexPath.row]]];
+        NSDate *date = [dateManager objectForKey:[NSString stringWithFormat:@"%@+Date",_titlesCurrent[indexPath.row]]];
         NSDateFormatter *formatter = [NSDateFormatter new];
         [formatter setDateFormat:@"MM/dd/yyyy 'at' hh:mm"];
         NSString *string;
@@ -452,7 +451,7 @@ UIViewControllerPreviewingDelegate
             //NSLog(@"Date Has Passed");
             string = @"";
         }
-        if ([dateManager objectForKey:[NSString stringWithFormat:@"%@+Date",titles[indexPath.row]]] == nil)
+        if ([dateManager objectForKey:[NSString stringWithFormat:@"%@+Date",_titlesCurrent[indexPath.row]]] == nil)
         {
             cell.reminder.text = [NSString stringWithFormat:@"Remember: "];
         } else {
@@ -464,7 +463,7 @@ UIViewControllerPreviewingDelegate
         }
         
         NSString *photoPath = [[containerURL URLByAppendingPathComponent:[NSString stringWithFormat:@"Documents/"]] path];
-        NSString *imageName = [photoPath stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.jpg",titles[indexPath.row]]];
+        NSString *imageName = [photoPath stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.jpg",_titlesCurrent[indexPath.row]]];
         if ([[NSFileManager defaultManager] fileExistsAtPath:imageName])
         {
             HNKCacheFormat *format = [HNKCache sharedCache].formats[@"thumbnail"];
@@ -528,7 +527,7 @@ UIViewControllerPreviewingDelegate
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [self chooseCellSound];
     DetailViewController *controller = [DetailViewController new];
-    controller.rememberTitle = titles[indexPath.row];
+    controller.rememberTitle = _titlesCurrent[indexPath.row];
     [self performSegueWithIdentifier:@"pushCell" sender:self];
 }
 
@@ -536,7 +535,7 @@ UIViewControllerPreviewingDelegate
 {
     DetailViewController *destViewController = segue.destinationViewController;
     NSIndexPath *indexPath = [_reminderTable indexPathForSelectedRow];
-    NSString *string = [NSString stringWithFormat:@"%@",titles[indexPath.row]];
+    NSString *string = [NSString stringWithFormat:@"%@",_titlesCurrent[indexPath.row]];
     destViewController.rememberTitle = string;
 }
 
@@ -563,13 +562,13 @@ UIViewControllerPreviewingDelegate
                 [self readFileContents:@"Notes"];
                 
                 // Move data to other completed.remember file
-                [_dManager addContentsToTable:[NSString stringWithFormat:@"%@",titles[indexPath.row]]
+                [_dManager addContentsToTable:[NSString stringWithFormat:@"%@",_titlesCurrent[indexPath.row]]
                                 containerID:@"group.com.solarpepper.Remember"
                                    fileName:@"Completed"];
                 [self readFileContents:@"Notes"];
                 
                 //
-                [titles removeObjectAtIndex:[indexPath row]];
+                [_titlesCurrent removeObjectAtIndex:[indexPath row]];
                 [_reminderTable deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationLeft];
                 [self writeFileContents:@"Notes"];
                 [self readFileContents:@"Notes"];
@@ -583,12 +582,12 @@ UIViewControllerPreviewingDelegate
                 //    Deleting note data
                 // 1. Gather required note information
                 NSIndexPath *indexPath = [_reminderTable indexPathForCell:cell];
-                NSString *deleteName = titles[indexPath.row];
+                NSString *deleteName = _titlesCurrent[indexPath.row];
                 [self readFileContents:@"Completed"];
                 [_dManager deleteDataContentsWithTitle:deleteName container:@"group.com.solarpepper.Remember"];
-                [_spotlight removeItemFromCoreSpotlightWithName:titles[indexPath.row]];
+                [_spotlight removeItemFromCoreSpotlightWithName:_titlesCurrent[indexPath.row]];
                 // 2. Cancel reminder for user
-                NSString *IDToCancel = [NSString stringWithFormat:@"%@",titles[indexPath.row]];
+                NSString *IDToCancel = [NSString stringWithFormat:@"%@",_titlesCurrent[indexPath.row]];
                 UILocalNotification *notificationToCancel = nil;
                 for(UILocalNotification *notification in [[UIApplication sharedApplication] scheduledLocalNotifications])
                 {
@@ -613,11 +612,11 @@ UIViewControllerPreviewingDelegate
                 [cell hideUtilityButtonsAnimated:YES];
                 
                 // 3. Continue deleting data
-                [titles removeObjectAtIndex:[indexPath row]];
+                [_titlesCurrent removeObjectAtIndex:[indexPath row]];
                 [_reminderTable deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationLeft];
                 [self writeFileContents:@"Completed"];
                 [self readFileContents:@"Favorites"];
-                [titles removeObjectIdenticalTo:deleteName];
+                [_titlesCurrent removeObjectIdenticalTo:deleteName];
                 [self writeFileContents:@"Favorites"];
                 [self readFileContents:@"Completed"];
                 [self deleteCellSound];
@@ -643,7 +642,7 @@ UIViewControllerPreviewingDelegate
             }
             
             // Move data to favorites.rememeber file
-            if ([favorites containsObject:titles[indexPath.row]])
+            if ([favorites containsObject:_titlesCurrent[indexPath.row]])
             {
                 [cell hideUtilityButtonsAnimated:YES];
                 // Don't add to favorites list
@@ -656,7 +655,7 @@ UIViewControllerPreviewingDelegate
                           duration:0.0f];
             } else {
                 [cell hideUtilityButtonsAnimated:YES];
-                [_dManager addContentsToTable:[NSString stringWithFormat:@"%@",titles[indexPath.row]]
+                [_dManager addContentsToTable:[NSString stringWithFormat:@"%@",_titlesCurrent[indexPath.row]]
                                   containerID:@"group.com.solarpepper.Remember"
                                      fileName:@"Favorites"];
                 [self readFileContents:@"Favorites"];
@@ -676,11 +675,11 @@ UIViewControllerPreviewingDelegate
     NSIndexPath *indexPath = [_reminderTable indexPathForCell:cell];
     NSURL *containerURL = [[NSFileManager defaultManager] containerURLForSecurityApplicationGroupIdentifier:
                            @"group.com.solarpepper.Remember"];
-    NSURL *container = [containerURL URLByAppendingPathComponent:[NSString stringWithFormat:@"Documents/%@.remember",titles[indexPath.row]]];
+    NSURL *container = [containerURL URLByAppendingPathComponent:[NSString stringWithFormat:@"Documents/%@.remember",_titlesCurrent[indexPath.row]]];
     NSMutableDictionary *data = [[NSMutableDictionary alloc] initWithContentsOfURL:container];
     
     NSString *photoPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
-    NSString *imageName = [photoPath stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.jpg",titles[indexPath.row]]];
+    NSString *imageName = [photoPath stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.jpg",_titlesCurrent[indexPath.row]]];
     UIImage *sharedImage = [UIImage imageWithContentsOfFile:imageName];
     //NSLog(@"Image Path: %@",sharedImage);
     // Load save data values
@@ -689,7 +688,7 @@ UIViewControllerPreviewingDelegate
         case 0:
         {
             NSArray *activities = [[NSArray alloc] initWithObjects:
-                                   [data objectForKey:[NSString stringWithFormat:@"%@+Note",titles[indexPath.row]]], sharedImage, nil];
+                                   [data objectForKey:[NSString stringWithFormat:@"%@+Note",_titlesCurrent[indexPath.row]]], sharedImage, nil];
             
             UIActivityViewController *activity = [[UIActivityViewController alloc]
                                                   initWithActivityItems:activities
@@ -703,7 +702,7 @@ UIViewControllerPreviewingDelegate
         case 1:
         {
             // Cancel reminder for user
-            NSString *IDToCancel = [NSString stringWithFormat:@"%@",titles[indexPath.row]];
+            NSString *IDToCancel = [NSString stringWithFormat:@"%@",_titlesCurrent[indexPath.row]];
             UILocalNotification *notificationToCancel = nil;
             for(UILocalNotification *notification in [[UIApplication sharedApplication] scheduledLocalNotifications])
             {
@@ -757,7 +756,7 @@ UIViewControllerPreviewingDelegate
 #pragma mark - Data Management
 
 - (void)writeFileContents:(NSString *)name {
-    [_dManager writeTableContentsFromArray:titles
+    [_dManager writeTableContentsFromArray:_titlesCurrent
                              containerID:@"group.com.solarpepper.Remember"
                                 fileName:name];
 }
@@ -765,7 +764,7 @@ UIViewControllerPreviewingDelegate
 - (void)readFileContents:(NSString *)name {
     [_dManager readTableContentsFromContainerID:@"group.com.solarpepper.Remember"
                                        fileName:name];
-    titles = _dManager.loadedTitles;
+    _titlesCurrent = _dManager.loadedTitles;
 }
 
 @end

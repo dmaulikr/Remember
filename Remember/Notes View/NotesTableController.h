@@ -17,6 +17,7 @@
 - (IBAction)showMenu;
 - (void)performSegueFromNotification:(UILocalNotification *)notification;
 
-@property (strong, nonatomic) NSMutableArray *titles;
+@property (strong, nonatomic) NSMutableArray *titlesCurrent;
+@property (strong, nonatomic) NSMutableArray *titlesComplete;
 
 @end

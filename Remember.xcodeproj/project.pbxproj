@@ -17,6 +17,8 @@
 		E904E4FF1A2CE27A00A7C753 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E904E4FE1A2CE27A00A7C753 /* SystemConfiguration.framework */; };
 		E905E86E1B0E1A24003116FE /* RMPhotoManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E905E86D1B0E1A24003116FE /* RMPhotoManager.m */; };
 		E9086F561CC19FA6003187F8 /* RMPhotoManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E905E86D1B0E1A24003116FE /* RMPhotoManager.m */; };
+		E91F95211D122E7500530BD9 /* RMNoteManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E99B80DC1D105CE8006DF687 /* RMNoteManager.m */; };
+		E91F95241D122E7D00530BD9 /* RMNote.m in Sources */ = {isa = PBXBuildFile; fileRef = E99B80D71D105251006DF687 /* RMNote.m */; };
 		E92AEA931C6E69C00024DC29 /* ContentController.m in Sources */ = {isa = PBXBuildFile; fileRef = E92AEA921C6E69C00024DC29 /* ContentController.m */; };
 		E93D30D41A15440E0086BB61 /* ShareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E93D30D31A15440E0086BB61 /* ShareViewController.m */; };
 		E93D30D61A15440E0086BB61 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E93D30D51A15440E0086BB61 /* MainInterface.storyboard */; };
@@ -73,6 +75,8 @@
 		E976D1A41B0E339A00DD1AAE /* EventKitUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E976D1A21B0E339A00DD1AAE /* EventKitUI.framework */; };
 		E98D32F31A800EE20031FCFD /* RMSegueReverse.m in Sources */ = {isa = PBXBuildFile; fileRef = E98D32F21A800EE20031FCFD /* RMSegueReverse.m */; };
 		E99477AC1C7E4BB900954635 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = E99477AB1C7E4BB900954635 /* libz.tbd */; };
+		E99B80D81D105251006DF687 /* RMNote.m in Sources */ = {isa = PBXBuildFile; fileRef = E99B80D71D105251006DF687 /* RMNote.m */; };
+		E99B80DD1D105CE8006DF687 /* RMNoteManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E99B80DC1D105CE8006DF687 /* RMNoteManager.m */; };
 		E99D609419ED685F00EA8B5F /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E99D609319ED685F00EA8B5F /* MapKit.framework */; };
 		E99D609619ED6A6300EA8B5F /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E99D609519ED6A6300EA8B5F /* QuartzCore.framework */; };
 		E99D609919ED778C00EA8B5F /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E99D609819ED778C00EA8B5F /* CoreLocation.framework */; };
@@ -311,6 +315,10 @@
 		E98D32F11A800EE20031FCFD /* RMSegueReverse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RMSegueReverse.h; path = Segues/RMSegueReverse.h; sourceTree = "<group>"; };
 		E98D32F21A800EE20031FCFD /* RMSegueReverse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RMSegueReverse.m; path = Segues/RMSegueReverse.m; sourceTree = "<group>"; };
 		E99477AB1C7E4BB900954635 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		E99B80D61D105251006DF687 /* RMNote.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RMNote.h; path = RMNote/RMNote.h; sourceTree = "<group>"; };
+		E99B80D71D105251006DF687 /* RMNote.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RMNote.m; path = RMNote/RMNote.m; sourceTree = "<group>"; };
+		E99B80DB1D105CE8006DF687 /* RMNoteManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RMNoteManager.h; path = RMNote/RMNoteManager/RMNoteManager.h; sourceTree = "<group>"; };
+		E99B80DC1D105CE8006DF687 /* RMNoteManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RMNoteManager.m; path = RMNote/RMNoteManager/RMNoteManager.m; sourceTree = "<group>"; };
 		E99D609319ED685F00EA8B5F /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		E99D609519ED6A6300EA8B5F /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		E99D609819ED778C00EA8B5F /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -498,6 +506,7 @@
 		E92248D71AF11D26006C0D2B /* Remember Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				E99B80D51D105230006DF687 /* RMNote */,
 				E965B2061CC67D03000E7CBD /* RMParallax */,
 				E93F5FF31CBD65E2004FF22F /* RMNanoManager */,
 				E989C2ED1A2387CE008E729A /* RMDataManager */,
@@ -715,6 +724,25 @@
 				E95C75641A8A6AC000E12337 /* DetailViewController.m */,
 			);
 			name = "Detail Controllers";
+			sourceTree = "<group>";
+		};
+		E99B80D51D105230006DF687 /* RMNote */ = {
+			isa = PBXGroup;
+			children = (
+				E99B80DA1D105CC1006DF687 /* RMNoteManager */,
+				E99B80D61D105251006DF687 /* RMNote.h */,
+				E99B80D71D105251006DF687 /* RMNote.m */,
+			);
+			name = RMNote;
+			sourceTree = "<group>";
+		};
+		E99B80DA1D105CC1006DF687 /* RMNoteManager */ = {
+			isa = PBXGroup;
+			children = (
+				E99B80DB1D105CE8006DF687 /* RMNoteManager.h */,
+				E99B80DC1D105CE8006DF687 /* RMNoteManager.m */,
+			);
+			name = RMNoteManager;
 			sourceTree = "<group>";
 		};
 		E99D609719ED6DD700EA8B5F /* Notes View */ = {
@@ -1334,11 +1362,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E91F95241D122E7D00530BD9 /* RMNote.m in Sources */,
 				E96B39A41A816685000D385E /* InitialViewController.m in Sources */,
 				E95C75831A8A6C9600E12337 /* RMDataManager.m in Sources */,
 				E9DE54A41C8747E2008FA8B5 /* RMAudio.m in Sources */,
 				E93D30D41A15440E0086BB61 /* ShareViewController.m in Sources */,
 				E9F166D21C8780A800D05A39 /* RMView.m in Sources */,
+				E91F95211D122E7500530BD9 /* RMNoteManager.m in Sources */,
 				E9086F561CC19FA6003187F8 /* RMPhotoManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1381,6 +1411,7 @@
 				E95C754E1A8A697F00E12337 /* LoginViewController.m in Sources */,
 				E95C757C1A8A6C3300E12337 /* RootViewController.m in Sources */,
 				E95C756E1A8A6B1000E12337 /* DateViewController.m in Sources */,
+				E99B80DD1D105CE8006DF687 /* RMNoteManager.m in Sources */,
 				E95C755D1A8A6A5300E12337 /* HelpViewController.m in Sources */,
 				E95C75761A8A6BD000E12337 /* RMDataManager.m in Sources */,
 				E965B2091CC67D23000E7CBD /* RMParallax.m in Sources */,
@@ -1392,6 +1423,7 @@
 				E95C75671A8A6AC000E12337 /* NotesTableController.m in Sources */,
 				E95C756F1A8A6B1000E12337 /* MapViewController.m in Sources */,
 				E9E6D09B1C89FB29003AEAF3 /* DropboxController.m in Sources */,
+				E99B80D81D105251006DF687 /* RMNote.m in Sources */,
 				E9B416921AFD17CA0046D4E7 /* RMGooglePlus.m in Sources */,
 				E95C75881A8A6CEB00E12337 /* AlertView+Input.m in Sources */,
 				E95C757B1A8A6C3300E12337 /* NavigationViewController.m in Sources */,
