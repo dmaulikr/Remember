@@ -30,7 +30,7 @@ DEPENDENCIES:
   - BOZPongRefreshControl
   - ChameleonFramework
   - FXReachability
-  - Haneke (~> 1.0)
+  - Haneke
   - pop
   - REFrostedViewController
   - SCLAlertView-Objective-C

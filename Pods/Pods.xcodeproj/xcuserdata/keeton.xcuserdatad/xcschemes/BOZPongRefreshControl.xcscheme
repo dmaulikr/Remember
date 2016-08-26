@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'BBC2251B1831AD2235D46044'
+               BlueprintIdentifier = 'B66E12342AE24B1B72F9D440'
                BlueprintName = 'BOZPongRefreshControl'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'libBOZPongRefreshControl.a'>

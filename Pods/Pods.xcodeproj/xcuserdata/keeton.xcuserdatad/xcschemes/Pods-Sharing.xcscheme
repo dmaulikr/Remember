@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'C491B8B35C63EB8F6E37A8B3'
-               BlueprintName = 'ChameleonFramework'
+               BlueprintIdentifier = '139A17B6167D890103D807D0'
+               BlueprintName = 'Pods-Sharing'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'libChameleonFramework.a'>
+               BuildableName = 'libPods-Sharing.a'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

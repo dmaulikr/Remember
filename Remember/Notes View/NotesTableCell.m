@@ -8,6 +8,7 @@
 
 #import "NotesTableCell.h"
 #import "DetailViewController.h"
+#import "RMView.h"
 
 @implementation NotesTableCell
 

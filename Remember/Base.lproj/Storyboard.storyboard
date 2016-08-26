@@ -385,11 +385,11 @@ Keeton Feavel (@Auxel)
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
+                                <exclude reference="AUv-In-qE3"/>
+                                <exclude reference="sqA-2j-mT8"/>
                                 <exclude reference="4gc-NC-2hG"/>
                                 <exclude reference="OCB-4t-qa5"/>
                                 <exclude reference="oHU-Q6-gMC"/>
-                                <exclude reference="AUv-In-qE3"/>
-                                <exclude reference="sqA-2j-mT8"/>
                             </mask>
                         </variation>
                     </view>
@@ -454,7 +454,7 @@ Keeton Feavel (@Auxel)
                                     <frame key="frameInset"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="96" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="jxH-kY-RFc">
+                                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="96" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="jxH-kY-RFc">
                                             <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                             <view key="tableHeaderView" contentMode="scaleToFill" id="gS4-17-E7h">
                                                 <frame key="frameInset" width="600" height="40"/>
@@ -480,7 +480,7 @@ Keeton Feavel (@Auxel)
                                                     <frame key="frameInset" minY="62" width="600" height="96"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <tableViewCellContentView key="contentView" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="jJh-6F-7NH" id="TG1-Re-ud1">
-                                                        <frame key="frameInset" width="600" height="95.5"/>
+                                                        <frame key="frameInset" width="600" height="96"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <subviews>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qYJ-Tr-5za">
@@ -832,8 +832,8 @@ Keeton Feavel (@Auxel)
                                     </constraints>
                                     <variation key="default">
                                         <mask key="constraints">
-                                            <exclude reference="kJI-Ip-a6I"/>
                                             <exclude reference="aPm-8w-RoS"/>
+                                            <exclude reference="kJI-Ip-a6I"/>
                                         </mask>
                                     </variation>
                                 </tableViewCellContentView>
@@ -1072,12 +1072,12 @@ your name in the slide out menu.</string>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
-                                <exclude reference="6ZJ-H5-fAP"/>
-                                <exclude reference="Vjx-YM-XeY"/>
-                                <exclude reference="cfu-6J-wtX"/>
                                 <exclude reference="Wfh-cw-ciL"/>
                                 <exclude reference="ioJ-qV-UHN"/>
                                 <exclude reference="qdx-0o-K1i"/>
+                                <exclude reference="6ZJ-H5-fAP"/>
+                                <exclude reference="Vjx-YM-XeY"/>
+                                <exclude reference="cfu-6J-wtX"/>
                             </mask>
                         </variation>
                     </view>
@@ -1220,6 +1220,9 @@ your name in the slide out menu.</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="cgq-74-yQm">
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="162" id="DM0-7w-WoO"/>
+                                </constraints>
                                 <date key="date" timeIntervalSinceReferenceDate="436802630.360735">
                                     <!--2014-11-04 14:03:50 +0000-->
                                 </date>
@@ -1406,7 +1409,7 @@ want to be reminded below:</string>
         <image name="earoa" width="346" height="207"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Zpg-jo-7KN"/>
+        <segue reference="GD3-Lc-AzB"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.2783651352" green="0.1853051037" blue="0.59323644639999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>

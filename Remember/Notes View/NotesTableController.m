@@ -344,7 +344,7 @@ UIViewControllerPreviewingDelegate
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
     if (_segmentedController.selectedSegmentIndex == 0) {
-        return _noteField.frame.size.height; //+10
+        return _noteField.frame.size.height+10;
     } else {
         return 0;
     }
@@ -382,6 +382,10 @@ UIViewControllerPreviewingDelegate
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    UIView *lineView = [[UIView alloc] initWithFrame:CGRectMake(0, 96, self.view.bounds.size.width, 10)];
+    lineView.backgroundColor = [UIColor clearColor];
+    [_cell.contentView addSubview:lineView];
+    
     // Define Variables
     static NSString *cellIdentifier = @"noteCell";
     NotesTableCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
