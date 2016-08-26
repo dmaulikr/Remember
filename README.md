@@ -12,3 +12,6 @@ Until Remember actually gets to a point that it provides an experience unlike an
 
 ### Don't you dare insult my carmel vanilla skim milk iced frappé!
 I just did. Deal with it.
+
+### What's the Remember-Watchtower branch for?
+All things iOS 10+ related. It basically serves as the "beta" branch for remember.
