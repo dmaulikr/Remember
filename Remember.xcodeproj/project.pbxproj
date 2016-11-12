@@ -21,6 +21,11 @@
 		E904E4FF1A2CE27A00A7C753 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E904E4FE1A2CE27A00A7C753 /* SystemConfiguration.framework */; };
 		E905E86E1B0E1A24003116FE /* RMPhotoManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E905E86D1B0E1A24003116FE /* RMPhotoManager.m */; };
 		E9086F561CC19FA6003187F8 /* RMPhotoManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E905E86D1B0E1A24003116FE /* RMPhotoManager.m */; };
+		E92428A51DD7AF1600EC1187 /* GoogleAppUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E92428A01DD7AF1600EC1187 /* GoogleAppUtilities.framework */; };
+		E92428A61DD7AF1600EC1187 /* GoogleAuthUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E92428A11DD7AF1600EC1187 /* GoogleAuthUtilities.framework */; };
+		E92428A71DD7AF1600EC1187 /* GoogleNetworkingUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E92428A21DD7AF1600EC1187 /* GoogleNetworkingUtilities.framework */; };
+		E92428A81DD7AF1600EC1187 /* GoogleSymbolUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E92428A31DD7AF1600EC1187 /* GoogleSymbolUtilities.framework */; };
+		E92428A91DD7AF1600EC1187 /* GoogleUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E92428A41DD7AF1600EC1187 /* GoogleUtilities.framework */; };
 		E92AEA931C6E69C00024DC29 /* ContentController.m in Sources */ = {isa = PBXBuildFile; fileRef = E92AEA921C6E69C00024DC29 /* ContentController.m */; };
 		E93D30D41A15440E0086BB61 /* ShareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E93D30D31A15440E0086BB61 /* ShareViewController.m */; };
 		E93D30D61A15440E0086BB61 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E93D30D51A15440E0086BB61 /* MainInterface.storyboard */; };
@@ -234,6 +239,11 @@
 		E904E4FE1A2CE27A00A7C753 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		E905E86C1B0E1A24003116FE /* RMPhotoManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RMPhotoManager.h; path = RMPhotoManager/RMPhotoManager.h; sourceTree = "<group>"; };
 		E905E86D1B0E1A24003116FE /* RMPhotoManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RMPhotoManager.m; path = RMPhotoManager/RMPhotoManager.m; sourceTree = "<group>"; };
+		E92428A01DD7AF1600EC1187 /* GoogleAppUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleAppUtilities.framework; path = Frameworks/GoogleAppUtilities.framework; sourceTree = "<group>"; };
+		E92428A11DD7AF1600EC1187 /* GoogleAuthUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleAuthUtilities.framework; path = Frameworks/GoogleAuthUtilities.framework; sourceTree = "<group>"; };
+		E92428A21DD7AF1600EC1187 /* GoogleNetworkingUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleNetworkingUtilities.framework; path = Frameworks/GoogleNetworkingUtilities.framework; sourceTree = "<group>"; };
+		E92428A31DD7AF1600EC1187 /* GoogleSymbolUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleSymbolUtilities.framework; path = Frameworks/GoogleSymbolUtilities.framework; sourceTree = "<group>"; };
+		E92428A41DD7AF1600EC1187 /* GoogleUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleUtilities.framework; path = Frameworks/GoogleUtilities.framework; sourceTree = "<group>"; };
 		E92AEA911C6E69C00024DC29 /* ContentController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ContentController.h; path = Login/ContentController.h; sourceTree = "<group>"; };
 		E92AEA921C6E69C00024DC29 /* ContentController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ContentController.m; path = Login/ContentController.m; sourceTree = "<group>"; };
 		E93D30CE1A15440D0086BB61 /* Sharing.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Sharing.appex; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -426,7 +436,12 @@
 				E976D1A31B0E339A00DD1AAE /* EventKit.framework in Frameworks */,
 				E976D1A41B0E339A00DD1AAE /* EventKitUI.framework in Frameworks */,
 				E99D609D19EDF54200EA8B5F /* Foundation.framework in Frameworks */,
+				E92428A51DD7AF1600EC1187 /* GoogleAppUtilities.framework in Frameworks */,
+				E92428A61DD7AF1600EC1187 /* GoogleAuthUtilities.framework in Frameworks */,
+				E92428A71DD7AF1600EC1187 /* GoogleNetworkingUtilities.framework in Frameworks */,
 				E9FABAF21C84E21E00195130 /* GoogleSignIn.framework in Frameworks */,
+				E92428A81DD7AF1600EC1187 /* GoogleSymbolUtilities.framework in Frameworks */,
+				E92428A91DD7AF1600EC1187 /* GoogleUtilities.framework in Frameworks */,
 				E99D609419ED685F00EA8B5F /* MapKit.framework in Frameworks */,
 				E96FF17D1AF9488800D41FD8 /* MediaPlayer.framework in Frameworks */,
 				E99E811719FFE794003A80B4 /* MessageUI.framework in Frameworks */,
@@ -463,6 +478,11 @@
 		4A44ACE5B75B491698664E19 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E92428A01DD7AF1600EC1187 /* GoogleAppUtilities.framework */,
+				E92428A11DD7AF1600EC1187 /* GoogleAuthUtilities.framework */,
+				E92428A21DD7AF1600EC1187 /* GoogleNetworkingUtilities.framework */,
+				E92428A31DD7AF1600EC1187 /* GoogleSymbolUtilities.framework */,
+				E92428A41DD7AF1600EC1187 /* GoogleUtilities.framework */,
 				E904E4F21A2CE20200A7C753 /* Accounts.framework */,
 				E9CA7BFA19ECAD67004348F1 /* AddressBook.framework */,
 				E9CA7BF819ECAD60004348F1 /* AddressBookUI.framework */,

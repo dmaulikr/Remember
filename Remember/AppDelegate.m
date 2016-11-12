@@ -54,7 +54,7 @@
     
     /* CHANGED */
     //application.applicationIconBadgeNumber = 0;
-/*
+    /*
     [[Harpy sharedInstance] setAppID:@"931575516"];
     [[Harpy sharedInstance] setPresentingViewController:_window.rootViewController];
     [[Harpy sharedInstance] setAlertControllerTintColor:[UIColor flatPurpleColorDark]];
@@ -64,7 +64,7 @@
     [[Harpy sharedInstance] setMinorUpdateAlertType:HarpyAlertTypeOption];
     [[Harpy sharedInstance] setMajorUpdateAlertType:HarpyAlertTypeForce];
     [[Harpy sharedInstance] checkVersion];
-*/
+    */
     // Move all photos in Documents directory into the shared container directory. The only reason this (really) still exists is because I'm too lazy to update the share extension and because due to the nature of the end user, they will avoid updating Remember for a long while, which makes "legacy code" still necessary in order for the app to not continually fail to load data.
     
     NSURL *containerURL = [[NSFileManager defaultManager] containerURLForSecurityApplicationGroupIdentifier:

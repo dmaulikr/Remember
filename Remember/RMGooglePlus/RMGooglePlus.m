@@ -30,7 +30,6 @@
 - (void)signInAndRefreshInterface; {
     _signIn = [GIDSignIn sharedInstance];
     _signIn.shouldFetchBasicProfile = YES;
-    _signIn.allowsSignInWithWebView = YES;
     _signIn.clientID = @"262401164415-hqcftmico35rqpotenujfcbbrgl4uej6.apps.googleusercontent.com";
     _signIn.scopes = @[@"profile"];
     _signIn.delegate = self;
