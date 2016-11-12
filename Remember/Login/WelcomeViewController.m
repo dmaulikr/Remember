@@ -101,7 +101,7 @@
         
         SCLAlertView *alert = [SCLAlertView new];
         alert.shouldDismissOnTapOutside = YES;
-        alert.backgroundType = Blur;
+        //alert.backgroundType = Blur;
         [alert showCustom:self.window.rootViewController
                     image:[UIImage imageNamed:@"Sticky Note"]
                     color:[UIColor flatPurpleColorDark]
@@ -114,7 +114,7 @@
     {
         SCLAlertView *alert = [SCLAlertView new];
         alert.shouldDismissOnTapOutside = YES;
-        alert.backgroundType = Blur;
+        //alert.backgroundType = Blur;
         [alert showCustom:self
                     image:[UIImage imageNamed:@"Sticky Note"]
                     color:[UIColor flatPurpleColorDark]

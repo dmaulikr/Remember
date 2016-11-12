@@ -56,7 +56,7 @@
 #import <ChameleonFramework/Chameleon.h>
 #import <FXReachability/FXReachability.h>
 #import <REFrostedViewController/REFrostedViewController.h>
-#import <SCLAlertView-Objective-C/SCLAlertView.h>
+#import "SCLAlertView.h"
 #import <SWTableViewCell/SWTableViewCell.h>
 #import <POP/POP.h>
 #import <GoogleSignIn/GoogleSignIn.h>

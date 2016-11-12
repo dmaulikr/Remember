@@ -198,7 +198,7 @@
 - (void)showRequestLocation {
     SCLAlertView *alert = [[SCLAlertView alloc] init];
     alert.shouldDismissOnTapOutside = YES;
-    alert.backgroundType = Blur;
+    //alert.backgroundType = Blur;
     [alert showCustom:self
                 image:[UIImage imageNamed:@"Location Icon"]
                 color:[UIColor flatPurpleColorDark]

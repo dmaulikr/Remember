@@ -12,7 +12,7 @@
 #import "AlertView+Input.h"
 #import "RMSpotlight.h"
 #import "RMParallax.h"
-#import <SWTableViewCell.h>
+#import "SWTableViewCell.h"
 
 @interface NotesTableController ()
 <
@@ -216,7 +216,7 @@ UIViewControllerPreviewingDelegate
                      subTitle:@"You already have a note with the same name.\nPlease choose a new one."
              closeButtonTitle:@"Dismiss"
                      duration:0.0f];
-            alert2.backgroundType = Blur;
+            //alert2.backgroundType = Blur;
         } else {
             // 1. Read (validate file before rewriting)
             // 2. Add object to array (add note title)
@@ -230,7 +230,7 @@ UIViewControllerPreviewingDelegate
             [weakSelf.reminderTable reloadData];
         }
     }];
-    alertView.backgroundType = Blur;
+    //alertView.backgroundType = Blur;
     [alertView showCustom:self
                 image:[UIImage imageNamed:@"Sticky Note"]
                 color:[UIColor flatPurpleColorDark]
@@ -605,7 +605,7 @@ UIViewControllerPreviewingDelegate
                                  subTitle:@"You deleted a note that still had an active reminder.\nBecause it has been deleted, you will no longer be reminded."
                          closeButtonTitle:@"Dismiss"
                                  duration:0.0f];
-                        alert.backgroundType = Blur;
+                        //alert.backgroundType = Blur;
                         [cell hideUtilityButtonsAnimated:YES];
                         break;
                     }
@@ -720,7 +720,7 @@ UIViewControllerPreviewingDelegate
                              subTitle:@"You will no longer be reminded about this note."
                      closeButtonTitle:@"Dismiss"
                              duration:0.0f];
-                    alert.backgroundType = Blur;
+                    //alert.backgroundType = Blur;
                     [cell hideUtilityButtonsAnimated:YES];
                     break;
                 }

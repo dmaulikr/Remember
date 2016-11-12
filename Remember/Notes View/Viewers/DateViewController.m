@@ -66,7 +66,7 @@
 - (void)showConfirmation {
     _alert = [[SCLAlertView alloc] init];
     _alert.shouldDismissOnTapOutside = YES;
-    _alert.backgroundType = Blur;
+    //_alert.backgroundType = Blur;
     [_alert showCustom:self
                 image:[UIImage imageNamed:@"Thin Check"]
                 color:[UIColor flatPurpleColorDark]
@@ -113,7 +113,7 @@
             [[UIApplication sharedApplication] cancelLocalNotification:notificationToCancel];
             _alert = [[SCLAlertView alloc] init];
             _alert.shouldDismissOnTapOutside = YES;
-            _alert.backgroundType = Blur;
+            //_alert.backgroundType = Blur;
             [_alert showCustom:self
                         image:[UIImage imageNamed:@"Thin Check"]
                         color:[UIColor flatPurpleColorDark]

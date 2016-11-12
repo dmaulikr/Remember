@@ -15,7 +15,7 @@
 #import "DetailViewController.h"
 #import "MenuViewCell.h"
 #import "RMView.h"
-#import <SWTableViewCell.h>
+#import "SWTableViewCell.h"
 
 @interface MenuViewController ()
 <UINavigationControllerDelegate,UIImagePickerControllerDelegate,SWTableViewCellDelegate>

@@ -2,15 +2,17 @@
   "images" : [
     {
       "idiom" : "universal",
+      "filename" : "Fence by the Ocean-1.jpg",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
+      "filename" : "Fence by the Ocean@2x.jpg",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "filename" : "Fence by the Ocean.jpg",
+      "filename" : "Fence by the Ocean@3x.jpg",
       "scale" : "3x"
     }
   ],

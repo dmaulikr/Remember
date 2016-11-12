@@ -137,11 +137,11 @@
         [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"contactPhoto"];
     }];
     
-    alert.backgroundType = Blur;
+    //alert.backgroundType = Blur;
     [alert showTitle:self
                title:@"Remove Contact Photo"
             subTitle:@"Are you sure?\n(This cannot be undone.)"
-               style:Warning
+               style:SCLAlertViewStyleWarning
     closeButtonTitle:@"Cancel"
             duration:0.00f];
 }
@@ -181,14 +181,14 @@
         SCLAlertView *alert = [SCLAlertView new];
         [alert showTitle:@"Error"
                 subTitle:error.description
-                   style:Info
+                   style:SCLAlertViewStyleInfo
         closeButtonTitle:@"Dismiss"
                 duration:0.00f];
     } else {
         SCLAlertView *alert = [SCLAlertView new];
         [alert showTitle:@"Signed Out"
                 subTitle:@"You have been sucessfully signed out of Google."
-                   style:Info
+                   style:SCLAlertViewStyleInfo
         closeButtonTitle:@"Dismiss"
                 duration:3.00f];
     }
