@@ -6,14 +6,6 @@
 	<array>
 		<dict>
 			<key>Type</key>
-			<string>PSChildPaneSpecifier</string>
-			<key>Title</key>
-			<string>About</string>
-			<key>File</key>
-			<string>About</string>
-		</dict>
-		<dict>
-			<key>Type</key>
 			<string>PSGroupSpecifier</string>
 			<key>Title</key>
 			<string></string>
@@ -24,7 +16,7 @@
 			<key>Type</key>
 			<string>PSToggleSwitchSpecifier</string>
 			<key>Title</key>
-			<string>Remember Setup Complete</string>
+			<string>Launched?</string>
 			<key>Key</key>
 			<string>wasLaunchedBefore</string>
 			<key>DefaultValue</key>
@@ -34,7 +26,7 @@
 			<key>Type</key>
 			<string>PSToggleSwitchSpecifier</string>
 			<key>Title</key>
-			<string>Pong Pull-To-Refresh</string>
+			<string>Pong Refresh</string>
 			<key>Key</key>
 			<string>Pong</string>
 			<key>DefaultValue</key>
@@ -44,15 +36,29 @@
 			<key>Type</key>
 			<string>PSGroupSpecifier</string>
 			<key>Title</key>
-			<string>Developer Tools</string>
+			<string></string>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSChildPaneSpecifier</string>
+			<key>Title</key>
+			<string>About</string>
+			<key>File</key>
+			<string>About</string>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSGroupSpecifier</string>
+			<key>Title</key>
+			<string>Debugging</string>
 			<key>FooterText</key>
-			<string>These toggles are used in case of debugging emergencies. Please note, if this is enabled, your note titles and photo IDs will be logged!</string>
+			<string>Leave these alone unless specified by tech support.</string>
 		</dict>
 		<dict>
 			<key>Type</key>
 			<string>PSToggleSwitchSpecifier</string>
 			<key>Title</key>
-			<string>Additional Logging</string>
+			<string>Advanced Logs</string>
 			<key>Key</key>
 			<string>AdvLog</string>
 			<key>DefaultValue</key>
