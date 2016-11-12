@@ -1984,11 +1984,33 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = Remember/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/Remember-dogwpwgpwrgsosayesjjzytpndhe/Build/Products/Debug-iphoneos",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					"\"AFNetworking\"",
+					"-framework",
+					"\"BOZPongRefreshControl\"",
+					"-framework",
+					"\"ChameleonFramework\"",
+					"-framework",
+					"\"FXReachability\"",
+					"-framework",
+					"\"Haneke\"",
+					"-framework",
+					"\"REFrostedViewController\"",
+					"-framework",
+					"\"SCLAlertView_Objective_C\"",
+					"-framework",
+					"\"SWTableViewCell\"",
+					"-framework",
+					"\"pop\"",
+					"-ObjC",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.solarpepper.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -2026,11 +2048,33 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = Remember/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/Remember-dogwpwgpwrgsosayesjjzytpndhe/Build/Products/Debug-iphoneos",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					"\"AFNetworking\"",
+					"-framework",
+					"\"BOZPongRefreshControl\"",
+					"-framework",
+					"\"ChameleonFramework\"",
+					"-framework",
+					"\"FXReachability\"",
+					"-framework",
+					"\"Haneke\"",
+					"-framework",
+					"\"REFrostedViewController\"",
+					"-framework",
+					"\"SCLAlertView_Objective_C\"",
+					"-framework",
+					"\"SWTableViewCell\"",
+					"-framework",
+					"\"pop\"",
+					"-ObjC",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.solarpepper.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
