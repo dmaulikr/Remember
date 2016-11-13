@@ -274,7 +274,7 @@ UITextViewDelegate
                                                       style:UIAlertActionStyleDefault
                                                     handler:^(UIAlertAction * action)
                               {
-                                  [[UIApplication sharedApplication] openURL:url];
+                                  [[UIApplication sharedApplication] openURL:url options:@{} completionHandler:nil];
                               }];
     UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"Cancel"
                                                       style:UIAlertActionStyleCancel

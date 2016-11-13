@@ -215,7 +215,7 @@ UIViewControllerPreviewingDelegate
                      subTitle:@"You already have a note with the same name.\nPlease choose a new one."
              closeButtonTitle:@"Dismiss"
                      duration:0.0f];
-            //alert2.backgroundType = Blur;
+            alert2.backgroundType = SCLAlertViewBackgroundBlur;
         } else {
             // 1. Read (validate file before rewriting)
             // 2. Add object to array (add note title)
@@ -229,7 +229,7 @@ UIViewControllerPreviewingDelegate
             [weakSelf.reminderTable reloadData];
         }
     }];
-    //alertView.backgroundType = Blur;
+    alertView.backgroundType = SCLAlertViewBackgroundBlur;
     [alertView showCustom:self
                 image:[UIImage imageNamed:@"Sticky Note"]
                 color:[UIColor flatPurpleColorDark]
@@ -539,11 +539,11 @@ UIViewControllerPreviewingDelegate
     destViewController.rememberTitle = string;
 }
 
-- (void)performSegueFromNotification:(UILocalNotification *)notification {
+- (void)performSegueFromNotification:(UNNotificationRequest *)notification {
     DetailViewController *detailView = [DetailViewController new];
     if (notification) {
-        NSDictionary *data = notification.userInfo;
-        NSString *rememberTitle = [data objectForKey:@"Title"];
+        //NSDictionary *data = notification.content.userInfo;
+        NSString *rememberTitle = notification.content.title;
         detailView.rememberTitle = rememberTitle;
         [self performSegueWithIdentifier:@"cellPush" sender:self];
     }
@@ -604,7 +604,7 @@ UIViewControllerPreviewingDelegate
                                  subTitle:@"You deleted a note that still had an active reminder.\nBecause it has been deleted, you will no longer be reminded."
                          closeButtonTitle:@"Dismiss"
                                  duration:0.0f];
-                        //alert.backgroundType = Blur;
+                        alert.backgroundType = SCLAlertViewBackgroundBlur;
                         [cell hideUtilityButtonsAnimated:YES];
                         break;
                     }
@@ -719,7 +719,7 @@ UIViewControllerPreviewingDelegate
                              subTitle:@"You will no longer be reminded about this note."
                      closeButtonTitle:@"Dismiss"
                              duration:0.0f];
-                    //alert.backgroundType = Blur;
+                    alert.backgroundType = SCLAlertViewBackgroundBlur;
                     [cell hideUtilityButtonsAnimated:YES];
                     break;
                 }

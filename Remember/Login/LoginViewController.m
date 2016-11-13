@@ -151,14 +151,12 @@
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker
 {
     [self dismissViewControllerAnimated:YES completion:NULL];
-    [[UIApplication sharedApplication] setStatusBarHidden:YES];
     [[NSUserDefaults standardUserDefaults] setBool:NO forKey:[NSString stringWithFormat:@"MainPhoto"]];
     [self cancelActionSound];
 }
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
-    [[UIApplication sharedApplication] setStatusBarHidden:YES];
     self.contactImage.image = [info valueForKey:UIImagePickerControllerOriginalImage];
     [self finishAndUpdate];
 }
@@ -177,7 +175,6 @@
     photoPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
     imageName = [photoPath stringByAppendingPathComponent:[NSString stringWithFormat:@"MainPhoto.jpg"]];
     self.contactImage.image = [UIImage imageWithContentsOfFile:imageName];
-    [[UIApplication sharedApplication] setStatusBarHidden:YES];
     [self photoCompleteSound];
 }
 
@@ -198,7 +195,7 @@
 - (void)showRequestLocation {
     SCLAlertView *alert = [[SCLAlertView alloc] init];
     alert.shouldDismissOnTapOutside = YES;
-    //alert.backgroundType = Blur;
+    alert.backgroundType = SCLAlertViewBackgroundBlur;
     [alert showCustom:self
                 image:[UIImage imageNamed:@"Location Icon"]
                 color:[UIColor flatPurpleColorDark]

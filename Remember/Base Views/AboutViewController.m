@@ -89,19 +89,19 @@
 # pragma mark - Button Management
 
 - (IBAction)githubButton:(id)sender {
-    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://github.com/Kfeavel"]];
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://github.com/Kfeavel"] options:@{} completionHandler:nil];
 }
 
 - (IBAction)safariButton:(id)sender {
-    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://kfeavel.github.io"]];
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://kfeavel.github.io"] options:@{} completionHandler:nil];
 }
 
 - (IBAction)twitterButton:(id)sender {
-    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://twitter.com/Auxel_"]];
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://twitter.com/Auxel_"] options:@{} completionHandler:nil];
 }
 
 - (IBAction)efrainButton:(id)sender {
-    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://twitter.com/EA_Roa"]];
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://twitter.com/EA_Roa"] options:@{} completionHandler:nil];
 }
 
 @end

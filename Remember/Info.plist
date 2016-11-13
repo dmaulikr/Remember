@@ -58,7 +58,7 @@
 		</dict>
 	</array>
 	<key>CFBundleVersion</key>
-	<string>2119</string>
+	<string>2130</string>
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
 		<string>dbapi-2</string>
@@ -82,6 +82,8 @@
 	<string>Remember uses your Location Services in order to add a location to your notes.</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>Remember uses your Location Services in order to add a location to your notes.</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Remember uses your Photo Library to add photos to your notes and set your profile picture.</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>Arimo-Regular.ttf</string>

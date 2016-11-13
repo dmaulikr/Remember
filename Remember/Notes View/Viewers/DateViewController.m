@@ -66,7 +66,7 @@
 - (void)showConfirmation {
     _alert = [[SCLAlertView alloc] init];
     _alert.shouldDismissOnTapOutside = YES;
-    //_alert.backgroundType = Blur;
+    _alert.backgroundType = SCLAlertViewBackgroundBlur;
     [_alert showCustom:self
                 image:[UIImage imageNamed:@"Thin Check"]
                 color:[UIColor flatPurpleColorDark]
@@ -106,7 +106,23 @@
     // Cancel reminder for user
     
     NSString *IDToCancel = _rememberTitle;
-    UILocalNotification *notificationToCancel = nil;
+    UNUserNotificationCenter* center = [UNUserNotificationCenter currentNotificationCenter];
+    //UNNotificationRequest *notificationToCancel = nil;
+    [center removePendingNotificationRequestsWithIdentifiers:@[IDToCancel]];
+    
+    _alert = [[SCLAlertView alloc] init];
+    _alert.shouldDismissOnTapOutside = YES;
+    _alert.backgroundType = SCLAlertViewBackgroundBlur;
+    [_alert showCustom:self
+                 image:[UIImage imageNamed:@"Thin Check"]
+                 color:[UIColor flatPurpleColorDark]
+                 title:@"Success!"
+              subTitle:@"Remember has successfully cancelled your reminder."
+      closeButtonTitle:@"Dismiss"
+              duration:4.0f];
+    [_sound playSoundWithName:@"3" extension:@"caf"];
+    
+    /*
     for(UILocalNotification *notification in [[UIApplication sharedApplication] scheduledLocalNotifications]) {
         if([[notification.userInfo objectForKey:@"ID"] isEqualToString:IDToCancel]) {
             notificationToCancel = notification;
@@ -125,6 +141,7 @@
             break;
         }
     }
+    */
 }
 
 - (IBAction)pickerValueChanged:(id)sender {

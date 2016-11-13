@@ -15,7 +15,7 @@
  Accessable mainly for XCTests and read/write optimization.
  */
 - (IBAction)showMenu;
-- (void)performSegueFromNotification:(UILocalNotification *)notification;
+- (void)performSegueFromNotification:(UNNotificationRequest *)notification;
 
 @property (strong, nonatomic) NSMutableArray *titles;
 

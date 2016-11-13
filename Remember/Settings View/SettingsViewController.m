@@ -137,7 +137,7 @@
         [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"contactPhoto"];
     }];
     
-    //alert.backgroundType = Blur;
+    alert.backgroundType = SCLAlertViewBackgroundBlur;
     [alert showTitle:self
                title:@"Remove Contact Photo"
             subTitle:@"Are you sure?\n(This cannot be undone.)"

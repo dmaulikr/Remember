@@ -33,6 +33,8 @@
 #import <QuartzCore/QuartzCore.h>
 #import <Social/Social.h>
 #import <UIKit/UIKit.h>
+#import <UserNotifications/UserNotifications.h>
+#import <UserNotificationsUI/UserNotificationsUI.h>
 #import "AppDelegate.h"
 #import <objc/runtime.h>
 

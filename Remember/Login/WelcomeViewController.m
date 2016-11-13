@@ -102,7 +102,7 @@
         
         SCLAlertView *alert = [SCLAlertView new];
         alert.shouldDismissOnTapOutside = YES;
-        //alert.backgroundType = Blur;
+        alert.backgroundType = SCLAlertViewBackgroundBlur;
         [alert showCustom:self.window.rootViewController
                     image:[UIImage imageNamed:@"Sticky Note"]
                     color:[UIColor flatPurpleColorDark]
@@ -115,7 +115,7 @@
     {
         SCLAlertView *alert = [SCLAlertView new];
         alert.shouldDismissOnTapOutside = YES;
-        //alert.backgroundType = Blur;
+        alert.backgroundType = SCLAlertViewBackgroundBlur;
         [alert showCustom:self
                     image:[UIImage imageNamed:@"Sticky Note"]
                     color:[UIColor flatPurpleColorDark]
@@ -168,7 +168,6 @@
     NSString *imageName = [[cDocuments path] stringByAppendingPathComponent:[NSString stringWithFormat:@"MainPhoto.jpg"]];
     NSData *imageData = UIImageJPEGRepresentation(_image, 1.0);
     [imageData writeToFile:imageName atomically:YES];
-    [[UIApplication sharedApplication] setStatusBarHidden:YES];
     
     [self photoCompleteSound];
 }

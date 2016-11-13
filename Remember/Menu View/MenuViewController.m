@@ -303,14 +303,12 @@
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker
 {
     [self dismissViewControllerAnimated:YES completion:NULL];
-    [[UIApplication sharedApplication] setStatusBarHidden:YES];
     [[NSUserDefaults standardUserDefaults] setBool:NO forKey:[NSString stringWithFormat:@"MainPhoto"]];
     [self cancelActionSound];
 }
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
-    [[UIApplication sharedApplication] setStatusBarHidden:YES];
     self.contactImage.image = [info valueForKey:UIImagePickerControllerOriginalImage];
     [self finishAndUpdate];
 }

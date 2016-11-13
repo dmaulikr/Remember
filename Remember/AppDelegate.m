@@ -29,6 +29,7 @@
     // Override point for customization after application launch.
     // Create content and menu controllers.
     _kClientId = @"262401164415-hqcftmico35rqpotenujfcbbrgl4uej6.apps.googleusercontent.com";
+    
     /*
     DBSession *dbSession = [[DBSession alloc]
                             initWithAppKey:@"430jqxkfolcr5hl"
@@ -49,22 +50,8 @@
         [self initializeStoryBoardBasedOnScreenSize:nil];
     }
     
-    [[UIApplication sharedApplication] setStatusBarHidden:YES withAnimation:NO];
     [self initializeHolidaySurprise];
     
-    /* CHANGED */
-    //application.applicationIconBadgeNumber = 0;
-    /*
-    [[Harpy sharedInstance] setAppID:@"931575516"];
-    [[Harpy sharedInstance] setPresentingViewController:_window.rootViewController];
-    [[Harpy sharedInstance] setAlertControllerTintColor:[UIColor flatPurpleColorDark]];
-    [[Harpy sharedInstance] setAppName:@"Remember"];
-    [[Harpy sharedInstance] setAlertType:HarpyAlertTypeOption];
-    [[Harpy sharedInstance] setPatchUpdateAlertType:HarpyAlertTypeSkip];
-    [[Harpy sharedInstance] setMinorUpdateAlertType:HarpyAlertTypeOption];
-    [[Harpy sharedInstance] setMajorUpdateAlertType:HarpyAlertTypeForce];
-    [[Harpy sharedInstance] checkVersion];
-    */
     // Move all photos in Documents directory into the shared container directory. The only reason this (really) still exists is because I'm too lazy to update the share extension and because due to the nature of the end user, they will avoid updating Remember for a long while, which makes "legacy code" still necessary in order for the app to not continually fail to load data.
     
     NSURL *containerURL = [[NSFileManager defaultManager] containerURLForSecurityApplicationGroupIdentifier:
@@ -154,15 +141,31 @@
 
 - (void)registerForNotifications {
     // Register for local and push notifications
-    UIUserNotificationType types = (UIUserNotificationTypeAlert|
-                                    UIUserNotificationTypeSound|
-                                    UIUserNotificationTypeBadge);
+    UNAuthorizationOptions types = (UNAuthorizationOptionAlert|
+                                    UNAuthorizationOptionSound|
+                                    UNAuthorizationOptionBadge);
     
-    UIUserNotificationSettings *settings;
-    settings = [UIUserNotificationSettings settingsForTypes:types
-                                                 categories:nil];
+    UNUserNotificationCenter* center = [UNUserNotificationCenter currentNotificationCenter];
+    [center requestAuthorizationWithOptions:types
+                          completionHandler:^(BOOL granted, NSError * _Nullable error) {
+                              // Enable or disable features based on authorization.
+                              NSLog(@"Registered for Notifications.");
+                          }];
     
-    [[UIApplication sharedApplication] registerUserNotificationSettings:settings];
+    UNNotificationAction* viewAction = [UNNotificationAction
+                                          actionWithIdentifier:@"View"
+                                          title:@"Snooze"
+                                          options:UNNotificationActionOptionForeground];
+    
+    UNNotificationCategory* generalCategory = [UNNotificationCategory
+                                               categoryWithIdentifier:@"GENERAL"
+                                               actions:@[viewAction]
+                                               intentIdentifiers:@[]
+                                               options:UNNotificationCategoryOptionCustomDismissAction];
+    
+    // Register the notification categories.
+    [center setNotificationCategories:[NSSet setWithObjects:generalCategory, nil]];
+    
     [[UIApplication sharedApplication] registerForRemoteNotifications];
 }
 
@@ -181,18 +184,18 @@
     [self processRemoteNotification:userInfo];
 }
 
-- (void)application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification
+- (void)application:(UIApplication *)application didReceiveLocalNotification:(UNNotificationRequest *)notification
 {
     UIApplicationState state = [application applicationState];
     application.applicationIconBadgeNumber = 0;
     if (state == UIApplicationStateActive) {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:notification.alertAction
-                                                        message:notification.alertBody
-                                                       delegate:self cancelButtonTitle:@"OK"
-                                              otherButtonTitles:nil];
-        [alert show];
+        UIAlertController *alert = [[UIAlertController alloc] init];
+            [alert setTitle: notification.content.title];
+            [alert setMessage: notification.content.body];
+            [alert setPreferredAction:[UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleCancel handler:nil]];
+            [alert presentViewController:alert animated:YES completion:nil];
     }
-    NSDictionary *dict = [notification userInfo];
+    NSDictionary *dict = [notification.content userInfo];
     [self processRemoteNotification:dict];
 }
 
