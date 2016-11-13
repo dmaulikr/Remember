@@ -9,10 +9,8 @@
 /* Begin PBXBuildFile section */
 		08F072F1C25BC3634E87D2BD /* Pods_Remember.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05D2C20CBFACA42224B0B6CD /* Pods_Remember.framework */; };
 		0C43C1420D853FBDC7BD0F2E /* Pods_Sharing.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 831B2A4CEBF5860337477498 /* Pods_Sharing.framework */; };
-		514F28178D8204FEDF3328F4 /* libPods-Nano.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AE2E37D78A32F4B3200FA8E /* libPods-Nano.a */; };
 		5637B60C620500EB772225E7 /* Pods_RememberTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A38C447628E36D6ED9A7FDFF /* Pods_RememberTests.framework */; };
 		91857144B47ADA3134FE1E6D /* libPods-Spotlight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E2580C49D35826FE665000D5 /* libPods-Spotlight.a */; };
-		C139410026A9AF9BBA0DAA20 /* libPods-Nano Extension.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B52491232DDFE17BD36F0925 /* libPods-Nano Extension.a */; };
 		E9004B6219EC31AC00D35F92 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9004B6119EC31AC00D35F92 /* CoreGraphics.framework */; };
 		E904E4F31A2CE20200A7C753 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E904E4F21A2CE20200A7C753 /* Accounts.framework */; };
 		E904E4F51A2CE21500A7C753 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E904E4F41A2CE21500A7C753 /* CFNetwork.framework */; };
@@ -28,22 +26,11 @@
 		E92428A91DD7AF1600EC1187 /* GoogleUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E92428A41DD7AF1600EC1187 /* GoogleUtilities.framework */; };
 		E92428AC1DD7B92B00EC1187 /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E92428AA1DD7B92B00EC1187 /* UserNotifications.framework */; };
 		E92428AD1DD7B92B00EC1187 /* UserNotificationsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E92428AB1DD7B92B00EC1187 /* UserNotificationsUI.framework */; };
-		E92428AE1DD81E7900EC1187 /* GoogleSignIn.bundle in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = E95C833E1C77761D004D18D9 /* GoogleSignIn.bundle */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		E92428AF1DD81E7900EC1187 /* Settings.bundle in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = E961A2541CC146C8003728BA /* Settings.bundle */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E92AEA931C6E69C00024DC29 /* ContentController.m in Sources */ = {isa = PBXBuildFile; fileRef = E92AEA921C6E69C00024DC29 /* ContentController.m */; };
 		E93D30D41A15440E0086BB61 /* ShareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E93D30D31A15440E0086BB61 /* ShareViewController.m */; };
 		E93D30D61A15440E0086BB61 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E93D30D51A15440E0086BB61 /* MainInterface.storyboard */; };
 		E93D30D91A15440E0086BB61 /* Sharing.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = E93D30CE1A15440D0086BB61 /* Sharing.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		E93F5FCB1CBD45D7004FF22F /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E93F5FC91CBD45D7004FF22F /* Interface.storyboard */; };
-		E93F5FD41CBD45D8004FF22F /* Nano Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = E93F5FD31CBD45D8004FF22F /* Nano Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		E93F5FDC1CBD45D8004FF22F /* InterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = E93F5FDB1CBD45D8004FF22F /* InterfaceController.m */; };
-		E93F5FDF1CBD45D8004FF22F /* ExtensionDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E93F5FDE1CBD45D8004FF22F /* ExtensionDelegate.m */; };
-		E93F5FE21CBD45D8004FF22F /* NotificationController.m in Sources */ = {isa = PBXBuildFile; fileRef = E93F5FE11CBD45D8004FF22F /* NotificationController.m */; };
-		E93F5FF61CBD660B004FF22F /* RMNanoManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E93F5FF51CBD660B004FF22F /* RMNanoManager.m */; };
-		E93F5FF91CBD6AF9004FF22F /* NanoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E93F5FF81CBD6AF9004FF22F /* NanoCell.m */; };
 		E940F5F81CC0797F00132FFD /* SafariServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E940F5F71CC0797F00132FFD /* SafariServices.framework */; };
-		E95A4EC91CC0706F0078A286 /* Nano Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E95A4EC81CC0706F0078A286 /* Nano Assets.xcassets */; };
-		E95A4ECB1CC070890078A286 /* Nano Extension Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E95A4ECA1CC070890078A286 /* Nano Extension Assets.xcassets */; };
 		E95A4ECC1CC0737E0078A286 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9FBB3F419E9E5C000063C38 /* Images.xcassets */; };
 		E95A92A01C3C468C00BBAB41 /* CoreSpotlight.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E95A929F1C3C468C00BBAB41 /* CoreSpotlight.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		E95A92A91C3C47A900BBAB41 /* IndexRequestHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = E95A92A81C3C47A900BBAB41 /* IndexRequestHandler.m */; };
@@ -150,20 +137,6 @@
 			remoteGlobalIDString = E93D30CD1A15440D0086BB61;
 			remoteInfo = Sharing;
 		};
-		E93F5FD51CBD45D8004FF22F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = E9FBB3DC19E9E5C000063C38 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = E93F5FD21CBD45D8004FF22F;
-			remoteInfo = "Nano Extension";
-		};
-		E93F5FE61CBD45D8004FF22F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = E9FBB3DC19E9E5C000063C38 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = E93F5FC61CBD45D7004FF22F;
-			remoteInfo = Nano;
-		};
 		E95A92B21C3C513800BBAB41 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = E9FBB3DC19E9E5C000063C38 /* Project object */;
@@ -187,33 +160,10 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				E92428AF1DD81E7900EC1187 /* Settings.bundle in Embed App Extensions */,
 				E93D30D91A15440E0086BB61 /* Sharing.appex in Embed App Extensions */,
-				E92428AE1DD81E7900EC1187 /* GoogleSignIn.bundle in Embed App Extensions */,
 				E95A92B11C3C513800BBAB41 /* Spotlight.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		E93F5FEE1CBD45D8004FF22F /* Embed App Extensions */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 13;
-			files = (
-				E93F5FD41CBD45D8004FF22F /* Nano Extension.appex in Embed App Extensions */,
-			);
-			name = "Embed App Extensions";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		E9EACA461C8F151C004027D1 /* Embed Watch Content */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
-			dstSubfolderSpec = 16;
-			files = (
-			);
-			name = "Embed Watch Content";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -258,27 +208,9 @@
 		E93D30D31A15440E0086BB61 /* ShareViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShareViewController.m; sourceTree = "<group>"; };
 		E93D30D51A15440E0086BB61 /* MainInterface.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainInterface.storyboard; sourceTree = "<group>"; };
 		E93D318A1A1697350086BB61 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
-		E93F5FC71CBD45D7004FF22F /* Nano.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nano.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		E93F5FCA1CBD45D7004FF22F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
-		E93F5FCE1CBD45D7004FF22F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E93F5FD31CBD45D8004FF22F /* Nano Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Nano Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
-		E93F5FD91CBD45D8004FF22F /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
-		E93F5FDA1CBD45D8004FF22F /* InterfaceController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InterfaceController.h; sourceTree = "<group>"; };
-		E93F5FDB1CBD45D8004FF22F /* InterfaceController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InterfaceController.m; sourceTree = "<group>"; };
-		E93F5FDD1CBD45D8004FF22F /* ExtensionDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExtensionDelegate.h; sourceTree = "<group>"; };
-		E93F5FDE1CBD45D8004FF22F /* ExtensionDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExtensionDelegate.m; sourceTree = "<group>"; };
-		E93F5FE01CBD45D8004FF22F /* NotificationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotificationController.h; sourceTree = "<group>"; };
-		E93F5FE11CBD45D8004FF22F /* NotificationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotificationController.m; sourceTree = "<group>"; };
-		E93F5FE51CBD45D8004FF22F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E93F5FF01CBD47E2004FF22F /* Nano.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Nano.entitlements; sourceTree = "<group>"; };
-		E93F5FF11CBD47EC004FF22F /* Nano Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Nano Extension.entitlements"; sourceTree = "<group>"; };
 		E93F5FF41CBD660B004FF22F /* RMNanoManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RMNanoManager.h; path = RMNanoManager/RMNanoManager.h; sourceTree = "<group>"; };
 		E93F5FF51CBD660B004FF22F /* RMNanoManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RMNanoManager.m; path = RMNanoManager/RMNanoManager.m; sourceTree = "<group>"; };
-		E93F5FF71CBD6AF9004FF22F /* NanoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NanoCell.h; sourceTree = "<group>"; };
-		E93F5FF81CBD6AF9004FF22F /* NanoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NanoCell.m; sourceTree = "<group>"; };
 		E940F5F71CC0797F00132FFD /* SafariServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SafariServices.framework; path = System/Library/Frameworks/SafariServices.framework; sourceTree = SDKROOT; };
-		E95A4EC81CC0706F0078A286 /* Nano Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Nano Assets.xcassets"; sourceTree = "<group>"; };
-		E95A4ECA1CC070890078A286 /* Nano Extension Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Nano Extension Assets.xcassets"; sourceTree = "<group>"; };
 		E95A929F1C3C468C00BBAB41 /* CoreSpotlight.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreSpotlight.framework; path = System/Library/Frameworks/CoreSpotlight.framework; sourceTree = SDKROOT; };
 		E95A92A51C3C47A900BBAB41 /* Spotlight.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Spotlight.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		E95A92A71C3C47A900BBAB41 /* IndexRequestHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IndexRequestHandler.h; sourceTree = "<group>"; };
@@ -406,14 +338,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E93F5FD01CBD45D8004FF22F /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C139410026A9AF9BBA0DAA20 /* libPods-Nano Extension.a in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		E95A92A21C3C47A900BBAB41 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -469,14 +393,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				5637B60C620500EB772225E7 /* Pods_RememberTests.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		ED4E79E389FADBCDC2EE7525 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				514F28178D8204FEDF3328F4 /* libPods-Nano.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -611,44 +527,6 @@
 			children = (
 				E93D30D11A15440E0086BB61 /* Info.plist */,
 				E9E0EDBF1A1A637200924329 /* Sharing.entitlements */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		E93F5FC81CBD45D7004FF22F /* Nano */ = {
-			isa = PBXGroup;
-			children = (
-				E93F5FF01CBD47E2004FF22F /* Nano.entitlements */,
-				E93F5FC91CBD45D7004FF22F /* Interface.storyboard */,
-				E95A4EC81CC0706F0078A286 /* Nano Assets.xcassets */,
-				E93F5FCE1CBD45D7004FF22F /* Info.plist */,
-			);
-			path = Nano;
-			sourceTree = "<group>";
-		};
-		E93F5FD71CBD45D8004FF22F /* Nano Extension */ = {
-			isa = PBXGroup;
-			children = (
-				E93F5FF11CBD47EC004FF22F /* Nano Extension.entitlements */,
-				E93F5FDA1CBD45D8004FF22F /* InterfaceController.h */,
-				E93F5FDB1CBD45D8004FF22F /* InterfaceController.m */,
-				E93F5FF71CBD6AF9004FF22F /* NanoCell.h */,
-				E93F5FF81CBD6AF9004FF22F /* NanoCell.m */,
-				E93F5FDD1CBD45D8004FF22F /* ExtensionDelegate.h */,
-				E93F5FDE1CBD45D8004FF22F /* ExtensionDelegate.m */,
-				E93F5FE01CBD45D8004FF22F /* NotificationController.h */,
-				E93F5FE11CBD45D8004FF22F /* NotificationController.m */,
-				E95A4ECA1CC070890078A286 /* Nano Extension Assets.xcassets */,
-				E93F5FE51CBD45D8004FF22F /* Info.plist */,
-				E93F5FD81CBD45D8004FF22F /* Supporting Files */,
-			);
-			path = "Nano Extension";
-			sourceTree = "<group>";
-		};
-		E93F5FD81CBD45D8004FF22F /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				E93F5FD91CBD45D8004FF22F /* PushNotificationPayload.apns */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -910,8 +788,6 @@
 				E9FBB40019E9E5C100063C38 /* RememberTests */,
 				E93D30CF1A15440E0086BB61 /* Sharing */,
 				E95A92A61C3C47A900BBAB41 /* Spotlight */,
-				E93F5FC81CBD45D7004FF22F /* Nano */,
-				E93F5FD71CBD45D8004FF22F /* Nano Extension */,
 				E9FBB3E519E9E5C000063C38 /* Products */,
 				4A44ACE5B75B491698664E19 /* Frameworks */,
 				C542B40862B1FA9DF31B011F /* Pods */,
@@ -925,8 +801,6 @@
 				E9FBB3FD19E9E5C100063C38 /* RememberTests.xctest */,
 				E93D30CE1A15440D0086BB61 /* Sharing.appex */,
 				E95A92A51C3C47A900BBAB41 /* Spotlight.appex */,
-				E93F5FC71CBD45D7004FF22F /* Nano.app */,
-				E93F5FD31CBD45D8004FF22F /* Nano Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1000,46 +874,6 @@
 			productReference = E93D30CE1A15440D0086BB61 /* Sharing.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
-		E93F5FC61CBD45D7004FF22F /* Nano */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = E93F5FEF1CBD45D8004FF22F /* Build configuration list for PBXNativeTarget "Nano" */;
-			buildPhases = (
-				EB1A0D29C7030FD014BB6965 /* [CP] Check Pods Manifest.lock */,
-				E93F5FC51CBD45D7004FF22F /* Resources */,
-				E93F5FEE1CBD45D8004FF22F /* Embed App Extensions */,
-				ED4E79E389FADBCDC2EE7525 /* Frameworks */,
-				4FD72EBCA29BFE4BDDD1CADA /* [CP] Copy Pods Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				E93F5FD61CBD45D8004FF22F /* PBXTargetDependency */,
-			);
-			name = Nano;
-			productName = Nano;
-			productReference = E93F5FC71CBD45D7004FF22F /* Nano.app */;
-			productType = "com.apple.product-type.application.watchapp2";
-		};
-		E93F5FD21CBD45D8004FF22F /* Nano Extension */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = E93F5FED1CBD45D8004FF22F /* Build configuration list for PBXNativeTarget "Nano Extension" */;
-			buildPhases = (
-				0B031108526B6132B6933C25 /* [CP] Check Pods Manifest.lock */,
-				E93F5FCF1CBD45D8004FF22F /* Sources */,
-				E93F5FD01CBD45D8004FF22F /* Frameworks */,
-				E93F5FD11CBD45D8004FF22F /* Resources */,
-				EB78462D8B39994EE6F7013D /* [CP] Embed Pods Frameworks */,
-				CB24E996EDCCBBEC363F2322 /* [CP] Copy Pods Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "Nano Extension";
-			productName = "Nano Extension";
-			productReference = E93F5FD31CBD45D8004FF22F /* Nano Extension.appex */;
-			productType = "com.apple.product-type.watchkit2-extension";
-		};
 		E95A92A41C3C47A900BBAB41 /* Spotlight */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = E95A92AE1C3C47A900BBAB41 /* Build configuration list for PBXNativeTarget "Spotlight" */;
@@ -1069,7 +903,6 @@
 				E9FBB3E219E9E5C000063C38 /* Resources */,
 				E97A160719F41A2B0020873F /* Update Build Number */,
 				E93D30DD1A15440E0086BB61 /* Embed App Extensions */,
-				E9EACA461C8F151C004027D1 /* Embed Watch Content */,
 				92AA79A0EE1BF6F21D6474B6 /* [CP] Embed Pods Frameworks */,
 				B91B51925E28832F3FD85CD7 /* [CP] Copy Pods Resources */,
 			);
@@ -1078,7 +911,6 @@
 			dependencies = (
 				E93D30D81A15440E0086BB61 /* PBXTargetDependency */,
 				E95A92B31C3C513800BBAB41 /* PBXTargetDependency */,
-				E93F5FE71CBD45D8004FF22F /* PBXTargetDependency */,
 			);
 			name = Remember;
 			productName = Remember;
@@ -1127,25 +959,6 @@
 								enabled = 1;
 							};
 							com.apple.SafariKeychain = {
-								enabled = 1;
-							};
-						};
-					};
-					E93F5FC61CBD45D7004FF22F = {
-						CreatedOnToolsVersion = 7.3;
-						DevelopmentTeam = X3R99W7RN3;
-						SystemCapabilities = {
-							com.apple.ApplicationGroups.iOS = {
-								enabled = 1;
-							};
-						};
-					};
-					E93F5FD21CBD45D8004FF22F = {
-						CreatedOnToolsVersion = 7.3;
-						DevelopmentTeam = X3R99W7RN3;
-						ProvisioningStyle = Automatic;
-						SystemCapabilities = {
-							com.apple.ApplicationGroups.iOS = {
 								enabled = 1;
 							};
 						};
@@ -1207,8 +1020,6 @@
 				E93D30CD1A15440D0086BB61 /* Sharing */,
 				E95A92A41C3C47A900BBAB41 /* Spotlight */,
 				E9FBB3FC19E9E5C100063C38 /* RememberTests */,
-				E93F5FC61CBD45D7004FF22F /* Nano */,
-				E93F5FD21CBD45D8004FF22F /* Nano Extension */,
 			);
 		};
 /* End PBXProject section */
@@ -1232,23 +1043,6 @@
 				E9E6D0B81C8B7064003AEAF3 /* 2.caf in Resources */,
 				E9E8BAA31C6925A20023A353 /* Arimo-Italic.ttf in Resources */,
 				E9E6D0B61C8B7064003AEAF3 /* 1.caf in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		E93F5FC51CBD45D7004FF22F /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				E95A4EC91CC0706F0078A286 /* Nano Assets.xcassets in Resources */,
-				E93F5FCB1CBD45D7004FF22F /* Interface.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		E93F5FD11CBD45D8004FF22F /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				E95A4ECB1CC070890078A286 /* Nano Extension Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1302,21 +1096,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0B031108526B6132B6933C25 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
 		0E00B20073938523474D1A8C /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1375,21 +1154,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		4FD72EBCA29BFE4BDDD1CADA /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Nano/Pods-Nano-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		5580DDC5312F91550278B1FE /* [CP] Copy Pods Resources */ = {
@@ -1482,21 +1246,6 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Remember/Pods-Remember-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		CB24E996EDCCBBEC363F2322 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Nano Extension/Pods-Nano Extension-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		E97A160719F41A2B0020873F /* Update Build Number */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1509,37 +1258,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/bash;
-			shellScript = "#!/bin/bash\nbuildNumber=$(/usr/libexec/PlistBuddy -c \"Print CFBundleVersion\" \"$INFOPLIST_FILE\")\nbuildNumber=$(($buildNumber + 1))\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $buildNumber\" \"$INFOPLIST_FILE\"\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $buildNumber\" \"$SRCROOT/Sharing/Info.plist\"\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $buildNumber\" \"$SRCROOT/Spotlight/Info.plist\"\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $buildNumber\" \"$SRCROOT/Nano/Info.plist\"\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $buildNumber\" \"$SRCROOT/Nano Extension/Info.plist\"";
-		};
-		EB1A0D29C7030FD014BB6965 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		EB78462D8B39994EE6F7013D /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Nano Extension/Pods-Nano Extension-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
+			shellScript = "#!/bin/bash\nbuildNumber=$(/usr/libexec/PlistBuddy -c \"Print CFBundleVersion\" \"$INFOPLIST_FILE\")\nbuildNumber=$(($buildNumber + 1))\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $buildNumber\" \"$INFOPLIST_FILE\"\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $buildNumber\" \"$SRCROOT/Sharing/Info.plist\"\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $buildNumber\" \"$SRCROOT/Spotlight/Info.plist\"";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -1554,18 +1273,6 @@
 				E93D30D41A15440E0086BB61 /* ShareViewController.m in Sources */,
 				E9F166D21C8780A800D05A39 /* RMView.m in Sources */,
 				E9086F561CC19FA6003187F8 /* RMPhotoManager.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		E93F5FCF1CBD45D8004FF22F /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				E93F5FF61CBD660B004FF22F /* RMNanoManager.m in Sources */,
-				E93F5FDF1CBD45D8004FF22F /* ExtensionDelegate.m in Sources */,
-				E93F5FDC1CBD45D8004FF22F /* InterfaceController.m in Sources */,
-				E93F5FE21CBD45D8004FF22F /* NotificationController.m in Sources */,
-				E93F5FF91CBD6AF9004FF22F /* NanoCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1632,16 +1339,6 @@
 			target = E93D30CD1A15440D0086BB61 /* Sharing */;
 			targetProxy = E93D30D71A15440E0086BB61 /* PBXContainerItemProxy */;
 		};
-		E93F5FD61CBD45D8004FF22F /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = E93F5FD21CBD45D8004FF22F /* Nano Extension */;
-			targetProxy = E93F5FD51CBD45D8004FF22F /* PBXContainerItemProxy */;
-		};
-		E93F5FE71CBD45D8004FF22F /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = E93F5FC61CBD45D7004FF22F /* Nano */;
-			targetProxy = E93F5FE61CBD45D8004FF22F /* PBXContainerItemProxy */;
-		};
 		E95A92B31C3C513800BBAB41 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = E95A92A41C3C47A900BBAB41 /* Spotlight */;
@@ -1655,14 +1352,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		E93F5FC91CBD45D7004FF22F /* Interface.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E93F5FCA1CBD45D7004FF22F /* Base */,
-			);
-			name = Interface.storyboard;
-			sourceTree = "<group>";
-		};
 		E96FF17E1AF94D3C00D41FD8 /* Login-Universal.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -1740,94 +1429,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.solarpepper.Remember.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-			};
-			name = Release;
-		};
-		E93F5FE91CBD45D8004FF22F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0676F046E46A659EF667C7C2 /* Pods-Nano.debug.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CLANG_ANALYZER_NONNULL = YES;
-				CODE_SIGN_ENTITLEMENTS = Nano/Nano.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				GCC_NO_COMMON_BLOCKS = YES;
-				IBSC_MODULE = Nano_Extension;
-				INFOPLIST_FILE = Nano/Info.plist;
-				PRODUCT_BUNDLE_IDENTIFIER = com.solarpepper.Remember.watchkitapp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 2.2;
-			};
-			name = Debug;
-		};
-		E93F5FEA1CBD45D8004FF22F /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = F3C0E0EC6EEE0064574FAFB8 /* Pods-Nano.release.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CLANG_ANALYZER_NONNULL = YES;
-				CODE_SIGN_ENTITLEMENTS = Nano/Nano.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				GCC_NO_COMMON_BLOCKS = YES;
-				IBSC_MODULE = Nano_Extension;
-				INFOPLIST_FILE = Nano/Info.plist;
-				PRODUCT_BUNDLE_IDENTIFIER = com.solarpepper.Remember.watchkitapp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 2.2;
-			};
-			name = Release;
-		};
-		E93F5FEB1CBD45D8004FF22F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = DBCB85BF2EF4C88975794E50 /* Pods-Nano Extension.debug.xcconfig */;
-			buildSettings = {
-				CLANG_ANALYZER_NONNULL = YES;
-				CODE_SIGN_ENTITLEMENTS = "Nano Extension/Nano Extension.entitlements";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Nano Extension/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.solarpepper.Remember.watchkitapp.watchkitextension;
-				PRODUCT_NAME = "${TARGET_NAME}";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 2.2;
-			};
-			name = Debug;
-		};
-		E93F5FEC1CBD45D8004FF22F /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = B563AA3A4B1642A7944DD099 /* Pods-Nano Extension.release.xcconfig */;
-			buildSettings = {
-				CLANG_ANALYZER_NONNULL = YES;
-				CODE_SIGN_ENTITLEMENTS = "Nano Extension/Nano Extension.entitlements";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Nano Extension/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.solarpepper.Remember.watchkitapp.watchkitextension;
-				PRODUCT_NAME = "${TARGET_NAME}";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 2.2;
 			};
 			name = Release;
 		};
@@ -2138,24 +1739,6 @@
 			buildConfigurations = (
 				E93D30DA1A15440E0086BB61 /* Debug */,
 				E93D30DB1A15440E0086BB61 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		E93F5FED1CBD45D8004FF22F /* Build configuration list for PBXNativeTarget "Nano Extension" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				E93F5FEB1CBD45D8004FF22F /* Debug */,
-				E93F5FEC1CBD45D8004FF22F /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		E93F5FEF1CBD45D8004FF22F /* Build configuration list for PBXNativeTarget "Nano" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				E93F5FE91CBD45D8004FF22F /* Debug */,
-				E93F5FEA1CBD45D8004FF22F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
