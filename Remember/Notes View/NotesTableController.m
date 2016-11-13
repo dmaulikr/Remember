@@ -9,7 +9,6 @@
 #import "NotesTableController.h"
 #import "NotesTableCell.h"
 #import "DetailViewController.h"
-#import "AlertView+Input.h"
 #import "RMSpotlight.h"
 #import "RMParallax.h"
 #import "SWTableViewCell.h"
