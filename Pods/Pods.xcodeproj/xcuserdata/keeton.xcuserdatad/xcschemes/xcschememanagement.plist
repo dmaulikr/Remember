@@ -29,16 +29,6 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-Nano Extension.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Pods-Nano.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>Pods-Remember.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -127,11 +117,6 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>BA16EC83824C9826AD85967DE86C0B4E</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>BBCAB135C52C02A9CE19118DFEBED701</key>
 		<dict>
 			<key>primary</key>
@@ -148,11 +133,6 @@
 			<true/>
 		</dict>
 		<key>F7ADCCF49889FA44DE2929C38A51BB15</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>FE227C4DD9E34CE8B2FF9912317014DF</key>
 		<dict>
 			<key>primary</key>
 			<true/>
