@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import <CoreFoundation/CoreFoundation.h>
-#import <Haneke/Haneke.h>
+//#import <Haneke/Haneke.h>
 #import "RMAudio.h"
 
 @interface RMPhotoManager : NSObject

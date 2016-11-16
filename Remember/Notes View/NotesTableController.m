@@ -586,6 +586,7 @@ UIViewControllerPreviewingDelegate
                 [self readFileContents:@"Completed"];
                 [_dManager deleteDataContentsWithTitle:deleteName container:@"group.com.solarpepper.Remember"];
                 [_spotlight removeItemFromCoreSpotlightWithName:titles[indexPath.row]];
+                
                 // 2. Cancel reminder for user
                 NSString *IDToCancel = [NSString stringWithFormat:@"%@",titles[indexPath.row]];
                 UILocalNotification *notificationToCancel = nil;

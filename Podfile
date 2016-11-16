@@ -20,21 +20,4 @@ target 'Remember' do
     inherit! :search_paths
     # Pods for testing
   end
-
-end
-
-target 'Sharing' do
-  # Uncomment the next line if you're using Swift or would like to use dynamic frameworks
-  #use_frameworks!
-  pod 'Haneke'
-  # Pods for Sharing
-
-end
-
-target 'Spotlight' do
-  # Uncomment the next line if you're using Swift or would like to use dynamic frameworks
-  # use_frameworks!
-
-  # Pods for Spotlight
-
 end
