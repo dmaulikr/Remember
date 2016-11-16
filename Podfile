@@ -9,7 +9,7 @@ target 'Remember' do
   pod 'ChameleonFramework'
   pod 'SCLAlertView-Objective-C'
   pod 'SWTableViewCell'
-  pod "AFNetworking"
+  pod 'AFNetworking'
   pod 'REFrostedViewController'
   pod 'FXReachability'
   pod 'BOZPongRefreshControl'
