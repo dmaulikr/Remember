@@ -1,13 +1,14 @@
 # Remember
 Remember 2 - The Smart Reminder App
 
-
-## Notes about the repo:
+--------
 ### - Audio -
 This folder contains sounds that were purchased from AudioJungle and are not to be used for personal use without payment to the original source. If you abuse this and use these sounds for private or public use then you are breaking the user purchase agreement of both federal copyright and the EULA of AudioJungle and could be fined accordingly.
 
 ### - Frameworks -
 These frameworks are *not* created by Solar Pepper Studios and/or Keeton Feavel and are copyright / all rights reserved their respective owners (this applies to Pods too, however, these are for sure open source code and can be found on Github.) If you abuse the APIs or frameworks in such a way that it violates the EULA of the respective owners, then you are personally accountable for such abuse, not Solar Pepper Studios and/or Keeton Feavel.
+
+---------
 
 ### Open Source License
 This code has been made open source for various reasons and is a fully functioning app that is available in the iOS App Store. However, Solar Pepper Studios and/or Keeton Feavel is/are not responsible for any damages to your equipment if you compile the source code yourself. This code has been made available for research and as such, if you plan to use Remember or Remember 2 for personal use, please buy a license to do so by downloading the application in the iOS App Store.
