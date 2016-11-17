@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A320" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11760" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11755"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -35,7 +38,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="37" y="431"/>
+            <point key="canvasLocation" x="-435" y="504"/>
         </scene>
         <!--About-->
         <scene sceneID="Q6g-AL-RPD">
@@ -49,8 +52,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Beach" translatesAutoresizingMaskIntoConstraints="NO" id="xO6-bB-Lg0"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Beach" translatesAutoresizingMaskIntoConstraints="NO" id="xO6-bB-Lg0">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="About Remember" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Efq-y3-14c">
+                                <rect key="frame" x="150" y="72" width="300" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="300" id="dmo-ia-6De"/>
                                     <constraint firstAttribute="height" constant="30" id="hlp-yl-k9z"/>
@@ -60,6 +66,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" minimumScaleFactor="0.59999999999999998" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kKD-0l-ehE">
+                                <rect key="frame" x="20" y="120" width="560" height="77"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="77" id="pJV-bi-02C"/>
                                 </constraints>
@@ -71,6 +78,7 @@ Keeton Feavel (@Auxel)
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aoD-xw-kiZ">
+                                <rect key="frame" x="248" y="336" width="67" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="95" id="EN9-wb-N8d"/>
                                     <constraint firstAttribute="width" constant="67" id="goJ-Tg-Wpb"/>
@@ -91,6 +99,7 @@ Keeton Feavel (@Auxel)
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Pepper Circle" translatesAutoresizingMaskIntoConstraints="NO" id="Cs9-ym-ObO">
+                                <rect key="frame" x="150" y="340" width="80" height="70"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="80" id="BOt-zu-XH3"/>
                                     <constraint firstAttribute="width" secondItem="Cs9-ym-ObO" secondAttribute="height" multiplier="8:7" id="JI2-Yc-xp3"/>
@@ -106,6 +115,7 @@ Keeton Feavel (@Auxel)
                                 </variation>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Created By:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FM5-h5-ZUL">
+                                <rect key="frame" x="225" y="283" width="150" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="4yQ-aX-Kfj"/>
                                     <constraint firstAttribute="height" constant="34" id="D6f-jf-ZWB"/>
@@ -115,12 +125,14 @@ Keeton Feavel (@Auxel)
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vf7-I0-T06">
+                                <rect key="frame" x="150" y="325" width="300" height="2"/>
                                 <color key="backgroundColor" red="0.90823972225189209" green="0.92638683319091797" blue="0.9317171573638916" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="2" id="5nE-Bb-5Fp"/>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Solar Pepper Studios" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u25-PF-sUs">
+                                <rect key="frame" x="248" y="364" width="230" height="22"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="22" id="zEb-G8-0NC"/>
                                     <constraint firstAttribute="width" constant="230" id="zTb-8b-YPF"/>
@@ -130,6 +142,7 @@ Keeton Feavel (@Auxel)
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Efrain Ayllon Roa" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sNB-3D-5YA">
+                                <rect key="frame" x="248" y="454" width="202" height="22"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="22" id="qeo-fa-aXY"/>
                                 </constraints>
@@ -138,6 +151,7 @@ Keeton Feavel (@Auxel)
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="diV-Ub-ud9">
+                                <rect key="frame" x="333" y="205" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="2D0-uZ-6P5"/>
                                     <constraint firstAttribute="width" secondItem="diV-Ub-ud9" secondAttribute="height" multiplier="1:1" id="mOp-du-Dgr"/>
@@ -150,6 +164,7 @@ Keeton Feavel (@Auxel)
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9QK-uy-sbD">
+                                <rect key="frame" x="275" y="205" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="TYw-NO-R3N"/>
                                     <constraint firstAttribute="width" secondItem="9QK-uy-sbD" secondAttribute="height" multiplier="1:1" id="TnF-uV-yzk"/>
@@ -162,6 +177,7 @@ Keeton Feavel (@Auxel)
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ueV-Gv-YWH">
+                                <rect key="frame" x="217" y="205" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="ueV-Gv-YWH" secondAttribute="height" multiplier="1:1" id="0GI-gM-UAF"/>
                                     <constraint firstAttribute="width" constant="50" id="twC-Qb-2hu"/>
@@ -174,6 +190,7 @@ Keeton Feavel (@Auxel)
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="earoa" translatesAutoresizingMaskIntoConstraints="NO" id="xZS-UI-VoY">
+                                <rect key="frame" x="140" y="435" width="90" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="90" id="7cI-ZB-YTC"/>
                                     <constraint firstAttribute="width" constant="90" id="MqL-dj-prf"/>
@@ -189,6 +206,7 @@ Keeton Feavel (@Auxel)
                                 </variation>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nI8-5o-naz">
+                                <rect key="frame" x="248" y="426" width="67" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="95" id="4hL-bD-qEK"/>
                                 </constraints>
@@ -208,6 +226,7 @@ Keeton Feavel (@Auxel)
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sgD-uN-hUL">
+                                <rect key="frame" x="0.0" y="110" width="600" height="2"/>
                                 <color key="backgroundColor" red="0.90823972225189209" green="0.92638683319091797" blue="0.9317171573638916" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="2" id="LDO-G9-HEM"/>
@@ -263,7 +282,7 @@ Keeton Feavel (@Auxel)
                     </view>
                     <navigationItem key="navigationItem" title="Remember" id="aVo-PY-DXk">
                         <barButtonItem key="leftBarButtonItem" image="Menu" id="sYK-Y1-d4L">
-                            <color key="tintColor" red="0.2783651352" green="0.1853051037" blue="0.59323644639999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="tintColor" red="0.66902792453765869" green="0.73128575086593628" blue="0.94889926910400391" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <action selector="showMenu" destination="kxi-Xm-SGm" id="yyq-61-sCI"/>
                             </connections>
@@ -280,7 +299,7 @@ Keeton Feavel (@Auxel)
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aGZ-M6-ktr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1490" y="-234"/>
+            <point key="canvasLocation" x="1930" y="-151"/>
         </scene>
         <!--Help-->
         <scene sceneID="s6j-8b-wtx">
@@ -294,8 +313,11 @@ Keeton Feavel (@Auxel)
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Beach" translatesAutoresizingMaskIntoConstraints="NO" id="pD8-vF-WMH"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Beach" translatesAutoresizingMaskIntoConstraints="NO" id="pD8-vF-WMH">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Help Desk" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rby-kX-vxs">
+                                <rect key="frame" x="140" y="72" width="320" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="KR7-L2-3PR"/>
                                     <constraint firstAttribute="width" constant="320" id="ZZU-g4-Wb0"/>
@@ -305,6 +327,7 @@ Keeton Feavel (@Auxel)
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iWL-rE-YVo">
+                                <rect key="frame" x="0.0" y="110" width="600" height="2"/>
                                 <color key="backgroundColor" red="0.90823972230000005" green="0.92638683320000004" blue="0.93171715740000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="2" id="141-3O-FlQ"/>
@@ -317,11 +340,13 @@ Keeton Feavel (@Auxel)
                                 </variation>
                             </view>
                             <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9K5-tu-WmR">
+                                <rect key="frame" x="0.0" y="120" width="600" height="460"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="qR1-uL-rsE">
-                                    <frame key="frameInset"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="460"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <webView contentMode="scaleToFill" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Krc-xM-hW7">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="460"/>
                                             <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                             <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES" calendarEvent="YES"/>
                                         </webView>
@@ -359,17 +384,17 @@ Keeton Feavel (@Auxel)
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
+                                <exclude reference="AUv-In-qE3"/>
+                                <exclude reference="sqA-2j-mT8"/>
                                 <exclude reference="4gc-NC-2hG"/>
                                 <exclude reference="OCB-4t-qa5"/>
                                 <exclude reference="oHU-Q6-gMC"/>
-                                <exclude reference="AUv-In-qE3"/>
-                                <exclude reference="sqA-2j-mT8"/>
                             </mask>
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Remember" id="vHz-xx-ycq">
                         <barButtonItem key="leftBarButtonItem" image="Menu" id="TAH-cu-hfH">
-                            <color key="tintColor" red="0.2783651352" green="0.1853051037" blue="0.59323644639999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="tintColor" red="0.66902792453765869" green="0.73128575086593628" blue="0.94889926910400391" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <action selector="showMenu" destination="alO-g2-w6a" id="PP1-XD-ebj"/>
                             </connections>
@@ -384,17 +409,17 @@ Keeton Feavel (@Auxel)
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zMS-k7-yNF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1490" y="431"/>
+            <point key="canvasLocation" x="1930" y="511"/>
         </scene>
         <!--Navigation-->
         <scene sceneID="VyM-7P-IsW">
             <objects>
                 <navigationController storyboardIdentifier="contentController" title="Navigation" useStoryboardIdentifierAsRestorationIdentifier="YES" id="4zC-f7-fXk" customClass="NavigationViewController" sceneMemberID="viewController">
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
-                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" prompted="NO"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="600" height="600"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="56t-i6-dlL">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" barStyle="black" id="56t-i6-dlL">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -408,7 +433,7 @@ Keeton Feavel (@Auxel)
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YmU-1r-h1J" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="775" y="431"/>
+            <point key="canvasLocation" x="774" y="504"/>
         </scene>
         <!--Notes-->
         <scene sceneID="799-pT-qUU">
@@ -422,19 +447,24 @@ Keeton Feavel (@Auxel)
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Beach" translatesAutoresizingMaskIntoConstraints="NO" id="KMt-EP-5hV"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Beach" translatesAutoresizingMaskIntoConstraints="NO" id="KMt-EP-5hV">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
                             <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MeE-8O-UQi">
+                                <rect key="frame" x="0.0" y="72" width="600" height="528"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="0qe-ML-KzH">
-                                    <frame key="frameInset"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="528"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="96" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="jxH-kY-RFc">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="528"/>
                                             <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                             <view key="tableHeaderView" contentMode="scaleToFill" id="gS4-17-E7h">
                                                 <rect key="frame" x="0.0" y="0.0" width="600" height="40"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <subviews>
                                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="New Note Name:" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="vjL-sJ-MLK">
+                                                        <rect key="frame" x="8" y="5" width="584" height="30"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="30" id="PA5-fK-dHZ"/>
                                                         </constraints>
@@ -454,13 +484,15 @@ Keeton Feavel (@Auxel)
                                                     <rect key="frame" x="0.0" y="62" width="600" height="96"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <tableViewCellContentView key="contentView" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="jJh-6F-7NH" id="TG1-Re-ud1">
-                                                        <frame key="frameInset" width="600" height="95.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="600" height="95"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <subviews>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qYJ-Tr-5za">
+                                                                <rect key="frame" x="0.0" y="0.0" width="600" height="96.5"/>
                                                                 <color key="backgroundColor" red="0.90823972225189209" green="0.92638683319091797" blue="0.9317171573638916" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             </imageView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Remember:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wHJ-U0-KVC">
+                                                                <rect key="frame" x="8" y="41.5" width="300" height="21"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="21" id="e80-kU-206"/>
                                                                 </constraints>
@@ -470,6 +502,7 @@ Keeton Feavel (@Auxel)
                                                                 <size key="shadowOffset" width="0.0" height="2"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Author:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZjD-3y-TPA">
+                                                                <rect key="frame" x="8" y="70.5" width="300" height="21"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="21" id="SFl-Aq-7gb"/>
                                                                 </constraints>
@@ -479,6 +512,7 @@ Keeton Feavel (@Auxel)
                                                                 <size key="shadowOffset" width="0.0" height="2"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NZh-8t-vSy">
+                                                                <rect key="frame" x="8" y="8" width="300" height="24.5"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="300" id="b8z-Zi-6dh"/>
                                                                 </constraints>
@@ -540,7 +574,7 @@ Keeton Feavel (@Auxel)
                     <navigationItem key="navigationItem" id="hVt-8C-2a8">
                         <nil key="title"/>
                         <barButtonItem key="leftBarButtonItem" image="Menu" id="zRp-Ei-tu3">
-                            <color key="tintColor" red="0.2783651352" green="0.1853051037" blue="0.59323644639999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="tintColor" red="0.66902792453765869" green="0.73128575086593628" blue="0.94889926910400391" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <action selector="showMenu" destination="TIS-xJ-jje" id="RK0-p9-NDT"/>
                             </connections>
@@ -557,13 +591,12 @@ Keeton Feavel (@Auxel)
                             </connections>
                         </segmentedControl>
                         <barButtonItem key="rightBarButtonItem" systemItem="compose" id="FzZ-Wt-EoR">
-                            <color key="tintColor" red="0.2783651352" green="0.1853051037" blue="0.59323644639999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="tintColor" red="0.66902792453765869" green="0.73128575086593628" blue="0.94889926910400391" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <action selector="addReminder:" destination="TIS-xJ-jje" id="N2L-qm-bYQ"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
-                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="600" height="600"/>
                     <connections>
@@ -576,7 +609,7 @@ Keeton Feavel (@Auxel)
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FoC-50-Ctg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1490" y="1241"/>
+            <point key="canvasLocation" x="1930" y="1240"/>
         </scene>
         <!--Details-->
         <scene sceneID="KYM-k9-VUt">
@@ -590,16 +623,20 @@ Keeton Feavel (@Auxel)
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Beach" translatesAutoresizingMaskIntoConstraints="NO" id="GWX-1V-NoE"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Beach" translatesAutoresizingMaskIntoConstraints="NO" id="GWX-1V-NoE">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
                             <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xqj-0d-Ggy">
+                                <rect key="frame" x="0.0" y="72" width="600" height="528"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="nwN-LZ-ufE">
-                                    <frame key="frameInset"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="528"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7UI-Tr-2pR">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="40"/>
                                             <subviews>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Author" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Dn9-nG-v82">
-                                                    <frame key="frameInset" minX="8" minY="5" width="584" height="30"/>
+                                                    <rect key="frame" x="8" y="5" width="584" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="Arimo" family="Arimo" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="done"/>
@@ -615,6 +652,7 @@ Keeton Feavel (@Auxel)
                                             </constraints>
                                         </view>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mWq-9f-hQg">
+                                            <rect key="frame" x="200" y="496" width="200" height="24"/>
                                             <color key="backgroundColor" red="0.90823972225189209" green="0.92638683319091797" blue="0.9317171573638916" alpha="0.75" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="24" id="4Wx-nc-7cb"/>
@@ -631,6 +669,7 @@ Keeton Feavel (@Auxel)
                                             </connections>
                                         </button>
                                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" indicatorStyle="black" translatesAutoresizingMaskIntoConstraints="NO" id="mb6-F9-M4n">
+                                            <rect key="frame" x="0.0" y="40" width="600" height="448"/>
                                             <color key="backgroundColor" red="0.90823972225189209" green="0.92638683319091797" blue="0.9317171573638916" alpha="0.75" colorSpace="custom" customColorSpace="sRGB"/>
                                             <color key="textColor" red="0.11181893199682236" green="0.1118365004658699" blue="0.1118125319480896" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <fontDescription key="fontDescription" name="Arimo" family="Arimo" pointSize="14"/>
@@ -652,6 +691,7 @@ Keeton Feavel (@Auxel)
                                 <blurEffect style="light"/>
                             </visualEffectView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i9D-2y-r3r">
+                                <rect key="frame" x="548" y="72" width="52" height="52"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="52" id="981-GA-nHS"/>
                                     <constraint firstAttribute="height" constant="52" id="fNb-he-hjv"/>
@@ -681,19 +721,18 @@ Keeton Feavel (@Auxel)
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Note" id="iL1-H9-if7">
                         <barButtonItem key="leftBarButtonItem" image="Menu" id="exx-u1-kFn">
-                            <color key="tintColor" red="0.2783651352" green="0.1853051037" blue="0.59323644639999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="tintColor" red="0.66902792453765869" green="0.73128575086593628" blue="0.94889926910400391" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <action selector="showMenu" destination="vbh-s1-EDa" id="31O-We-eHp"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="TdR-ro-9gP">
-                            <color key="tintColor" red="0.2783651352" green="0.1853051037" blue="0.59323644639999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="tintColor" red="0.66902792453765869" green="0.73128575086593628" blue="0.94889926910400391" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <action selector="dismissView:" destination="vbh-s1-EDa" id="2ta-Bv-Ve6"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
-                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="600" height="600"/>
@@ -711,13 +750,13 @@ Keeton Feavel (@Auxel)
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wN1-x1-ASC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2194" y="1241"/>
+            <point key="canvasLocation" x="3096" y="1240"/>
         </scene>
         <!--Menu-->
         <scene sceneID="dMI-RR-UKE">
             <objects>
                 <tableViewController storyboardIdentifier="menuController" title="Menu" useStoryboardIdentifierAsRestorationIdentifier="YES" id="k79-Nn-uVl" customClass="MenuViewController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="l39-Uy-3QH">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="l39-Uy-3QH">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
@@ -725,14 +764,18 @@ Keeton Feavel (@Auxel)
                             <rect key="frame" x="0.0" y="0.0" width="600" height="200"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Menu Top" translatesAutoresizingMaskIntoConstraints="NO" id="Krh-Qd-ddd"/>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Menu Top" translatesAutoresizingMaskIntoConstraints="NO" id="Krh-Qd-ddd">
+                                    <rect key="frame" x="0.0" y="0.0" width="800" height="200"/>
+                                </imageView>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Default Avatar" translatesAutoresizingMaskIntoConstraints="NO" id="EM9-Px-mH3">
+                                    <rect key="frame" x="254" y="30" width="92" height="92"/>
                                     <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="92" id="crn-nB-vq8"/>
                                     </constraints>
                                 </imageView>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Remember" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uC7-vo-alV">
+                                    <rect key="frame" x="180" y="130" width="240" height="38"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="240" id="2wY-kA-e0R"/>
                                         <constraint firstAttribute="height" constant="38" id="wkk-Vm-nBf"/>
@@ -742,6 +785,7 @@ Keeton Feavel (@Auxel)
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Beta Version 1.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LKT-bQ-nqc">
+                                    <rect key="frame" x="238" y="176" width="124" height="16"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="124" id="Gzp-DD-D8z"/>
                                         <constraint firstAttribute="height" constant="16" id="aUU-zv-VXk"/>
@@ -767,14 +811,15 @@ Keeton Feavel (@Auxel)
                             </constraints>
                         </view>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="54" id="OTk-Ng-Ply" customClass="MenuViewCell">
-                                <rect key="frame" x="0.0" y="222" width="600" height="54"/>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="46" id="OTk-Ng-Ply" customClass="MenuViewCell">
+                                <rect key="frame" x="0.0" y="222" width="600" height="46"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="OTk-Ng-Ply" id="aQa-DF-LSi">
-                                    <frame key="frameInset" width="600" height="53.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="567" height="46"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FCc-tL-mRn">
+                                            <rect key="frame" x="44" y="4" width="256" height="38"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="256" id="4hF-5A-aW6"/>
                                             </constraints>
@@ -783,8 +828,9 @@ Keeton Feavel (@Auxel)
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rqa-YO-0jD">
+                                            <rect key="frame" x="8" y="9" width="28" height="28"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="37" id="FfG-Vi-AHm"/>
+                                                <constraint firstAttribute="width" constant="28" id="FfG-Vi-AHm"/>
                                                 <constraint firstAttribute="width" constant="32" id="RdI-Wi-sOm"/>
                                             </constraints>
                                             <variation key="default">
@@ -797,17 +843,17 @@ Keeton Feavel (@Auxel)
                                     <constraints>
                                         <constraint firstItem="rqa-YO-0jD" firstAttribute="centerY" secondItem="aQa-DF-LSi" secondAttribute="centerY" constant="0.5" id="C0O-n4-NO6"/>
                                         <constraint firstItem="FCc-tL-mRn" firstAttribute="top" secondItem="aQa-DF-LSi" secondAttribute="topMargin" constant="-4" id="Joo-Ee-iWj"/>
-                                        <constraint firstItem="rqa-YO-0jD" firstAttribute="top" secondItem="aQa-DF-LSi" secondAttribute="topMargin" id="MK6-cM-ChI"/>
-                                        <constraint firstItem="FCc-tL-mRn" firstAttribute="leading" secondItem="rqa-YO-0jD" secondAttribute="trailing" constant="8" symbolic="YES" id="Sf8-9j-Fg4"/>
+                                        <constraint firstItem="rqa-YO-0jD" firstAttribute="top" secondItem="aQa-DF-LSi" secondAttribute="topMargin" constant="1" id="MK6-cM-ChI"/>
+                                        <constraint firstItem="FCc-tL-mRn" firstAttribute="leading" secondItem="rqa-YO-0jD" secondAttribute="trailing" constant="8" id="Sf8-9j-Fg4"/>
                                         <constraint firstItem="FCc-tL-mRn" firstAttribute="leading" secondItem="aQa-DF-LSi" secondAttribute="leading" constant="48" id="aPm-8w-RoS"/>
                                         <constraint firstItem="FCc-tL-mRn" firstAttribute="centerY" secondItem="rqa-YO-0jD" secondAttribute="centerY" id="dE1-ot-Y6u"/>
-                                        <constraint firstItem="rqa-YO-0jD" firstAttribute="leading" secondItem="aQa-DF-LSi" secondAttribute="leadingMargin" constant="3" id="g8z-fS-AIe"/>
+                                        <constraint firstItem="rqa-YO-0jD" firstAttribute="leading" secondItem="aQa-DF-LSi" secondAttribute="leadingMargin" id="g8z-fS-AIe"/>
                                         <constraint firstItem="rqa-YO-0jD" firstAttribute="leading" secondItem="aQa-DF-LSi" secondAttribute="leadingMargin" constant="-7" id="kJI-Ip-a6I"/>
                                     </constraints>
                                     <variation key="default">
                                         <mask key="constraints">
-                                            <exclude reference="kJI-Ip-a6I"/>
                                             <exclude reference="aPm-8w-RoS"/>
+                                            <exclude reference="kJI-Ip-a6I"/>
                                         </mask>
                                     </variation>
                                 </tableViewCellContentView>
@@ -833,7 +879,7 @@ Keeton Feavel (@Auxel)
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Sk-Bv-yYb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="37" y="1241"/>
+            <point key="canvasLocation" x="-435.19999999999999" y="1239.5802098950526"/>
         </scene>
         <!--Settings-->
         <scene sceneID="mc6-IO-bf8">
@@ -847,18 +893,22 @@ Keeton Feavel (@Auxel)
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Beach" translatesAutoresizingMaskIntoConstraints="NO" id="TIp-zL-BNV"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Beach" translatesAutoresizingMaskIntoConstraints="NO" id="TIp-zL-BNV">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
                             <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Pe-Pf-NxT">
+                                <rect key="frame" x="0.0" y="120" width="600" height="460"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="TvK-2y-2ox">
-                                    <frame key="frameInset"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="460"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xnJ-b9-uJj">
-                                            <frame key="frameInset" width="600" height="40"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="40"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <color key="backgroundColor" red="0.90823972225189209" green="0.92638683319091797" blue="0.9317171573638916" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </view>
                                         <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="12" minValue="12" maxValue="22" translatesAutoresizingMaskIntoConstraints="NO" id="Jjb-Ai-hyZ">
+                                            <rect key="frame" x="138" y="82" width="324" height="15"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="14" id="ESg-MO-2L1"/>
                                             </constraints>
@@ -867,6 +917,7 @@ Keeton Feavel (@Auxel)
                                             </connections>
                                         </slider>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Text Size: 12pt" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="DbK-XQ-vAO">
+                                            <rect key="frame" x="210" y="104" width="180" height="22"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="180" id="Rx8-vZ-46l"/>
                                                 <constraint firstAttribute="height" constant="22" id="eDn-J2-hMK"/>
@@ -876,6 +927,7 @@ Keeton Feavel (@Auxel)
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Author First and Last Name" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="17e-UA-iU4">
+                                            <rect key="frame" x="8" y="0.0" width="584" height="40"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="40" id="Bjw-CE-1bA"/>
                                             </constraints>
@@ -886,6 +938,7 @@ Keeton Feavel (@Auxel)
                                             </connections>
                                         </textField>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This name will be used as the default author." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zXE-IY-whl">
+                                            <rect key="frame" x="140" y="48" width="320" height="26"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="320" id="oY9-CJ-yYV"/>
                                                 <constraint firstAttribute="height" constant="26" id="yjf-l3-4dk"/>
@@ -895,6 +948,7 @@ Keeton Feavel (@Auxel)
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ga8-ce-WMo">
+                                            <rect key="frame" x="220" y="207" width="160" height="22"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="22" id="K5h-05-m0E"/>
                                                 <constraint firstAttribute="width" constant="160" id="yum-3c-q7g"/>
@@ -908,6 +962,7 @@ Keeton Feavel (@Auxel)
                                             </connections>
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="8" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5Jh-Qw-Xmb">
+                                            <rect key="frame" x="140" y="237" width="320" height="36"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="36" id="lKz-ns-zmq"/>
                                             </constraints>
@@ -918,6 +973,7 @@ your name in the slide out menu.</string>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bkb-uE-COH">
+                                            <rect key="frame" x="210" y="281" width="180" height="22"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="22" id="Q56-Kg-TV2"/>
                                             </constraints>
@@ -931,6 +987,7 @@ your name in the slide out menu.</string>
                                             </connections>
                                         </button>
                                         <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VmL-Bk-Kh3">
+                                            <rect key="frame" x="275.5" y="168" width="51" height="31"/>
                                             <color key="onTintColor" red="0.2783651352" green="0.1853051037" blue="0.59323644639999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <color key="thumbTintColor" red="0.90823972225189209" green="0.92638683319091797" blue="0.9317171573638916" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <connections>
@@ -938,6 +995,7 @@ your name in the slide out menu.</string>
                                             </connections>
                                         </switch>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enable Interface Sounds:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5C3-gQ-Usc">
+                                            <rect key="frame" x="196.5" y="134" width="207" height="26"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="207" id="31h-LR-pGO"/>
                                                 <constraint firstAttribute="height" constant="26" id="j87-Qj-TFc"/>
@@ -991,6 +1049,7 @@ your name in the slide out menu.</string>
                                 <blurEffect style="light"/>
                             </visualEffectView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0h9-ok-Xfi">
+                                <rect key="frame" x="0.0" y="110" width="600" height="2"/>
                                 <color key="backgroundColor" red="0.90823972230000005" green="0.92638683320000004" blue="0.93171715740000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="2" id="gBk-tv-DmF"/>
@@ -1003,6 +1062,7 @@ your name in the slide out menu.</string>
                                 </variation>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tweaks And Settings" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Okq-QP-cWq">
+                                <rect key="frame" x="0.0" y="72" width="600" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="CXL-6K-HId"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="QdF-6q-pXk"/>
@@ -1046,19 +1106,19 @@ your name in the slide out menu.</string>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
-                                <exclude reference="6ZJ-H5-fAP"/>
-                                <exclude reference="Vjx-YM-XeY"/>
-                                <exclude reference="cfu-6J-wtX"/>
                                 <exclude reference="Wfh-cw-ciL"/>
                                 <exclude reference="ioJ-qV-UHN"/>
                                 <exclude reference="qdx-0o-K1i"/>
+                                <exclude reference="6ZJ-H5-fAP"/>
+                                <exclude reference="Vjx-YM-XeY"/>
+                                <exclude reference="cfu-6J-wtX"/>
                             </mask>
                         </variation>
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Remember" id="ZqS-48-z4c">
                         <barButtonItem key="leftBarButtonItem" image="Menu" id="6uF-Xg-J5P">
-                            <color key="tintColor" red="0.27836513519287109" green="0.18530510365962982" blue="0.59323644638061523" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="tintColor" red="0.66902792453765869" green="0.73128575086593628" blue="0.94889926910400391" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <action selector="showMenu" destination="wZo-CA-478" id="pju-ae-Npu"/>
                             </connections>
@@ -1077,7 +1137,7 @@ your name in the slide out menu.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UlT-tc-FN3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="775" y="1241"/>
+            <point key="canvasLocation" x="773" y="1240"/>
         </scene>
         <!--Map-->
         <scene sceneID="TYo-gU-Rai">
@@ -1092,6 +1152,7 @@ your name in the slide out menu.</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reminder Map" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0n2-ia-pem">
+                                <rect key="frame" x="0.0" y="70" width="600" height="32"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="32" id="7tJ-q4-x1W"/>
                                 </constraints>
@@ -1100,12 +1161,14 @@ your name in the slide out menu.</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Un3-8Q-aci">
+                                <rect key="frame" x="0.0" y="110" width="600" height="2"/>
                                 <color key="backgroundColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="2" id="Xnv-AW-xBe"/>
                                 </constraints>
                             </view>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="irq-66-JfX">
+                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="6Lo-Sz-mTr"/>
                                 </constraints>
@@ -1120,12 +1183,15 @@ your name in the slide out menu.</string>
                                 </items>
                             </navigationBar>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UCz-eS-N06">
+                                <rect key="frame" x="0.0" y="578" width="600" height="2"/>
                                 <color key="backgroundColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="2" id="KSI-Eu-5hJ"/>
                                 </constraints>
                             </view>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" pitchEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bgF-rs-yee"/>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" pitchEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bgF-rs-yee">
+                                <rect key="frame" x="20" y="120" width="560" height="450"/>
+                            </mapView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -1162,7 +1228,7 @@ your name in the slide out menu.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xxv-Xf-HBm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2911" y="1601"/>
+            <point key="canvasLocation" x="4248" y="1627"/>
         </scene>
         <!--Date View Controller-->
         <scene sceneID="yEZ-Bv-JNn">
@@ -1186,6 +1252,7 @@ your name in the slide out menu.</string>
                                 <blurEffect style="light"/>
                             </visualEffectView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="September 10, 9:14 AM" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jZC-Rx-0AC">
+                                <rect key="frame" x="93" y="502" width="414" height="18"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="18" id="izf-id-N2H"/>
                                 </constraints>
@@ -1194,6 +1261,7 @@ your name in the slide out menu.</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="cgq-74-yQm">
+                                <rect key="frame" x="0.0" y="203" width="600" height="162"/>
                                 <date key="date" timeIntervalSinceReferenceDate="436802630.360735">
                                     <!--2014-11-04 14:03:50 +0000-->
                                 </date>
@@ -1217,6 +1285,7 @@ your name in the slide out menu.</string>
                                 <blurEffect style="light"/>
                             </visualEffectView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gcT-ak-pqs">
+                                <rect key="frame" x="0.0" y="130" width="600" height="48"/>
                                 <string key="text">Set the date on which you 
 want to be reminded below:</string>
                                 <fontDescription key="fontDescription" name="Arimo" family="Arimo" pointSize="20"/>
@@ -1227,6 +1296,7 @@ want to be reminded below:</string>
                                 <color key="backgroundColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kiG-aO-iho">
+                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="h5z-Se-7Mj"/>
                                 </constraints>
@@ -1241,6 +1311,7 @@ want to be reminded below:</string>
                                 </items>
                             </navigationBar>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Schedule Reminder" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SPk-ge-1cP">
+                                <rect key="frame" x="0.0" y="72" width="600" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="FxU-Ib-xLk"/>
                                 </constraints>
@@ -1249,6 +1320,7 @@ want to be reminded below:</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aYm-eE-fvK">
+                                <rect key="frame" x="0.0" y="110" width="600" height="2"/>
                                 <color key="backgroundColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="2" id="vhX-3E-QRt"/>
@@ -1258,6 +1330,7 @@ want to be reminded below:</string>
                                 <color key="backgroundColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Chn-eU-1ds">
+                                <rect key="frame" x="200" y="388" width="200" height="32"/>
                                 <color key="backgroundColor" red="0.90823972230000005" green="0.92638683320000004" blue="0.93171715740000005" alpha="0.75" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="32" id="ZYN-Fd-aRV"/>
@@ -1272,6 +1345,7 @@ want to be reminded below:</string>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Remember Me On:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="weE-kq-kDs">
+                                <rect key="frame" x="200" y="470" width="200" height="24"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="24" id="k5t-L4-6Ts"/>
                                 </constraints>
@@ -1280,6 +1354,7 @@ want to be reminded below:</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yyR-8r-Lwx">
+                                <rect key="frame" x="200" y="428" width="200" height="34"/>
                                 <color key="backgroundColor" red="0.90823972230000005" green="0.92638683320000004" blue="0.93171715740000005" alpha="0.75" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="sU8-xx-vZr"/>
@@ -1293,6 +1368,7 @@ want to be reminded below:</string>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4bu-gF-3bL">
+                                <rect key="frame" x="0.0" y="193" width="600" height="2"/>
                                 <color key="backgroundColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="2" id="du8-Rc-23J"/>
@@ -1364,7 +1440,7 @@ want to be reminded below:</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rPS-Vh-Sff" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2911" y="827"/>
+            <point key="canvasLocation" x="4248" y="853"/>
         </scene>
     </scenes>
     <resources>
@@ -1380,7 +1456,7 @@ want to be reminded below:</string>
         <image name="earoa" width="260" height="155"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="GD3-Lc-AzB"/>
+        <segue reference="Zpg-jo-7KN"/>
     </inferredMetricsTieBreakers>
-    <color key="tintColor" red="0.2783651352" green="0.1853051037" blue="0.59323644639999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+    <color key="tintColor" red="0.66902792453765869" green="0.73128575086593628" blue="0.94889926910400391" alpha="1" colorSpace="calibratedRGB"/>
 </document>

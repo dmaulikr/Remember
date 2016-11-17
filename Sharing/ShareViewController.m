@@ -11,7 +11,7 @@
 #import <CoreLocation/CoreLocation.h>
 #import "RMAudio.h"
 #import "RMView.h"
-#import "RMPhotoManager.h"
+//#import "RMPhotoManager.h"
 #import <CoreSpotlight/CoreSpotlight.h>
 #import <MobileCoreServices/MobileCoreServices.h>
 
@@ -211,8 +211,8 @@
     }
     if (_hasPhoto)
     {
-        RMPhotoManager *photo = [[RMPhotoManager alloc] initWithView:self andFileName:titleField.text];
-        [photo writePicture:_image withName:titleField.text];
+        //RMPhotoManager *photo = [[RMPhotoManager alloc] initWithView:self andFileName:titleField.text];
+        //[photo writePicture:_image withName:titleField.text];
         //[self finishAndUpdate];
     }
     [self addItemToCoreSpotlight];

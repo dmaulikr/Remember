@@ -245,7 +245,7 @@ UITextViewDelegate
                                                     handler:^(UIAlertAction * action)
                             {
                                 [_pMan selectPhotoFromLibrary:self];
-                                //HNKCache *format = [HNKCache sharedCache];
+                                //HNKCacheFormat *format = [HNKCache sharedCache];
                                 //[format removeAllImages];
                             }];
     UIAlertAction *camera = [UIAlertAction actionWithTitle:@"Photo From Camera"

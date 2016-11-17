@@ -64,7 +64,6 @@
 		E96FF17D1AF9488800D41FD8 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E96FF17C1AF9488800D41FD8 /* MediaPlayer.framework */; };
 		E96FF1801AF94D3C00D41FD8 /* Login-Universal.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E96FF17E1AF94D3C00D41FD8 /* Login-Universal.storyboard */; };
 		E97064D21AEE8813009A9286 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E97064D01AEE8813009A9286 /* Storyboard.storyboard */; };
-		E97613B71DDD17E300D43DC8 /* RMPhotoManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E905E86D1B0E1A24003116FE /* RMPhotoManager.m */; };
 		E976D1A31B0E339A00DD1AAE /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E976D1A11B0E339A00DD1AAE /* EventKit.framework */; };
 		E976D1A41B0E339A00DD1AAE /* EventKitUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E976D1A21B0E339A00DD1AAE /* EventKitUI.framework */; };
 		E98D32F31A800EE20031FCFD /* RMSegueReverse.m in Sources */ = {isa = PBXBuildFile; fileRef = E98D32F21A800EE20031FCFD /* RMSegueReverse.m */; };
@@ -1321,7 +1320,6 @@
 				E9DE54A41C8747E2008FA8B5 /* RMAudio.m in Sources */,
 				E93D30D41A15440E0086BB61 /* ShareViewController.m in Sources */,
 				E9F166D21C8780A800D05A39 /* RMView.m in Sources */,
-				E97613B71DDD17E300D43DC8 /* RMPhotoManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

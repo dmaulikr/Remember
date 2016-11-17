@@ -50,6 +50,7 @@
     
     REFrostedViewController *frost = [REFrostedViewController new];
     frost.liveBlur = YES;
+    [frost resizeMenuViewControllerToSize:CGSizeMake(250, self.view.frame.size.height)];
     
     self.tableView.separatorColor = [UIColor colorWithRed:150/255.0f green:161/255.0f blue:177/255.0f alpha:1.0f];
     self.tableView.delegate = self;
@@ -125,8 +126,9 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    
     if ([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPhone) {
-        return 54;
+        return 46;
     } else {
         return 108;
     }
@@ -161,13 +163,19 @@
         return nil;
     }
     if (sectionIndex == 1) {
+        UIVisualEffectView *effect = [[UIVisualEffectView alloc] initWithFrame:CGRectMake(0.f, 0.f, 320.f, 32.f)];
+        //[effect setAlpha:1.f];
+        UIBlurEffect *blur = [UIBlurEffect effectWithStyle:UIBlurEffectStyleDark];
+        [effect setEffect:blur];
         UITextView *text = [UITextView new];
         [text setFont:[UIFont fontWithName:@"Arimo" size:14]];
         [text setText:@"Favorites:"];
         [text setFrame:CGRectMake(0.f, 0.f, 320.f, 32.f)];
+        //[text setBackgroundColor:[UIColor colorWithRed:109/255.0f green:109/255.0f blue:109/255.0f alpha:0.6f]];
         [text setBackgroundColor:[UIColor clearColor]];
         [text setUserInteractionEnabled:NO];
-        return text;
+        [effect addSubview:text];
+        return effect;
     }
     
     return nil;
@@ -235,8 +243,29 @@
         
     }
     if (indexPath.section == 1) {
+        NSURL *containerURL = [[NSFileManager defaultManager] containerURLForSecurityApplicationGroupIdentifier:
+                               @"group.com.solarpepper.Remember"];
+        NSString *photoPath = [[containerURL URLByAppendingPathComponent:[NSString stringWithFormat:@"Documents/"]] path];
+        NSString *imageName = [photoPath stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.jpg",_favorites[indexPath.row]]];
+        if ([[NSFileManager defaultManager] fileExistsAtPath:imageName])
+        {
+            HNKCacheFormat *format = [HNKCache sharedCache].formats[@"thumbnail"];
+            if (!format)
+            {
+                format = [[HNKCacheFormat alloc] initWithName:@"thumbnail"];
+                format.size = CGSizeMake(cell.icon.frame.size.width, cell.icon.frame.size.height);
+                format.scaleMode = UIViewContentModeScaleToFill;
+                format.compressionQuality = 0.25;
+                format.diskCapacity = 0.5 * 1024 * 1024; // 0.5MB
+                format.preloadPolicy = HNKPreloadPolicyAll;
+            }
+            RMView *corners = [RMView new];
+            [corners createViewWithRoundedCornersWithRadius:3.14159 andView:cell.icon];
+            [cell.icon hnk_setImageFromFile:imageName];
+            
+        }
         cell.title.text = _favorites[indexPath.row];
-        cell.icon.image = [UIImage imageNamed:@"Heart Thin"];
+            //cell.icon.image = [UIImage imageNamed:@"Heart Thin"];
     }
     
     if (indexPath.section == 1) {
