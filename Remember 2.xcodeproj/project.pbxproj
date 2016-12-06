@@ -211,6 +211,8 @@
 		E95A92A81C3C47A900BBAB41 /* IndexRequestHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IndexRequestHandler.m; sourceTree = "<group>"; };
 		E95A92AA1C3C47A900BBAB41 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E95C09901DF7704F00E39BEC /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = Settings.bundle; path = Remember/Settings.bundle; sourceTree = SOURCE_ROOT; };
+		E95C09921DF7717600E39BEC /* Remember.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; name = Remember.entitlements; path = Remember/Remember.entitlements; sourceTree = "<group>"; };
+		E95C09931DF771A400E39BEC /* Sharing.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = Sharing.entitlements; sourceTree = "<group>"; };
 		E95C754A1A8A697F00E12337 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		E95C754B1A8A697F00E12337 /* WelcomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WelcomeViewController.h; sourceTree = "<group>"; };
 		E95C754C1A8A697F00E12337 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = LoginViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
@@ -296,8 +298,6 @@
 		E9D55E091CC565CF007C5211 /* Notes.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = Notes.rtf; sourceTree = "<group>"; };
 		E9DE54A11C8747E2008FA8B5 /* RMAudio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMAudio.h; sourceTree = "<group>"; };
 		E9DE54A21C8747E2008FA8B5 /* RMAudio.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMAudio.m; sourceTree = "<group>"; };
-		E9E0EDBF1A1A637200924329 /* Sharing.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Sharing.entitlements; sourceTree = "<group>"; };
-		E9E0EDC01A1A63B600924329 /* Remember.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Remember.entitlements; sourceTree = "<group>"; };
 		E9E2B0751A6999B7007CF38E /* CorePreprocessor.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = CorePreprocessor.js; sourceTree = "<group>"; };
 		E9E6D0991C89FB29003AEAF3 /* DropboxController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DropboxController.h; sourceTree = "<group>"; };
 		E9E6D09A1C89FB29003AEAF3 /* DropboxController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropboxController.m; sourceTree = "<group>"; };
@@ -526,6 +526,7 @@
 		E93D30CF1A15440E0086BB61 /* Sharing */ = {
 			isa = PBXGroup;
 			children = (
+				E95C09931DF771A400E39BEC /* Sharing.entitlements */,
 				E93D30D01A15440E0086BB61 /* Supporting Files */,
 				E9E2B0751A6999B7007CF38E /* CorePreprocessor.js */,
 				E96B39A21A816684000D385E /* InitialViewController.h */,
@@ -541,7 +542,6 @@
 			isa = PBXGroup;
 			children = (
 				E93D30D11A15440E0086BB61 /* Info.plist */,
-				E9E0EDBF1A1A637200924329 /* Sharing.entitlements */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -770,6 +770,7 @@
 		E9FBB3DB19E9E5C000063C38 = {
 			isa = PBXGroup;
 			children = (
+				E95C09921DF7717600E39BEC /* Remember.entitlements */,
 				4A44ACE5B75B491698664E19 /* Frameworks */,
 				4F618641C3EC685F69B8FE8A /* Pods */,
 				E9FBB3E519E9E5C000063C38 /* Products */,
@@ -814,7 +815,6 @@
 				E95C833E1C77761D004D18D9 /* GoogleSignIn.bundle */,
 				E9FBB3E819E9E5C000063C38 /* Info.plist */,
 				E9BCF4EF19F05EF3009CFEBB /* Remember Prefix.pch */,
-				E9E0EDC01A1A63B600924329 /* Remember.entitlements */,
 				E95C09901DF7704F00E39BEC /* Settings.bundle */,
 				E9FBB3E919E9E5C000063C38 /* main.m */,
 			);
@@ -1613,6 +1613,7 @@
 				CODE_SIGN_ENTITLEMENTS = Remember/Remember.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Jonathan Feavel (GJL2J73ZKG)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = X3R99W7RN3;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1658,6 +1659,7 @@
 				CODE_SIGN_ENTITLEMENTS = Remember/Remember.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Jonathan Feavel (X3R99W7RN3)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = X3R99W7RN3;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
