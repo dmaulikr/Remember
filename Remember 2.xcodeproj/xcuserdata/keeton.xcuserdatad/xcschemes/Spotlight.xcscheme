@@ -18,7 +18,7 @@
                BlueprintIdentifier = "E95A92A41C3C47A900BBAB41"
                BuildableName = "Spotlight.appex"
                BlueprintName = "Spotlight"
-               ReferencedContainer = "container:Remember.xcodeproj">
+               ReferencedContainer = "container:Remember 2.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -32,7 +32,7 @@
                BlueprintIdentifier = "E9FBB3E319E9E5C000063C38"
                BuildableName = "Remember.app"
                BlueprintName = "Remember"
-               ReferencedContainer = "container:Remember.xcodeproj">
+               ReferencedContainer = "container:Remember 2.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -43,24 +43,14 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "E95C832D1C776EF4004D18D9"
-               BuildableName = "Snapshot.xctest"
-               BlueprintName = "Snapshot"
-               ReferencedContainer = "container:Remember.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "E9FBB3E319E9E5C000063C38"
-            BuildableName = "Remember.app"
-            BlueprintName = "Remember"
-            ReferencedContainer = "container:Remember.xcodeproj">
+            BlueprintIdentifier = "E95A92A41C3C47A900BBAB41"
+            BuildableName = "Spotlight.appex"
+            BlueprintName = "Spotlight"
+            ReferencedContainer = "container:Remember 2.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -84,7 +74,7 @@
             BlueprintIdentifier = "E9FBB3E319E9E5C000063C38"
             BuildableName = "Remember.app"
             BlueprintName = "Remember"
-            ReferencedContainer = "container:Remember.xcodeproj">
+            ReferencedContainer = "container:Remember 2.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -104,7 +94,7 @@
             BlueprintIdentifier = "E9FBB3E319E9E5C000063C38"
             BuildableName = "Remember.app"
             BlueprintName = "Remember"
-            ReferencedContainer = "container:Remember.xcodeproj">
+            ReferencedContainer = "container:Remember 2.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

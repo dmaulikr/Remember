@@ -24,6 +24,8 @@
 		E92428AC1DD7B92B00EC1187 /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E92428AA1DD7B92B00EC1187 /* UserNotifications.framework */; };
 		E92428AD1DD7B92B00EC1187 /* UserNotificationsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E92428AB1DD7B92B00EC1187 /* UserNotificationsUI.framework */; };
 		E92AEA931C6E69C00024DC29 /* ContentController.m in Sources */ = {isa = PBXBuildFile; fileRef = E92AEA921C6E69C00024DC29 /* ContentController.m */; };
+		E92B433F1DF4ABC2007D227C /* RMNote.m in Sources */ = {isa = PBXBuildFile; fileRef = E92B433E1DF4ABC2007D227C /* RMNote.m */; };
+		E933932B1DF76D4B00C8EE59 /* RMNoteLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = E933932A1DF76D4B00C8EE59 /* RMNoteLoader.m */; };
 		E93D30D41A15440E0086BB61 /* ShareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E93D30D31A15440E0086BB61 /* ShareViewController.m */; };
 		E93D30D61A15440E0086BB61 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E93D30D51A15440E0086BB61 /* MainInterface.storyboard */; };
 		E93D30D91A15440E0086BB61 /* Sharing.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = E93D30CE1A15440D0086BB61 /* Sharing.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -190,6 +192,10 @@
 		E92428AB1DD7B92B00EC1187 /* UserNotificationsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotificationsUI.framework; path = System/Library/Frameworks/UserNotificationsUI.framework; sourceTree = SDKROOT; };
 		E92AEA911C6E69C00024DC29 /* ContentController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ContentController.h; path = Login/ContentController.h; sourceTree = "<group>"; };
 		E92AEA921C6E69C00024DC29 /* ContentController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ContentController.m; path = Login/ContentController.m; sourceTree = "<group>"; };
+		E92B433D1DF4ABC2007D227C /* RMNote.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RMNote.h; path = RMNote/RMNote.h; sourceTree = "<group>"; };
+		E92B433E1DF4ABC2007D227C /* RMNote.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RMNote.m; path = RMNote/RMNote.m; sourceTree = "<group>"; };
+		E93393291DF76D4B00C8EE59 /* RMNoteLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RMNoteLoader.h; path = RMNote/RMNoteLoader.h; sourceTree = "<group>"; };
+		E933932A1DF76D4B00C8EE59 /* RMNoteLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RMNoteLoader.m; path = RMNote/RMNoteLoader.m; sourceTree = "<group>"; };
 		E93D30CE1A15440D0086BB61 /* Sharing.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Sharing.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		E93D30D11A15440E0086BB61 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E93D30D21A15440E0086BB61 /* ShareViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShareViewController.h; sourceTree = "<group>"; };
@@ -234,10 +240,6 @@
 		E95C757E1A8A6C6100E12337 /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MenuViewController.h; path = "Menu View/MenuViewController.h"; sourceTree = "<group>"; };
 		E95C757F1A8A6C6100E12337 /* MenuViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MenuViewCell.m; path = "Menu View/MenuViewCell.m"; sourceTree = "<group>"; };
 		E95C75801A8A6C6100E12337 /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MenuViewController.m; path = "Menu View/MenuViewController.m"; sourceTree = "<group>"; };
-		E95C75841A8A6CEB00E12337 /* AlertView+Input.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "AlertView+Input.h"; path = "Alert Views/AlertView+Input.h"; sourceTree = "<group>"; };
-		E95C75851A8A6CEB00E12337 /* MKAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MKAlertView.h; path = "Alert Views/MKAlertView.h"; sourceTree = "<group>"; };
-		E95C75861A8A6CEB00E12337 /* AlertView+Input.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "AlertView+Input.m"; path = "Alert Views/AlertView+Input.m"; sourceTree = "<group>"; };
-		E95C75871A8A6CEB00E12337 /* MKAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MKAlertView.m; path = "Alert Views/MKAlertView.m"; sourceTree = "<group>"; };
 		E95C833E1C77761D004D18D9 /* GoogleSignIn.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = GoogleSignIn.bundle; sourceTree = "<group>"; };
 		E95C83441C777DC1004D18D9 /* POPTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = POPTransition.h; path = Segues/POPTransition.h; sourceTree = "<group>"; };
 		E95C83451C777DC1004D18D9 /* POPTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = POPTransition.m; path = Segues/POPTransition.m; sourceTree = "<group>"; };
@@ -495,6 +497,7 @@
 		E92248D71AF11D26006C0D2B /* Remember Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				E92B433C1DF4AA95007D227C /* RMNote */,
 				E965B2061CC67D03000E7CBD /* RMParallax */,
 				E93F5FF31CBD65E2004FF22F /* RMNanoManager */,
 				E989C2ED1A2387CE008E729A /* RMDataManager */,
@@ -507,6 +510,17 @@
 				E9F166CE1C87809100D05A39 /* RMView */,
 			);
 			name = "Remember Libraries";
+			sourceTree = "<group>";
+		};
+		E92B433C1DF4AA95007D227C /* RMNote */ = {
+			isa = PBXGroup;
+			children = (
+				E92B433D1DF4ABC2007D227C /* RMNote.h */,
+				E92B433E1DF4ABC2007D227C /* RMNote.m */,
+				E93393291DF76D4B00C8EE59 /* RMNoteLoader.h */,
+				E933932A1DF76D4B00C8EE59 /* RMNoteLoader.m */,
+			);
+			name = RMNote;
 			sourceTree = "<group>";
 		};
 		E93D30CF1A15440E0086BB61 /* Sharing */ = {
@@ -606,24 +620,6 @@
 			path = Spotlight;
 			sourceTree = "<group>";
 		};
-		E95C758A1A8A6CF500E12337 /* AlertView+Input */ = {
-			isa = PBXGroup;
-			children = (
-				E95C75841A8A6CEB00E12337 /* AlertView+Input.h */,
-				E95C75861A8A6CEB00E12337 /* AlertView+Input.m */,
-			);
-			name = "AlertView+Input";
-			sourceTree = "<group>";
-		};
-		E95C758B1A8A6D0000E12337 /* MKAlertView */ = {
-			isa = PBXGroup;
-			children = (
-				E95C75851A8A6CEB00E12337 /* MKAlertView.h */,
-				E95C75871A8A6CEB00E12337 /* MKAlertView.m */,
-			);
-			name = MKAlertView;
-			sourceTree = "<group>";
-		};
 		E95C83521C7781AE004D18D9 /* RMPOP */ = {
 			isa = PBXGroup;
 			children = (
@@ -720,15 +716,6 @@
 			name = "View Controllers";
 			sourceTree = "<group>";
 		};
-		E9DA61FE1A0453A90075A1B8 /* AlertView Subclasses */ = {
-			isa = PBXGroup;
-			children = (
-				E95C758A1A8A6CF500E12337 /* AlertView+Input */,
-				E95C758B1A8A6D0000E12337 /* MKAlertView */,
-			);
-			name = "AlertView Subclasses";
-			sourceTree = "<group>";
-		};
 		E9E6D0AF1C8B7064003AEAF3 /* Audio */ = {
 			isa = PBXGroup;
 			children = (
@@ -813,7 +800,6 @@
 				E9D55E091CC565CF007C5211 /* Notes.rtf */,
 				E95481781A0056F2000BDFC9 /* Storyboards */,
 				E92248D71AF11D26006C0D2B /* Remember Libraries */,
-				E9DA61FE1A0453A90075A1B8 /* AlertView Subclasses */,
 				E95481771A0056CC000BDFC9 /* App Delegate */,
 				E9BC90A919F1E4740036A6F4 /* View Controllers */,
 				E9FBB3E719E9E5C000063C38 /* Supporting Files */,
@@ -1007,7 +993,7 @@
 					};
 				};
 			};
-			buildConfigurationList = E9FBB3DF19E9E5C000063C38 /* Build configuration list for PBXProject "Remember" */;
+			buildConfigurationList = E9FBB3DF19E9E5C000063C38 /* Build configuration list for PBXProject "Remember 2" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -1358,7 +1344,9 @@
 				E9FBB3EA19E9E5C000063C38 /* main.m in Sources */,
 				E95C75671A8A6AC000E12337 /* NotesTableController.m in Sources */,
 				E95C756F1A8A6B1000E12337 /* MapViewController.m in Sources */,
+				E933932B1DF76D4B00C8EE59 /* RMNoteLoader.m in Sources */,
 				E9E6D09B1C89FB29003AEAF3 /* DropboxController.m in Sources */,
+				E92B433F1DF4ABC2007D227C /* RMNote.m in Sources */,
 				E9B416921AFD17CA0046D4E7 /* RMGooglePlus.m in Sources */,
 				E95C757B1A8A6C3300E12337 /* NavigationViewController.m in Sources */,
 				E95C83551C77821B004D18D9 /* RMPOPImageView.m in Sources */,
@@ -1760,7 +1748,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E9FBB3DF19E9E5C000063C38 /* Build configuration list for PBXProject "Remember" */ = {
+		E9FBB3DF19E9E5C000063C38 /* Build configuration list for PBXProject "Remember 2" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E9FBB40519E9E5C100063C38 /* Debug */,

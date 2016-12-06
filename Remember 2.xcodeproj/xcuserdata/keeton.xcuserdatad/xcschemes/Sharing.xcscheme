@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
    LastUpgradeVersion = "0820"
+   wasCreatedForAppExtension = "YES"
    version = "2.0">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,24 +15,24 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "E9FBB3E319E9E5C000063C38"
-               BuildableName = "Remember.app"
-               BlueprintName = "Remember"
-               ReferencedContainer = "container:Remember.xcodeproj">
+               BlueprintIdentifier = "E93D30CD1A15440D0086BB61"
+               BuildableName = "Sharing.appex"
+               BlueprintName = "Sharing"
+               ReferencedContainer = "container:Remember 2.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
             buildForTesting = "YES"
             buildForRunning = "YES"
-            buildForProfiling = "NO"
-            buildForArchiving = "NO"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "E9FBB3FC19E9E5C100063C38"
-               BuildableName = "RememberTests.xctest"
-               BlueprintName = "RememberTests"
-               ReferencedContainer = "container:Remember.xcodeproj">
+               BlueprintIdentifier = "E9FBB3E319E9E5C000063C38"
+               BuildableName = "Remember.app"
+               BlueprintName = "Remember"
+               ReferencedContainer = "container:Remember 2.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -40,45 +41,16 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      shouldUseLaunchSchemeArgsEnv = "YES"
-      codeCoverageEnabled = "YES">
+      shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "E9FBB3FC19E9E5C100063C38"
-               BuildableName = "RememberTests.xctest"
-               BlueprintName = "RememberTests"
-               ReferencedContainer = "container:Remember.xcodeproj">
-            </BuildableReference>
-            <LocationScenarioReference
-               identifier = "New York, NY, USA"
-               referenceType = "1">
-            </LocationScenarioReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "E95C832D1C776EF4004D18D9"
-               BuildableName = "Snapshot.xctest"
-               BlueprintName = "Snapshot"
-               ReferencedContainer = "container:Remember.xcodeproj">
-            </BuildableReference>
-            <LocationScenarioReference
-               identifier = "New York, NY, USA"
-               referenceType = "1">
-            </LocationScenarioReference>
-         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "E9FBB3E319E9E5C000063C38"
-            BuildableName = "Remember.app"
-            BlueprintName = "Remember"
-            ReferencedContainer = "container:Remember.xcodeproj">
+            BlueprintIdentifier = "E93D30CD1A15440D0086BB61"
+            BuildableName = "Sharing.appex"
+            BlueprintName = "Sharing"
+            ReferencedContainer = "container:Remember 2.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -86,15 +58,15 @@
    </TestAction>
    <LaunchAction
       buildConfiguration = "Debug"
-      selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
-      selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      selectedDebuggerIdentifier = ""
+      selectedLauncherIdentifier = "Xcode.IDEFoundation.Launcher.PosixSpawn"
       launchStyle = "0"
       useCustomWorkingDirectory = "NO"
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
-      debugXPCServices = "NO"
       debugServiceExtension = "internal"
-      allowLocationSimulation = "NO">
+      allowLocationSimulation = "YES"
+      launchAutomaticallySubstyle = "2">
       <BuildableProductRunnable
          runnableDebuggingMode = "0">
          <BuildableReference
@@ -102,22 +74,19 @@
             BlueprintIdentifier = "E9FBB3E319E9E5C000063C38"
             BuildableName = "Remember.app"
             BlueprintName = "Remember"
-            ReferencedContainer = "container:Remember.xcodeproj">
+            ReferencedContainer = "container:Remember 2.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
       </AdditionalOptions>
-      <LocationScenarioReference
-         identifier = "com.apple.dt.IDEFoundation.CurrentLocationScenarioIdentifier"
-         referenceType = "1">
-      </LocationScenarioReference>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
       shouldUseLaunchSchemeArgsEnv = "YES"
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
-      debugDocumentVersioning = "YES">
+      debugDocumentVersioning = "YES"
+      launchAutomaticallySubstyle = "2">
       <BuildableProductRunnable
          runnableDebuggingMode = "0">
          <BuildableReference
@@ -125,7 +94,7 @@
             BlueprintIdentifier = "E9FBB3E319E9E5C000063C38"
             BuildableName = "Remember.app"
             BlueprintName = "Remember"
-            ReferencedContainer = "container:Remember.xcodeproj">
+            ReferencedContainer = "container:Remember 2.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

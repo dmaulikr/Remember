@@ -1,39 +1,34 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="PXw-ib-HlO">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="PXw-ib-HlO">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <mutableArray key="Amble-Regular.ttf">
+        <array key="Amble-Regular.ttf">
             <string>Amble-Regular</string>
-            <string>Amble-Regular</string>
-        </mutableArray>
-        <mutableArray key="Arimo-Regular.ttf">
+        </array>
+        <array key="Arimo-Regular.ttf">
             <string>Arimo</string>
-            <string>Arimo</string>
-            <string>Arimo</string>
-            <string>Arimo</string>
-            <string>Arimo</string>
-            <string>Arimo</string>
-            <string>Arimo</string>
-            <string>Arimo</string>
-            <string>Arimo</string>
-            <string>Arimo</string>
-            <string>Arimo</string>
-            <string>Arimo</string>
-            <string>Arimo</string>
-        </mutableArray>
+        </array>
     </customFonts>
     <scenes>
         <!--Pages-->
         <scene sceneID="NY2-gc-EnS">
             <objects>
-                <pageViewController storyboardIdentifier="pageController" autoresizesArchivedViewToFullSize="NO" title="Pages" useStoryboardIdentifierAsRestorationIdentifier="YES" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="kt2-xD-2Oe" sceneMemberID="viewController"/>
+                <pageViewController storyboardIdentifier="pageController" autoresizesArchivedViewToFullSize="NO" title="Pages" useStoryboardIdentifierAsRestorationIdentifier="YES" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="kt2-xD-2Oe" sceneMemberID="viewController">
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="600" height="600"/>
+                </pageViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YqD-aP-Yg3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1042" y="319"/>
+            <point key="canvasLocation" x="-1386" y="318"/>
         </scene>
         <!--Welcome View Controller-->
         <scene sceneID="k3r-PD-pzb">
@@ -58,7 +53,7 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Arimo" family="Arimo" pointSize="15"/>
                                 <state key="normal" title="Remember" backgroundImage="Purple Button">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="dismissView:" destination="AJ6-3l-54Z" eventType="touchUpInside" id="mtt-pu-iuK"/>
@@ -79,7 +74,7 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Arimo" family="Arimo" pointSize="15"/>
                                 <state key="normal" title="Google" backgroundImage="Purple Button">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="googlePlusSignIn:" destination="AJ6-3l-54Z" eventType="touchUpInside" id="8oa-bW-2Pk"/>
@@ -91,7 +86,7 @@
                                     <constraint firstAttribute="height" constant="21" id="WQJ-JH-HYe"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Arimo" family="Arimo" pointSize="20"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                                 <size key="shadowOffset" width="1" height="1"/>
                             </label>
@@ -101,12 +96,12 @@
                                     <constraint firstAttribute="height" constant="80" id="2Tg-6l-dUQ"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Arimo" family="Arimo" pointSize="20"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                                 <size key="shadowOffset" width="1" height="2"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="MmH-go-0OM" firstAttribute="trailing" secondItem="gTc-dB-xCn" secondAttribute="trailing" constant="142" id="11R-vz-co3"/>
                             <constraint firstItem="3ky-og-Ddk" firstAttribute="centerX" secondItem="gRn-Lz-GH6" secondAttribute="centerX" id="8XZ-vw-haJ"/>
@@ -153,12 +148,14 @@
                     <view key="view" contentMode="scaleToFill" id="aKb-qe-6sa">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.12637259066104889" green="0.12639245390892029" blue="0.12636536359786987" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.12637259066104889" green="0.12639245390892029" blue="0.12636536359786987" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="600" height="600"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9XE-Qq-bdM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1773" y="319"/>
+            <point key="canvasLocation" x="-2453" y="318"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="sti-Cm-76s">
@@ -191,10 +188,10 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Amble-Regular" family="Amble" pointSize="15"/>
                                 <state key="normal" title="Finish" backgroundImage="Purple Button">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="exitLogin:" destination="qe3-Ag-aaC" eventType="touchUpInside" id="Lmq-Ti-GWe"/>
+                                    <segue destination="K1A-Zg-GeK" kind="showDetail" identifier="pushStoryboard" id="AIO-1z-Oev"/>
                                 </connections>
                             </button>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UHy-Yp-nIl">
@@ -205,8 +202,8 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Amble-Regular" family="Amble" pointSize="15"/>
                                 <state key="normal" title="Setup Dropbox">
-                                    <color key="titleColor" red="0.090196078430000007" green="0.4039215686" blue="0.87450980389999999" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" red="0.090196078430000007" green="0.4039215686" blue="0.87450980389999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="showDropbox:" destination="qe3-Ag-aaC" eventType="touchUpInside" id="nbc-Xj-czx"/>
@@ -214,7 +211,7 @@
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First &amp; Last Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PVX-vQ-DEg">
                                 <rect key="frame" x="172" y="210" width="256" height="30"/>
-                                <color key="tintColor" red="0.46620205044746399" green="0.15637357532978058" blue="0.6434749960899353" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="0.46620205044746399" green="0.15637357532978058" blue="0.6434749960899353" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="256" id="gLZ-6h-XJc"/>
                                 </constraints>
@@ -231,7 +228,7 @@
                                     <constraint firstAttribute="height" constant="21" id="pjy-uJ-dJf"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Arimo" family="Arimo" pointSize="17"/>
-                                <color key="textColor" red="0.11181893199682236" green="0.1118365004658699" blue="0.1118125319480896" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.11181893199682236" green="0.1118365004658699" blue="0.1118125319480896" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView multipleTouchEnabled="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Default Avatar" translatesAutoresizingMaskIntoConstraints="NO" id="DzT-37-wM5">
@@ -248,7 +245,7 @@
                                     <constraint firstAttribute="width" constant="248" id="vea-bg-ltm"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Arimo" family="Arimo" pointSize="17"/>
-                                <color key="textColor" red="0.11181893199682236" green="0.1118365004658699" blue="0.1118125319480896" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.11181893199682236" green="0.1118365004658699" blue="0.1118125319480896" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="12" minValue="12" maxValue="22" translatesAutoresizingMaskIntoConstraints="NO" id="cIc-of-9nk">
@@ -266,7 +263,7 @@
                                     <constraint firstAttribute="height" constant="22" id="ymm-1D-EgD"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Arimo" family="Arimo" pointSize="12"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose a Text Size:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w1S-vj-Z66">
@@ -279,7 +276,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="UHy-Yp-nIl" firstAttribute="centerX" secondItem="Ofy-gh-Rxz" secondAttribute="centerX" constant="5" id="2y7-a7-nBw"/>
                             <constraint firstItem="UHy-Yp-nIl" firstAttribute="top" secondItem="tk5-Nf-RRc" secondAttribute="bottom" constant="8" symbolic="YES" id="5ZY-Ol-a4n"/>
@@ -322,7 +319,15 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZXW-uC-Y7j" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="443" y="319"/>
+            <point key="canvasLocation" x="880" y="318"/>
+        </scene>
+        <!--notesTableController-->
+        <scene sceneID="IKv-tJ-3Tn">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="storyboardPush" storyboardName="Storyboard" referencedIdentifier="notesTableController" id="K1A-Zg-GeK" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9kR-w3-suU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1858" y="318"/>
         </scene>
         <!--Dropbox Controller-->
         <scene sceneID="mJA-x9-Mc3">
@@ -344,8 +349,8 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Arimo" family="Arimo" pointSize="15"/>
                                 <state key="normal" title="Login">
-                                    <color key="titleColor" cyan="0.73999999999999999" magenta="0.62" yellow="0.55000000000000004" black="0.42999999999999999" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" red="0.15940389037132263" green="0.17694956064224243" blue="0.18229582905769348" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="dropboxLogin:" destination="ZIa-eI-znu" eventType="touchUpInside" id="i6y-d4-s5S"/>
@@ -359,8 +364,8 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Arimo" family="Arimo" pointSize="15"/>
                                 <state key="normal" title="Cancel">
-                                    <color key="titleColor" cyan="0.73999999999999999" magenta="0.62" yellow="0.55000000000000004" black="0.42999999999999999" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" red="0.15940389037132263" green="0.17694956064224243" blue="0.18229582905769348" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="dismissView:" destination="ZIa-eI-znu" eventType="touchUpInside" id="NUW-r5-FfH"/>
@@ -378,7 +383,7 @@
                                     <constraint firstAttribute="height" constant="36" id="9Mc-Xp-d1f"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Arimo" family="Arimo" pointSize="32"/>
-                                <color key="textColor" red="0.0" green="0.49411764705882355" blue="0.89803921568627454" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.0" green="0.49411764705882355" blue="0.89803921568627454" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                                 <size key="shadowOffset" width="1" height="1"/>
                             </label>
@@ -388,11 +393,11 @@
                                     <constraint firstAttribute="height" constant="92" id="EBe-cx-k7R"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Arimo" family="Arimo" pointSize="16"/>
-                                <color key="textColor" red="0.090196078431372548" green="0.40392156862745099" blue="0.87450980392156863" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.090196078431372548" green="0.40392156862745099" blue="0.87450980392156863" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="eRQ-On-m0Y" firstAttribute="centerX" secondItem="gAV-KV-Cdx" secondAttribute="centerX" constant="-71" id="6EP-hF-o9Q"/>
                             <constraint firstItem="B6c-YI-K7g" firstAttribute="trailing" secondItem="5KZ-dJ-tpY" secondAttribute="trailing" id="9HZ-P6-bho"/>
@@ -409,10 +414,12 @@
                             <constraint firstItem="22t-wv-JsU" firstAttribute="trailing" secondItem="B6c-YI-K7g" secondAttribute="trailing" id="yBj-D2-uUQ"/>
                         </constraints>
                     </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="600" height="600"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mf3-Cd-mqT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="443" y="1023"/>
+            <point key="canvasLocation" x="880" y="1021"/>
         </scene>
     </scenes>
     <resources>
@@ -422,5 +429,5 @@
         <image name="Purple Button" width="200" height="57"/>
         <image name="Sticky Note" width="225" height="227"/>
     </resources>
-    <color key="tintColor" red="0.48627450980392156" green="0.0" blue="0.99607843137254903" alpha="1" colorSpace="calibratedRGB"/>
+    <color key="tintColor" red="0.48627450980392156" green="0.0" blue="0.99607843137254903" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>

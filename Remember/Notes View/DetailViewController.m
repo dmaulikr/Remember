@@ -35,6 +35,7 @@ UITextViewDelegate
 @property (weak) IBOutlet UIButton *dateButton;
 @property (weak) IBOutlet UIButton *paperclip;
 @property (weak) IBOutlet UINavigationItem *navigationItem;
+@property (weak) IBOutlet UIImageView *noteImageView;
 
 @property (nonatomic) NSMutableArray *capturedImages;
 @property (nonatomic) NSString *photoPath;
@@ -256,6 +257,7 @@ UITextViewDelegate
                                 //HNKCache *format = [HNKCache sharedCache];
                                 //[format removeAllImages];
                             }];
+    /*
     UIAlertAction *viewPhoto = [UIAlertAction actionWithTitle:@"View Photo"
                                                      style:UIAlertActionStyleDefault
                                                    handler:^(UIAlertAction * action)
@@ -264,6 +266,7 @@ UITextViewDelegate
                                  photo = true;
                                  [_textView setUserInteractionEnabled:NO];
                              }];
+    */
     UIAlertAction *viewMap = [UIAlertAction actionWithTitle:@"View Location"
                                                      style:UIAlertActionStyleDefault
                                                    handler:^(UIAlertAction * action)
@@ -286,7 +289,7 @@ UITextViewDelegate
     [library setValue:[[UIImage imageNamed:@"Flower"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] forKey:@"image"];
     [camera setValue:[[UIImage imageNamed:@"Camera Thumb"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] forKey:@"image"];
     [viewMap setValue:[[UIImage imageNamed:@"Location Thumb"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] forKey:@"image"];
-    [viewPhoto setValue:[[UIImage imageNamed:@"Flower"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] forKey:@"image"];
+    //[viewPhoto setValue:[[UIImage imageNamed:@"Flower"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] forKey:@"image"];
     [viewURL setValue:[[UIImage imageNamed:@"World"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] forKey:@"image"];
     [alert addAction:library];
 #if TARGET_IPHONE_SIMULATOR
@@ -298,7 +301,7 @@ UITextViewDelegate
         [alert addAction:camera];
     }
 #endif
-    if ([_imageHandler hasPhotoWithTitle:_rememberTitle]) { [alert addAction:viewPhoto]; }
+    //if ([_imageHandler hasPhotoWithTitle:_rememberTitle]) { [alert addAction:viewPhoto]; }
     if (self.location) { [alert addAction:viewMap]; }
     if (url) { [alert addAction:viewURL]; }
     [alert addAction:cancel];
@@ -402,6 +405,8 @@ UITextViewDelegate
     _authorField.text = _manager.loadedAuthor;
     _textView.text = _manager.loadedBody;
     _photoPath = _manager.loadedPhotoPath;
+    [_pMan loadPicture:_noteImageView withName:_rememberTitle];
+    
     _latitude = _manager.loadedLatitude;
     _longitude = _manager.loadedLongitude;
     [_spotlight removeItemFromCoreSpotlightWithName:_rememberTitle];

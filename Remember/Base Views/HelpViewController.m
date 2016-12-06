@@ -30,7 +30,7 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     
-    NSURLRequest *requestObject = [NSURLRequest requestWithURL:[NSURL URLWithString:@"https://kfeavel.github.io/Remember"]];
+    NSURLRequest *requestObject = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://kfeavel.com/Remember"]];
     [self.webView loadRequest:requestObject];
 }
 
