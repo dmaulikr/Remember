@@ -9,9 +9,6 @@
 #import "RMNote.h"
 
 @interface RMNote()
-{
-    
-}
 
 @end
 
@@ -21,10 +18,14 @@
     self = [super init];
     if (self) {
         // Custom initilization
-        /*
-         Load content from file folder with the following structure:
-         
-         */
+        _name = name;
+        
+        _body = [[NSAttributedString alloc] initWithString:@"" attributes:nil];
+        _author = @"";
+        _image = [UIImage new];
+        _url = [[NSURL alloc] initWithString:@""];
+        _fire = [NSDate new];
+        _location = [NSArray new];
     }
     return self;
 }

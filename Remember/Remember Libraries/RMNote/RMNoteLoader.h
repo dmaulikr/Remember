@@ -7,7 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "RMNote.h"
 
 @interface RMNoteLoader : NSObject
+
+- (id)init;
+- (NSString *)pathForDataFileWithName:(NSString *)name;
+- (void)saveDataToDiskWithNote:(RMNote *)note;
+- (RMNote *)loadDataFromDiskWithName:(NSString *)name;
 
 @end

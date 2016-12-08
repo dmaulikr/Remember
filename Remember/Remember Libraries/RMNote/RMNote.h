@@ -10,10 +10,14 @@
 
 @interface RMNote : NSObject
 
-@property (weak, nonatomic) NSString *note;
-@property (weak, nonatomic) NSString *author;
-@property (weak, nonatomic) UIImage *image;
-@property (weak, nonatomic) NSURL *url;
-@property (weak, nonatomic) NSDate *fire;
+- (id)initWithName:(NSString *)name;
+@property NSString *name;
+
+@property (strong, nonatomic) NSAttributedString *body;
+@property (strong, nonatomic) NSString *author;
+@property (strong, nonatomic) UIImage *image;
+@property (strong, nonatomic) NSURL *url;
+@property (strong, nonatomic) NSDate *fire;
+@property (strong, nonatomic) NSArray *location;
 
 @end
