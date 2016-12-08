@@ -363,9 +363,9 @@ Keeton Feavel (@Auxel)
                                                 </subviews>
                                                 <color key="backgroundColor" red="0.90823972225189209" green="0.92638683319091797" blue="0.9317171573638916" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
-                                                    <constraint firstItem="vjL-sJ-MLK" firstAttribute="top" secondItem="gS4-17-E7h" secondAttribute="top" constant="5" id="3HG-xX-Okn"/>
-                                                    <constraint firstItem="vjL-sJ-MLK" firstAttribute="trailing" secondItem="gS4-17-E7h" secondAttribute="trailingMargin" id="6cK-gu-se7"/>
-                                                    <constraint firstItem="vjL-sJ-MLK" firstAttribute="leading" secondItem="gS4-17-E7h" secondAttribute="leadingMargin" id="vaW-20-IgQ"/>
+                                                    <constraint firstItem="vjL-sJ-MLK" firstAttribute="trailing" secondItem="gS4-17-E7h" secondAttribute="trailingMargin" id="aKQ-es-t1p"/>
+                                                    <constraint firstItem="vjL-sJ-MLK" firstAttribute="leading" secondItem="gS4-17-E7h" secondAttribute="leadingMargin" id="orc-Pd-MUl"/>
+                                                    <constraint firstItem="vjL-sJ-MLK" firstAttribute="centerY" secondItem="gS4-17-E7h" secondAttribute="centerY" id="y5x-Z6-2TN"/>
                                                 </constraints>
                                             </view>
                                             <prototypes>
@@ -377,11 +377,11 @@ Keeton Feavel (@Auxel)
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <subviews>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qYJ-Tr-5za">
-                                                                <rect key="frame" x="0.0" y="0.0" width="600" height="97"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="600" height="96"/>
                                                                 <color key="backgroundColor" red="0.90823972225189209" green="0.92638683319091797" blue="0.9317171573638916" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             </imageView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Remember:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wHJ-U0-KVC">
-                                                                <rect key="frame" x="8" y="42" width="300" height="21"/>
+                                                                <rect key="frame" x="8" y="41" width="300" height="21"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="21" id="e80-kU-206"/>
                                                                 </constraints>
@@ -391,7 +391,7 @@ Keeton Feavel (@Auxel)
                                                                 <size key="shadowOffset" width="0.0" height="2"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Author:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZjD-3y-TPA">
-                                                                <rect key="frame" x="8" y="71" width="300" height="21"/>
+                                                                <rect key="frame" x="8" y="70" width="300" height="21"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="21" id="SFl-Aq-7gb"/>
                                                                 </constraints>
@@ -401,7 +401,7 @@ Keeton Feavel (@Auxel)
                                                                 <size key="shadowOffset" width="0.0" height="2"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NZh-8t-vSy">
-                                                                <rect key="frame" x="8" y="8" width="300" height="25"/>
+                                                                <rect key="frame" x="8" y="8" width="300" height="24"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="300" id="b8z-Zi-6dh"/>
                                                                 </constraints>
@@ -475,6 +475,7 @@ Keeton Feavel (@Auxel)
                                 <segment title="Current"/>
                                 <segment title="Completed"/>
                             </segments>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <action selector="segmentValueChanged:" destination="TIS-xJ-jje" eventType="valueChanged" id="bGJ-DB-ePx"/>
                             </connections>

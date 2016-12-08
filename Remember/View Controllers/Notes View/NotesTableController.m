@@ -328,7 +328,7 @@ UIViewControllerPreviewingDelegate
     
     self.reminderTable.tableHeaderView = header;
 }
-*/
+
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
     if (_segmentedController.selectedSegmentIndex == 0) {
         return _headerView;
@@ -339,12 +339,12 @@ UIViewControllerPreviewingDelegate
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
     if (_segmentedController.selectedSegmentIndex == 0) {
-        return _noteField.frame.size.height+10;
+        return 40;
     } else {
         return 0;
     }
 }
-
+*/
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     return 96;
 }

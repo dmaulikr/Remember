@@ -30,6 +30,7 @@
     detail.rememberTitle = name;
     self.viewControllers = @[detail];
     self.frostedViewController.contentViewController = self;
+    [self.frostedViewController setLimitMenuViewSize:true];
     [self.frostedViewController setMenuViewSize:CGSizeMake(150, self.view.frame.size.height)];
 }
 
