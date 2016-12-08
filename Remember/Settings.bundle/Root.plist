@@ -18,7 +18,7 @@
 			<key>Title</key>
 			<string>Launched?</string>
 			<key>Key</key>
-			<string>wasLaunchedBefore</string>
+			<string>RMSetupComplete</string>
 			<key>DefaultValue</key>
 			<false/>
 		</dict>
@@ -28,7 +28,7 @@
 			<key>Title</key>
 			<string>Pong Refresh</string>
 			<key>Key</key>
-			<string>Pong</string>
+			<string>RMPongRefresh</string>
 			<key>DefaultValue</key>
 			<false/>
 		</dict>
@@ -68,7 +68,7 @@
 			<key>Title</key>
 			<string>Advanced Logs</string>
 			<key>Key</key>
-			<string>AdvLog</string>
+			<string>RMDebug</string>
 			<key>DefaultValue</key>
 			<false/>
 		</dict>

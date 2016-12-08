@@ -144,7 +144,7 @@
     //TODO: Update everything from NSMutableDictionary to NSData along with NSFileManager
     [data setObject:[NSNumber numberWithBool:false] forKey:@"Updated"];
     [data writeToURL:path atomically:YES];
-    if ([[NSUserDefaults standardUserDefaults] boolForKey:@"AdvLog"]) {
+    if ([[NSUserDefaults standardUserDefaults] boolForKey:@"RMDebug"]) {
         NSLog(@"File Attributes: %@",[[NSFileManager defaultManager] attributesOfItemAtPath:[path path]
                                                          error:NULL]);
     }

@@ -73,7 +73,7 @@
     // Sign in at application launch
     [_gPlus signInAndRefreshInterface];
     
-    if ([[NSUserDefaults standardUserDefaults] boolForKey:@"AdvLog"])
+    if ([[NSUserDefaults standardUserDefaults] boolForKey:@"RMDebug"])
     {
         NSArray *newContents = [[NSFileManager defaultManager] contentsOfDirectoryAtPath:[cDocuments path] error:nil];
         NSLog(@"Files in Container: %@",newContents);
@@ -245,7 +245,7 @@
 - (void)initializeStoryBoardBasedOnScreenSize:(NSString *)controller {
     UIStoryboard *storyboard;
     CGSize iOSDeviceScreenSize = [[UIScreen mainScreen] bounds].size;
-    if ([[NSUserDefaults standardUserDefaults] boolForKey:@"wasLaunchedBefore"])
+    if ([[NSUserDefaults standardUserDefaults] boolForKey:@"RMSetupComplete"])
     {
         if (iOSDeviceScreenSize.height == 480)
         {

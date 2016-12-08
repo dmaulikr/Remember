@@ -22,7 +22,7 @@
     /**
      Debug Font Names - Enable BOOLEAN below:
      */
-    bool debugFonts = false; //[[NSUserDefaults standardUserDefaults] boolForKey:@"AdvLog"];
+    bool debugFonts = false; //[[NSUserDefaults standardUserDefaults] boolForKey:@"RMDebug"];
     if (debugFonts)
         for (NSString *familyName in [UIFont familyNames]) {
             for (NSString *fontName in [UIFont fontNamesForFamilyName:familyName]) {

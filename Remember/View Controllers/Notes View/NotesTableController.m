@@ -74,7 +74,7 @@ UIViewControllerPreviewingDelegate
     [hold setMinimumPressDuration:1.0];
     [_cell addGestureRecognizer:hold];
     */
-    if ([[NSUserDefaults standardUserDefaults] boolForKey:@"Pong"] == false)
+    if ([[NSUserDefaults standardUserDefaults] boolForKey:@"RMPongRefresh"] == false)
     {
         _refresh = [UIRefreshControl new];
         _refresh.attributedTitle = [[NSAttributedString alloc] initWithString:@"Pull To Refresh"];
@@ -105,7 +105,7 @@ UIViewControllerPreviewingDelegate
 
 - (void)viewDidLayoutSubviews
 {
-    if ([[NSUserDefaults standardUserDefaults] boolForKey:@"Pong"] == true)
+    if ([[NSUserDefaults standardUserDefaults] boolForKey:@"RMPongRefresh"] == true)
     {
         self.pongRefreshControl = [BOZPongRefreshControl attachToTableView:_reminderTable
                                                          withRefreshTarget:self
