@@ -148,8 +148,8 @@
     } else {
         login.contactImage.image = [UIImage imageWithContentsOfFile:imageName];
     }
-    [self dismissViewControllerAnimated:YES completion:nil];
-    [self performSegueWithIdentifier:@"push" sender:nil];
+    //[self dismissViewControllerAnimated:YES completion:nil];
+    [self performSegueWithIdentifier:@"push" sender:self];
 }
 
 - (IBAction)googlePlusSignIn:(id)sender {

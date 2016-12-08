@@ -10,14 +10,6 @@
         <key>Type</key>
         <string>PSChildPaneSpecifier</string>
         <key>Title</key>
-        <string>AchknowledgementGenerator</string>
-        <key>File</key>
-        <string>Acknowledgement-AchknowledgementGenerator</string>
-      </dict>
-      <dict>
-        <key>Type</key>
-        <string>PSChildPaneSpecifier</string>
-        <key>Title</key>
         <string>AcknowledgementGenerator</string>
         <key>File</key>
         <string>Acknowledgement-AcknowledgementGenerator</string>

@@ -244,31 +244,14 @@
 
 - (void)initializeStoryBoardBasedOnScreenSize:(NSString *)controller {
     UIStoryboard *storyboard;
-    CGSize iOSDeviceScreenSize = [[UIScreen mainScreen] bounds].size;
     if ([[NSUserDefaults standardUserDefaults] boolForKey:@"RMSetupComplete"])
     {
-        if (iOSDeviceScreenSize.height == 480)
-        {
-            // Instantiate a new storyboard object using the storyboard file named Storyboard_iPhone35
-            storyboard = [UIStoryboard storyboardWithName:@"iPhone-Small" bundle:nil];
-        }
-        else
-        {
-            storyboard = [UIStoryboard storyboardWithName:@"Storyboard" bundle:nil];
-        }
+        storyboard = [UIStoryboard storyboardWithName:@"Storyboard" bundle:nil];
     }
     else
     {
-        [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"wasLaunchedBefore"];
-        if (iOSDeviceScreenSize.height == 480)
-        {
-            // Instantiate a new storyboard object using the storyboard file named Storyboard_iPhone35
-            storyboard = [UIStoryboard storyboardWithName:@"Login-Universal" bundle:nil];
-        }
-        else
-        {
-            storyboard = [UIStoryboard storyboardWithName:@"Login-Universal" bundle:nil];
-        }
+        [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"RMSetupComplete"];
+        storyboard = [UIStoryboard storyboardWithName:@"Login-Universal" bundle:nil];
         [self registerForNotifications];
     }
     
