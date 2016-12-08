@@ -14,9 +14,13 @@
 <CLLocationManagerDelegate>
 @property (copy, nonatomic) NSString *rememberTitle;
 /**
+ THIS ENTIRE LIBRARY IS NOW DEPRECATED. IT WILL BE REMOVED BEFORE REMEMBER 2 RELEASE
+ */
+
+/**
  Initialize RMDataManager with a custom group container identifier.
  */
-- (id)initWithContainer:(NSString *)container;
+- (id)initWithContainer:(NSString *)container __deprecated;
 /**
  Move all files from one directory to a new directory.
  */
@@ -33,7 +37,7 @@
  (double   *)latitude: Provides a double for MKMapView coordinates (latitude)
  (double   *)longitude: Provides a double for MKMapView coordinates (longitude)
  */
-- (void)writeDataContentsWithTitle:(NSString *)rememberTitle author:(NSString *)author body:(NSString *)body;
+- (void)writeDataContentsWithTitle:(NSString *)rememberTitle author:(NSString *)author body:(NSString *)body __deprecated;
 
 /*
  Reads the contents of a plist into an NSDictionary. This library was designed as a method of saving notes
@@ -46,7 +50,7 @@
  (double   *)longitude: Provides a double for MKMapView coordinates (longitude)
  (MKMapView *)mapView: Allows the loading of latitude and longitude into an MKMapView
  */
-- (void)readDataContentsWithTitle:(NSString *)rememberTitle containerID:(NSString *)containerID;
+- (void)readDataContentsWithTitle:(NSString *)rememberTitle containerID:(NSString *)containerID __deprecated;
 @property (copy, nonatomic) NSString *loadedAuthor;
 @property (copy, nonatomic) NSString *loadedBody;
 @property (copy, nonatomic) NSString *loadedPhotoPath;
@@ -55,38 +59,38 @@
 /*
  
  */
-- (void)deleteDataContentsWithTitle:(NSString*)title container:(NSString *)containerName;
+- (void)deleteDataContentsWithTitle:(NSString*)title container:(NSString *)containerName __deprecated;
 
 /*
  Writes an NSMutableArray into a plist file in order to save the contents of a UITableView
  (NSMutableArray *)titles: The NSMutableArray that contains the contents of a UITableView's data
  */
-- (void)writeTableContentsFromArray:(NSMutableArray *)titles containerID:(NSString *)containerID fileName:(NSString*)fileName;
+- (void)writeTableContentsFromArray:(NSMutableArray *)titles containerID:(NSString *)containerID fileName:(NSString*)fileName __deprecated;
 
 /*
  Reads the contents of a plist into an NSMutableArray in order to load the contents of a UITableView
  (NSMutableArray *)titles: The NSMutableArray that will contain the contents of the plist's data
  */
-- (void)readTableContentsFromContainerID:(NSString *)containerID fileName:(NSString*)fileName;
+- (void)readTableContentsFromContainerID:(NSString *)containerID fileName:(NSString*)fileName __deprecated;
 @property (copy, nonatomic) NSMutableArray *loadedTitles;
 
 /*
  Adds a string to the table array and then writes it into the plist file using - (void)writeTableContentsFromArray:(NSMutableArray *)titles
  */
-- (void)addContentsToTable:(NSString *)title containerID:(NSString *)containerID fileName:(NSString*)fileName;
+- (void)addContentsToTable:(NSString *)title containerID:(NSString *)containerID fileName:(NSString*)fileName __deprecated;
 
 /*
  Coordinate stuff
  */
-- (void)writeCoordinates;
-- (void)writeCoordinatesWithLatitude:(double)latitude longitude:(double)longitude;
-- (void)readCoordinates;
+- (void)writeCoordinates __deprecated;
+- (void)writeCoordinatesWithLatitude:(double)latitude longitude:(double)longitude __deprecated;
+- (void)readCoordinates __deprecated;
 
 /*
  Date stuff
  */
-- (void)writeDates:(NSDate *)date title:(NSString *)rememberTitle;
-- (void)readDates:(NSString *)rememberTitle;
+- (void)writeDates:(NSDate *)date title:(NSString *)rememberTitle __deprecated;
+- (void)readDates:(NSString *)rememberTitle __deprecated;
 @property (copy, nonatomic) NSString *loadedDateName;
 
 /*
@@ -94,14 +98,14 @@
  (NSURL *)url: The URL associated with the note.
  (NSString *)rememberTitle: The note title to which the URL is written.
  */
-- (void)writeURL:(NSURL *)url title:(NSString *)rememberTitle;
+- (void)writeURL:(NSURL *)url title:(NSString *)rememberTitle __deprecated;
 /*
  Returns a URL for a note from a plist file given a note title.
  (NSURL *)url: The URL associated with the note.
  (NSString *)rememberTitle: The note title from which the URL is loaded.
  */
-- (NSURL *)readURL:(NSString *)rememberTitle;
+- (NSURL *)readURL:(NSString *)rememberTitle __deprecated;
 
-- (void)deleteFileWithName:(NSString*)title container:(NSString *)containerName;
+- (void)deleteFileWithName:(NSString*)title container:(NSString *)containerName __deprecated;
 
 @end
