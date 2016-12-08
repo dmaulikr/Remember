@@ -11,7 +11,6 @@
 #import "NotesTableController.h"
 #import "SettingsViewController.h"
 #import "AboutViewController.h"
-#import "HelpViewController.h"
 #import "DetailViewController.h"
 #import "MenuViewCell.h"
 #import "RMView.h"
@@ -50,7 +49,7 @@
     
     REFrostedViewController *frost = [REFrostedViewController new];
     frost.liveBlur = YES;
-    [frost resizeMenuViewControllerToSize:CGSizeMake(250, self.view.frame.size.height)];
+    [frost setMenuViewSize:CGSizeMake(150, self.view.frame.size.height)];
     
     self.tableView.separatorColor = [UIColor colorWithRed:150/255.0f green:161/255.0f blue:177/255.0f alpha:1.0f];
     self.tableView.delegate = self;

@@ -23,6 +23,13 @@
 
 @end
 
+/**
+ 
+  TODO: Move all code from a static settings view to a plist reader that displays everything in a table view
+        All of this is static UI code that needs to be transitioned to a new Plist + TableView class.
+ 
+ */
+
 @implementation SettingsViewController
 
 # pragma mark - View Management

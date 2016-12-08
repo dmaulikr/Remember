@@ -10,7 +10,6 @@
 #import "NotesTableCell.h"
 #import "DetailViewController.h"
 #import "RMSpotlight.h"
-#import "RMParallax.h"
 #import "SWTableViewCell.h"
 
 @interface NotesTableController ()
@@ -41,7 +40,6 @@ UIViewControllerPreviewingDelegate
 @property (copy, nonatomic) RMAudio *sound;
 @property (copy, nonatomic) RMDataManager *dManager;
 @property (copy, nonatomic) RMSpotlight *spotlight;
-@property (copy, nonatomic) RMParallax *parallax;
 @property (copy, nonatomic) SCLAlertView *alert;
 
 @end
@@ -62,10 +60,9 @@ UIViewControllerPreviewingDelegate
     _dManager = [RMDataManager new];
     _alert = [SCLAlertView new];
     _spotlight = [RMSpotlight new];
-    _parallax = [RMParallax new];
     titles = [NSMutableArray new];
     
-    [self sizeHeaderToFit];
+    //[self sizeHeaderToFit];
     UIPanGestureRecognizer *pan = [[UIPanGestureRecognizer alloc]
                                    initWithTarget:self
                                    action:@selector(panGestureRecognized:)];
@@ -96,8 +93,6 @@ UIViewControllerPreviewingDelegate
     if ([self isForceTouchAvailable]) {
         self.previewingContext = [self registerForPreviewingWithDelegate:self sourceView:self.view];
     }
-    [_parallax setMinimumValue:-5];
-    [_parallax setMaximumValue: 5];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -317,7 +312,7 @@ UIViewControllerPreviewingDelegate
         [_reminderTable reloadData];
     }
 }
-
+/*
 - (void)sizeHeaderToFit
 {
     UIView *header = self.reminderTable.tableHeaderView;
@@ -333,7 +328,7 @@ UIViewControllerPreviewingDelegate
     
     self.reminderTable.tableHeaderView = header;
 }
-
+*/
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
     if (_segmentedController.selectedSegmentIndex == 0) {
         return _headerView;
