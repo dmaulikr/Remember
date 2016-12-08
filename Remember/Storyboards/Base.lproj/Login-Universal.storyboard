@@ -371,36 +371,36 @@
                                     <action selector="dismissView:" destination="ZIa-eI-znu" eventType="touchUpInside" id="NUW-r5-FfH"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Dropbox" translatesAutoresizingMaskIntoConstraints="NO" id="Enb-6I-kIl">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Google Drive" translatesAutoresizingMaskIntoConstraints="NO" id="Enb-6I-kIl">
                                 <rect key="frame" x="220" y="58" width="160" height="160"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="160" id="WaN-fN-okE"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dropbox" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="22t-wv-JsU">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Google Drive" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="22t-wv-JsU">
                                 <rect key="frame" x="169" y="226" width="261" height="36"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="36" id="9Mc-Xp-d1f"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Arimo" family="Arimo" pointSize="32"/>
-                                <color key="textColor" red="0.0" green="0.49411764705882355" blue="0.89803921568627454" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                                 <size key="shadowOffset" width="1" height="1"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Remember is able to sync your notes across all of your devices by utilizing Dropbox's cloud storage service." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B6c-YI-K7g">
-                                <rect key="frame" x="169" y="270" width="261" height="92"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Remember is able to sync your notes across all of your devices by utilizing Google Drive's cloud storage service." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B6c-YI-K7g">
+                                <rect key="frame" x="95" y="270" width="410" height="92"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="92" id="EBe-cx-k7R"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Arimo" family="Arimo" pointSize="16"/>
-                                <color key="textColor" red="0.090196078431372548" green="0.40392156862745099" blue="0.87450980392156863" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="eRQ-On-m0Y" firstAttribute="centerX" secondItem="gAV-KV-Cdx" secondAttribute="centerX" constant="-71" id="6EP-hF-o9Q"/>
-                            <constraint firstItem="B6c-YI-K7g" firstAttribute="trailing" secondItem="5KZ-dJ-tpY" secondAttribute="trailing" id="9HZ-P6-bho"/>
+                            <constraint firstItem="B6c-YI-K7g" firstAttribute="trailing" secondItem="5KZ-dJ-tpY" secondAttribute="trailing" constant="75" id="9HZ-P6-bho"/>
                             <constraint firstItem="B6c-YI-K7g" firstAttribute="top" secondItem="22t-wv-JsU" secondAttribute="bottom" constant="8" symbolic="YES" id="Ccm-II-eZZ"/>
                             <constraint firstItem="Aoa-TK-RHJ" firstAttribute="top" secondItem="eRQ-On-m0Y" secondAttribute="bottom" constant="64" id="GMT-Y8-jZu"/>
                             <constraint firstItem="Enb-6I-kIl" firstAttribute="centerX" secondItem="22t-wv-JsU" secondAttribute="centerX" id="IXc-Gh-q69"/>
@@ -408,10 +408,10 @@
                             <constraint firstItem="22t-wv-JsU" firstAttribute="top" secondItem="gAV-KV-Cdx" secondAttribute="top" constant="226" id="g38-t2-w9X"/>
                             <constraint firstItem="5KZ-dJ-tpY" firstAttribute="baseline" secondItem="eRQ-On-m0Y" secondAttribute="baseline" id="irT-C3-svC"/>
                             <constraint firstItem="Enb-6I-kIl" firstAttribute="top" secondItem="CIs-nJ-FLS" secondAttribute="bottom" constant="38" id="l72-du-Y5t"/>
-                            <constraint firstItem="22t-wv-JsU" firstAttribute="leading" secondItem="B6c-YI-K7g" secondAttribute="leading" id="nqX-7n-hAD"/>
-                            <constraint firstItem="B6c-YI-K7g" firstAttribute="leading" secondItem="eRQ-On-m0Y" secondAttribute="leading" id="u51-It-cmk"/>
+                            <constraint firstItem="22t-wv-JsU" firstAttribute="leading" secondItem="B6c-YI-K7g" secondAttribute="leading" constant="74" id="nqX-7n-hAD"/>
+                            <constraint firstItem="B6c-YI-K7g" firstAttribute="leading" secondItem="eRQ-On-m0Y" secondAttribute="leading" constant="-74" id="u51-It-cmk"/>
                             <constraint firstItem="5KZ-dJ-tpY" firstAttribute="leading" secondItem="eRQ-On-m0Y" secondAttribute="trailing" constant="21" id="vqU-mX-TNK"/>
-                            <constraint firstItem="22t-wv-JsU" firstAttribute="trailing" secondItem="B6c-YI-K7g" secondAttribute="trailing" id="yBj-D2-uUQ"/>
+                            <constraint firstItem="22t-wv-JsU" firstAttribute="trailing" secondItem="B6c-YI-K7g" secondAttribute="trailing" constant="-75" id="yBj-D2-uUQ"/>
                         </constraints>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
@@ -419,13 +419,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mf3-Cd-mqT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="880" y="1021"/>
+            <point key="canvasLocation" x="880" y="1020.9895052473764"/>
         </scene>
     </scenes>
     <resources>
         <image name="Beach" width="414" height="736"/>
         <image name="Default Avatar" width="166" height="167"/>
-        <image name="Dropbox" width="236" height="236"/>
+        <image name="Google Drive" width="256" height="256"/>
         <image name="Purple Button" width="200" height="57"/>
         <image name="Sticky Note" width="225" height="227"/>
     </resources>
