@@ -7,7 +7,7 @@
 //
 
 #import "LoginViewController.h"
-#import "DropboxController.h"
+#import "DriveController.h"
 #import "AppDelegate.h"
 #import "RMView.h"
 
@@ -57,11 +57,6 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-}
-
-- (IBAction)showDropbox:(id)sender {
-    DropboxController *view = [self.storyboard instantiateViewControllerWithIdentifier:@"dropbox"];
-    [self presentViewController:view animated:YES completion:nil];
 }
 
 - (IBAction)exitLogin:(id)sender {

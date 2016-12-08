@@ -58,7 +58,7 @@
 		</dict>
 	</array>
 	<key>CFBundleVersion</key>
-	<string>2230</string>
+	<string>2232</string>
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
 		<string>dbapi-2</string>

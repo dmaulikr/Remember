@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DropboxController : UIViewController
+@interface DriveController : UIViewController
 
 @end
