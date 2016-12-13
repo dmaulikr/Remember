@@ -69,7 +69,7 @@
     rootObject = [NSMutableDictionary dictionary];
     
     [rootObject setValue:note forKey:@"data"];
-    [NSKeyedArchiver archiveRootObject: rootObject toFile: path];
+    [NSKeyedArchiver archiveRootObject:rootObject toFile: path];
 }
 
 - (RMNote *) loadDataFromDiskWithName:(NSString *)name

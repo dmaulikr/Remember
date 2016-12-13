@@ -19,13 +19,13 @@
     if (self) {
         // Custom initilization
         _name = name;
-        
         _body = [[NSAttributedString alloc] initWithString:@"" attributes:nil];
         _author = @"";
         _image = [UIImage new];
         _url = [[NSURL alloc] initWithString:@""];
         _fire = [NSDate new];
         _location = [NSArray new];
+        _array = [NSMutableArray new];
     }
     return self;
 }

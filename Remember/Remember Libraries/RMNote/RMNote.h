@@ -20,5 +20,6 @@
 @property (strong, nonatomic) NSURL *url;
 @property (strong, nonatomic) NSDate *fire;
 @property (strong, nonatomic) NSArray *location;
+@property (strong, nonatomic) NSMutableArray *array;
 
 @end

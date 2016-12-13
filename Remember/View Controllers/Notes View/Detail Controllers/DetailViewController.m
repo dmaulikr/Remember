@@ -11,6 +11,9 @@
 #import "NavigationViewController.h"
 #import "NotesTableCell.h"
 
+#import "RMNote.h"
+#import "RMNoteLoader.h"
+
 #import "MapViewController.h"
 #import "DateViewController.h"
 #import "RMPOPImageView.h"
@@ -84,6 +87,13 @@ UITextViewDelegate
     tap.numberOfTapsRequired = 2;
     [_textView addGestureRecognizer:tap];
     
+    UITapGestureRecognizer *photoTap = [[UITapGestureRecognizer alloc]
+                                   initWithTarget:self
+                                   action:@selector(showPhoto)];
+    tap.numberOfTouchesRequired = 1;
+    tap.numberOfTapsRequired = 1;
+    [_noteImageView addGestureRecognizer:photoTap];
+    
     UISwipeGestureRecognizer *swipe = [[UISwipeGestureRecognizer alloc]
                                         initWithTarget:self
                                                 action:@selector(hideKeyboard)];
@@ -108,7 +118,6 @@ UITextViewDelegate
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-    //[self updateMapView];
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
@@ -174,6 +183,7 @@ UITextViewDelegate
 
 - (void)keyboardWillHide:(NSNotification *)notification {
     // the keyboard is hiding reset the table's height
+    /*
     NSTimeInterval animationDuration = [[[notification userInfo] objectForKey:UIKeyboardAnimationDurationUserInfoKey] doubleValue];
     NSDictionary *keyboardInfo = [notification userInfo];
     NSValue *keyboardFrameBegin = [keyboardInfo valueForKey:UIKeyboardFrameBeginUserInfoKey];
@@ -184,11 +194,13 @@ UITextViewDelegate
     [UIView setAnimationDuration:animationDuration];
     self.textView.frame = text;
     [UIView commitAnimations];
+    */
     keyboard = false;
 }
 
 - (void)keyboardWillShow:(NSNotification *)notification {
     // the keyboard is showing so resize the table's height
+    /*
     NSTimeInterval animationDuration = [[[notification userInfo] objectForKey:UIKeyboardAnimationDurationUserInfoKey] doubleValue];
     NSDictionary *keyboardInfo = [notification userInfo];
     NSValue *keyboardFrameBegin = [keyboardInfo valueForKey:UIKeyboardFrameBeginUserInfoKey];
@@ -199,9 +211,10 @@ UITextViewDelegate
     [UIView setAnimationDuration:animationDuration];
     self.textView.frame = text;
     [UIView commitAnimations];
+    */
     keyboard = true;
 }
-
+/*
 - (void)inputModeDidChange:(NSNotification *)notification {
     NSTimeInterval animationDuration = [[[notification userInfo] objectForKey:UIKeyboardAnimationDurationUserInfoKey] doubleValue];
     NSDictionary *keyboardInfo = [notification userInfo];
@@ -214,7 +227,7 @@ UITextViewDelegate
     self.textView.frame = text;
     [UIView commitAnimations];
 }
-
+*/
 - (void)hideKeyboard {
     [_textView resignFirstResponder];
     [_authorField resignFirstResponder];
@@ -308,6 +321,12 @@ UITextViewDelegate
     
     [self presentViewController:alert animated:YES completion:nil];
     [self writeFileContents];
+}
+
+- (void)showPhoto {
+    [_imageHandler addImageViewinView:self.view withImageView:_popImage andTitle:_rememberTitle];
+    photo = true;
+    [_textView setUserInteractionEnabled:NO];
 }
 
 #pragma mark - Location
