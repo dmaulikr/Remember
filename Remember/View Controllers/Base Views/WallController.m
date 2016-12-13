@@ -1,28 +1,29 @@
 //
-//  BackgroundController.m
+//  WallController.m
 //  Remember 2
 //
 //  Created by Keeton Feavel on 12/8/16.
 //  Copyright © 2016 Solar Pepper Studios. All rights reserved.
 //
 
-#import "BackgroundController.h"
+#import "WallController.h"
+#import "WallCell.h"
 
-@interface BackgroundController ()
+@interface WallController ()
 
-@property (strong, nonatomic) NSArray *imageArray;
+@property (strong, nonatomic) NSArray *source;
 
 @end
 
-@implementation BackgroundController
+@implementation WallController
 
 static NSString * const reuseIdentifier = @"Cell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    _imageArray = @[[UIImage imageNamed:@""]];
-    
+
+    _source = @[[UIImage imageNamed:@"Beach"],[UIImage imageNamed:@"Fence"],[UIImage imageNamed:@"Grass"],[UIImage imageNamed:@"Landing"]];
+
     // Uncomment the following line to preserve selection between presentations
     // self.clearsSelectionOnViewWillAppear = NO;
     
@@ -50,20 +51,19 @@ static NSString * const reuseIdentifier = @"Cell";
 #pragma mark <UICollectionViewDataSource>
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
+    return [_source count];
 }
 
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of items
-    return 0;
+    return [_source count];
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
+    WallCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
     
     // Configure the cell
+    cell.background = _source[indexPath.row];
     
     return cell;
 }
@@ -77,26 +77,9 @@ static NSString * const reuseIdentifier = @"Cell";
 }
 */
 
-/*
 // Uncomment this method to specify if the specified item should be selected
 - (BOOL)collectionView:(UICollectionView *)collectionView shouldSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     return YES;
 }
-*/
-
-/*
-// Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item
-- (BOOL)collectionView:(UICollectionView *)collectionView shouldShowMenuForItemAtIndexPath:(NSIndexPath *)indexPath {
-	return NO;
-}
-
-- (BOOL)collectionView:(UICollectionView *)collectionView canPerformAction:(SEL)action forItemAtIndexPath:(NSIndexPath *)indexPath withSender:(id)sender {
-	return NO;
-}
-
-- (void)collectionView:(UICollectionView *)collectionView performAction:(SEL)action forItemAtIndexPath:(NSIndexPath *)indexPath withSender:(id)sender {
-	
-}
-*/
 
 @end

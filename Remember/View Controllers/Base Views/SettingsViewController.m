@@ -201,7 +201,7 @@
     }
 }
 
-#pragma mark - Dropbox Sign In
+#pragma mark - Google Sign In
 
 - (IBAction)signOutDropbox:(id)sender {
     /*

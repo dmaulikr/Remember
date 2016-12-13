@@ -6,14 +6,12 @@
 //  Copyright © 2016 Solar Pepper Studios. All rights reserved.
 //
 
-#import "BackgroundCell.h"
+#import "WallCell.h"
 
-@interface BackgroundCell ()
-
-@property (weak, nonatomic) UIImageView *background;
+@interface WallCell ()
 
 @end
 
-@implementation BackgroundCell
+@implementation WallCell
 
 @end

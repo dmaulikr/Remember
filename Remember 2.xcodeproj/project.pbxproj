@@ -88,7 +88,6 @@
 		E9DE54A41C8747E2008FA8B5 /* RMAudio.m in Sources */ = {isa = PBXBuildFile; fileRef = E9DE54A21C8747E2008FA8B5 /* RMAudio.m */; };
 		E9DE54A51C8747E2008FA8B5 /* RMAudio.m in Sources */ = {isa = PBXBuildFile; fileRef = E9DE54A21C8747E2008FA8B5 /* RMAudio.m */; };
 		E9E2B0761A6999B7007CF38E /* CorePreprocessor.js in Resources */ = {isa = PBXBuildFile; fileRef = E9E2B0751A6999B7007CF38E /* CorePreprocessor.js */; };
-		E9E6D09B1C89FB29003AEAF3 /* DropboxController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9E6D09A1C89FB29003AEAF3 /* DropboxController.m */; };
 		E9E6D0B51C8B7064003AEAF3 /* 1.caf in Resources */ = {isa = PBXBuildFile; fileRef = E9E6D0B01C8B7064003AEAF3 /* 1.caf */; };
 		E9E6D0B61C8B7064003AEAF3 /* 1.caf in Resources */ = {isa = PBXBuildFile; fileRef = E9E6D0B01C8B7064003AEAF3 /* 1.caf */; };
 		E9E6D0B71C8B7064003AEAF3 /* 2.caf in Resources */ = {isa = PBXBuildFile; fileRef = E9E6D0B11C8B7064003AEAF3 /* 2.caf */; };
@@ -123,7 +122,6 @@
 		E9FBB3ED19E9E5C000063C38 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E9FBB3EC19E9E5C000063C38 /* AppDelegate.m */; };
 		E9FBB3F819E9E5C000063C38 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E9FBB3F619E9E5C000063C38 /* LaunchScreen.xib */; };
 		E9FBB40419E9E5C100063C38 /* RememberTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E9FBB40319E9E5C100063C38 /* RememberTests.m */; };
-		E9FD189B1A71A0BB001328F1 /* iPhone-Small.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9FD18991A71A0BB001328F1 /* iPhone-Small.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -1040,7 +1038,6 @@
 				E9E6D0B91C8B7064003AEAF3 /* 3.caf in Resources */,
 				E9E8BA9F1C6925A20023A353 /* Arimo-BoldItalic.ttf in Resources */,
 				E9E8BAA21C6925A20023A353 /* Arimo-Italic.ttf in Resources */,
-				E9FD189B1A71A0BB001328F1 /* iPhone-Small.storyboard in Resources */,
 				E9B869171C76599B00AE1BC9 /* GoogleService-Info.plist in Resources */,
 				E9E8BA9C1C6925A20023A353 /* Arimo-Bold.ttf in Resources */,
 				E9E6D0BB1C8B7064003AEAF3 /* 4.caf in Resources */,
@@ -1324,7 +1321,6 @@
 				E95C75671A8A6AC000E12337 /* NotesTableController.m in Sources */,
 				E95C756F1A8A6B1000E12337 /* MapViewController.m in Sources */,
 				E933932B1DF76D4B00C8EE59 /* RMNoteLoader.m in Sources */,
-				E9E6D09B1C89FB29003AEAF3 /* DropboxController.m in Sources */,
 				E92B433F1DF4ABC2007D227C /* RMNote.m in Sources */,
 				E9B416921AFD17CA0046D4E7 /* RMGooglePlus.m in Sources */,
 				E95C757B1A8A6C3300E12337 /* NavigationViewController.m in Sources */,

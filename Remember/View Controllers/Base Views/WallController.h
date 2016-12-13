@@ -1,5 +1,5 @@
 //
-//  BackgroundController.h
+//  WallController.h
 //  Remember 2
 //
 //  Created by Keeton Feavel on 12/8/16.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface BackgroundController : UICollectionViewController
+@interface WallController : UICollectionViewController
 
 @end

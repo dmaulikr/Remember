@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface BackgroundCell : UICollectionViewCell
+@interface WallCell : UICollectionViewCell
+
+@property (weak, nonatomic) UIImageView *background;
 
 @end
