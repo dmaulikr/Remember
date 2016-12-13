@@ -69,10 +69,11 @@
     rootObject = [NSMutableDictionary dictionary];
     
     [rootObject setValue:note forKey:@"data"];
-    [NSKeyedArchiver archiveRootObject:rootObject toFile: path];
+    [NSKeyedArchiver archiveRootObject:rootObject toFile:path];
+    NSLog(@"Saved data to disk: %@", path);
 }
 
-- (RMNote *) loadDataFromDiskWithName:(NSString *)name
+- (RMNote *)loadDataFromDiskWithName:(NSString *)name
 {
     RMNote *note;
     NSString *path = [self pathForDataFileWithName:name];
@@ -80,6 +81,8 @@
     
     rootObject = [NSKeyedUnarchiver unarchiveObjectWithFile:path];
     note = [rootObject valueForKey:@"data"];
+    NSLog(@"Loaded data from path: %@", path);
+    
     return note;
 }
 

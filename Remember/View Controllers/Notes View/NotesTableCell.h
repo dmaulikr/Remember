@@ -11,9 +11,9 @@
 
 @interface NotesTableCell : SWTableViewCell
 
-@property (weak, nonatomic) IBOutlet UILabel *title;
-@property (weak, nonatomic) IBOutlet UILabel *reminder;
-@property (weak, nonatomic) IBOutlet UILabel *author;
-@property (weak, nonatomic) IBOutlet UIImageView *customBackground;
+@property (weak, nonatomic) IBOutlet UILabel            *title;
+@property (weak, nonatomic) IBOutlet UILabel            *reminder;
+@property (weak, nonatomic) IBOutlet UILabel            *author;
+@property (weak, nonatomic) IBOutlet UIImageView        *customBackground;
 
 @end

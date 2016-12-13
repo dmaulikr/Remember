@@ -10,7 +10,7 @@
 
 @interface DateViewController : UIViewController
 
-@property (strong, nonatomic) NSString *rememberTitle;
-@property (strong, nonatomic) NSString *summary;
+@property (strong, nonatomic) NSString          *rememberTitle;
+@property (strong, nonatomic) NSString          *summary;
 
 @end

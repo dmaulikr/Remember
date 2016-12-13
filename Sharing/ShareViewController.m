@@ -338,12 +338,12 @@
 
 - (void)sendPostSound
 {
-    [_sound playSoundWithName:@"3" extension:@"caf"];
+    [_sound playSoundWithName:@"Complete" extension:@"caf"];
 }
 
 - (void)cancelPostSound
 {
-    [_sound playSoundWithName:@"1" extension:@"caf"];
+    [_sound playSoundWithName:@"Dismiss" extension:@"caf"];
 }
 
 # pragma mark - Photo Library Management

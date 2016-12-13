@@ -11,6 +11,8 @@
 #import "DetailViewController.h"
 #import "RMSpotlight.h"
 #import "SWTableViewCell.h"
+#import "RMNote.h"
+#import "RMNoteLoader.h"
 
 @interface NotesTableController ()
 <
@@ -24,23 +26,27 @@ UIScrollViewDelegate,
 UIViewControllerPreviewingDelegate
 >
 
-@property (weak, nonatomic) IBOutlet UIImageView *background;
-@property (weak, nonatomic) IBOutlet UITableView *reminderTable;
-@property (weak, nonatomic) IBOutlet UITextField *noteField;
-@property (weak, nonatomic) IBOutlet UIView *headerView;
-@property (weak, nonatomic) IBOutlet UISegmentedControl *segmentedController;
-@property (weak, nonatomic) id previewingContext;
-@property (weak, nonatomic) id tapticEngine;
+@property (weak, nonatomic) IBOutlet UIImageView            *background;
+@property (weak, nonatomic) IBOutlet UITableView            *reminderTable;
+@property (weak, nonatomic) IBOutlet UITextField            *noteField;
+@property (weak, nonatomic) IBOutlet UIView                 *headerView;
+@property (weak, nonatomic) IBOutlet UISegmentedControl     *segmentedController;
+@property (weak, nonatomic) id                              previewingContext;
+@property (weak, nonatomic) id                              tapticEngine;
 
-@property (copy, nonatomic) UIRefreshControl *refresh;
-@property (copy, nonatomic) UITableViewController *tableViewController;
-@property (copy, nonatomic) NotesTableCell *cell;
-@property (weak, nonatomic) BOZPongRefreshControl *pongRefreshControl;
+@property (copy, nonatomic) UIRefreshControl                *refresh;
+@property (copy, nonatomic) UITableViewController           *tableViewController;
+@property (copy, nonatomic) NotesTableCell                  *cell;
+@property (weak, nonatomic) BOZPongRefreshControl           *pongRefreshControl;
 
-@property (copy, nonatomic) RMAudio *sound;
-@property (copy, nonatomic) RMDataManager *dManager;
-@property (copy, nonatomic) RMSpotlight *spotlight;
-@property (copy, nonatomic) SCLAlertView *alert;
+@property (copy, nonatomic) RMAudio                         *audio;
+@property (copy, nonatomic) RMDataManager                   *dataManager;
+@property (copy, nonatomic) RMSpotlight                     *spotlight;
+@property (copy, nonatomic) SCLAlertView                    *alert;
+
+@property (strong, nonatomic) RMNote                        *note;
+@property (strong, nonatomic) RMNote                        *list;
+@property (strong, nonatomic) RMNoteLoader                  *loader;
 
 @end
 
@@ -53,20 +59,25 @@ UIViewControllerPreviewingDelegate
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    _note = [[RMNote alloc] init];
+    _list = [[RMNote alloc] init];
+    _loader = [[RMNoteLoader alloc] init];
+    
     _reminderTable.dataSource = self;
     _reminderTable.delegate = self;
     _noteField.delegate = self;
-    _sound = [RMAudio new];
-    _dManager = [RMDataManager new];
+    
+    _audio = [RMAudio new];
+    _dataManager = [RMDataManager new];
     _alert = [SCLAlertView new];
     _spotlight = [RMSpotlight new];
     titles = [NSMutableArray new];
     
-    //[self sizeHeaderToFit];
     UIPanGestureRecognizer *pan = [[UIPanGestureRecognizer alloc]
                                    initWithTarget:self
                                    action:@selector(panGestureRecognized:)];
     [self.view addGestureRecognizer:pan];
+    
     /*
     UILongPressGestureRecognizer *hold = [[UILongPressGestureRecognizer alloc]
                                     initWithTarget:self
@@ -74,6 +85,7 @@ UIViewControllerPreviewingDelegate
     [hold setMinimumPressDuration:1.0];
     [_cell addGestureRecognizer:hold];
     */
+    
     if ([[NSUserDefaults standardUserDefaults] boolForKey:@"RMPongRefresh"] == false)
     {
         _refresh = [UIRefreshControl new];
@@ -312,39 +324,7 @@ UIViewControllerPreviewingDelegate
         [_reminderTable reloadData];
     }
 }
-/*
-- (void)sizeHeaderToFit
-{
-    UIView *header = self.reminderTable.tableHeaderView;
-    
-    [header setNeedsLayout];
-    [header layoutIfNeeded];
-    
-    CGFloat height = [header systemLayoutSizeFittingSize:UILayoutFittingCompressedSize].height;
-    CGRect frame = header.frame;
-    
-    frame.size.height = height;
-    header.frame = frame;
-    
-    self.reminderTable.tableHeaderView = header;
-}
 
-- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
-    if (_segmentedController.selectedSegmentIndex == 0) {
-        return _headerView;
-    } else {
-        return nil;
-    }
-}
-
-- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
-    if (_segmentedController.selectedSegmentIndex == 0) {
-        return 40;
-    } else {
-        return 0;
-    }
-}
-*/
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     return 96;
 }
@@ -479,9 +459,8 @@ UIViewControllerPreviewingDelegate
                                                                                         AverageColorFromImage(cell.customBackground.image)] isFlat:YES];
             cell.author.textColor = [UIColor colorWithContrastingBlackOrWhiteColorOn:[UIColor colorWithComplementaryFlatColorOf:
                                                                                       AverageColorFromImage(cell.customBackground.image)] isFlat:YES];
-            //[_parallax addParallaxToView:_cell.customBackground];
-
         } else {
+            
             cell.customBackground.image = nil;
             cell.title.textColor = [UIColor flatBlackColor];
             cell.reminder.textColor = [UIColor flatBlackColor];
@@ -557,7 +536,7 @@ UIViewControllerPreviewingDelegate
                 [self readFileContents:@"Notes"];
                 
                 // Move data to other completed.remember file
-                [_dManager addContentsToTable:[NSString stringWithFormat:@"%@",titles[indexPath.row]]
+                [_dataManager addContentsToTable:[NSString stringWithFormat:@"%@",titles[indexPath.row]]
                                 containerID:@"group.com.solarpepper.Remember"
                                    fileName:@"Completed"];
                 [self readFileContents:@"Notes"];
@@ -579,7 +558,7 @@ UIViewControllerPreviewingDelegate
                 NSIndexPath *indexPath = [_reminderTable indexPathForCell:cell];
                 NSString *deleteName = titles[indexPath.row];
                 [self readFileContents:@"Completed"];
-                [_dManager deleteDataContentsWithTitle:deleteName container:@"group.com.solarpepper.Remember"];
+                [_dataManager deleteDataContentsWithTitle:deleteName container:@"group.com.solarpepper.Remember"];
                 [_spotlight removeItemFromCoreSpotlightWithName:titles[indexPath.row]];
                 
                 // 2. Cancel reminder for user
@@ -627,7 +606,7 @@ UIViewControllerPreviewingDelegate
             // Checkmark - Complete Task
             NSIndexPath *indexPath = [_reminderTable indexPathForCell:cell];
             [self readFileContents:@"Favorites"];
-            NSMutableArray *favorites = _dManager.loadedTitles;
+            NSMutableArray *favorites = _dataManager.loadedTitles;
             if (_segmentedController.selectedSegmentIndex == 0)
             {
                 [self readFileContents:@"Notes"];
@@ -651,7 +630,7 @@ UIViewControllerPreviewingDelegate
                           duration:0.0f];
             } else {
                 [cell hideUtilityButtonsAnimated:YES];
-                [_dManager addContentsToTable:[NSString stringWithFormat:@"%@",titles[indexPath.row]]
+                [_dataManager addContentsToTable:[NSString stringWithFormat:@"%@",titles[indexPath.row]]
                                   containerID:@"group.com.solarpepper.Remember"
                                      fileName:@"Favorites"];
                 [self readFileContents:@"Favorites"];
@@ -731,36 +710,44 @@ UIViewControllerPreviewingDelegate
 
 - (void)chooseCellSound
 {
-    [_sound playSoundWithName:@"2" extension:@"caf"];
-}
-
-- (void)deleteCellSound
-{
-    [_sound playSoundWithName:@"4" extension:@"caf"];
+    [_audio playSoundWithName:@"Select" extension:@"caf"];
 }
 
 - (void)completeCellSound
 {
-    [_sound playSoundWithName:@"3" extension:@"caf"];
+    [_audio playSoundWithName:@"Complete" extension:@"caf"];
+}
+
+- (void)deleteCellSound
+{
+    [_audio playSoundWithName:@"Delete" extension:@"caf"];
 }
 
 - (void)favoriteCellSound
 {
-    [_sound playSoundWithName:@"5" extension:@"caf"];
+    [_audio playSoundWithName:@"Favorite" extension:@"caf"];
 }
 
 #pragma mark - Data Management
 
-- (void)writeFileContents:(NSString *)name {
-    [_dManager writeTableContentsFromArray:titles
+- (void)writeFileContents:(NSString *)file {
+    _list.array = titles;
+    _list.name = @"List";
+    [_list debugNoteContents];
+    [_loader saveDataToDiskWithNote:_list];
+    [_dataManager writeTableContentsFromArray:titles
                              containerID:@"group.com.solarpepper.Remember"
-                                fileName:name];
+                                fileName:file];
 }
 
-- (void)readFileContents:(NSString *)name {
-    [_dManager readTableContentsFromContainerID:@"group.com.solarpepper.Remember"
-                                       fileName:name];
-    titles = _dManager.loadedTitles;
+- (void)readFileContents:(NSString *)file {
+    _list = [_loader loadDataFromDiskWithName:@"List"];
+    [_list debugNoteContents];
+    titles = _list.array;
+    
+    //[_dataManager readTableContentsFromContainerID:@"group.com.solarpepper.Remember"
+    //                                   fileName:name];
+    //titles = _dataManager.loadedTitles;
 }
 
 @end

@@ -90,16 +90,16 @@
 		E9DE54A41C8747E2008FA8B5 /* RMAudio.m in Sources */ = {isa = PBXBuildFile; fileRef = E9DE54A21C8747E2008FA8B5 /* RMAudio.m */; };
 		E9DE54A51C8747E2008FA8B5 /* RMAudio.m in Sources */ = {isa = PBXBuildFile; fileRef = E9DE54A21C8747E2008FA8B5 /* RMAudio.m */; };
 		E9E2B0761A6999B7007CF38E /* CorePreprocessor.js in Resources */ = {isa = PBXBuildFile; fileRef = E9E2B0751A6999B7007CF38E /* CorePreprocessor.js */; };
-		E9E6D0B51C8B7064003AEAF3 /* 1.caf in Resources */ = {isa = PBXBuildFile; fileRef = E9E6D0B01C8B7064003AEAF3 /* 1.caf */; };
-		E9E6D0B61C8B7064003AEAF3 /* 1.caf in Resources */ = {isa = PBXBuildFile; fileRef = E9E6D0B01C8B7064003AEAF3 /* 1.caf */; };
-		E9E6D0B71C8B7064003AEAF3 /* 2.caf in Resources */ = {isa = PBXBuildFile; fileRef = E9E6D0B11C8B7064003AEAF3 /* 2.caf */; };
-		E9E6D0B81C8B7064003AEAF3 /* 2.caf in Resources */ = {isa = PBXBuildFile; fileRef = E9E6D0B11C8B7064003AEAF3 /* 2.caf */; };
-		E9E6D0B91C8B7064003AEAF3 /* 3.caf in Resources */ = {isa = PBXBuildFile; fileRef = E9E6D0B21C8B7064003AEAF3 /* 3.caf */; };
-		E9E6D0BA1C8B7064003AEAF3 /* 3.caf in Resources */ = {isa = PBXBuildFile; fileRef = E9E6D0B21C8B7064003AEAF3 /* 3.caf */; };
-		E9E6D0BB1C8B7064003AEAF3 /* 4.caf in Resources */ = {isa = PBXBuildFile; fileRef = E9E6D0B31C8B7064003AEAF3 /* 4.caf */; };
-		E9E6D0BC1C8B7064003AEAF3 /* 4.caf in Resources */ = {isa = PBXBuildFile; fileRef = E9E6D0B31C8B7064003AEAF3 /* 4.caf */; };
-		E9E6D0BD1C8B7064003AEAF3 /* 5.caf in Resources */ = {isa = PBXBuildFile; fileRef = E9E6D0B41C8B7064003AEAF3 /* 5.caf */; };
-		E9E6D0BE1C8B7064003AEAF3 /* 5.caf in Resources */ = {isa = PBXBuildFile; fileRef = E9E6D0B41C8B7064003AEAF3 /* 5.caf */; };
+		E9E6D0B51C8B7064003AEAF3 /* Dismiss.caf in Resources */ = {isa = PBXBuildFile; fileRef = E9E6D0B01C8B7064003AEAF3 /* Dismiss.caf */; };
+		E9E6D0B61C8B7064003AEAF3 /* Dismiss.caf in Resources */ = {isa = PBXBuildFile; fileRef = E9E6D0B01C8B7064003AEAF3 /* Dismiss.caf */; };
+		E9E6D0B71C8B7064003AEAF3 /* Select.caf in Resources */ = {isa = PBXBuildFile; fileRef = E9E6D0B11C8B7064003AEAF3 /* Select.caf */; };
+		E9E6D0B81C8B7064003AEAF3 /* Select.caf in Resources */ = {isa = PBXBuildFile; fileRef = E9E6D0B11C8B7064003AEAF3 /* Select.caf */; };
+		E9E6D0B91C8B7064003AEAF3 /* Complete.caf in Resources */ = {isa = PBXBuildFile; fileRef = E9E6D0B21C8B7064003AEAF3 /* Complete.caf */; };
+		E9E6D0BA1C8B7064003AEAF3 /* Complete.caf in Resources */ = {isa = PBXBuildFile; fileRef = E9E6D0B21C8B7064003AEAF3 /* Complete.caf */; };
+		E9E6D0BB1C8B7064003AEAF3 /* Delete.caf in Resources */ = {isa = PBXBuildFile; fileRef = E9E6D0B31C8B7064003AEAF3 /* Delete.caf */; };
+		E9E6D0BC1C8B7064003AEAF3 /* Delete.caf in Resources */ = {isa = PBXBuildFile; fileRef = E9E6D0B31C8B7064003AEAF3 /* Delete.caf */; };
+		E9E6D0BD1C8B7064003AEAF3 /* Favorite.caf in Resources */ = {isa = PBXBuildFile; fileRef = E9E6D0B41C8B7064003AEAF3 /* Favorite.caf */; };
+		E9E6D0BE1C8B7064003AEAF3 /* Favorite.caf in Resources */ = {isa = PBXBuildFile; fileRef = E9E6D0B41C8B7064003AEAF3 /* Favorite.caf */; };
 		E9E8BA9C1C6925A20023A353 /* Arimo-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E9E8BA971C6925A20023A353 /* Arimo-Bold.ttf */; };
 		E9E8BA9D1C6925A20023A353 /* Arimo-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E9E8BA971C6925A20023A353 /* Arimo-Bold.ttf */; };
 		E9E8BA9E1C6925A20023A353 /* Arimo-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E9E8BA971C6925A20023A353 /* Arimo-Bold.ttf */; };
@@ -297,13 +297,11 @@
 		E9DE54A11C8747E2008FA8B5 /* RMAudio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMAudio.h; sourceTree = "<group>"; };
 		E9DE54A21C8747E2008FA8B5 /* RMAudio.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMAudio.m; sourceTree = "<group>"; };
 		E9E2B0751A6999B7007CF38E /* CorePreprocessor.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = CorePreprocessor.js; sourceTree = "<group>"; };
-		E9E6D0991C89FB29003AEAF3 /* DropboxController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DropboxController.h; sourceTree = "<group>"; };
-		E9E6D09A1C89FB29003AEAF3 /* DropboxController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropboxController.m; sourceTree = "<group>"; };
-		E9E6D0B01C8B7064003AEAF3 /* 1.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = 1.caf; sourceTree = "<group>"; };
-		E9E6D0B11C8B7064003AEAF3 /* 2.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = 2.caf; sourceTree = "<group>"; };
-		E9E6D0B21C8B7064003AEAF3 /* 3.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = 3.caf; sourceTree = "<group>"; };
-		E9E6D0B31C8B7064003AEAF3 /* 4.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = 4.caf; sourceTree = "<group>"; };
-		E9E6D0B41C8B7064003AEAF3 /* 5.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = 5.caf; sourceTree = "<group>"; };
+		E9E6D0B01C8B7064003AEAF3 /* Dismiss.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Dismiss.caf; sourceTree = "<group>"; };
+		E9E6D0B11C8B7064003AEAF3 /* Select.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Select.caf; sourceTree = "<group>"; };
+		E9E6D0B21C8B7064003AEAF3 /* Complete.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Complete.caf; sourceTree = "<group>"; };
+		E9E6D0B31C8B7064003AEAF3 /* Delete.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Delete.caf; sourceTree = "<group>"; };
+		E9E6D0B41C8B7064003AEAF3 /* Favorite.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Favorite.caf; sourceTree = "<group>"; };
 		E9E8BA971C6925A20023A353 /* Arimo-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Arimo-Bold.ttf"; sourceTree = "<group>"; };
 		E9E8BA981C6925A20023A353 /* Arimo-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Arimo-BoldItalic.ttf"; sourceTree = "<group>"; };
 		E9E8BA991C6925A20023A353 /* Arimo-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Arimo-Italic.ttf"; sourceTree = "<group>"; };
@@ -473,8 +471,6 @@
 			children = (
 				E92AEA911C6E69C00024DC29 /* ContentController.h */,
 				E92AEA921C6E69C00024DC29 /* ContentController.m */,
-				E9E6D0991C89FB29003AEAF3 /* DropboxController.h */,
-				E9E6D09A1C89FB29003AEAF3 /* DropboxController.m */,
 				E95C754A1A8A697F00E12337 /* LoginViewController.h */,
 				E95C754C1A8A697F00E12337 /* LoginViewController.m */,
 				E95C754B1A8A697F00E12337 /* WelcomeViewController.h */,
@@ -717,11 +713,11 @@
 		E9E6D0AF1C8B7064003AEAF3 /* Audio */ = {
 			isa = PBXGroup;
 			children = (
-				E9E6D0B01C8B7064003AEAF3 /* 1.caf */,
-				E9E6D0B11C8B7064003AEAF3 /* 2.caf */,
-				E9E6D0B21C8B7064003AEAF3 /* 3.caf */,
-				E9E6D0B31C8B7064003AEAF3 /* 4.caf */,
-				E9E6D0B41C8B7064003AEAF3 /* 5.caf */,
+				E9E6D0B01C8B7064003AEAF3 /* Dismiss.caf */,
+				E9E6D0B11C8B7064003AEAF3 /* Select.caf */,
+				E9E6D0B21C8B7064003AEAF3 /* Complete.caf */,
+				E9E6D0B31C8B7064003AEAF3 /* Delete.caf */,
+				E9E6D0B41C8B7064003AEAF3 /* Favorite.caf */,
 			);
 			path = Audio;
 			sourceTree = "<group>";
@@ -1018,18 +1014,18 @@
 			files = (
 				E9E8BAA61C6925A20023A353 /* Arimo-Regular.ttf in Resources */,
 				E93D30D61A15440E0086BB61 /* MainInterface.storyboard in Resources */,
-				E9E6D0BC1C8B7064003AEAF3 /* 4.caf in Resources */,
+				E9E6D0BC1C8B7064003AEAF3 /* Delete.caf in Resources */,
 				E9E8BAA01C6925A20023A353 /* Arimo-BoldItalic.ttf in Resources */,
-				E9E6D0BA1C8B7064003AEAF3 /* 3.caf in Resources */,
+				E9E6D0BA1C8B7064003AEAF3 /* Complete.caf in Resources */,
 				E95C83401C77761D004D18D9 /* GoogleSignIn.bundle in Resources */,
 				E9E2B0761A6999B7007CF38E /* CorePreprocessor.js in Resources */,
 				E9E8BA9D1C6925A20023A353 /* Arimo-Bold.ttf in Resources */,
 				E9B869181C76599B00AE1BC9 /* GoogleService-Info.plist in Resources */,
-				E9E6D0BE1C8B7064003AEAF3 /* 5.caf in Resources */,
+				E9E6D0BE1C8B7064003AEAF3 /* Favorite.caf in Resources */,
 				E9E8BAA91C6925A20023A353 /* LICENSE.txt in Resources */,
-				E9E6D0B81C8B7064003AEAF3 /* 2.caf in Resources */,
+				E9E6D0B81C8B7064003AEAF3 /* Select.caf in Resources */,
 				E9E8BAA31C6925A20023A353 /* Arimo-Italic.ttf in Resources */,
-				E9E6D0B61C8B7064003AEAF3 /* 1.caf in Resources */,
+				E9E6D0B61C8B7064003AEAF3 /* Dismiss.caf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1051,21 +1047,21 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E9E6D0B51C8B7064003AEAF3 /* 1.caf in Resources */,
+				E9E6D0B51C8B7064003AEAF3 /* Dismiss.caf in Resources */,
 				E95C09911DF7704F00E39BEC /* Settings.bundle in Resources */,
-				E9E6D0B91C8B7064003AEAF3 /* 3.caf in Resources */,
+				E9E6D0B91C8B7064003AEAF3 /* Complete.caf in Resources */,
 				E9E8BA9F1C6925A20023A353 /* Arimo-BoldItalic.ttf in Resources */,
 				E9E8BAA21C6925A20023A353 /* Arimo-Italic.ttf in Resources */,
 				E9B869171C76599B00AE1BC9 /* GoogleService-Info.plist in Resources */,
 				E9E8BA9C1C6925A20023A353 /* Arimo-Bold.ttf in Resources */,
-				E9E6D0BB1C8B7064003AEAF3 /* 4.caf in Resources */,
+				E9E6D0BB1C8B7064003AEAF3 /* Delete.caf in Resources */,
 				E9E8BAA81C6925A20023A353 /* LICENSE.txt in Resources */,
 				E95A4ECC1CC0737E0078A286 /* Images.xcassets in Resources */,
 				E9FBB3F819E9E5C000063C38 /* LaunchScreen.xib in Resources */,
-				E9E6D0BD1C8B7064003AEAF3 /* 5.caf in Resources */,
+				E9E6D0BD1C8B7064003AEAF3 /* Favorite.caf in Resources */,
 				E9E8BAA51C6925A20023A353 /* Arimo-Regular.ttf in Resources */,
 				E97064D21AEE8813009A9286 /* Storyboard.storyboard in Resources */,
-				E9E6D0B71C8B7064003AEAF3 /* 2.caf in Resources */,
+				E9E6D0B71C8B7064003AEAF3 /* Select.caf in Resources */,
 				E95C833F1C77761D004D18D9 /* GoogleSignIn.bundle in Resources */,
 				E96FF1801AF94D3C00D41FD8 /* Login-Universal.storyboard in Resources */,
 			);

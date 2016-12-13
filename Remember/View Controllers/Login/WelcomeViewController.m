@@ -91,7 +91,7 @@
         _image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[profileData imageURLWithDimension:250]]];
         [self finishAndUpdate];
         
-        [defaults setObject:_name forKey:@"Default Author"];
+        [defaults setObject:_name forKey:@"RMAuthor"];
         [defaults synchronize];
         
         float value = floorf((int)12);
@@ -176,12 +176,12 @@
 
 - (void)photoCompleteSound {
     RMAudio *sound = [[RMAudio alloc] init];
-    [sound playSoundWithName:@"5" extension:@"caf"];
+    [sound playSoundWithName:@"Favorite" extension:@"caf"];
 }
 
 - (void)cancelActionSound {
     RMAudio *sound = [[RMAudio alloc] init];
-    [sound playSoundWithName:@"1" extension:@"caf"];
+    [sound playSoundWithName:@"Dismiss" extension:@"caf"];
 }
 
 @end

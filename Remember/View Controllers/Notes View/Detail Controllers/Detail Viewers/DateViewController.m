@@ -11,12 +11,12 @@
 #import "RMView.h"
 
 @interface DateViewController ()
-@property (weak, nonatomic) IBOutlet UIDatePicker *datePicker;
-@property (weak, nonatomic) IBOutlet UIButton *dateButton;
-@property (weak, nonatomic) IBOutlet UIButton *cancelButton;
-@property (weak, nonatomic) IBOutlet UIButton *dismissButton;
-@property (weak, nonatomic) IBOutlet UIView *buttonBlur;
-@property (weak, nonatomic) IBOutlet UILabel *dateLabel;
+@property (weak, nonatomic) IBOutlet UIDatePicker       *datePicker;
+@property (weak, nonatomic) IBOutlet UIButton           *dateButton;
+@property (weak, nonatomic) IBOutlet UIButton           *cancelButton;
+@property (weak, nonatomic) IBOutlet UIButton           *dismissButton;
+@property (weak, nonatomic) IBOutlet UIView             *buttonBlur;
+@property (weak, nonatomic) IBOutlet UILabel            *dateLabel;
 @property (copy) RMAudio *sound;
 @property (copy) SCLAlertView *alert;
 
@@ -31,11 +31,6 @@
     
     [_datePicker setMinimumDate:[NSDate date]];
     [_datePicker setMinuteInterval:5];
-    RMView *corners = [RMView new];
-    [corners createViewWithRoundedCornersWithRadius:10.0 andView:_dateButton];
-    [corners createViewWithRoundedCornersWithRadius:10.0 andView:_cancelButton];
-    [corners createViewWithRoundedCornersWithRadius:10.0 andView:_dismissButton];
-    [corners createViewWithRoundedCornersWithRadius:10.0 andView:_buttonBlur];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -74,7 +69,7 @@
              subTitle:@"Remember has successfully scheduled your reminder."
      closeButtonTitle:@"Dismiss"
              duration:4.0f];
-    [_sound playSoundWithName:@"3" extension:@"caf"];
+    [_sound playSoundWithName:@"Complete" extension:@"caf"];
     
     RMDataManager *dataManager = [[RMDataManager alloc] init];
     [dataManager writeDates:self.datePicker.date title:self.rememberTitle];
@@ -120,7 +115,7 @@
               subTitle:@"Remember has successfully cancelled your reminder."
       closeButtonTitle:@"Dismiss"
               duration:4.0f];
-    [_sound playSoundWithName:@"3" extension:@"caf"];
+    [_sound playSoundWithName:@"Complete" extension:@"caf"];
     
     /*
     for(UILocalNotification *notification in [[UIApplication sharedApplication] scheduledLocalNotifications]) {
@@ -137,7 +132,7 @@
                      subTitle:@"Remember has successfully cancelled your reminder."
              closeButtonTitle:@"Dismiss"
                      duration:4.0f];
-            [_sound playSoundWithName:@"3" extension:@"caf"];
+            [_sound playSoundWithName:@"Complete" extension:@"caf"];
             break;
         }
     }
@@ -161,7 +156,7 @@
 
 - (void)dismissViewSound
 {
-    [_sound playSoundWithName:@"1" extension:@"caf"];
+    [_sound playSoundWithName:@"Dismiss" extension:@"caf"];
 }
 
 @end

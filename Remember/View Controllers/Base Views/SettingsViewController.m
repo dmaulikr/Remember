@@ -50,14 +50,14 @@
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     _textSizeSlider.value = [defaults floatForKey:@"Text Size"];
     _textSizeLabel.text = [NSString stringWithFormat:@"Text Size: %g pt",[defaults floatForKey:@"Text Size"]];
-    if (![defaults valueForKey:@"Default Author"])
+    if (![defaults valueForKey:@"RMAuthor"])
     {
         _defaultAuthorField.text = [NSString stringWithFormat:@""];
-        [defaults setObject:_defaultAuthorField.text forKey:@"Default Author"];
+        [defaults setObject:_defaultAuthorField.text forKey:@"RMAuthor"];
     }
     else
     {
-        _defaultAuthorField.text = [NSString stringWithFormat:@"%@",[defaults valueForKey:@"Default Author"]];
+        _defaultAuthorField.text = [NSString stringWithFormat:@"%@",[defaults valueForKey:@"RMAuthor"]];
     }
 }
 
@@ -83,7 +83,7 @@
 - (void)dismissKeyboard
 {
     [_defaultAuthorField resignFirstResponder];
-    [[NSUserDefaults standardUserDefaults] setObject:_defaultAuthorField.text forKey:@"Default Author"];
+    [[NSUserDefaults standardUserDefaults] setObject:_defaultAuthorField.text forKey:@"RMAuthor"];
 }
 
 - (void)panGestureRecognized:(UIPanGestureRecognizer *)sender
@@ -118,7 +118,7 @@
 
 - (IBAction)authorValueChanged:(id)sender {
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    [defaults setObject:_defaultAuthorField.text forKey:@"Default Author"];
+    [defaults setObject:_defaultAuthorField.text forKey:@"RMAuthor"];
     [defaults synchronize];
 }
 
@@ -127,13 +127,13 @@
     if (_audioSwitch.isOn) {
         [[NSUserDefaults standardUserDefaults] setBool:_audioSwitch.isOn forKey:@"Audio"];
         [[NSUserDefaults standardUserDefaults] synchronize];
-        [sound playSoundWithName:@"3" extension:@"caf"];
+        [sound playSoundWithName:@"Complete" extension:@"caf"];
     }
     else
     {
         [[NSUserDefaults standardUserDefaults] setBool:_audioSwitch.isOn forKey:@"Audio"];
         [[NSUserDefaults standardUserDefaults] synchronize];
-        [sound playSoundWithName:@"3" extension:@"caf"];
+        [sound playSoundWithName:@"Complete" extension:@"caf"];
     }
 }
 

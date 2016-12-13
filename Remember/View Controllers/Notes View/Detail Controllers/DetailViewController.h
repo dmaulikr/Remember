@@ -17,12 +17,12 @@
 - (void)writeFileContents;
 - (void)readFileContents;
 
-@property (strong, nonatomic) NSString *rememberTitle;
-@property (strong, nonatomic) NSDictionary *plistData;
+@property (strong, nonatomic) NSString          *rememberTitle;
+@property (strong, nonatomic) NSDictionary      *plistData;
 
-@property (nonatomic, assign) double latitude;
-@property (nonatomic, assign) double longitude;
-@property (strong, nonatomic) NSString *reminder;
+@property (nonatomic, assign) NSNumber          *latitude;
+@property (nonatomic, assign) NSNumber          *longitude;
+@property (strong, nonatomic) NSString          *reminder;
 - (BOOL)location;
 
 @end

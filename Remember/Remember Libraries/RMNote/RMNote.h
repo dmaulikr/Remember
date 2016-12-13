@@ -11,15 +11,17 @@
 
 @interface RMNote : NSObject
 
+- (id)init;
 - (id)initWithName:(NSString *)name;
-@property NSString *name;
+- (void)debugNoteContents;
 
-@property (strong, nonatomic) NSAttributedString *body;
-@property (strong, nonatomic) NSString *author;
-@property (strong, nonatomic) UIImage *image;
-@property (strong, nonatomic) NSURL *url;
-@property (strong, nonatomic) NSDate *fire;
-@property (strong, nonatomic) NSArray *location;
-@property (strong, nonatomic) NSMutableArray *array;
+@property (strong, nonatomic) NSString              *name;
+@property (strong, nonatomic) NSAttributedString    *body;
+@property (strong, nonatomic) NSString              *author;
+@property (strong, nonatomic) UIImage               *image;
+@property (strong, nonatomic) NSURL                 *url;
+@property (strong, nonatomic) NSDate                *fire;
+@property (strong, nonatomic) NSArray               *location;
+@property (strong, nonatomic) NSMutableArray        *array;
 
 @end

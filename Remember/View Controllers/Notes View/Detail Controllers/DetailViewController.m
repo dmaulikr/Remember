@@ -32,33 +32,37 @@ UITextFieldDelegate,
 UITextViewDelegate
 >
 
-@property (weak) IBOutlet UIImageView *background;
-@property (weak) IBOutlet UITextView *textView;
-@property (weak) IBOutlet UITextField *authorField;
-@property (weak) IBOutlet UIButton *dateButton;
-@property (weak) IBOutlet UIButton *paperclip;
-@property (weak) IBOutlet UINavigationItem *navigationItem;
-@property (weak) IBOutlet UIImageView *noteImageView;
+@property (weak) IBOutlet UIImageView           *background;
+@property (weak) IBOutlet UITextView            *textView;
+@property (weak) IBOutlet UITextField           *authorField;
+@property (weak) IBOutlet UITextField           *urlField;
+@property (weak) IBOutlet UIButton              *dateButton;
+@property (weak) IBOutlet UIButton              *paperclip;
+@property (weak) IBOutlet UINavigationItem      *navigationItem;
+@property (weak) IBOutlet UIImageView           *noteImageView;
 
-@property (nonatomic) NSMutableArray *capturedImages;
-@property (nonatomic) NSString *photoPath;
-@property (nonatomic) UIImagePickerController *imagePickerController;
+@property (nonatomic) NSMutableArray            *capturedImages;
+@property (nonatomic) NSString                  *photoPath;
+@property (nonatomic) UIImagePickerController   *imagePickerController;
 
 @property (strong, nonatomic) CLLocationManager *locationManager;
 
-@property (copy, nonatomic) RMDataManager *manager;
-@property (copy, nonatomic) RMPhotoManager *pMan;
-@property (copy, nonatomic) RMAudio *sound;
-@property (copy, nonatomic) RMSpotlight *spotlight;
-@property (weak, nonatomic) RMPOPImageView *popImage;
-@property (copy, nonatomic) RMPOPImageHandler *imageHandler;
+@property (copy, nonatomic) RMDataManager       *dataManager;
+@property (copy, nonatomic) RMPhotoManager      *photoManager;
+@property (copy, nonatomic) RMAudio             *audio;
+@property (copy, nonatomic) RMSpotlight         *spotlight;
+@property (weak, nonatomic) RMPOPImageView      *popImage;
+@property (copy, nonatomic) RMPOPImageHandler   *popHandler;
+
+@property (strong, nonatomic) RMNote            *note;
+@property (strong, nonatomic) RMNoteLoader      *loader;
 
 @end
 
 @implementation DetailViewController
 {
-    BOOL keyboard;
-    BOOL photo;
+    BOOL showingKeyboard;
+    BOOL showingPhoto;
     BOOL hasLocation;
 }
 
@@ -66,12 +70,15 @@ UITextViewDelegate
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    _manager = [[RMDataManager alloc] init];
-    _pMan = [[RMPhotoManager alloc] initWithView:self andFileName:_rememberTitle];
-    [_pMan setFileContainer:@"group.com.solarpepper.Remember"];
-    _sound = [RMAudio new];
+    
+    _note = [[RMNote alloc] init];
+    
+    _dataManager = [[RMDataManager alloc] init];
+    _photoManager = [[RMPhotoManager alloc] initWithView:self andFileName:_rememberTitle];
+    [_photoManager setFileContainer:@"group.com.solarpepper.Remember"];
+    _audio = [RMAudio new];
     _spotlight = [RMSpotlight new];
-    _imageHandler = [RMPOPImageHandler new];
+    _popHandler = [RMPOPImageHandler new];
     [_authorField setDelegate:self];
     [_textView setDelegate:self];
     
@@ -100,8 +107,6 @@ UITextViewDelegate
     [swipe setDirection:UISwipeGestureRecognizerDirectionDown];
     [self.view addGestureRecognizer:swipe];
     
-    RMView *corners = [RMView new];
-    [corners createViewWithRoundedCornersWithRadius:10.0 andView:_dateButton];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -112,22 +117,14 @@ UITextViewDelegate
     [self readFileContents];
     if ([_authorField.text isEqualToString:@""])
     {
-        _authorField.text = [[NSUserDefaults standardUserDefaults] objectForKey:@"Default Author"];
+        _authorField.text = [[NSUserDefaults standardUserDefaults] objectForKey:@"RMAuthor"];
     }
-}
-
-- (void)viewDidAppear:(BOOL)animated {
-    [super viewDidAppear:animated];
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
     [self writeFileContents];
     [self removeKeyboardObservers];
-}
-
-- (void)viewDidDisappear:(BOOL)animated {
-    [super viewDidDisappear:animated];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -145,9 +142,9 @@ UITextViewDelegate
     _authorField.font = [UIFont fontWithName:@"Arimo" size:[defaults floatForKey:@"Text Size"]];
     [_textView setScrollEnabled:YES];
     [_textView setUserInteractionEnabled:YES];
-    if (_authorField.text == nil && [[NSUserDefaults standardUserDefaults] objectForKey:@"Default Author"])
+    if (_authorField.text == nil && [[NSUserDefaults standardUserDefaults] objectForKey:@"RMAuthor"])
     {
-        _authorField.text = [NSString stringWithFormat:@"%@",[defaults valueForKey:@"Default Author"]];
+        _authorField.text = [NSString stringWithFormat:@"%@",[defaults valueForKey:@"RMAuthor"]];
     }
     _textView.allowsEditingTextAttributes = NO;
 }
@@ -163,10 +160,6 @@ UITextViewDelegate
                                              selector:@selector(keyboardWillHide:)
                                                  name:UIKeyboardWillHideNotification
                                                object:nil];
-    //[[NSNotificationCenter defaultCenter] addObserver:self
-    //                                         selector:@selector(inputModeDidChange:)
-    //                                             name:UIKeyboardWillChangeFrameNotification
-    //                                           object:nil];
 }
 
 - (void)removeKeyboardObservers {
@@ -176,58 +169,16 @@ UITextViewDelegate
     [[NSNotificationCenter defaultCenter] removeObserver:self
                                                     name:UIKeyboardWillHideNotification
                                                   object:nil];
-    //[[NSNotificationCenter defaultCenter] removeObserver:self
-    //                                                name:UIKeyboardWillChangeFrameNotification
-    //                                              object:nil];
 }
 
 - (void)keyboardWillHide:(NSNotification *)notification {
-    // the keyboard is hiding reset the table's height
-    /*
-    NSTimeInterval animationDuration = [[[notification userInfo] objectForKey:UIKeyboardAnimationDurationUserInfoKey] doubleValue];
-    NSDictionary *keyboardInfo = [notification userInfo];
-    NSValue *keyboardFrameBegin = [keyboardInfo valueForKey:UIKeyboardFrameBeginUserInfoKey];
-    CGRect keyboardFrameBeginRect = [keyboardFrameBegin CGRectValue];
-    CGRect text = self.textView.frame;
-    text.size.height += (keyboardFrameBeginRect.size.height-40);
-    [UIView beginAnimations:@"ResizeForKeyboard" context:nil];
-    [UIView setAnimationDuration:animationDuration];
-    self.textView.frame = text;
-    [UIView commitAnimations];
-    */
-    keyboard = false;
+    showingKeyboard = false;
 }
 
 - (void)keyboardWillShow:(NSNotification *)notification {
-    // the keyboard is showing so resize the table's height
-    /*
-    NSTimeInterval animationDuration = [[[notification userInfo] objectForKey:UIKeyboardAnimationDurationUserInfoKey] doubleValue];
-    NSDictionary *keyboardInfo = [notification userInfo];
-    NSValue *keyboardFrameBegin = [keyboardInfo valueForKey:UIKeyboardFrameBeginUserInfoKey];
-    CGRect keyboardFrameBeginRect = [keyboardFrameBegin CGRectValue];
-    CGRect text = self.textView.frame;
-    text.size.height -= (keyboardFrameBeginRect.size.height-40);
-    [UIView beginAnimations:@"ResizeForKeyboard" context:nil];
-    [UIView setAnimationDuration:animationDuration];
-    self.textView.frame = text;
-    [UIView commitAnimations];
-    */
-    keyboard = true;
+    showingKeyboard = true;
 }
-/*
-- (void)inputModeDidChange:(NSNotification *)notification {
-    NSTimeInterval animationDuration = [[[notification userInfo] objectForKey:UIKeyboardAnimationDurationUserInfoKey] doubleValue];
-    NSDictionary *keyboardInfo = [notification userInfo];
-    NSValue *keyboardFrameBegin = [keyboardInfo valueForKey:UIKeyboardFrameBeginUserInfoKey];
-    CGRect keyboardFrameBeginRect = [keyboardFrameBegin CGRectValue];
-    CGRect text = self.textView.frame;
-    text.size.height += (keyboardFrameBeginRect.size.height-40);
-    [UIView beginAnimations:@"ResizeForKeyboard" context:nil];
-    [UIView setAnimationDuration:animationDuration];
-    self.textView.frame = text;
-    [UIView commitAnimations];
-}
-*/
+
 - (void)hideKeyboard {
     [_textView resignFirstResponder];
     [_authorField resignFirstResponder];
@@ -243,8 +194,8 @@ UITextViewDelegate
 }
 
 - (IBAction)textFieldDidEndEditing:(id)sender {
-    _latitude = _locationManager.location.coordinate.latitude;
-    _longitude = _locationManager.location.coordinate.longitude;
+    _latitude = [NSNumber numberWithFloat:_locationManager.location.coordinate.latitude];
+    _longitude = [NSNumber numberWithFloat:_locationManager.location.coordinate.longitude];
 }
 
 # pragma mark - Photo Library Management
@@ -253,12 +204,12 @@ UITextViewDelegate
     UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Select Action:"
                                                                    message:nil
                                                             preferredStyle:UIAlertControllerStyleActionSheet];
-    NSURL *url = [_manager readURL:_rememberTitle];
+    NSURL *url = [_dataManager readURL:_rememberTitle];
     UIAlertAction *library = [UIAlertAction actionWithTitle:@"Photo From Library"
                                                       style:UIAlertActionStyleDefault
                                                     handler:^(UIAlertAction * action)
                             {
-                                [_pMan selectPhotoFromLibrary:self];
+                                [_photoManager selectPhotoFromLibrary:self];
                                 //HNKCacheFormat *format = [HNKCache sharedCache];
                                 //[format removeAllImages];
                             }];
@@ -266,20 +217,20 @@ UITextViewDelegate
                                                       style:UIAlertActionStyleDefault
                                                     handler:^(UIAlertAction * action)
                             {
-                                [_pMan selectPhotoFromCamera:self];
+                                [_photoManager selectPhotoFromCamera:self];
                                 //HNKCache *format = [HNKCache sharedCache];
                                 //[format removeAllImages];
                             }];
-    /*
+    
     UIAlertAction *viewPhoto = [UIAlertAction actionWithTitle:@"View Photo"
                                                      style:UIAlertActionStyleDefault
                                                    handler:^(UIAlertAction * action)
                              {
-                                 [_imageHandler addImageViewinView:self.view withImageView:_popImage andTitle:_rememberTitle];
-                                 photo = true;
+                                 [_popHandler addImageViewinView:self.view withImageView:_popImage andTitle:_rememberTitle];
+                                 showingPhoto = true;
                                  [_textView setUserInteractionEnabled:NO];
                              }];
-    */
+    
     UIAlertAction *viewMap = [UIAlertAction actionWithTitle:@"View Location"
                                                      style:UIAlertActionStyleDefault
                                                    handler:^(UIAlertAction * action)
@@ -302,7 +253,7 @@ UITextViewDelegate
     [library setValue:[[UIImage imageNamed:@"Flower"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] forKey:@"image"];
     [camera setValue:[[UIImage imageNamed:@"Camera Thumb"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] forKey:@"image"];
     [viewMap setValue:[[UIImage imageNamed:@"Location Thumb"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] forKey:@"image"];
-    //[viewPhoto setValue:[[UIImage imageNamed:@"Flower"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] forKey:@"image"];
+    [viewPhoto setValue:[[UIImage imageNamed:@"Flower"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] forKey:@"image"];
     [viewURL setValue:[[UIImage imageNamed:@"World"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] forKey:@"image"];
     [alert addAction:library];
 #if TARGET_IPHONE_SIMULATOR
@@ -324,8 +275,8 @@ UITextViewDelegate
 }
 
 - (void)showPhoto {
-    [_imageHandler addImageViewinView:self.view withImageView:_popImage andTitle:_rememberTitle];
-    photo = true;
+    [_popHandler addImageViewinView:self.view withImageView:_popImage andTitle:_rememberTitle];
+    showingPhoto = true;
     [_textView setUserInteractionEnabled:NO];
 }
 
@@ -356,22 +307,22 @@ UITextViewDelegate
 
 - (void)saveNoteSound {
     
-    [_sound playSoundWithName:@"3" extension:@"caf"];
+    [_audio playSoundWithName:@"Complete" extension:@"caf"];
 }
 
 - (void)photoCompleteSound {
     
-    [_sound playSoundWithName:@"5" extension:@"caf"];
+    [_audio playSoundWithName:@"Favorite" extension:@"caf"];
 }
 
 - (void)cancelActionSound {
     
-    [_sound playSoundWithName:@"1" extension:@"caf"];
+    [_audio playSoundWithName:@"Dismiss" extension:@"caf"];
 }
 
 - (void)displayViewSound {
     
-    [_sound playSoundWithName:@"2" extension:@"caf"];
+    [_audio playSoundWithName:@"Select" extension:@"caf"];
 }
 
 # pragma mark - Menu Management
@@ -383,15 +334,15 @@ UITextViewDelegate
 }
 
 - (IBAction)dismissView:(id)sender {
-    if (keyboard)
+    if (showingKeyboard)
     {
         [self hideKeyboard];
     }
-    else if (photo)
+    else if (showingPhoto)
     {
-        [_imageHandler dismissViewFromSuperView];
+        [_popHandler dismissViewFromSuperView];
         [_textView setUserInteractionEnabled:YES];
-        photo = false;
+        showingPhoto = false;
     }
     else
     {
@@ -411,23 +362,39 @@ UITextViewDelegate
 # pragma mark - Data Management
 
 - (void)writeFileContents {
-    [_manager writeDataContentsWithTitle:_rememberTitle
+    [_note setName:_rememberTitle];
+    [_note setAuthor:_authorField.text];
+    [_note setBody:[[NSAttributedString alloc] initWithString:_textView.text attributes:nil]];
+    [_note setUrl:[NSURL URLWithString:_urlField.text]];
+    [_note setLocation:@[_latitude, _longitude]];
+    [_note setImage:_noteImageView.image];
+    // Save data we just set
+    [_loader saveDataToDiskWithNote:_note];
+    
+    // Deprecated: To be removed
+    [_dataManager writeDataContentsWithTitle:_rememberTitle
                                  author:_authorField.text
-                                   body:_textView.text]; //date:_reminder];
-    [_manager writeCoordinatesWithLatitude:_latitude longitude:_longitude];
+                                   body:_textView.text];
+    [_dataManager writeCoordinatesWithLatitude:[_latitude floatValue] longitude:[_longitude floatValue]];
+    // Still used: Do not remove
     [_spotlight addItemToCoreSpotlightWithName:_rememberTitle andDescription:_textView.text];
 }
 
 - (void)readFileContents {
-    [_manager readDataContentsWithTitle:_rememberTitle
-                           containerID:@"group.com.solarpepper.Remember"];
-    _authorField.text = _manager.loadedAuthor;
-    _textView.text = _manager.loadedBody;
-    _photoPath = _manager.loadedPhotoPath;
-    [_pMan loadPicture:_noteImageView withName:_rememberTitle];
+    _note = [_loader loadDataFromDiskWithName:_rememberTitle];
+    [_note debugNoteContents];
     
-    _latitude = _manager.loadedLatitude;
-    _longitude = _manager.loadedLongitude;
+    // Deprecated: To be removed
+    [_dataManager readDataContentsWithTitle:_rememberTitle
+                           containerID:@"group.com.solarpepper.Remember"];
+    _authorField.text = _dataManager.loadedAuthor;
+    _textView.text = _dataManager.loadedBody;
+    _photoPath = _dataManager.loadedPhotoPath;
+    [_photoManager loadPicture:_noteImageView withName:_rememberTitle];
+    
+    _latitude = [NSNumber numberWithFloat:_dataManager.loadedLatitude];
+    _longitude = [NSNumber numberWithFloat:_dataManager.loadedLongitude];
+    // Still used: Do not remove
     [_spotlight removeItemFromCoreSpotlightWithName:_rememberTitle];
 }
 

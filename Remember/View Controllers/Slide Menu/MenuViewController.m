@@ -88,16 +88,16 @@
     [self loadPicture];
     [self readFileContents:@"Favorites"];
     
-    if (![[NSUserDefaults standardUserDefaults] objectForKey:@"Default Author"])
+    if (![[NSUserDefaults standardUserDefaults] objectForKey:@"RMAuthor"])
     {
         self.userNameLabel.text = @"Remember";
     }
     else
     {
-        self.userNameLabel.text = [NSString stringWithFormat:@"%@",[[NSUserDefaults standardUserDefaults] valueForKey:@"Default Author"]];
+        self.userNameLabel.text = [NSString stringWithFormat:@"%@",[[NSUserDefaults standardUserDefaults] valueForKey:@"RMAuthor"]];
     }
     
-    if ([[[NSUserDefaults standardUserDefaults] objectForKey:@"Default Author"] isEqualToString:@""])
+    if ([[[NSUserDefaults standardUserDefaults] objectForKey:@"RMAuthor"] isEqualToString:@""])
     {
         self.userNameLabel.text = @"Remember";
     }
@@ -383,22 +383,22 @@
 
 - (void)menuOpeningSound {
     
-    [_sound playSoundWithName:@"2" extension:@"caf"];
+    [_sound playSoundWithName:@"Select" extension:@"caf"];
 }
 
 - (void)menuClosingSound {
     
-    [_sound playSoundWithName:@"1" extension:@"caf"];
+    [_sound playSoundWithName:@"Dismiss" extension:@"caf"];
 }
 
 - (void)photoCompleteSound {
     
-    [_sound playSoundWithName:@"5" extension:@"caf"];
+    [_sound playSoundWithName:@"Favorite" extension:@"caf"];
 }
 
 - (void)cancelActionSound {
     
-    [_sound playSoundWithName:@"1" extension:@"caf"];
+    [_sound playSoundWithName:@"Dismiss" extension:@"caf"];
 }
 
 #pragma mark - Date Management

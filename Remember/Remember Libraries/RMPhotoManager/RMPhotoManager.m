@@ -103,12 +103,12 @@
 
 - (void)photoCompleteSound; {
     /*Save Sound*/
-    [_sound playSoundWithName:@"5" extension:@"caf"];
+    [_sound playSoundWithName:@"Favorite" extension:@"caf"];
 }
 
 - (void)cancelActionSound; {
     /*Save Sound*/
-    [_sound playSoundWithName:@"1" extension:@"caf"];
+    [_sound playSoundWithName:@"Dismiss" extension:@"caf"];
 }
 
 @end

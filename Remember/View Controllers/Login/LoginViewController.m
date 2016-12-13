@@ -110,7 +110,7 @@
     [textField resignFirstResponder];
     
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    [defaults setObject:authorField.text forKey:@"Default Author"];
+    [defaults setObject:authorField.text forKey:@"RMAuthor"];
     [defaults synchronize];
     
     return NO;
@@ -182,7 +182,7 @@
     } else {
         self.contactImage.image = [UIImage imageWithContentsOfFile:imageName];
     }
-    self.authorField.text = [[NSUserDefaults standardUserDefaults] valueForKey:@"Default Author"];
+    self.authorField.text = [[NSUserDefaults standardUserDefaults] valueForKey:@"RMAuthor"];
 }
 
 #pragma mark - Location Management
@@ -231,13 +231,13 @@
 - (void)photoCompleteSound {
     /*Save Sound*/
     RMAudio *sound = [[RMAudio alloc] init];
-    [sound playSoundWithName:@"5" extension:@"caf"];
+    [sound playSoundWithName:@"Favorite" extension:@"caf"];
 }
 
 - (void)cancelActionSound {
     /*Save Sound*/
     RMAudio *sound = [[RMAudio alloc] init];
-    [sound playSoundWithName:@"1" extension:@"caf"];
+    [sound playSoundWithName:@"Dismiss" extension:@"caf"];
 }
 
 @end

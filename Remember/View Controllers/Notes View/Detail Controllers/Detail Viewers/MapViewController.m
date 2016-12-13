@@ -13,14 +13,14 @@
 @interface MapViewController ()
 <CLLocationManagerDelegate>
 /*-------------------------------------------------------*/
-@property (weak, nullable) IBOutlet MKMapView *mapView;
-@property (weak, nonatomic) IBOutlet UIButton *dismissButton;
-@property (weak, nonatomic) MKUserLocation *location;
-@property (strong, nonatomic) CLLocationManager *locationManager;
-@property (copy, nonnull) RMAudio *sound;
-@property (copy, nonnull) RMDataManager *data;
-@property double latitude;
-@property double longitude;
+@property (weak, nullable) IBOutlet MKMapView       *mapView;
+@property (weak, nonatomic) IBOutlet UIButton       *dismissButton;
+@property (weak, nonatomic) MKUserLocation          *location;
+@property (strong, nonatomic) CLLocationManager     *locationManager;
+@property (copy, nonnull) RMAudio                   *sound;
+@property (copy, nonnull) RMDataManager             *data;
+@property double                                    latitude;
+@property double                                    longitude;
 /*-------------------------------------------------------*/
 
 @end
@@ -89,7 +89,7 @@
 - (void)dismissViewSound
 {
     _sound = [[RMAudio alloc] init];
-    [_sound playSoundWithName:@"1" extension:@"caf"];
+    [_sound playSoundWithName:@"Dismiss" extension:@"caf"];
 }
 
 @end
