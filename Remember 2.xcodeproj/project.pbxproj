@@ -76,6 +76,8 @@
 		E99D8D2A1A0C0755009D772A /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E99D8D291A0C0755009D772A /* Social.framework */; };
 		E99E811719FFE794003A80B4 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E99E811619FFE794003A80B4 /* MessageUI.framework */; };
 		E9A5EDF11C779D7100101ED5 /* RMPOPImageHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = E9A5EDF01C779D7100101ED5 /* RMPOPImageHandler.m */; };
+		E9A9239E1DFFBC4F008260AB /* WallCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E9A9239C1DFFBC4F008260AB /* WallCell.m */; };
+		E9A9239F1DFFBC4F008260AB /* WallController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9A9239D1DFFBC4F008260AB /* WallController.m */; };
 		E9B416921AFD17CA0046D4E7 /* RMGooglePlus.m in Sources */ = {isa = PBXBuildFile; fileRef = E9B416911AFD17CA0046D4E7 /* RMGooglePlus.m */; };
 		E9B869171C76599B00AE1BC9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E9B869161C76599B00AE1BC9 /* GoogleService-Info.plist */; };
 		E9B869181C76599B00AE1BC9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E9B869161C76599B00AE1BC9 /* GoogleService-Info.plist */; };
@@ -278,6 +280,10 @@
 		E99E811619FFE794003A80B4 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		E9A5EDEF1C779D7100101ED5 /* RMPOPImageHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMPOPImageHandler.h; sourceTree = "<group>"; };
 		E9A5EDF01C779D7100101ED5 /* RMPOPImageHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMPOPImageHandler.m; sourceTree = "<group>"; };
+		E9A9239A1DFFBC4F008260AB /* WallCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WallCell.h; sourceTree = "<group>"; };
+		E9A9239B1DFFBC4F008260AB /* WallController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WallController.h; sourceTree = "<group>"; };
+		E9A9239C1DFFBC4F008260AB /* WallCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WallCell.m; sourceTree = "<group>"; };
+		E9A9239D1DFFBC4F008260AB /* WallController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WallController.m; sourceTree = "<group>"; };
 		E9AB2D821DDBDCB50085D4F5 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
 		E9B416901AFD17CA0046D4E7 /* RMGooglePlus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMGooglePlus.h; sourceTree = "<group>"; };
 		E9B416911AFD17CA0046D4E7 /* RMGooglePlus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMGooglePlus.m; sourceTree = "<group>"; };
@@ -560,10 +566,9 @@
 		E95481761A005672000BDFC9 /* Base Views */ = {
 			isa = PBXGroup;
 			children = (
+				E9A923A01DFFBC56008260AB /* Settings */,
 				E95C75561A8A6A5300E12337 /* AboutViewController.h */,
 				E95C75591A8A6A5300E12337 /* AboutViewController.m */,
-				E95C755F1A8A6A8B00E12337 /* SettingsViewController.h */,
-				E95C75601A8A6A8B00E12337 /* SettingsViewController.m */,
 			);
 			path = "Base Views";
 			sourceTree = "<group>";
@@ -662,6 +667,19 @@
 				E95C75651A8A6AC000E12337 /* NotesTableController.m */,
 			);
 			path = "Notes View";
+			sourceTree = "<group>";
+		};
+		E9A923A01DFFBC56008260AB /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				E95C755F1A8A6A8B00E12337 /* SettingsViewController.h */,
+				E95C75601A8A6A8B00E12337 /* SettingsViewController.m */,
+				E9A9239A1DFFBC4F008260AB /* WallCell.h */,
+				E9A9239C1DFFBC4F008260AB /* WallCell.m */,
+				E9A9239B1DFFBC4F008260AB /* WallController.h */,
+				E9A9239D1DFFBC4F008260AB /* WallController.m */,
+			);
+			name = Settings;
 			sourceTree = "<group>";
 		};
 		E9B4168F1AFD178B0046D4E7 /* RMGooglePlus */ = {
@@ -1317,6 +1335,7 @@
 				E9DE54A31C8747E2008FA8B5 /* RMAudio.m in Sources */,
 				E95C834D1C777EAB004D18D9 /* POPDismiss.m in Sources */,
 				E905E86E1B0E1A24003116FE /* RMPhotoManager.m in Sources */,
+				E9A9239F1DFFBC4F008260AB /* WallController.m in Sources */,
 				E9FBB3EA19E9E5C000063C38 /* main.m in Sources */,
 				E95C75671A8A6AC000E12337 /* NotesTableController.m in Sources */,
 				E95C756F1A8A6B1000E12337 /* MapViewController.m in Sources */,
@@ -1328,6 +1347,7 @@
 				E98D32F31A800EE20031FCFD /* RMSegueReverse.m in Sources */,
 				E95C755C1A8A6A5300E12337 /* AboutViewController.m in Sources */,
 				E9F166D11C8780A800D05A39 /* RMView.m in Sources */,
+				E9A9239E1DFFBC4F008260AB /* WallCell.m in Sources */,
 				E9F166CD1C877C9D00D05A39 /* RMSpotlight.m in Sources */,
 				E95C75611A8A6A8B00E12337 /* SettingsViewController.m in Sources */,
 			);

@@ -10,6 +10,6 @@
 
 @interface WallCell : UICollectionViewCell
 
-@property (weak, nonatomic) UIImageView *background;
+@property (weak, nonatomic) IBOutlet UIImageView *customBackground;
 
 @end
