@@ -680,8 +680,13 @@ Keeton Feavel (@Auxel)
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="600" height="1000"/>
                     <connections>
+                        <outlet property="authorField" destination="75y-7S-ndK" id="AEr-Kg-nDl"/>
                         <outlet property="background" destination="GWX-1V-NoE" id="Jpe-OZ-kEI"/>
+                        <outlet property="dateButton" destination="QZF-Zs-dwh" id="DSV-Y0-d1u"/>
                         <outlet property="navigationItem" destination="iL1-H9-if7" id="ZIM-5H-hgT"/>
+                        <outlet property="noteImageView" destination="ZQz-7l-qSc" id="LA9-im-gxY"/>
+                        <outlet property="paperclip" destination="sQ2-aJ-UYE" id="y4Y-I4-N1y"/>
+                        <outlet property="textView" destination="7D7-Yq-Sug" id="tL0-cn-6qK"/>
                         <segue destination="TIS-xJ-jje" kind="custom" identifier="reversePushCell" customClass="RMSegueReverse" id="Zpg-jo-7KN"/>
                         <segue destination="SEl-yt-nAD" kind="presentation" identifier="mapPush" id="7Hy-cH-C10"/>
                         <segue destination="Qcg-JZ-zzA" kind="presentation" identifier="datePush" id="rZe-Rn-47k"/>
