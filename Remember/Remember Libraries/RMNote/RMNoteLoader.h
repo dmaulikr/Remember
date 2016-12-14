@@ -13,7 +13,7 @@
 
 - (id)init;
 - (NSString *)pathForDataFileWithName:(NSString *)name;
-- (void)saveDataToDiskWithNote:(RMNote *)note;
+- (void)saveDataToDiskWithNote:(RMNote *)note andName:(NSString *)name;
 - (RMNote *)loadDataFromDiskWithName:(NSString *)name;
 
 @end

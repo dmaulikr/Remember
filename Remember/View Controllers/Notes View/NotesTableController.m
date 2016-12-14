@@ -734,14 +734,15 @@ UIViewControllerPreviewingDelegate
     _list.array = titles;
     _list.name = @"List";
     [_list debugNoteContents];
-    [_loader saveDataToDiskWithNote:_list];
-    [_dataManager writeTableContentsFromArray:titles
-                             containerID:@"group.com.solarpepper.Remember"
-                                fileName:file];
+    [_loader saveDataToDiskWithNote:_list andName:file];
+    
+    //[_dataManager writeTableContentsFromArray:titles
+    //                         containerID:@"group.com.solarpepper.Remember"
+    //                            fileName:file];
 }
 
 - (void)readFileContents:(NSString *)file {
-    _list = [_loader loadDataFromDiskWithName:@"List"];
+    _list = [_loader loadDataFromDiskWithName:@"Notes"];
     [_list debugNoteContents];
     titles = _list.array;
     

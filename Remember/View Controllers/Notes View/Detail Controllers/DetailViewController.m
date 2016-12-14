@@ -369,7 +369,7 @@ UITextViewDelegate
     [_note setLocation:@[_latitude, _longitude]];
     [_note setImage:_noteImageView.image];
     // Save data we just set
-    [_loader saveDataToDiskWithNote:_note];
+    [_loader saveDataToDiskWithNote:_note andName:_rememberTitle];
     
     // Deprecated: To be removed
     [_dataManager writeDataContentsWithTitle:_rememberTitle

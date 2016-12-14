@@ -11,8 +11,8 @@
 
 @interface RMNote : NSObject
 
-- (id)init;
-- (id)initWithName:(NSString *)name;
+- (id)initWithCoder:(NSCoder *)coder;
+- (void)encodeWithCoder:(NSCoder *)coder; 
 - (void)debugNoteContents;
 
 @property (strong, nonatomic) NSString              *name;

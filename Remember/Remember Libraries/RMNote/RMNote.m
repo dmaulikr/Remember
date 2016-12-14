@@ -9,46 +9,40 @@
 #import "RMNote.h"
 
 @interface RMNote()
+<NSCoding>
 
 @end
 
 @implementation RMNote
 
-- (id)init; {
-    self = [super init];
-    if (self) {
-        // Custom initilization
-        _name = @"Error Name";
-        _body = [[NSAttributedString alloc] initWithString:@"" attributes:nil];
-        _author = @"";
-        _image = [UIImage new];
-        _url = [[NSURL alloc] initWithString:@""];
-        _fire = [NSDate new];
-        _location = [NSArray new];
-        _array = [NSMutableArray new];
+- (id)initWithCoder:(NSCoder *)coder; {
+    if (self = [super init])
+    {
+        [self setName:[coder decodeObjectForKey:@"name"]];
+        [self setBody:[coder decodeObjectForKey:@"body"]];
+        [self setAuthor:[coder decodeObjectForKey:@"author"]];
+        [self setImage:[coder decodeObjectForKey:@"image"]];
+        [self setUrl:[coder decodeObjectForKey:@"url"]];
+        [self setFire:[coder decodeObjectForKey:@"fire"]];
+        [self setLocation:[coder decodeObjectForKey:@"location"]];
+        [self setArray:[coder decodeObjectForKey:@"array"]];
     }
     return self;
 }
-
-
-- (id)initWithName:(NSString *)name; {
-    self = [super init];
-    if (self) {
-        // Custom initilization
-        _name = name;
-        _body = [[NSAttributedString alloc] initWithString:@"" attributes:nil];
-        _author = @"";
-        _image = [UIImage new];
-        _url = [[NSURL alloc] initWithString:@""];
-        _fire = [NSDate new];
-        _location = [NSArray new];
-        _array = [NSMutableArray new];
-    }
-    return self;
+ 
+- (void)encodeWithCoder:(NSCoder *)coder; {
+    [coder encodeObject:_name forKey:@"name"];
+    [coder encodeObject:_body forKey:@"body"];
+    [coder encodeObject:_author forKey:@"author"];
+    [coder encodeObject:_image forKey:@"image"];
+    [coder encodeObject:_url forKey:@"url"];
+    [coder encodeObject:_fire forKey:@"fire"];
+    [coder encodeObject:_location forKey:@"location"];
+    [coder encodeObject:_array forKey:@"array"];
 }
 
-- (void)debugNoteContents {
-    if ([[NSUserDefaults standardUserDefaults] boolForKey:@"RMDebug"]) {
+- (void)debugNoteContents; {
+    //if ([[NSUserDefaults standardUserDefaults] boolForKey:@"RMDebug"]) {
         NSLog(@"-- RMNote Debugging --");
         NSLog(@"Name: %@",_name);
         NSLog(@"Body: %@",_body);
@@ -58,7 +52,7 @@
         NSLog(@"Location: %@",_location);
         NSLog(@"Array: %@",_array);
         NSLog(@"-- End RMNote Data  --");
-    }
+    //}
 }
 
 @end

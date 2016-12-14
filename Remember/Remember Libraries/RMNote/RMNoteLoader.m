@@ -28,22 +28,8 @@
     }
     return self;
 }
-/*
-- (id)initWithCoder:(NSCoder *)coder
-{
-    if (self = [super init])
-    {
-        [self setData: [coder decodeObjectForKey:@"data"]];
-    }
-    return self;
-}
 
-- (void)encodeWithCoder:(NSCoder *)coder
-{
-    [coder encodeObject:_data forKey:@"data"];
-}
-*/
-- (NSString *)pathForDataFileWithName:(NSString *)name
+- (NSString *)pathForDataFileWithName:(NSString *)name;
 {
     NSFileManager *fileManager = [NSFileManager defaultManager];
     
@@ -61,26 +47,19 @@
     return [[folder path] stringByAppendingPathComponent: fileName];
 }
 
-- (void)saveDataToDiskWithNote:(RMNote *)note
+- (void)saveDataToDiskWithNote:(RMNote *)note andName:(NSString *)name;
 {
-    NSString *path = [self pathForDataFileWithName:note.name];
-    
-    NSMutableDictionary *rootObject;
-    rootObject = [NSMutableDictionary dictionary];
-    
-    [rootObject setValue:note forKey:@"data"];
-    [NSKeyedArchiver archiveRootObject:rootObject toFile:path];
+    RMNote *archive = note;
+    NSString *path = [self pathForDataFileWithName:name];
+    [NSKeyedArchiver archiveRootObject:archive toFile:path];
     NSLog(@"Saved data to disk: %@", path);
 }
 
-- (RMNote *)loadDataFromDiskWithName:(NSString *)name
+- (RMNote *)loadDataFromDiskWithName:(NSString *)name;
 {
     RMNote *note;
     NSString *path = [self pathForDataFileWithName:name];
-    NSDictionary *rootObject;
-    
-    rootObject = [NSKeyedUnarchiver unarchiveObjectWithFile:path];
-    note = [rootObject valueForKey:@"data"];
+    note = [NSKeyedUnarchiver unarchiveObjectWithFile:path];
     NSLog(@"Loaded data from path: %@", path);
     
     return note;
