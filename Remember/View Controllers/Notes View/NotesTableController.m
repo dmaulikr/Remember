@@ -46,12 +46,17 @@ UIViewControllerPreviewingDelegate
 
 @property (strong, nonatomic) RMNote                        *note;
 @property (strong, nonatomic) RMNote                        *list;
+@property (strong, nonatomic) RMNote                        *completed;
+@property (strong, nonatomic) RMNote                        *favorites;
 @property (strong, nonatomic) RMNoteLoader                  *loader;
+@property (strong, nonatomic) NSCoder                       *coder;
 
 @end
 
 @implementation NotesTableController
 @synthesize titles;
+@synthesize listComplete;
+@synthesize listFavorites;
 
 # pragma mark - View Management
 
@@ -59,8 +64,11 @@ UIViewControllerPreviewingDelegate
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    _note = [[RMNote alloc] init];
-    _list = [[RMNote alloc] init];
+    _coder = [[NSKeyedArchiver alloc] initForWritingWithMutableData:[NSMutableData data]];
+    _note = [[RMNote alloc] initWithCoder:_coder];
+    _list = [[RMNote alloc] initWithName:@"Notes"];
+    _completed = [[RMNote alloc] initWithName:@"Completed"];
+    _favorites = [[RMNote alloc] initWithName:@"Favorites"];
     _loader = [[RMNoteLoader alloc] init];
     
     _reminderTable.dataSource = self;
@@ -71,7 +79,10 @@ UIViewControllerPreviewingDelegate
     _dataManager = [RMDataManager new];
     _alert = [SCLAlertView new];
     _spotlight = [RMSpotlight new];
+    
     titles = [NSMutableArray new];
+    listComplete = [NSMutableArray new];
+    listFavorites = [NSMutableArray new];
     
     UIPanGestureRecognizer *pan = [[UIPanGestureRecognizer alloc]
                                    initWithTarget:self
@@ -110,8 +121,6 @@ UIViewControllerPreviewingDelegate
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    [self readFileContents:@"Notes"];
-    [_reminderTable reloadData];
     [self update];
 }
 
@@ -206,38 +215,51 @@ UIViewControllerPreviewingDelegate
 # pragma mark - Alert Management
 
 - (IBAction)addReminder:(id)sender {
-    SCLAlertView *alertView = [[SCLAlertView alloc] init];
-    UITextField *textField = [alertView addTextField:@"i.e. Pick Up Milk"];
+    SCLAlertView *alert = [SCLAlertView new];
+    UITextField *textField = [alert addTextField:@"i.e. Pick Up Milk"];
     __weak typeof(self) weakSelf = self;
-    [alertView addButton:@"Done" actionBlock:^(void)
+    [alert addButton:@"Done" actionBlock:^(void)
     {
         if ([weakSelf.titles containsObject:textField.text])
         {
-            SCLAlertView *alert2 = [SCLAlertView new];
-            alert2.shouldDismissOnTapOutside = YES;
-            [alert2 showCustom:weakSelf
+            //SCLAlertView *alert2 = [SCLAlertView new];
+            weakSelf.alert.shouldDismissOnTapOutside = YES;
+            [weakSelf.alert showCustom:weakSelf
                          image:[UIImage imageNamed:@"Thin Delete"]
                         color:[UIColor flatPurpleColorDark]
                         title:@"Remember"
                      subTitle:@"You already have a note with the same name.\nPlease choose a new one."
              closeButtonTitle:@"Dismiss"
                      duration:0.0f];
-            alert2.backgroundType = SCLAlertViewBackgroundBlur;
+            weakSelf.alert.backgroundType = SCLAlertViewBackgroundBlur;
         } else {
             // 1. Read (validate file before rewriting)
             // 2. Add object to array (add note title)
             // 3. Write (overwrite file after adding new value)
             // 4. Read (validate that title was added)
             // 5. Refresh (display updated array and contents)
-            [weakSelf readFileContents:@"Notes"];
-            [weakSelf.titles addObject:textField.text];
-            [weakSelf writeFileContents:@"Notes"];
-            [weakSelf readFileContents:@"Notes"];
-            [weakSelf.reminderTable reloadData];
+                //[weakSelf readFileContents:@"Notes"];
+            if (titles) {
+                [weakSelf.titles addObject:textField.text];
+                [weakSelf writeFileContents:@"Notes"];
+                [weakSelf readFileContents:@"Notes"];
+                [weakSelf.reminderTable reloadData];
+                [self.noteField setText:@""];
+            } else {
+                titles = [NSMutableArray new];
+                [weakSelf.titles addObject:textField.text];
+                _list.array = titles;
+                NSLog(@"Titles: %@", titles);
+                NSLog(@"Set List: %@", _list.array);
+                [weakSelf writeFileContents:@"Notes"];
+                [weakSelf readFileContents:@"Notes"];
+                [weakSelf.reminderTable reloadData];
+                [self.noteField setText:@""];
+            }
         }
     }];
-    alertView.backgroundType = SCLAlertViewBackgroundBlur;
-    [alertView showCustom:self
+    alert.backgroundType = SCLAlertViewBackgroundBlur;
+    [alert showCustom:self
                 image:[UIImage imageNamed:@"Sticky Note"]
                 color:[UIColor flatPurpleColorDark]
               title:@"Remember"
@@ -263,11 +285,23 @@ UIViewControllerPreviewingDelegate
                  closeButtonTitle:@"Dismiss"
                          duration:0.0f];
             } else {
-                [self.titles addObject:_noteField.text];
-                [self writeFileContents:@"Notes"];
-                [self readFileContents:@"Notes"];
-                [self.reminderTable reloadData];
-                [self.noteField setText:@""];
+                if (titles) {
+                    [self.titles addObject:_noteField.text];
+                    [self writeFileContents:@"Notes"];
+                    [self readFileContents:@"Notes"];
+                    [self.reminderTable reloadData];
+                    [self.noteField setText:@""];
+                } else {
+                    titles = [NSMutableArray new];
+                    [self.titles addObject:_noteField.text];
+                    _list.array = titles;
+                    NSLog(@"Titles: %@", titles);
+                    NSLog(@"Set List: %@", _list.array);
+                    [self writeFileContents:@"Notes"];
+                    [self readFileContents:@"Notes"];
+                    [self.reminderTable reloadData];
+                    [self.noteField setText:@""];
+                }
             }
         }
     });
@@ -323,6 +357,22 @@ UIViewControllerPreviewingDelegate
         [_noteField setAlpha:50.0];
         [_reminderTable reloadData];
     }
+}
+
+- (void)update
+{
+    if (_segmentedController.selectedSegmentIndex == 0)
+        [self readFileContents:@"Notes"];
+    else
+        [self readFileContents:@"Completed"];
+    [_reminderTable reloadData];
+    [_refresh endRefreshing];
+    double delayInSeconds = 1.5;
+    dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, delayInSeconds * NSEC_PER_SEC);
+    dispatch_after(popTime, dispatch_get_main_queue(), ^(void)
+                   {
+                       [self.pongRefreshControl finishedLoading];
+                   });
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -397,25 +447,18 @@ UIViewControllerPreviewingDelegate
     
     if (indexPath.section == 0)
     {
-        NSURL *containerURL = [[NSFileManager defaultManager] containerURLForSecurityApplicationGroupIdentifier:
-                               @"group.com.solarpepper.Remember"];
-        NSURL *container = [containerURL URLByAppendingPathComponent:[NSString stringWithFormat:@"Documents/%@.remember",titles[indexPath.row]]];
-        NSMutableDictionary *sharedData = [[NSMutableDictionary alloc] initWithContentsOfURL:container];
-        
+        RMNote *note = [[RMNote alloc] initWithName:titles[indexPath.row]];
         cell.title.text = titles[indexPath.row];
-        NSString *author = [sharedData objectForKey:[NSString stringWithFormat:@"%@+Author",titles[indexPath.row]]];
+        NSString *author = note.author;
         
-        if ([sharedData objectForKey:[NSString stringWithFormat:@"%@+Author",titles[indexPath.row]]] == nil)
+        if (note.author == nil)
         {
             cell.author.text = [NSString stringWithFormat:@"Author: "];
         } else {
             cell.author.text = [NSString stringWithFormat:@"Author: %@",author];
         }
         
-        NSURL *dateContainer = [containerURL URLByAppendingPathComponent:[NSString stringWithFormat:@"Documents/Dates.remember"]];
-        NSMutableDictionary *dateManager = [[NSMutableDictionary alloc] initWithContentsOfURL:dateContainer];
-        
-        NSDate *date = [dateManager objectForKey:[NSString stringWithFormat:@"%@+Date",titles[indexPath.row]]];
+        NSDate *date = note.fire;
         NSDateFormatter *formatter = [NSDateFormatter new];
         [formatter setDateFormat:@"MM/dd/yyyy 'at' hh:mm"];
         NSString *string;
@@ -426,7 +469,7 @@ UIViewControllerPreviewingDelegate
             //NSLog(@"Date Has Passed");
             string = @"";
         }
-        if ([dateManager objectForKey:[NSString stringWithFormat:@"%@+Date",titles[indexPath.row]]] == nil)
+        if (note.fire == nil)
         {
             cell.reminder.text = [NSString stringWithFormat:@"Remember: "];
         } else {
@@ -437,8 +480,11 @@ UIViewControllerPreviewingDelegate
             }
         }
         
-        NSString *photoPath = [[containerURL URLByAppendingPathComponent:[NSString stringWithFormat:@"Documents/"]] path];
+        NSURL *container = [[NSFileManager defaultManager] containerURLForSecurityApplicationGroupIdentifier:@"group.com.solarpepper.Remember"];
+        NSString *photoPath = [[container URLByAppendingPathComponent:[NSString stringWithFormat:@"Documents/"]] path];
         NSString *imageName = [photoPath stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.jpg",titles[indexPath.row]]];
+        UIImage *image = note.image;
+        
         if ([[NSFileManager defaultManager] fileExistsAtPath:imageName])
         {
             HNKCacheFormat *format = [HNKCache sharedCache].formats[@"thumbnail"];
@@ -451,6 +497,7 @@ UIViewControllerPreviewingDelegate
                 format.diskCapacity = 10 * 1024 * 1024; // 10MB
                 format.preloadPolicy = HNKPreloadPolicyAll;
             }
+            //
             [cell.customBackground hnk_setImageFromFile:imageName];
             
             cell.title.textColor = [UIColor colorWithContrastingBlackOrWhiteColorOn:[UIColor colorWithComplementaryFlatColorOf:
@@ -460,8 +507,8 @@ UIViewControllerPreviewingDelegate
             cell.author.textColor = [UIColor colorWithContrastingBlackOrWhiteColorOn:[UIColor colorWithComplementaryFlatColorOf:
                                                                                       AverageColorFromImage(cell.customBackground.image)] isFlat:YES];
         } else {
-            
-            cell.customBackground.image = nil;
+            //
+            cell.customBackground.image = image;
             cell.title.textColor = [UIColor flatBlackColor];
             cell.reminder.textColor = [UIColor flatBlackColor];
             cell.author.textColor = [UIColor flatBlackColor];
@@ -478,22 +525,6 @@ UIViewControllerPreviewingDelegate
 - (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate
 {
     [self.pongRefreshControl scrollViewDidEndDragging];
-}
-
-- (void)update
-{
-    if (_segmentedController.selectedSegmentIndex == 0)
-        [self readFileContents:@"Notes"];
-    else
-        [self readFileContents:@"Completed"];
-    [_reminderTable reloadData];
-    [_refresh endRefreshing];
-    double delayInSeconds = 1.5;
-    dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, delayInSeconds * NSEC_PER_SEC);
-    dispatch_after(popTime, dispatch_get_main_queue(), ^(void)
-    {
-        [self.pongRefreshControl finishedLoading];
-    });
 }
 
 #pragma mark - Cell Selection
@@ -531,6 +562,7 @@ UIViewControllerPreviewingDelegate
         {
             if (_segmentedController.selectedSegmentIndex == 0)
             {
+                #pragma mark - TODO: Move to new RMNote system
                 // Checkmark Button - Complete Task
                 NSIndexPath *indexPath = [_reminderTable indexPathForCell:cell];
                 [self readFileContents:@"Notes"];
@@ -595,7 +627,6 @@ UIViewControllerPreviewingDelegate
                 [self writeFileContents:@"Favorites"];
                 [self readFileContents:@"Completed"];
                 [self deleteCellSound];
-                //[self envokeFeedback];
                 
                 [_reminderTable reloadData];
                 break;
@@ -732,7 +763,6 @@ UIViewControllerPreviewingDelegate
 
 - (void)writeFileContents:(NSString *)file {
     _list.array = titles;
-    _list.name = @"List";
     [_list debugNoteContents];
     [_loader saveDataToDiskWithNote:_list andName:file];
     
@@ -742,9 +772,14 @@ UIViewControllerPreviewingDelegate
 }
 
 - (void)readFileContents:(NSString *)file {
-    _list = [_loader loadDataFromDiskWithName:@"Notes"];
+    _list = [_loader loadDataFromDiskWithName:file];
     [_list debugNoteContents];
-    titles = _list.array;
+    if (_list.array) {
+        NSLog(@"Note array is allocated.");
+        titles = _list.array;
+    } else {
+        NSLog(@"Note array is nil. Leaving titles alone.");
+    }
     
     //[_dataManager readTableContentsFromContainerID:@"group.com.solarpepper.Remember"
     //                                   fileName:name];

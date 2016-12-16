@@ -370,20 +370,21 @@ UITextViewDelegate
     [_note setImage:_noteImageView.image];
     // Save data we just set
     [_loader saveDataToDiskWithNote:_note andName:_rememberTitle];
-    
+    /*
     // Deprecated: To be removed
     [_dataManager writeDataContentsWithTitle:_rememberTitle
                                  author:_authorField.text
                                    body:_textView.text];
     [_dataManager writeCoordinatesWithLatitude:[_latitude floatValue] longitude:[_longitude floatValue]];
     // Still used: Do not remove
+    */
     [_spotlight addItemToCoreSpotlightWithName:_rememberTitle andDescription:_textView.text];
 }
 
 - (void)readFileContents {
     _note = [_loader loadDataFromDiskWithName:_rememberTitle];
     [_note debugNoteContents];
-    
+    /*
     // Deprecated: To be removed
     [_dataManager readDataContentsWithTitle:_rememberTitle
                            containerID:@"group.com.solarpepper.Remember"];
@@ -394,6 +395,7 @@ UITextViewDelegate
     
     _latitude = [NSNumber numberWithFloat:_dataManager.loadedLatitude];
     _longitude = [NSNumber numberWithFloat:_dataManager.loadedLongitude];
+    */
     // Still used: Do not remove
     [_spotlight removeItemFromCoreSpotlightWithName:_rememberTitle];
 }

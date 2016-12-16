@@ -18,5 +18,7 @@
 - (void)performSegueFromNotification:(UNNotificationRequest *)notification;
 
 @property (strong, nonatomic) NSMutableArray *titles;
+@property (strong, nonatomic) NSMutableArray *listComplete;
+@property (strong, nonatomic) NSMutableArray *listFavorites;
 
 @end

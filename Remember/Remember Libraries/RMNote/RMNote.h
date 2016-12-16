@@ -10,7 +10,9 @@
 #import <UIKit/UIKit.h>
 
 @interface RMNote : NSObject
+<NSCoding>
 
+- (id)initWithName:(NSString *)name;
 - (id)initWithCoder:(NSCoder *)coder;
 - (void)encodeWithCoder:(NSCoder *)coder; 
 - (void)debugNoteContents;
